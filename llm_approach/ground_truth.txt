@@ -1,0 +1,125 @@
+# Ground Truth Entity Extraction
+# Source: big_book.txt (War and Peace) - Second chunk (~39KB)
+# Extracted independently for benchmark validation
+
+## NAMES (Person names found in the text)
+
+### Major characters (appear multiple times):
+- Pierre
+- Prince Andrew (also: Andrew, André)
+- Prince Vasíli (also: Vasíli)
+- Anna Pávlovna (also: Annette)
+- Princess Hélène
+- Prince Hippolyte (also: Hippolyte)
+- Princess Drubetskáya / Anna Mikháylovna
+- Borís
+- Lise (the little princess, Prince Andrew's wife)
+- The vicomte (French royalist, unnamed)
+
+### Historical/political figures mentioned:
+- Napoleon (also: Buonaparte, Bonaparte, Monsieur Buonaparte)
+- Emperor Alexander (also: The Emperor)
+- Louis XVII
+- Madame Elizabeth
+- The Queen (Marie Antoinette, not named explicitly)
+- The Duc d'Enghien (also: the duc)
+- Rousseau
+- Caesar
+
+### Other named individuals:
+- Prince Golítsyn (also: Golítsyn)
+- Rumyántsev
+- Michael Ilariónovich Kutúzov (also: Kutúzov)
+- Anatole
+- Mlle Schérer
+- The abbé (unnamed)
+- Condé (house of)
+
+### Title-only references (no personal name):
+- The elderly lady (Princess Drubetskáya, named elsewhere)
+- The Frenchman (the vicomte)
+- The general (unnamed)
+- The ambassador (unnamed)
+- The little princess (Lise, named elsewhere)
+
+---
+
+## DATES (Explicit dates or date references)
+
+### Specific date references:
+- "April, 2001" (Gutenberg release date - in header, NOT in this chunk)
+- "June 14, 2022" (Gutenberg update - NOT in this chunk)
+- "18th Brumaire" (French Republican calendar date - historical event)
+
+### Temporal references (not specific dates):
+- "April" (Gutenberg release month - NOT in this chunk)
+- "a year" (duration, not a date)
+- "six months ago" (relative time)
+- "three months" (duration)
+- "the coronation at Milan" (event, not specific date)
+- "today" (relative)
+- "tomorrow" (relative)
+- "the first time" (ordinal, not date)
+
+**Note:** This chunk contains very few explicit dates. The "18th Brumaire" is the most specific date-like reference.
+
+---
+
+## PLACES (Geographic locations)
+
+### Cities:
+- Petersburg (St. Petersburg)
+- Moscow
+- Milan
+- Genoa
+- Lucca
+- Jaffa
+- Africa
+
+### Countries/Regions:
+- Russia
+- France
+- England
+- Austria
+- French (adjective for France)
+
+### Specific locations:
+- Arcola (bridge of Arcola - Battle of Arcole)
+- The Guards (military unit, not a place)
+- The Horse Guards (military unit)
+- Anna Pávlovna's (residence/location)
+- The ambassador's (location)
+- The Apráksins' (residence)
+- Kurágins' (residence)
+- Prince Andrew's study
+- The anteroom
+- The hall
+- The porch
+- The drawing room
+- The dining room
+- The sofa (furniture, not place)
+
+### Places NOT in this chunk:
+- Washington, Valley Forge (those were from EXAMPLES in previous prompt versions)
+
+---
+
+## SUMMARY FOR BENCHMARK VALIDATION
+
+### Core entities that SHOULD be extracted:
+
+NAMES (high confidence):
+Pierre; Prince Andrew; Prince Vasíli; Anna Pávlovna; Princess Hélène; Prince Hippolyte; Princess Drubetskáya; Anna Mikháylovna; Borís; Lise; Napoleon; Buonaparte; Bonaparte; Emperor Alexander; Louis XVII; Madame Elizabeth; Duc d'Enghien; Prince Golítsyn; Rumyántsev; Kutúzov; Michael Ilariónovich Kutúzov; Anatole; Mlle Schérer; Rousseau; Caesar; Condé
+
+PLACES (high confidence):
+Petersburg; Moscow; Milan; Genoa; Lucca; Jaffa; Africa; Russia; France; England; Austria; Arcola
+
+DATES (high confidence):
+18th Brumaire
+
+### Edge cases:
+- "The vicomte" - title used as identifier, no personal name given
+- "The Queen" - title only, refers to Marie Antoinette but not named
+- "The Emperor" - context makes it Alexander I, but just "Emperor" in text
+- "Guards" / "Horse Guards" - military units, borderline places
+- Relative dates like "today", "tomorrow" - should probably be excluded
