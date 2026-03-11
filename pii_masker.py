@@ -3,9 +3,9 @@
 PII Masker CLI - Anonymize and deanonymize text with unique placeholders.
 
 Usage:
-    python unique_masker.py --generate-key --key-file key.key
-    python unique_masker.py --input text.txt --output result --key-file key.key
-    python unique_masker.py --mode deanonymize --input masked.txt --mapping mapping.json --key-file key.key --output restored.txt
+    python pii_masker.py --generate-key --key-file key.key
+    python pii_masker.py --input text.txt --output result --key-file key.key
+    python pii_masker.py --mode deanonymize --input masked.txt --mapping mapping.json --key-file key.key --output restored.txt
 """
 
 # Disable GPU/CUDA loading for CPU-only systems (MUST be before any imports)

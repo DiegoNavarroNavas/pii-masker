@@ -12,7 +12,7 @@ model_path = model_pkg_path / "en_core_web_lg-3.8.0"
 presidio_path = Path(presidio_analyzer.__file__).parent
 
 a = Analysis(
-    ['getting_started.py'],
+    ['pii_masker.py'],
     pathex=[],
     binaries=[],
     datas=[
