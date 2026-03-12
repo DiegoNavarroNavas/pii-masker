@@ -84,6 +84,21 @@ SPACY_SMALL_MODELS = {
 # Default transformer model (multilingual NER)
 DEFAULT_TRANSFORMER_MODEL = "Babelscape/wikineural-multilingual-ner"
 
+# Deterministic exit codes for automation/native messaging integration.
+EXIT_SUCCESS = 0
+EXIT_INVALID_REQUEST = 2
+EXIT_KEY_FILE_ERROR = 3
+EXIT_INPUT_ERROR = 4
+EXIT_PROCESSING_ERROR = 5
+EXIT_DEPENDENCY_ERROR = 6
+
+
+def emit_json(payload: dict) -> None:
+    """Write a compact JSON payload to stdout."""
+    sys.stdout.write(json.dumps(payload, ensure_ascii=False))
+    sys.stdout.write("\n")
+    sys.stdout.flush()
+
 
 def generate_key_file(path: Path) -> None:
     """Generate a new 256-bit encryption key and save to file."""
@@ -527,6 +542,235 @@ def run_deanonymize(args: argparse.Namespace) -> None:
         print(restored_text)
 
 
+def run_json_mode(args: argparse.Namespace) -> int:
+    """
+    Machine-readable mode for programmatic integrations.
+
+    Reads one JSON document from stdin and writes one JSON document to stdout.
+    """
+    try:
+        raw = sys.stdin.read()
+        if not raw.strip():
+            emit_json(
+                {
+                    "ok": False,
+                    "error": {
+                        "code": "EMPTY_REQUEST",
+                        "message": "No JSON payload received on stdin.",
+                    },
+                }
+            )
+            return EXIT_INVALID_REQUEST
+        payload = json.loads(raw)
+    except json.JSONDecodeError as e:
+        emit_json(
+            {
+                "ok": False,
+                "error": {
+                    "code": "INVALID_JSON",
+                    "message": f"Failed to parse request JSON: {e}",
+                },
+            }
+        )
+        return EXIT_INVALID_REQUEST
+
+    action = payload.get("action", "anonymize")
+    if action not in {"anonymize", "deanonymize"}:
+        emit_json(
+            {
+                "ok": False,
+                "error": {
+                    "code": "INVALID_ACTION",
+                    "message": "action must be 'anonymize' or 'deanonymize'.",
+                },
+            }
+        )
+        return EXIT_INVALID_REQUEST
+
+    key_file = payload.get("key_file") or args.key_file
+    if not key_file:
+        emit_json(
+            {
+                "ok": False,
+                "error": {
+                    "code": "MISSING_KEY_FILE",
+                    "message": "key_file is required.",
+                },
+            }
+        )
+        return EXIT_INVALID_REQUEST
+
+    try:
+        encryption_key = load_key_file(Path(key_file))
+    except FileNotFoundError as e:
+        emit_json(
+            {
+                "ok": False,
+                "error": {"code": "KEY_FILE_NOT_FOUND", "message": str(e)},
+            }
+        )
+        return EXIT_KEY_FILE_ERROR
+    except Exception as e:
+        emit_json(
+            {
+                "ok": False,
+                "error": {"code": "KEY_FILE_READ_FAILED", "message": str(e)},
+            }
+        )
+        return EXIT_KEY_FILE_ERROR
+
+    if action == "anonymize":
+        text = payload.get("text")
+        if not isinstance(text, str):
+            emit_json(
+                {
+                    "ok": False,
+                    "error": {
+                        "code": "INVALID_INPUT_TEXT",
+                        "message": "text must be a string for anonymize action.",
+                    },
+                }
+            )
+            return EXIT_INPUT_ERROR
+
+        language = payload.get("language", args.language)
+        if language not in SUPPORTED_LANGUAGES:
+            emit_json(
+                {
+                    "ok": False,
+                    "error": {
+                        "code": "UNSUPPORTED_LANGUAGE",
+                        "message": f"Unsupported language: {language}",
+                    },
+                }
+            )
+            return EXIT_INVALID_REQUEST
+
+        engine = payload.get("engine", args.engine)
+        if engine not in SUPPORTED_ENGINES:
+            emit_json(
+                {
+                    "ok": False,
+                    "error": {
+                        "code": "UNSUPPORTED_ENGINE",
+                        "message": f"Unsupported engine: {engine}",
+                    },
+                }
+            )
+            return EXIT_INVALID_REQUEST
+
+        recognizers_yaml = payload.get("recognizers_yaml")
+        recognizers_json = payload.get("recognizers")
+        if recognizers_json is not None and not isinstance(recognizers_json, list):
+            emit_json(
+                {
+                    "ok": False,
+                    "error": {
+                        "code": "INVALID_RECOGNIZERS",
+                        "message": "recognizers must be an array of recognizer JSON strings.",
+                    },
+                }
+            )
+            return EXIT_INVALID_REQUEST
+
+        try:
+            masked_text, mapping = anonymize_with_unique_masks(
+                text=text,
+                encryption_key=encryption_key,
+                language=language,
+                engine=engine,
+                model=payload.get("model", args.model),
+                spacy_model=payload.get("spacy_model", args.spacy_model),
+                transformer_model=payload.get("transformer_model", args.transformer_model),
+                ner_config=payload.get("ner_config"),
+                recognizers_yaml=Path(recognizers_yaml) if recognizers_yaml else None,
+                recognizers_json=recognizers_json,
+            )
+        except SystemExit:
+            emit_json(
+                {
+                    "ok": False,
+                    "error": {
+                        "code": "DEPENDENCY_OR_ENGINE_ERROR",
+                        "message": "NLP engine initialization failed. Check dependencies/models.",
+                    },
+                }
+            )
+            return EXIT_DEPENDENCY_ERROR
+        except Exception as e:
+            emit_json(
+                {
+                    "ok": False,
+                    "error": {"code": "ANONYMIZE_FAILED", "message": str(e)},
+                }
+            )
+            return EXIT_PROCESSING_ERROR
+
+        emit_json(
+            {
+                "ok": True,
+                "action": "anonymize",
+                "masked_text": masked_text,
+                "mapping": mapping,
+                "language": language,
+            }
+        )
+        return EXIT_SUCCESS
+
+    # action == "deanonymize"
+    text = payload.get("text")
+    mapping = payload.get("mapping")
+    if not isinstance(text, str):
+        emit_json(
+            {
+                "ok": False,
+                "error": {
+                    "code": "INVALID_INPUT_TEXT",
+                    "message": "text must be a string for deanonymize action.",
+                },
+            }
+        )
+        return EXIT_INPUT_ERROR
+    if not isinstance(mapping, dict):
+        emit_json(
+            {
+                "ok": False,
+                "error": {
+                    "code": "INVALID_MAPPING",
+                    "message": "mapping must be an object for deanonymize action.",
+                },
+            }
+        )
+        return EXIT_INPUT_ERROR
+
+    try:
+        normalized_mapping = {}
+        for placeholder, info in mapping.items():
+            if isinstance(info, dict):
+                normalized_mapping[placeholder] = (info["entity_type"], info["encrypted"])
+            elif isinstance(info, (list, tuple)) and len(info) == 2:
+                normalized_mapping[placeholder] = (info[0], info[1])
+            else:
+                raise ValueError(f"Invalid mapping entry for {placeholder!r}")
+
+        restored_text = deanonymize_unique_masks(
+            anonymized_text=text,
+            decrypt_map=normalized_mapping,
+            encryption_key=encryption_key,
+        )
+    except Exception as e:
+        emit_json(
+            {
+                "ok": False,
+                "error": {"code": "DEANONYMIZE_FAILED", "message": str(e)},
+            }
+        )
+        return EXIT_PROCESSING_ERROR
+
+    emit_json({"ok": True, "action": "deanonymize", "text": restored_text})
+    return EXIT_SUCCESS
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="PII Masker - Anonymize and deanonymize text with unique placeholders",
@@ -653,9 +897,18 @@ Examples:
         action="append",
         help="JSON string defining a custom recognizer (can be used multiple times)",
     )
+    parser.add_argument(
+        "--json-mode",
+        action="store_true",
+        help="Read request JSON from stdin and write response JSON to stdout",
+    )
 
     args = parser.parse_args()
     start_time = time.time()
+
+    if args.json_mode:
+        exit_code = run_json_mode(args)
+        sys.exit(exit_code)
 
     # Handle key generation
     if args.generate_key:

@@ -100,6 +100,92 @@ python pii_masker.py --input text.txt --output out --key-file secret.key \
 | `--ner-config` | JSON string with NER configuration |
 | `--recognizers-yaml` | YAML file with custom recognizers |
 | `--recognizer` | JSON string defining a custom recognizer (can repeat) |
+| `--json-mode` | Read request JSON from stdin and return response JSON on stdout |
+
+### JSON API Mode (for Native Integrations)
+
+`--json-mode` enables machine-readable stdin/stdout integration for callers like a browser native host.
+
+Example request:
+
+```bash
+echo '{"action":"anonymize","text":"John lives in Berlin","language":"en","engine":"spacy","key_file":"secret.key"}' \
+  | python pii_masker.py --json-mode
+```
+
+Example success response:
+
+```json
+{
+  "ok": true,
+  "action": "anonymize",
+  "masked_text": "<PERSON_1> lives in <LOCATION_1>",
+  "mapping": {
+    "<PERSON_1>": ["PERSON", "<encrypted>"],
+    "<LOCATION_1>": ["LOCATION", "<encrypted>"]
+  },
+  "language": "en"
+}
+```
+
+## Chrome Extension + Native Host (Local)
+
+This repository includes a v1 Chrome extension and native host bridge for **manual redact-before-upload** flows.
+
+- Extension path: `chrome_extension/`
+- Native host path: `native_host/`
+- Protocol spec: `native_host/PROTOCOL.md`
+
+### Supported v1 file types
+
+- PDF (`.pdf`)
+- Text formats (`.txt`, `.md`, `.csv`, `.json`)
+
+### Important behavior
+
+- Data stays local: Chrome extension -> native host -> local `pii_masker.py`.
+- v1 PDF output is a clean re-rendered PDF from extracted text (layout is not preserved).
+- Non-UTF-8 text files are rejected with an explicit error.
+
+### Setup Steps (Windows + Chrome)
+
+1. Install dependencies and models (same as CLI setup).
+2. Load extension:
+   - Open `chrome://extensions`
+   - Enable Developer mode
+   - Click "Load unpacked"
+   - Select the `chrome_extension` directory
+3. Register native host:
+   - Copy extension ID from `chrome://extensions`
+   - Run:
+
+```powershell
+.\native_host\install_chrome_host.ps1 -ExtensionId "<your_extension_id>"
+```
+
+4. In extension popup, set:
+   - `Key file path` (for example `C:\Users\franc\Documents\GitHub\pii-masker\secret.key`)
+   - `Language` and `Engine`
+5. On a webpage upload field:
+   - Click the file input and choose a file
+   - Open the extension popup
+   - Click **Redact Selected Upload**
+
+### Native Host command
+
+By default, native host executes:
+
+```bash
+uv run python pii_masker.py --json-mode
+```
+
+Override with environment variable `PII_MASKER_CMD` if needed.
+
+### Running tests
+
+```bash
+python -m unittest discover -s tests -p "test_*.py"
+```
 
 ## Example Output
 

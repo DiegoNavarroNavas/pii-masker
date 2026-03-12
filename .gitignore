@@ -11,3 +11,6 @@ wheels/
 
 # Documentation
 docs/
+secret.key
+document.txt
+native_host/*.installed.json
