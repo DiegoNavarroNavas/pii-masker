@@ -1,0 +1,11 @@
+{
+  "name": "pii-masker-native-host-tools",
+  "private": true,
+  "scripts": {
+    "playwright:diagnose-extension": "node ./playwright_diagnose_extension.mjs",
+    "playwright:test-upload": "node ./playwright_test_upload.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.58.2"
+  }
+}

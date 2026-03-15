@@ -159,7 +159,14 @@ This repository includes a v1 Chrome extension and native host bridge for **manu
    - Enable Developer mode
    - Click "Load unpacked"
    - Select the `chrome_extension` directory
-3. Register native host:
+3. Build native host executable:
+   - Run:
+
+```powershell
+.\native_host\build_host_exe.ps1
+```
+
+4. Register native host:
    - Copy extension ID from `chrome://extensions`
    - Run:
 
@@ -167,10 +174,10 @@ This repository includes a v1 Chrome extension and native host bridge for **manu
 .\native_host\install_chrome_host.ps1 -ExtensionId "<your_extension_id>"
 ```
 
-4. In extension popup, set:
+5. In extension popup, set:
    - `Key file path` (for example `C:\Users\franc\Documents\GitHub\pii-masker\secret.key`)
    - `Language` and `Engine`
-5. On a webpage upload field:
+6. On a webpage upload field:
    - Click the file input and choose a file
    - Open the extension popup
    - Click **Redact Selected Upload**
@@ -185,10 +192,45 @@ uv run python pii_masker.py --json-mode
 
 Override with environment variable `PII_MASKER_CMD` if needed.
 
+### Playwright helper scripts (native host and extension)
+
+Playwright is used for local browser automation of the extension/native-host flow. The Node manifest is scoped to `native_host/`.
+
+Install Node dependencies:
+
+```powershell
+cd native_host
+npm ci
+```
+
+Run helpers from repository root:
+
+```powershell
+npm --prefix native_host run playwright:diagnose-extension
+npm --prefix native_host run playwright:test-upload
+```
+
+What these helpers do:
+
+- `playwright:diagnose-extension`: Loads the unpacked extension in Edge, saves popup settings, runs "Diagnose Native Host", and prints popup status.
+- `playwright:test-upload`: Loads `tests/upload_test.html`, uploads `document.txt`, triggers manual redaction through the extension, and verifies a `.redacted` filename is selected.
+
 ### Running tests
 
 ```bash
 python -m unittest discover -s tests -p "test_*.py"
+```
+
+Engine integration tests (real runtime calls) are opt-in:
+
+```powershell
+python tests/test_json_mode_engine_integration.py --run-engine-integration
+```
+
+To include heavier transformers runtime/model tests:
+
+```powershell
+python tests/test_json_mode_engine_integration.py --run-engine-integration --run-heavy-engine
 ```
 
 ## Example Output

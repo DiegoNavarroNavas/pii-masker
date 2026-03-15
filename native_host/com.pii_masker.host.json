@@ -1,0 +1,9 @@
+{
+  "name": "com.pii_masker.host",
+  "description": "Local PII masker native host for Chrome extension",
+  "path": "C:\\\\Users\\\\franc\\\\Documents\\\\GitHub\\\\pii-masker\\\\native_host\\\\host.exe",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://nfceldmobbhcmjkfmkimjaapheanbjed"
+  ]
+}

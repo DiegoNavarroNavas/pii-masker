@@ -1,5 +1,6 @@
 # Python-generated files
 __pycache__/
+.pytest_cache/
 *.py[oc]
 build/
 dist/
@@ -14,3 +15,9 @@ docs/
 secret.key
 document.txt
 native_host/*.installed.json
+native_host/host.exe
+native_host/host.log
+
+result_*
+
+node_modules/

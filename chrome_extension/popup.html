@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PII Upload Redactor</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 12px;
+        width: 320px;
+      }
+      h1 {
+        margin: 0 0 10px;
+        font-size: 15px;
+      }
+      label {
+        display: block;
+        font-size: 12px;
+        margin-top: 8px;
+      }
+      input,
+      select {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 4px;
+        padding: 6px;
+        font-size: 12px;
+      }
+      .row {
+        margin-top: 10px;
+      }
+      button {
+        margin-top: 10px;
+        width: 100%;
+        padding: 8px;
+        border: 0;
+        background: #1d4ed8;
+        color: #fff;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      button.secondary {
+        background: #374151;
+      }
+      button:disabled {
+        background: #6b7280;
+        cursor: default;
+      }
+      .text-link {
+        margin-top: 8px;
+        width: auto;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: #6b7280;
+        font-size: 11px;
+        font-weight: 400;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        cursor: pointer;
+      }
+      .text-link:disabled {
+        background: transparent;
+        color: #9ca3af;
+        cursor: default;
+      }
+      .hint {
+        margin-top: 8px;
+        font-size: 11px;
+        color: #444;
+      }
+      .status {
+        margin-top: 8px;
+        font-size: 11px;
+      }
+      .status.error {
+        color: #b91c1c;
+      }
+      .status.ok {
+        color: #166534;
+      }
+      .status.pending {
+        color: #6b7280;
+      }
+      .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 10px;
+      }
+      .checkbox input {
+        width: auto;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PII Upload Redactor</h1>
+
+    <label for="keyFile">Key file path</label>
+    <input id="keyFile" placeholder="C:\path\to\secret.key" />
+
+    <label for="language">Language</label>
+    <select id="language">
+      <option value="en">en</option>
+      <option value="es">es</option>
+      <option value="fr">fr</option>
+      <option value="de">de</option>
+      <option value="it">it</option>
+      <option value="pt">pt</option>
+      <option value="zh">zh</option>
+      <option value="ja">ja</option>
+      <option value="ko">ko</option>
+    </select>
+
+    <label for="engine">Engine</label>
+    <select id="engine">
+      <option value="spacy">spacy</option>
+      <option value="stanza">stanza</option>
+      <option value="transformers">transformers</option>
+      <option value="local_multihead">local_multihead</option>
+    </select>
+
+    <label for="spacyModel">spaCy model (used when engine=spacy)</label>
+    <input
+      id="spacyModel"
+      placeholder="en_core_web_lg"
+    />
+
+    <label for="transformersModel">Transformers model (used when engine=transformers)</label>
+    <input
+      id="transformersModel"
+      placeholder="Babelscape/wikineural-multilingual-ner"
+    />
+
+    <label for="localModelPath">Local multihead checkpoint (used when engine=local_multihead)</label>
+    <input
+      id="localModelPath"
+      placeholder="local_models/multihead_model.pt"
+    />
+
+    <label for="localEncoderModel">Local encoder/tokenizer (used when engine=local_multihead)</label>
+    <input
+      id="localEncoderModel"
+      placeholder="answerdotai/ModernBERT-base"
+    />
+
+    <div class="checkbox">
+      <input id="includeMapping" type="checkbox" />
+      <label for="includeMapping">Return encrypted mapping</label>
+    </div>
+
+    <button id="saveSettings" class="secondary">Save Settings</button>
+    <button id="runRedaction">Redact Selected Upload</button>
+    <button id="diagnoseHost" class="text-link">Diagnose Native Host</button>
+
+    <div class="hint">
+      Click an upload field on the page, choose a file, then press "Redact Selected Upload".
+    </div>
+    <div id="status" class="status"></div>
+
+    <script src="popup.js"></script>
+  </body>
+  </html>
