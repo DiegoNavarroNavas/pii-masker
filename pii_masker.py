@@ -23,6 +23,8 @@ from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 
+from pii_masker_local import DEFAULT_LOCAL_ENCODER_MODEL, detect_pii_with_local_multihead, resolve_local_multihead_checkpoint
+
 @contextmanager
 def pulse(message: str):
     """Show animated status with elapsed time while operation runs."""
@@ -53,7 +55,7 @@ def pulse(message: str):
 SUPPORTED_LANGUAGES = ["en", "es", "fr", "de", "it", "pt", "zh", "ja", "ko"]
 
 # Supported NLP engines
-SUPPORTED_ENGINES = ["spacy", "stanza", "transformers"]
+SUPPORTED_ENGINES = ["spacy", "stanza", "transformers", "local_multihead"]
 
 # Language-specific spacy models (large versions for better accuracy)
 SPACY_MODELS = {
@@ -293,6 +295,7 @@ def anonymize_with_unique_masks(
     model: str | None = None,
     spacy_model: str | None = None,
     transformer_model: str | None = None,
+    local_encoder_model: str | None = None,
     ner_config: dict | None = None,
     recognizers_yaml: Path | None = None,
     recognizers_json: list[str] | None = None,
@@ -307,9 +310,10 @@ def anonymize_with_unique_masks(
         encryption_key: Encryption key string
         language: Language code for analysis
         engine: NLP engine to use
-        model: Model name (string or "spacy:transformer" format)
+        model: Model name/path ("spacy:transformer" format for transformers; .pt path for local_multihead)
         spacy_model: Spacy model for tokenization (transformers only)
         transformer_model: Transformer NER model (transformers only)
+        local_encoder_model: Encoder/tokenizer id for local_multihead
         ner_config: NerModelConfiguration options
         recognizers_yaml: Path to YAML file with custom recognizers
         recognizers_json: List of JSON strings defining custom recognizers
@@ -321,20 +325,38 @@ def anonymize_with_unique_masks(
     from presidio_anonymizer import AnonymizerEngine
     from presidio_anonymizer.entities import OperatorConfig
 
-    analyzer = create_analyzer(
-        engine=engine,
-        model=model,
-        spacy_model=spacy_model,
-        transformer_model=transformer_model,
-        ner_config=ner_config,
-        language=language,
-        recognizers_yaml=recognizers_yaml,
-        recognizers_json=recognizers_json,
-    )
     anonymizer = AnonymizerEngine()
 
-    with pulse("Analyzing text for PII"):
-        results = analyzer.analyze(text=text, language=language)
+    if engine == "local_multihead":
+        checkpoint_path = resolve_local_multihead_checkpoint(model)
+        with pulse(f"Loading local multihead checkpoint: {checkpoint_path.name}"):
+            detections = detect_pii_with_local_multihead(
+                text=text,
+                checkpoint_path=checkpoint_path,
+                encoder_model=local_encoder_model,
+            )
+        results = [
+            RecognizerResult(
+                entity_type=d["entity_type"],
+                start=d["start"],
+                end=d["end"],
+                score=d["score"],
+            )
+            for d in detections
+        ]
+    else:
+        analyzer = create_analyzer(
+            engine=engine,
+            model=model,
+            spacy_model=spacy_model,
+            transformer_model=transformer_model,
+            ner_config=ner_config,
+            language=language,
+            recognizers_yaml=recognizers_yaml,
+            recognizers_json=recognizers_json,
+        )
+        with pulse("Analyzing text for PII"):
+            results = analyzer.analyze(text=text, language=language)
 
     if not results:
         return text, {}
@@ -485,6 +507,7 @@ def run_anonymize(args: argparse.Namespace, parser: argparse.ArgumentParser) -> 
         model=args.model,
         spacy_model=args.spacy_model,
         transformer_model=args.transformer_model,
+        local_encoder_model=args.local_encoder_model,
         ner_config=ner_config,
         recognizers_yaml=recognizers_yaml,
         recognizers_json=args.recognizer,
@@ -682,6 +705,7 @@ def run_json_mode(args: argparse.Namespace) -> int:
                 model=payload.get("model", args.model),
                 spacy_model=payload.get("spacy_model", args.spacy_model),
                 transformer_model=payload.get("transformer_model", args.transformer_model),
+                local_encoder_model=payload.get("local_encoder_model", args.local_encoder_model),
                 ner_config=payload.get("ner_config"),
                 recognizers_yaml=Path(recognizers_yaml) if recognizers_yaml else None,
                 recognizers_json=recognizers_json,
@@ -801,6 +825,9 @@ Examples:
   # Advanced: Custom NER configuration
   %(prog)s --input text.txt --output out --key-file secret.key --engine transformers --model "en_core_web_sm:dslim/bert-base-NER" --ner-config '{"aggregation_strategy": "average", "default_score": 0.9}'
 
+  # Use local .pt multihead model (ModernBERT encoder by default)
+  %(prog)s --input text.txt --output out --key-file secret.key --engine local_multihead --model local_models/multihead_model.pt
+
   # Load custom recognizers from YAML
   %(prog)s --input text.txt --output out --key-file secret.key --recognizers-yaml custom_recognizers.yaml
 
@@ -867,7 +894,7 @@ Examples:
     parser.add_argument(
         "--model",
         type=str,
-        help="Model name. For transformers: 'spacy_model:transformer_model' format",
+        help="Model name or path. For transformers: 'spacy_model:transformer_model'; for local_multihead: path to .pt",
     )
     parser.add_argument(
         "--spacy-model",
@@ -878,6 +905,15 @@ Examples:
         "--transformer-model",
         type=str,
         help="Transformer NER model (transformers engine only)",
+    )
+    parser.add_argument(
+        "--local-encoder-model",
+        type=str,
+        default=DEFAULT_LOCAL_ENCODER_MODEL,
+        help=(
+            "Base encoder/tokenizer for local_multihead checkpoints "
+            f"(default: {DEFAULT_LOCAL_ENCODER_MODEL})"
+        ),
     )
     parser.add_argument(
         "--ner-config",

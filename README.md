@@ -9,7 +9,7 @@ PII Masker replaces personally identifiable information (PII) in text with uniqu
 ### Features
 
 - **Multi-language support**: English, Spanish, French, German, Italian, Portuguese, Chinese, Japanese, Korean
-- **Multiple NLP engines**: spaCy, Stanza, Transformers
+- **Multiple NLP engines**: spaCy, Stanza, Transformers, local multihead (`.pt`)
 - **Reversible anonymization**: Encrypted mappings allow secure restoration
 - **Consistent placeholders**: Same entity gets the same placeholder throughout the document
 - **Custom recognizers**: Add your own pattern recognizers via YAML or CLI
@@ -56,6 +56,9 @@ python pii_masker.py --input german.txt --output result --key-file secret.key --
 
 # Using transformers engine for better accuracy
 python pii_masker.py --input text.txt --output result --key-file secret.key --engine transformers
+
+# Using local multihead .pt checkpoint
+python pii_masker.py --input text.txt --output result --key-file secret.key --engine local_multihead --model local_models/multihead_model.pt
 ```
 
 ### Deanonymize Text
@@ -93,10 +96,11 @@ python pii_masker.py --input text.txt --output out --key-file secret.key \
 | `--output` | Output file prefix (anonymize) or path (deanonymize) |
 | `--mapping` | Mapping JSON file (required for deanonymize) |
 | `--language` | Language code: en, es, fr, de, it, pt, zh, ja, ko (default: en) |
-| `--engine` | NLP engine: spacy, stanza, transformers (default: spacy) |
-| `--model` | Model name (for transformers: `spacy_model:transformer_model`) |
+| `--engine` | NLP engine: spacy, stanza, transformers, local_multihead (default: spacy) |
+| `--model` | Model name/path (transformers: `spacy_model:transformer_model`; local_multihead: `.pt` checkpoint path) |
 | `--spacy-model` | spaCy model for tokenization (transformers only) |
 | `--transformer-model` | Transformer NER model (transformers only) |
+| `--local-encoder-model` | Encoder/tokenizer for local_multihead (default: `answerdotai/ModernBERT-base`) |
 | `--ner-config` | JSON string with NER configuration |
 | `--recognizers-yaml` | YAML file with custom recognizers |
 | `--recognizer` | JSON string defining a custom recognizer (can repeat) |
