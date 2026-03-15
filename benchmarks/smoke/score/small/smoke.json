@@ -1,0 +1,53 @@
+{
+  "dataset_path": "C:\\Users\\franc\\Documents\\GitHub\\pii-masker\\presidio-research\\tests\\data\\generated_small.json",
+  "subset": "all",
+  "split": {
+    "subset": "all",
+    "split_by": "template_id",
+    "validation_ratio": 0.2,
+    "split_seed": 42,
+    "train_count": 100,
+    "validation_count": 100
+  },
+  "sample_count": 5,
+  "models": {
+    "Babelscape/wikineural-multilingual-ner": {
+      "default": {
+        "ok": true,
+        "aggregation_strategy": "default",
+        "load_seconds": 1.1070267999893986,
+        "eval_seconds": 0.349892100028228,
+        "pii_precision": 1.0,
+        "pii_recall": 0.6,
+        "pii_f1": 0.7499999999999999,
+        "pii_f2": 0.6521739130434783,
+        "pii_f": 0.6521739130434783,
+        "entity_recall_top10": [
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "PERSON",
+            0.5
+          ],
+          [
+            "LOCATION",
+            0.5
+          ],
+          [
+            "PHONE_NUMBER",
+            0.0
+          ]
+        ],
+        "entity_precision": {
+          "PHONE_NUMBER": NaN,
+          "PERSON": 1.0,
+          "LOCATION": 1.0,
+          "CREDIT_CARD": 1.0
+        },
+        "n_tokens_scored": null
+      }
+    }
+  }
+}

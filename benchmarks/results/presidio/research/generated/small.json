@@ -1,0 +1,216 @@
+{
+  "dataset_path": "C:\\Users\\franc\\Documents\\GitHub\\pii-masker\\presidio-research\\tests\\data\\generated_small.json",
+  "sample_count": 100,
+  "models": {
+    "Babelscape/wikineural-multilingual-ner": {
+      "ok": true,
+      "load_seconds": 1.0898258999950485,
+      "eval_seconds": 3.2173389999952633,
+      "pii_precision": 0.9821428571428571,
+      "pii_recall": 0.6111111111111112,
+      "pii_f1": 0.7534246575342465,
+      "pii_f2": 0.6610576923076924,
+      "pii_f": 0.6610576923076924,
+      "entity_recall_top10": [
+        [
+          "EMAIL_ADDRESS",
+          1.0
+        ],
+        [
+          "IP_ADDRESS",
+          1.0
+        ],
+        [
+          "US_SSN",
+          1.0
+        ],
+        [
+          "CREDIT_CARD",
+          1.0
+        ],
+        [
+          "US_DRIVER_LICENSE",
+          1.0
+        ],
+        [
+          "DATE_TIME",
+          0.875
+        ],
+        [
+          "PERSON",
+          0.8441558441558441
+        ],
+        [
+          "ORGANIZATION",
+          0.75
+        ],
+        [
+          "URL",
+          0.6666666666666666
+        ],
+        [
+          "PHONE_NUMBER",
+          0.43902439024390244
+        ]
+      ],
+      "entity_precision": {
+        "EMAIL_ADDRESS": 1.0,
+        "PHONE_NUMBER": 0.9,
+        "ORGANIZATION": 0.6818181818181818,
+        "IP_ADDRESS": 1.0,
+        "US_SSN": 1.0,
+        "CREDIT_CARD": 1.0,
+        "LOCATION": 0.9577464788732394,
+        "PERSON": 0.9027777777777778,
+        "US_DRIVER_LICENSE": 1.0,
+        "URL": 1.0,
+        "DATE_TIME": 1.0
+      },
+      "n_tokens_scored": 360
+    },
+    "Davlan/xlm-roberta-large-ner-hrl": {
+      "ok": false,
+      "error": "create_analyzer exited with code=1"
+    },
+    "dbmdz/bert-large-cased-finetuned-conll03-german": {
+      "ok": false,
+      "error": "create_analyzer exited with code=1"
+    },
+    "Davlan/xlm-roberta-base-ner-hrl": {
+      "ok": false,
+      "error": "create_analyzer exited with code=1"
+    },
+    "Jean-Baptiste/roberta-large-ner-english": {
+      "ok": true,
+      "load_seconds": 1.0120066000090446,
+      "eval_seconds": 7.956369999999879,
+      "pii_precision": 0.9808429118773946,
+      "pii_recall": 0.6808510638297872,
+      "pii_f1": 0.803767660910518,
+      "pii_f2": 0.7252124645892352,
+      "pii_f": 0.7252124645892352,
+      "entity_recall_top10": [
+        [
+          "EMAIL_ADDRESS",
+          1.0
+        ],
+        [
+          "IP_ADDRESS",
+          1.0
+        ],
+        [
+          "US_SSN",
+          1.0
+        ],
+        [
+          "CREDIT_CARD",
+          1.0
+        ],
+        [
+          "US_DRIVER_LICENSE",
+          1.0
+        ],
+        [
+          "URL",
+          1.0
+        ],
+        [
+          "ORGANIZATION",
+          0.9130434782608695
+        ],
+        [
+          "DATE_TIME",
+          0.875
+        ],
+        [
+          "PERSON",
+          0.8441558441558441
+        ],
+        [
+          "LOCATION",
+          0.4639175257731959
+        ]
+      ],
+      "entity_precision": {
+        "EMAIL_ADDRESS": 1.0,
+        "PHONE_NUMBER": 0.9,
+        "ORGANIZATION": 0.5675675675675675,
+        "IP_ADDRESS": 1.0,
+        "US_SSN": 1.0,
+        "CREDIT_CARD": 1.0,
+        "LOCATION": 0.9782608695652174,
+        "PERSON": 0.9027777777777778,
+        "US_DRIVER_LICENSE": 1.0,
+        "URL": 1.0,
+        "DATE_TIME": 1.0
+      },
+      "n_tokens_scored": 376
+    },
+    "dslim/bert-base-NER": {
+      "ok": true,
+      "load_seconds": 0.8200675999978557,
+      "eval_seconds": 3.0799706000107108,
+      "pii_precision": 0.9529914529914529,
+      "pii_recall": 0.6211699164345403,
+      "pii_f1": 0.7521079258010118,
+      "pii_f2": 0.6676646706586826,
+      "pii_f": 0.6676646706586826,
+      "entity_recall_top10": [
+        [
+          "EMAIL_ADDRESS",
+          1.0
+        ],
+        [
+          "IP_ADDRESS",
+          1.0
+        ],
+        [
+          "US_SSN",
+          1.0
+        ],
+        [
+          "CREDIT_CARD",
+          1.0
+        ],
+        [
+          "US_DRIVER_LICENSE",
+          1.0
+        ],
+        [
+          "ORGANIZATION",
+          0.9545454545454546
+        ],
+        [
+          "DATE_TIME",
+          0.875
+        ],
+        [
+          "PERSON",
+          0.8311688311688312
+        ],
+        [
+          "PHONE_NUMBER",
+          0.43902439024390244
+        ],
+        [
+          "LOCATION",
+          0.2752808988764045
+        ]
+      ],
+      "entity_precision": {
+        "EMAIL_ADDRESS": 1.0,
+        "PHONE_NUMBER": 0.9,
+        "ORGANIZATION": 0.3888888888888889,
+        "IP_ADDRESS": 1.0,
+        "US_SSN": 1.0,
+        "CREDIT_CARD": 1.0,
+        "LOCATION": 0.9245283018867925,
+        "PERSON": 0.9142857142857143,
+        "US_DRIVER_LICENSE": 1.0,
+        "URL": NaN,
+        "DATE_TIME": 1.0
+      },
+      "n_tokens_scored": 359
+    }
+  }
+}

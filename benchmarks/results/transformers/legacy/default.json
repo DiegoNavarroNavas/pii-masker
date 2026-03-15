@@ -1,0 +1,633 @@
+{
+  "started_at_utc": "2026-03-13T00:52:43Z",
+  "runs_per_case": 2,
+  "cases": [
+    {
+      "case_id": "en_contact_profile",
+      "language": "en",
+      "expected": [
+        {
+          "text": "John Miller",
+          "entity_type": "PERSON"
+        },
+        {
+          "text": "Acme Corp",
+          "entity_type": "ORGANIZATION"
+        },
+        {
+          "text": "Sarah Connor",
+          "entity_type": "PERSON"
+        },
+        {
+          "text": "Berlin",
+          "entity_type": "LOCATION"
+        },
+        {
+          "text": "New York",
+          "entity_type": "LOCATION"
+        },
+        {
+          "text": "London",
+          "entity_type": "LOCATION"
+        }
+      ]
+    },
+    {
+      "case_id": "de_business_travel",
+      "language": "de",
+      "expected": [
+        {
+          "text": "Max Mustermann",
+          "entity_type": "PERSON"
+        },
+        {
+          "text": "Beispiel GmbH",
+          "entity_type": "ORGANIZATION"
+        },
+        {
+          "text": "Anna Schmidt",
+          "entity_type": "PERSON"
+        },
+        {
+          "text": "Berlin",
+          "entity_type": "LOCATION"
+        },
+        {
+          "text": "Munchen",
+          "entity_type": "LOCATION"
+        },
+        {
+          "text": "Paris",
+          "entity_type": "LOCATION"
+        }
+      ]
+    }
+  ],
+  "models": {
+    "Babelscape/wikineural-multilingual-ner": {
+      "ok": true,
+      "summary": {
+        "avg_load_seconds": 2.9831532499883906,
+        "avg_latency_mean_seconds": 0.08927065000170842,
+        "avg_precision_exact": 0.8571428571428571,
+        "avg_recall_exact": 1.0,
+        "avg_f1_exact": 0.923076923076923,
+        "avg_precision_partial": 0.8571428571428571,
+        "avg_recall_partial": 1.0,
+        "avg_f1_partial": 0.923076923076923
+      },
+      "results_by_case": [
+        {
+          "case_id": "en_contact_profile",
+          "language": "en",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 4.6216080999874976,
+          "latency_seconds": {
+            "runs": 2,
+            "first_run": 0.22267219999048393,
+            "mean": 0.1260319499997422,
+            "median": 0.1260319499997422,
+            "min": 0.029391700009000488,
+            "max": 0.22267219999048393
+          },
+          "score": {
+            "expected_count": 6,
+            "detected_count": 7,
+            "exact_matched_expected": 6,
+            "partial_matched_expected": 6,
+            "precision_exact": 0.8571428571428571,
+            "recall_exact": 1.0,
+            "f1_exact": 0.923076923076923,
+            "precision_partial": 0.8571428571428571,
+            "recall_partial": 1.0,
+            "f1_partial": 0.923076923076923
+          },
+          "entity_counts": {
+            "PERSON": 2,
+            "ORGANIZATION": 1,
+            "LOCATION": 3,
+            "DATE_TIME": 1
+          },
+          "detections": [
+            {
+              "start": 0,
+              "end": 11,
+              "entity_type": "PERSON",
+              "score": 0.9998466968536377,
+              "text": "John Miller"
+            },
+            {
+              "start": 17,
+              "end": 26,
+              "entity_type": "ORGANIZATION",
+              "score": 0.9969302415847778,
+              "text": "Acme Corp"
+            },
+            {
+              "start": 31,
+              "end": 43,
+              "entity_type": "PERSON",
+              "score": 0.9998807311058044,
+              "text": "Sarah Connor"
+            },
+            {
+              "start": 47,
+              "end": 53,
+              "entity_type": "LOCATION",
+              "score": 0.9992367029190063,
+              "text": "Berlin"
+            },
+            {
+              "start": 57,
+              "end": 67,
+              "entity_type": "DATE_TIME",
+              "score": 0.6,
+              "text": "2024-02-15"
+            },
+            {
+              "start": 87,
+              "end": 95,
+              "entity_type": "LOCATION",
+              "score": 0.9996330738067627,
+              "text": "New York"
+            },
+            {
+              "start": 116,
+              "end": 122,
+              "entity_type": "LOCATION",
+              "score": 0.9992005228996277,
+              "text": "London"
+            }
+          ]
+        },
+        {
+          "case_id": "de_business_travel",
+          "language": "de",
+          "spacy_model": "de_core_news_sm",
+          "load_seconds": 1.3446983999892836,
+          "latency_seconds": {
+            "runs": 2,
+            "first_run": 0.07365340000251308,
+            "mean": 0.052509350003674626,
+            "median": 0.052509350003674626,
+            "min": 0.03136530000483617,
+            "max": 0.07365340000251308
+          },
+          "score": {
+            "expected_count": 6,
+            "detected_count": 7,
+            "exact_matched_expected": 6,
+            "partial_matched_expected": 6,
+            "precision_exact": 0.8571428571428571,
+            "recall_exact": 1.0,
+            "f1_exact": 0.923076923076923,
+            "precision_partial": 0.8571428571428571,
+            "recall_partial": 1.0,
+            "f1_partial": 0.923076923076923
+          },
+          "entity_counts": {
+            "PERSON": 2,
+            "ORGANIZATION": 1,
+            "LOCATION": 3,
+            "DATE_TIME": 1
+          },
+          "detections": [
+            {
+              "start": 0,
+              "end": 14,
+              "entity_type": "PERSON",
+              "score": 0.999559223651886,
+              "text": "Max Mustermann"
+            },
+            {
+              "start": 19,
+              "end": 32,
+              "entity_type": "ORGANIZATION",
+              "score": 0.9448179006576538,
+              "text": "Beispiel GmbH"
+            },
+            {
+              "start": 38,
+              "end": 50,
+              "entity_type": "PERSON",
+              "score": 0.9996262788772583,
+              "text": "Anna Schmidt"
+            },
+            {
+              "start": 54,
+              "end": 60,
+              "entity_type": "LOCATION",
+              "score": 0.9997256398200989,
+              "text": "Berlin"
+            },
+            {
+              "start": 64,
+              "end": 74,
+              "entity_type": "DATE_TIME",
+              "score": 0.6,
+              "text": "15.02.2024"
+            },
+            {
+              "start": 100,
+              "end": 107,
+              "entity_type": "LOCATION",
+              "score": 0.9997943043708801,
+              "text": "Munchen"
+            },
+            {
+              "start": 112,
+              "end": 117,
+              "entity_type": "LOCATION",
+              "score": 0.9996904134750366,
+              "text": "Paris"
+            }
+          ]
+        }
+      ]
+    },
+    "Davlan/xlm-roberta-large-ner-hrl": {
+      "ok": false,
+      "error": "create_analyzer exited code=1; stderr_tail=mers NLP engine (0.3s)                    \r? Loading transformers NLP engine (0.4s)                    \r? Loading transformers NLP engine (0.5s)                    \r? Loading transformers NLP engine (0.6s)                    \r? Loading transformers NLP engine (0.7s)                    Error creating NLP engine: 'NoneType' object has no attribute 'endswith'\n\r? Loading transformers NLP engine (0.8s)",
+      "results_by_case": []
+    },
+    "dbmdz/bert-large-cased-finetuned-conll03-german": {
+      "ok": false,
+      "error": "create_analyzer exited code=1; stderr_tail=                 Error creating NLP engine: dbmdz/bert-large-cased-finetuned-conll03-german is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'\nIf this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`\n\r? Loading transformers NLP engine (0.4s)",
+      "results_by_case": []
+    },
+    "Davlan/xlm-roberta-base-ner-hrl": {
+      "ok": false,
+      "error": "create_analyzer exited code=1; stderr_tail=ers NLP engine (25.0s)                   \r? Loading transformers NLP engine (25.1s)                   \r? Loading transformers NLP engine (25.2s)                   \r? Loading transformers NLP engine (25.3s)                   \r? Loading transformers NLP engine (25.4s)                   Error creating NLP engine: 'NoneType' object has no attribute 'endswith'\n\r? Loading transformers NLP engine (25.5s)",
+      "results_by_case": []
+    },
+    "Jean-Baptiste/roberta-large-ner-english": {
+      "ok": true,
+      "summary": {
+        "avg_load_seconds": 15.594477950005967,
+        "avg_latency_mean_seconds": 0.1377989249995153,
+        "avg_precision_exact": 0.7142857142857143,
+        "avg_recall_exact": 0.8333333333333334,
+        "avg_f1_exact": 0.7692307692307692,
+        "avg_precision_partial": 0.8571428571428571,
+        "avg_recall_partial": 1.0,
+        "avg_f1_partial": 0.923076923076923
+      },
+      "results_by_case": [
+        {
+          "case_id": "en_contact_profile",
+          "language": "en",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 30.0372694000107,
+          "latency_seconds": {
+            "runs": 2,
+            "first_run": 0.18806210000184365,
+            "mean": 0.13385589999961667,
+            "median": 0.13385589999961667,
+            "min": 0.07964969999738969,
+            "max": 0.18806210000184365
+          },
+          "score": {
+            "expected_count": 6,
+            "detected_count": 7,
+            "exact_matched_expected": 5,
+            "partial_matched_expected": 6,
+            "precision_exact": 0.7142857142857143,
+            "recall_exact": 0.8333333333333334,
+            "f1_exact": 0.7692307692307692,
+            "precision_partial": 0.8571428571428571,
+            "recall_partial": 1.0,
+            "f1_partial": 0.923076923076923
+          },
+          "entity_counts": {
+            "PERSON": 2,
+            "ORGANIZATION": 1,
+            "LOCATION": 3,
+            "DATE_TIME": 1
+          },
+          "detections": [
+            {
+              "start": 0,
+              "end": 11,
+              "entity_type": "PERSON",
+              "score": 0.9996805191040039,
+              "text": "John Miller"
+            },
+            {
+              "start": 17,
+              "end": 26,
+              "entity_type": "ORGANIZATION",
+              "score": 0.9998376369476318,
+              "text": "Acme Corp"
+            },
+            {
+              "start": 31,
+              "end": 43,
+              "entity_type": "PERSON",
+              "score": 0.9992468357086182,
+              "text": "Sarah Connor"
+            },
+            {
+              "start": 47,
+              "end": 53,
+              "entity_type": "LOCATION",
+              "score": 0.9998923540115356,
+              "text": "Berlin"
+            },
+            {
+              "start": 57,
+              "end": 67,
+              "entity_type": "DATE_TIME",
+              "score": 0.6,
+              "text": "2024-02-15"
+            },
+            {
+              "start": 87,
+              "end": 95,
+              "entity_type": "LOCATION",
+              "score": 0.9998593926429749,
+              "text": "New York"
+            },
+            {
+              "start": 116,
+              "end": 123,
+              "entity_type": "LOCATION",
+              "score": 0.9997299313545227,
+              "text": "London."
+            }
+          ]
+        },
+        {
+          "case_id": "de_business_travel",
+          "language": "de",
+          "spacy_model": "de_core_news_sm",
+          "load_seconds": 1.151686500001233,
+          "latency_seconds": {
+            "runs": 2,
+            "first_run": 0.19233140000142157,
+            "mean": 0.14174194999941392,
+            "median": 0.14174194999941392,
+            "min": 0.09115249999740627,
+            "max": 0.19233140000142157
+          },
+          "score": {
+            "expected_count": 6,
+            "detected_count": 7,
+            "exact_matched_expected": 5,
+            "partial_matched_expected": 6,
+            "precision_exact": 0.7142857142857143,
+            "recall_exact": 0.8333333333333334,
+            "f1_exact": 0.7692307692307692,
+            "precision_partial": 0.8571428571428571,
+            "recall_partial": 1.0,
+            "f1_partial": 0.923076923076923
+          },
+          "entity_counts": {
+            "PERSON": 2,
+            "ORGANIZATION": 1,
+            "LOCATION": 3,
+            "DATE_TIME": 1
+          },
+          "detections": [
+            {
+              "start": 0,
+              "end": 14,
+              "entity_type": "PERSON",
+              "score": 0.9998976588249207,
+              "text": "Max Mustermann"
+            },
+            {
+              "start": 19,
+              "end": 32,
+              "entity_type": "ORGANIZATION",
+              "score": 0.9995855093002319,
+              "text": "Beispiel GmbH"
+            },
+            {
+              "start": 38,
+              "end": 50,
+              "entity_type": "PERSON",
+              "score": 0.9998283386230469,
+              "text": "Anna Schmidt"
+            },
+            {
+              "start": 54,
+              "end": 60,
+              "entity_type": "LOCATION",
+              "score": 0.9997096657752991,
+              "text": "Berlin"
+            },
+            {
+              "start": 64,
+              "end": 74,
+              "entity_type": "DATE_TIME",
+              "score": 0.6,
+              "text": "15.02.2024"
+            },
+            {
+              "start": 100,
+              "end": 107,
+              "entity_type": "LOCATION",
+              "score": 0.999480664730072,
+              "text": "Munchen"
+            },
+            {
+              "start": 112,
+              "end": 118,
+              "entity_type": "LOCATION",
+              "score": 0.9996179342269897,
+              "text": "Paris."
+            }
+          ]
+        }
+      ]
+    },
+    "dslim/bert-base-NER": {
+      "ok": true,
+      "summary": {
+        "avg_load_seconds": 6.2698347000041394,
+        "avg_latency_mean_seconds": 0.054567600000154926,
+        "avg_precision_exact": 0.7410714285714286,
+        "avg_recall_exact": 0.9166666666666667,
+        "avg_f1_exact": 0.8186813186813187,
+        "avg_precision_partial": 0.8035714285714286,
+        "avg_recall_partial": 1.0,
+        "avg_f1_partial": 0.8901098901098901
+      },
+      "results_by_case": [
+        {
+          "case_id": "en_contact_profile",
+          "language": "en",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 11.47204910000437,
+          "latency_seconds": {
+            "runs": 2,
+            "first_run": 0.07052670000120997,
+            "mean": 0.05221180000080494,
+            "median": 0.05221180000080494,
+            "min": 0.03389690000039991,
+            "max": 0.07052670000120997
+          },
+          "score": {
+            "expected_count": 6,
+            "detected_count": 7,
+            "exact_matched_expected": 6,
+            "partial_matched_expected": 6,
+            "precision_exact": 0.8571428571428571,
+            "recall_exact": 1.0,
+            "f1_exact": 0.923076923076923,
+            "precision_partial": 0.8571428571428571,
+            "recall_partial": 1.0,
+            "f1_partial": 0.923076923076923
+          },
+          "entity_counts": {
+            "PERSON": 2,
+            "ORGANIZATION": 1,
+            "LOCATION": 3,
+            "DATE_TIME": 1
+          },
+          "detections": [
+            {
+              "start": 0,
+              "end": 11,
+              "entity_type": "PERSON",
+              "score": 0.9997722506523132,
+              "text": "John Miller"
+            },
+            {
+              "start": 17,
+              "end": 26,
+              "entity_type": "ORGANIZATION",
+              "score": 0.9995042681694031,
+              "text": "Acme Corp"
+            },
+            {
+              "start": 31,
+              "end": 43,
+              "entity_type": "PERSON",
+              "score": 0.999661386013031,
+              "text": "Sarah Connor"
+            },
+            {
+              "start": 47,
+              "end": 53,
+              "entity_type": "LOCATION",
+              "score": 0.9996964931488037,
+              "text": "Berlin"
+            },
+            {
+              "start": 57,
+              "end": 67,
+              "entity_type": "DATE_TIME",
+              "score": 0.6,
+              "text": "2024-02-15"
+            },
+            {
+              "start": 87,
+              "end": 95,
+              "entity_type": "LOCATION",
+              "score": 0.9994551539421082,
+              "text": "New York"
+            },
+            {
+              "start": 116,
+              "end": 122,
+              "entity_type": "LOCATION",
+              "score": 0.9996391534805298,
+              "text": "London"
+            }
+          ]
+        },
+        {
+          "case_id": "de_business_travel",
+          "language": "de",
+          "spacy_model": "de_core_news_sm",
+          "load_seconds": 1.0676203000039095,
+          "latency_seconds": {
+            "runs": 2,
+            "first_run": 0.07610560000466648,
+            "mean": 0.05692339999950491,
+            "median": 0.05692339999950491,
+            "min": 0.03774119999434333,
+            "max": 0.07610560000466648
+          },
+          "score": {
+            "expected_count": 6,
+            "detected_count": 8,
+            "exact_matched_expected": 5,
+            "partial_matched_expected": 6,
+            "precision_exact": 0.625,
+            "recall_exact": 0.8333333333333334,
+            "f1_exact": 0.7142857142857143,
+            "precision_partial": 0.75,
+            "recall_partial": 1.0,
+            "f1_partial": 0.8571428571428571
+          },
+          "entity_counts": {
+            "PERSON": 2,
+            "ORGANIZATION": 2,
+            "LOCATION": 3,
+            "DATE_TIME": 1
+          },
+          "detections": [
+            {
+              "start": 0,
+              "end": 14,
+              "entity_type": "PERSON",
+              "score": 0.9985716342926025,
+              "text": "Max Mustermann"
+            },
+            {
+              "start": 15,
+              "end": 32,
+              "entity_type": "ORGANIZATION",
+              "score": 0.9480313658714294,
+              "text": "von Beispiel GmbH"
+            },
+            {
+              "start": 38,
+              "end": 50,
+              "entity_type": "PERSON",
+              "score": 0.9958401918411255,
+              "text": "Anna Schmidt"
+            },
+            {
+              "start": 54,
+              "end": 60,
+              "entity_type": "LOCATION",
+              "score": 0.9995154142379761,
+              "text": "Berlin"
+            },
+            {
+              "start": 64,
+              "end": 74,
+              "entity_type": "DATE_TIME",
+              "score": 0.6,
+              "text": "15.02.2024"
+            },
+            {
+              "start": 76,
+              "end": 82,
+              "entity_type": "ORGANIZATION",
+              "score": 0.5579056143760681,
+              "text": "Danach"
+            },
+            {
+              "start": 100,
+              "end": 107,
+              "entity_type": "LOCATION",
+              "score": 0.9887242913246155,
+              "text": "Munchen"
+            },
+            {
+              "start": 112,
+              "end": 117,
+              "entity_type": "LOCATION",
+              "score": 0.9981638789176941,
+              "text": "Paris"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

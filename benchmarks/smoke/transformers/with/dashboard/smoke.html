@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Benchmark Error Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #131a31;
+      --ink: #eef2ff;
+      --muted: #a8b0cc;
+      --grid: #2a3356;
+      --fn: #ff7f50;
+      --fp: #59c3c3;
+      --mis: #f4d35e;
+      --accent: #9ad1d4;
+    }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h1, h2, h3 { margin: 0 0 10px 0; }
+    .muted { color: var(--muted); }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--grid);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .stat {
+      background: #0f1530;
+      border: 1px solid var(--grid);
+      border-radius: 10px;
+      padding: 10px;
+    }
+    .stat .k { color: var(--muted); font-size: 12px; }
+    .stat .v { font-size: 22px; font-weight: 700; }
+    label { font-size: 13px; color: var(--muted); }
+    select, input[type=checkbox] {
+      margin-top: 6px;
+      font-size: 13px;
+    }
+    select {
+      width: 100%;
+      background: #0f1530;
+      color: var(--ink);
+      border: 1px solid var(--grid);
+      padding: 6px;
+      border-radius: 8px;
+    }
+    .toolbar {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 12px;
+      align-items: end;
+    }
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .table-wrap {
+      max-height: 360px;
+      overflow: auto;
+      border: 1px solid var(--grid);
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    th, td {
+      border: 1px solid var(--grid);
+      padding: 6px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      position: sticky;
+      top: 0;
+      background: #182147;
+      z-index: 1;
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--grid);
+      background: #0f1530;
+      font-size: 11px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <h1>Benchmark Error Dashboard</h1>
+  <p class="muted">Per-model false negatives, false positives, and misclassifications by category.</p>
+
+  <div class="card toolbar">
+    <div>
+      <label for="modelSelect">Model</label>
+      <select id="modelSelect"></select>
+    </div>
+    <div>
+      <label for="aliasMode">Label mode</label><br />
+      <select id="aliasMode">
+        <option value="strict">Strict labels</option>
+        <option value="alias">Alias-aware labels</option>
+      </select>
+    </div>
+    <div>
+      <span class="pill" id="enginePill">engine</span>
+    </div>
+  </div>
+
+  <div class="card row">
+    <div class="stat"><div class="k">False Negatives</div><div class="v" id="fnTotal">0</div></div>
+    <div class="stat"><div class="k">False Positives</div><div class="v" id="fpTotal">0</div></div>
+    <div class="stat"><div class="k">Misclassifications</div><div class="v" id="misTotal">0</div></div>
+  </div>
+
+  <div class="card grid2">
+    <div>
+      <h3>Errors By Category</h3>
+      <canvas id="categoryChart"></canvas>
+    </div>
+    <div>
+      <h3>Top Misclassification Pairs</h3>
+      <canvas id="pairChart"></canvas>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>False Negatives (Expected Missed)</h3>
+    <div class="table-wrap"><table id="fnTable"></table></div>
+  </div>
+  <div class="card">
+    <h3>False Positives (Unexpected Detections)</h3>
+    <div class="table-wrap"><table id="fpTable"></table></div>
+  </div>
+  <div class="card">
+    <h3>Misclassifications (Same Text, Wrong Label)</h3>
+    <div class="table-wrap"><table id="misTable"></table></div>
+  </div>
+
+  <script>
+    const DATA = {"generated_from": "benchmark_with_dashboard_smoke.json", "models": {"strict": {"Babelscape/wikineural-multilingual-ner": {"model": "Babelscape/wikineural-multilingual-ner", "engine": "transformers", "ok": true, "summary": {"avg_load_seconds": 5.268027599959169, "avg_latency_mean_seconds": 0.08589589999367793, "avg_precision_exact": 0.4444444444444444, "avg_recall_exact": 0.5, "avg_f1_exact": 0.38888888888888884, "avg_precision_partial": 0.4444444444444444, "avg_recall_partial": 0.5, "avg_f1_partial": 0.38888888888888884}, "totals": {"fn": 8, "fp": 2, "misclass": 0}, "counts": {"categories": ["ADDRESS", "LOCATION", "PERSON", "PHONE_NUMBER", "US_BANK_NUMBER", "US_DRIVER_LICENSE"], "fn": {"ADDRESS": 5, "LOCATION": 1, "PERSON": 1, "PHONE_NUMBER": 1, "US_BANK_NUMBER": 0, "US_DRIVER_LICENSE": 0}, "fp": {"ADDRESS": 0, "LOCATION": 0, "PERSON": 0, "PHONE_NUMBER": 0, "US_BANK_NUMBER": 1, "US_DRIVER_LICENSE": 1}, "misclass": {"ADDRESS": 0, "LOCATION": 0, "PERSON": 0, "PHONE_NUMBER": 0, "US_BANK_NUMBER": 0, "US_DRIVER_LICENSE": 0}, "pairs": {}}, "examples": {"fn": [{"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_0_template_36", "category": "PHONE_NUMBER", "text": "(96) 627-277", "expected_type": "PHONE_NUMBER"}, {"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_1_template_151", "category": "ADDRESS", "text": "77058", "expected_type": "ADDRESS"}, {"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_1_template_151", "category": "ADDRESS", "text": "nan", "expected_type": "ADDRESS"}, {"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_1_template_151", "category": "LOCATION", "text": "polapit tamar", "expected_type": "LOCATION"}, {"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_1_template_151", "category": "ADDRESS", "text": "suite 771", "expected_type": "ADDRESS"}, {"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_1_template_151", "category": "ADDRESS", "text": "8 wressle road", "expected_type": "ADDRESS"}, {"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_1_template_151", "category": "ADDRESS", "text": "23", "expected_type": "ADDRESS"}, {"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_1_template_151", "category": "PERSON", "text": "tracy sukhorukova", "expected_type": "PERSON"}], "fp": [{"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_2_template_0", "category": "US_BANK_NUMBER", "text": "5213591727586604", "predicted_type": "US_BANK_NUMBER", "score": 0.05}, {"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_2_template_0", "category": "US_DRIVER_LICENSE", "text": "5213591727586604", "predicted_type": "US_DRIVER_LICENSE", "score": 0.01}], "misclass": []}}}, "alias": {"Babelscape/wikineural-multilingual-ner": {"model": "Babelscape/wikineural-multilingual-ner", "engine": "transformers", "ok": true, "summary": {"avg_load_seconds": 5.268027599959169, "avg_latency_mean_seconds": 0.08589589999367793, "avg_precision_exact": 0.4444444444444444, "avg_recall_exact": 0.5, "avg_f1_exact": 0.38888888888888884, "avg_precision_partial": 0.4444444444444444, "avg_recall_partial": 0.5, "avg_f1_partial": 0.38888888888888884}, "totals": {"fn": 8, "fp": 2, "misclass": 0}, "counts": {"categories": ["ADDRESS", "LOCATION", "PERSON", "PHONE_NUMBER", "US_BANK_NUMBER", "US_DRIVER_LICENSE"], "fn": {"ADDRESS": 5, "LOCATION": 1, "PERSON": 1, "PHONE_NUMBER": 1, "US_BANK_NUMBER": 0, "US_DRIVER_LICENSE": 0}, "fp": {"ADDRESS": 0, "LOCATION": 0, "PERSON": 0, "PHONE_NUMBER": 0, "US_BANK_NUMBER": 1, "US_DRIVER_LICENSE": 1}, "misclass": {"ADDRESS": 0, "LOCATION": 0, "PERSON": 0, "PHONE_NUMBER": 0, "US_BANK_NUMBER": 0, "US_DRIVER_LICENSE": 0}, "pairs": {}}, "examples": {"fn": [{"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_0_template_36", "category": "PHONE_NUMBER", "text": "(96) 627-277", "expected_type": "PHONE_NUMBER"}, {"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_1_template_151", "category": "ADDRESS", "text": "77058", "expected_type": "ADDRESS"}, {"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_1_template_151", "category": "ADDRESS", "text": "nan", "expected_type": "ADDRESS"}, {"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_1_template_151", "category": "LOCATION", "text": "polapit tamar", "expected_type": "LOCATION"}, {"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_1_template_151", "category": "ADDRESS", "text": "suite 771", "expected_type": "ADDRESS"}, {"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_1_template_151", "category": "ADDRESS", "text": "8 wressle road", "expected_type": "ADDRESS"}, {"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_1_template_151", "category": "ADDRESS", "text": "23", "expected_type": "ADDRESS"}, {"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_1_template_151", "category": "PERSON", "text": "tracy sukhorukova", "expected_type": "PERSON"}], "fp": [{"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_2_template_0", "category": "US_BANK_NUMBER", "text": "5213591727586604", "predicted_type": "US_BANK_NUMBER", "score": 0.05}, {"model": "Babelscape/wikineural-multilingual-ner", "case_id": "row_2_template_0", "category": "US_DRIVER_LICENSE", "text": "5213591727586604", "predicted_type": "US_DRIVER_LICENSE", "score": 0.01}], "misclass": []}}}}};
+    const modelSelect = document.getElementById("modelSelect");
+    const aliasMode = document.getElementById("aliasMode");
+    const enginePill = document.getElementById("enginePill");
+
+    for (const modelName of Object.keys(DATA.models.strict)) {
+      const option = document.createElement("option");
+      option.value = modelName;
+      option.textContent = modelName;
+      modelSelect.appendChild(option);
+    }
+
+    let categoryChart = null;
+    let pairChart = null;
+
+    function escapeHtml(text) {
+      return String(text)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+
+    function renderTable(tableId, headers, rows) {
+      const table = document.getElementById(tableId);
+      let html = "<tr>" + headers.map(h => `<th>${escapeHtml(h)}</th>`).join("") + "</tr>";
+      for (const row of rows) {
+        html += "<tr>" + row.map(col => `<td>${escapeHtml(col)}</td>`).join("") + "</tr>";
+      }
+      table.innerHTML = html;
+    }
+
+    function getActiveModelData() {
+      const mode = aliasMode.value;
+      const model = modelSelect.value;
+      return DATA.models[mode][model];
+    }
+
+    function renderCharts(modelData) {
+      const categories = modelData.counts.categories;
+      const fn = categories.map(k => modelData.counts.fn[k] || 0);
+      const fp = categories.map(k => modelData.counts.fp[k] || 0);
+      const mis = categories.map(k => modelData.counts.misclass[k] || 0);
+
+      if (categoryChart) categoryChart.destroy();
+      categoryChart = new Chart(document.getElementById("categoryChart"), {
+        type: "bar",
+        data: {
+          labels: categories,
+          datasets: [
+            { label: "FN", data: fn, backgroundColor: "#ff7f50" },
+            { label: "FP", data: fp, backgroundColor: "#59c3c3" },
+            { label: "Misclass", data: mis, backgroundColor: "#f4d35e" },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { labels: { color: "#eef2ff" } } },
+          scales: {
+            x: { ticks: { color: "#eef2ff" }, grid: { color: "#2a3356" } },
+            y: { beginAtZero: true, ticks: { color: "#eef2ff" }, grid: { color: "#2a3356" } },
+          },
+        },
+      });
+
+      const pairs = Object.entries(modelData.counts.pairs).slice(0, 12);
+      if (pairChart) pairChart.destroy();
+      pairChart = new Chart(document.getElementById("pairChart"), {
+        type: "bar",
+        data: {
+          labels: pairs.map(p => p[0]),
+          datasets: [{ label: "Count", data: pairs.map(p => p[1]), backgroundColor: "#9ad1d4" }],
+        },
+        options: {
+          indexAxis: "y",
+          responsive: true,
+          plugins: { legend: { labels: { color: "#eef2ff" } } },
+          scales: {
+            x: { beginAtZero: true, ticks: { color: "#eef2ff" }, grid: { color: "#2a3356" } },
+            y: { ticks: { color: "#eef2ff" }, grid: { color: "#2a3356" } },
+          },
+        },
+      });
+    }
+
+    function render() {
+      const modelData = getActiveModelData();
+      document.getElementById("fnTotal").textContent = modelData.totals.fn;
+      document.getElementById("fpTotal").textContent = modelData.totals.fp;
+      document.getElementById("misTotal").textContent = modelData.totals.misclass;
+      enginePill.textContent = modelData.engine;
+
+      renderCharts(modelData);
+
+      renderTable(
+        "fnTable",
+        ["Category", "Case", "Expected text", "Expected label"],
+        modelData.examples.fn.map(x => [x.category, x.case_id, x.text, x.expected_type]),
+      );
+
+      renderTable(
+        "fpTable",
+        ["Category", "Case", "Detected text", "Predicted label", "Score"],
+        modelData.examples.fp.map(x => [x.category, x.case_id, x.text, x.predicted_type, x.score.toFixed(4)]),
+      );
+
+      renderTable(
+        "misTable",
+        ["Category", "Case", "Text", "Predicted", "Expected", "Pair", "Score"],
+        modelData.examples.misclass.map(x => [
+          x.category,
+          x.case_id,
+          x.text,
+          x.predicted_type,
+          x.expected_type,
+          x.pair,
+          x.score.toFixed(4),
+        ]),
+      );
+    }
+
+    modelSelect.addEventListener("change", render);
+    aliasMode.addEventListener("change", render);
+    render();
+  </script>
+</body>
+</html>

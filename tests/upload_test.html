@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PII Upload Test</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 24px;
+      }
+      h1 {
+        margin: 0 0 8px;
+      }
+      .hint {
+        color: #444;
+        margin-bottom: 12px;
+      }
+      input[type="file"] {
+        display: block;
+        margin: 8px 0 14px;
+      }
+      pre {
+        background: #f4f4f4;
+        padding: 10px;
+        border-radius: 6px;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PII Upload Test Page</h1>
+    <div class="hint">
+      Pick a file, then run the extension action. This page shows currently selected file metadata.
+    </div>
+
+    <input id="upload" type="file" />
+    <button id="download" type="button">Download Selected File</button>
+    <pre id="meta">No file selected.</pre>
+
+    <script>
+      const input = document.getElementById("upload");
+      const downloadButton = document.getElementById("download");
+      const meta = document.getElementById("meta");
+
+      function renderMeta() {
+        const file = input.files && input.files.length ? input.files[0] : null;
+        if (!file) {
+          meta.textContent = "No file selected.";
+          return;
+        }
+        meta.textContent = JSON.stringify(
+          {
+            name: file.name,
+            type: file.type,
+            size: file.size,
+            lastModified: file.lastModified,
+          },
+          null,
+          2
+        );
+      }
+
+      input.addEventListener("change", renderMeta);
+      downloadButton.addEventListener("click", () => {
+        const file = input.files && input.files.length ? input.files[0] : null;
+        if (!file) {
+          alert("No file selected.");
+          return;
+        }
+        const url = URL.createObjectURL(file);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = file.name;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+      });
+      renderMeta();
+    </script>
+  </body>
+</html>

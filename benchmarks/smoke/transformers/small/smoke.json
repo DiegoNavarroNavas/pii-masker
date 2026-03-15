@@ -1,0 +1,303 @@
+{
+  "started_at_utc": "2026-03-15T00:39:12Z",
+  "dataset_path": "C:\\Users\\franc\\Documents\\GitHub\\pii-masker\\presidio-research\\tests\\data\\generated_small.json",
+  "dataset_size": "small",
+  "subset": "all",
+  "split": {
+    "subset": "all",
+    "split_by": "template_id",
+    "validation_ratio": 0.2,
+    "split_seed": 42,
+    "selected_count": 100
+  },
+  "runs_per_case": 1,
+  "cases": [
+    {
+      "case_id": "row_0_template_36",
+      "language": "en",
+      "expected": [
+        {
+          "text": "Wijtze",
+          "entity_type": "PERSON"
+        },
+        {
+          "text": "(96) 627-277",
+          "entity_type": "PHONE_NUMBER"
+        }
+      ]
+    },
+    {
+      "case_id": "row_1_template_151",
+      "language": "en",
+      "expected": [
+        {
+          "text": "77058",
+          "entity_type": "ADDRESS"
+        },
+        {
+          "text": "nan",
+          "entity_type": "ADDRESS"
+        },
+        {
+          "text": "polapit tamar",
+          "entity_type": "LOCATION"
+        },
+        {
+          "text": "suite 771",
+          "entity_type": "ADDRESS"
+        },
+        {
+          "text": "8 wressle road",
+          "entity_type": "ADDRESS"
+        },
+        {
+          "text": "23",
+          "entity_type": "ADDRESS"
+        },
+        {
+          "text": "tracy sukhorukova",
+          "entity_type": "PERSON"
+        }
+      ]
+    },
+    {
+      "case_id": "row_2_template_0",
+      "language": "en",
+      "expected": [
+        {
+          "text": "5213591727586604",
+          "entity_type": "CREDIT_CARD"
+        }
+      ]
+    },
+    {
+      "case_id": "row_3_template_166",
+      "language": "en",
+      "expected": []
+    },
+    {
+      "case_id": "row_4_template_174",
+      "language": "en",
+      "expected": [
+        {
+          "text": "Blaketown",
+          "entity_type": "LOCATION"
+        }
+      ]
+    }
+  ],
+  "models": {
+    "Babelscape/wikineural-multilingual-ner": {
+      "ok": true,
+      "engine": "transformers",
+      "summary": {
+        "avg_load_seconds": 5.250371699978132,
+        "avg_latency_mean_seconds": 0.06157775999745354,
+        "avg_precision_exact": 0.6666666666666667,
+        "avg_recall_exact": 0.7,
+        "avg_f1_exact": 0.6333333333333333,
+        "avg_precision_partial": 0.6666666666666667,
+        "avg_recall_partial": 0.7,
+        "avg_f1_partial": 0.6333333333333333
+      },
+      "results_by_case": [
+        {
+          "case_id": "row_0_template_36",
+          "language": "en",
+          "engine": "transformers",
+          "model_id": "Babelscape/wikineural-multilingual-ner",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 5.250371699978132,
+          "latency_seconds": {
+            "runs": 1,
+            "first_run": 0.19280620000790805,
+            "mean": 0.19280620000790805,
+            "median": 0.19280620000790805,
+            "min": 0.19280620000790805,
+            "max": 0.19280620000790805
+          },
+          "score": {
+            "expected_count": 2,
+            "detected_count": 1,
+            "exact_matched_expected": 1,
+            "partial_matched_expected": 1,
+            "precision_exact": 1.0,
+            "recall_exact": 0.5,
+            "f1_exact": 0.6666666666666666,
+            "precision_partial": 1.0,
+            "recall_partial": 0.5,
+            "f1_partial": 0.6666666666666666
+          },
+          "entity_counts": {
+            "PERSON": 1
+          },
+          "detections": [
+            {
+              "start": 83,
+              "end": 89,
+              "entity_type": "PERSON",
+              "score": 0.8912878632545471,
+              "text": "Wijtze"
+            }
+          ]
+        },
+        {
+          "case_id": "row_1_template_151",
+          "language": "en",
+          "engine": "transformers",
+          "model_id": "Babelscape/wikineural-multilingual-ner",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 5.250371699978132,
+          "latency_seconds": {
+            "runs": 1,
+            "first_run": 0.026977699948474765,
+            "mean": 0.026977699948474765,
+            "median": 0.026977699948474765,
+            "min": 0.026977699948474765,
+            "max": 0.026977699948474765
+          },
+          "score": {
+            "expected_count": 7,
+            "detected_count": 0,
+            "exact_matched_expected": 0,
+            "partial_matched_expected": 0,
+            "precision_exact": 0.0,
+            "recall_exact": 0.0,
+            "f1_exact": 0.0,
+            "precision_partial": 0.0,
+            "recall_partial": 0.0,
+            "f1_partial": 0.0
+          },
+          "entity_counts": {},
+          "detections": []
+        },
+        {
+          "case_id": "row_2_template_0",
+          "language": "en",
+          "engine": "transformers",
+          "model_id": "Babelscape/wikineural-multilingual-ner",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 5.250371699978132,
+          "latency_seconds": {
+            "runs": 1,
+            "first_run": 0.029754100018180907,
+            "mean": 0.029754100018180907,
+            "median": 0.029754100018180907,
+            "min": 0.029754100018180907,
+            "max": 0.029754100018180907
+          },
+          "score": {
+            "expected_count": 1,
+            "detected_count": 3,
+            "exact_matched_expected": 1,
+            "partial_matched_expected": 1,
+            "precision_exact": 0.3333333333333333,
+            "recall_exact": 1.0,
+            "f1_exact": 0.5,
+            "precision_partial": 0.3333333333333333,
+            "recall_partial": 1.0,
+            "f1_partial": 0.5
+          },
+          "entity_counts": {
+            "CREDIT_CARD": 1,
+            "US_BANK_NUMBER": 1,
+            "US_DRIVER_LICENSE": 1
+          },
+          "detections": [
+            {
+              "start": 38,
+              "end": 54,
+              "entity_type": "CREDIT_CARD",
+              "score": 1.0,
+              "text": "5213591727586604"
+            },
+            {
+              "start": 38,
+              "end": 54,
+              "entity_type": "US_BANK_NUMBER",
+              "score": 0.05,
+              "text": "5213591727586604"
+            },
+            {
+              "start": 38,
+              "end": 54,
+              "entity_type": "US_DRIVER_LICENSE",
+              "score": 0.01,
+              "text": "5213591727586604"
+            }
+          ]
+        },
+        {
+          "case_id": "row_3_template_166",
+          "language": "en",
+          "engine": "transformers",
+          "model_id": "Babelscape/wikineural-multilingual-ner",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 5.250371699978132,
+          "latency_seconds": {
+            "runs": 1,
+            "first_run": 0.025043000001460314,
+            "mean": 0.025043000001460314,
+            "median": 0.025043000001460314,
+            "min": 0.025043000001460314,
+            "max": 0.025043000001460314
+          },
+          "score": {
+            "expected_count": 0,
+            "detected_count": 0,
+            "exact_matched_expected": 0,
+            "partial_matched_expected": 0,
+            "precision_exact": 1.0,
+            "recall_exact": 1.0,
+            "f1_exact": 1.0,
+            "precision_partial": 1.0,
+            "recall_partial": 1.0,
+            "f1_partial": 1.0
+          },
+          "entity_counts": {},
+          "detections": []
+        },
+        {
+          "case_id": "row_4_template_174",
+          "language": "en",
+          "engine": "transformers",
+          "model_id": "Babelscape/wikineural-multilingual-ner",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 5.250371699978132,
+          "latency_seconds": {
+            "runs": 1,
+            "first_run": 0.03330780001124367,
+            "mean": 0.03330780001124367,
+            "median": 0.03330780001124367,
+            "min": 0.03330780001124367,
+            "max": 0.03330780001124367
+          },
+          "score": {
+            "expected_count": 1,
+            "detected_count": 1,
+            "exact_matched_expected": 1,
+            "partial_matched_expected": 1,
+            "precision_exact": 1.0,
+            "recall_exact": 1.0,
+            "f1_exact": 1.0,
+            "precision_partial": 1.0,
+            "recall_partial": 1.0,
+            "f1_partial": 1.0
+          },
+          "entity_counts": {
+            "LOCATION": 1
+          },
+          "detections": [
+            {
+              "start": 113,
+              "end": 122,
+              "entity_type": "LOCATION",
+              "score": 0.9993501305580139,
+              "text": "Blaketown"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

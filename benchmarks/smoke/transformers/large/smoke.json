@@ -1,0 +1,335 @@
+{
+  "started_at_utc": "2026-03-15T00:39:26Z",
+  "dataset_path": "C:\\Users\\franc\\Documents\\GitHub\\pii-masker\\presidio-research\\tests\\data\\generated_large.json",
+  "dataset_size": "large",
+  "subset": "all",
+  "split": {
+    "subset": "all",
+    "split_by": "template_id",
+    "validation_ratio": 0.2,
+    "split_seed": 42,
+    "selected_count": 2109
+  },
+  "runs_per_case": 1,
+  "cases": [
+    {
+      "case_id": "row_0_template_100",
+      "language": "en",
+      "expected": [
+        {
+          "text": "Judy",
+          "entity_type": "PERSON"
+        },
+        {
+          "text": "Tamara",
+          "entity_type": "PERSON"
+        },
+        {
+          "text": "Austria",
+          "entity_type": "LOCATION"
+        }
+      ]
+    },
+    {
+      "case_id": "row_1_template_178",
+      "language": "en",
+      "expected": [
+        {
+          "text": "bahrain",
+          "entity_type": "LOCATION"
+        },
+        {
+          "text": "bauru",
+          "entity_type": "LOCATION"
+        }
+      ]
+    },
+    {
+      "case_id": "row_2_template_40",
+      "language": "en",
+      "expected": [
+        {
+          "text": "Donald van der Voet",
+          "entity_type": "PERSON"
+        }
+      ]
+    },
+    {
+      "case_id": "row_3_template_27",
+      "language": "en",
+      "expected": [
+        {
+          "text": "92 Eusebio Dávila 57\nΠΥΡΓΑ\n, LA\n 56139",
+          "entity_type": "ADDRESS"
+        }
+      ]
+    },
+    {
+      "case_id": "row_4_template_120",
+      "language": "en",
+      "expected": [
+        {
+          "text": "Phillips",
+          "entity_type": "PERSON"
+        },
+        {
+          "text": "Lee",
+          "entity_type": "PERSON"
+        },
+        {
+          "text": "Kovalev",
+          "entity_type": "PERSON"
+        },
+        {
+          "text": "Smith Ltd.",
+          "entity_type": "ORGANIZATION"
+        }
+      ]
+    }
+  ],
+  "models": {
+    "Babelscape/wikineural-multilingual-ner": {
+      "ok": true,
+      "engine": "transformers",
+      "summary": {
+        "avg_load_seconds": 5.450676099979319,
+        "avg_latency_mean_seconds": 0.06820794000523164,
+        "avg_precision_exact": 0.6,
+        "avg_recall_exact": 0.6,
+        "avg_f1_exact": 0.6,
+        "avg_precision_partial": 0.6,
+        "avg_recall_partial": 0.6,
+        "avg_f1_partial": 0.6
+      },
+      "results_by_case": [
+        {
+          "case_id": "row_0_template_100",
+          "language": "en",
+          "engine": "transformers",
+          "model_id": "Babelscape/wikineural-multilingual-ner",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 5.450676099979319,
+          "latency_seconds": {
+            "runs": 1,
+            "first_run": 0.19806000002427027,
+            "mean": 0.19806000002427027,
+            "median": 0.19806000002427027,
+            "min": 0.19806000002427027,
+            "max": 0.19806000002427027
+          },
+          "score": {
+            "expected_count": 3,
+            "detected_count": 3,
+            "exact_matched_expected": 3,
+            "partial_matched_expected": 3,
+            "precision_exact": 1.0,
+            "recall_exact": 1.0,
+            "f1_exact": 1.0,
+            "precision_partial": 1.0,
+            "recall_partial": 1.0,
+            "f1_partial": 1.0
+          },
+          "entity_counts": {
+            "LOCATION": 1,
+            "PERSON": 2
+          },
+          "detections": [
+            {
+              "start": 84,
+              "end": 91,
+              "entity_type": "LOCATION",
+              "score": 0.9992458820343018,
+              "text": "Austria"
+            },
+            {
+              "start": 97,
+              "end": 103,
+              "entity_type": "PERSON",
+              "score": 0.7103555798530579,
+              "text": "Tamara"
+            },
+            {
+              "start": 144,
+              "end": 148,
+              "entity_type": "PERSON",
+              "score": 0.4127660393714905,
+              "text": "Judy"
+            }
+          ]
+        },
+        {
+          "case_id": "row_1_template_178",
+          "language": "en",
+          "engine": "transformers",
+          "model_id": "Babelscape/wikineural-multilingual-ner",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 5.450676099979319,
+          "latency_seconds": {
+            "runs": 1,
+            "first_run": 0.022875100024975836,
+            "mean": 0.022875100024975836,
+            "median": 0.022875100024975836,
+            "min": 0.022875100024975836,
+            "max": 0.022875100024975836
+          },
+          "score": {
+            "expected_count": 2,
+            "detected_count": 0,
+            "exact_matched_expected": 0,
+            "partial_matched_expected": 0,
+            "precision_exact": 0.0,
+            "recall_exact": 0.0,
+            "f1_exact": 0.0,
+            "precision_partial": 0.0,
+            "recall_partial": 0.0,
+            "f1_partial": 0.0
+          },
+          "entity_counts": {},
+          "detections": []
+        },
+        {
+          "case_id": "row_2_template_40",
+          "language": "en",
+          "engine": "transformers",
+          "model_id": "Babelscape/wikineural-multilingual-ner",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 5.450676099979319,
+          "latency_seconds": {
+            "runs": 1,
+            "first_run": 0.02853290003258735,
+            "mean": 0.02853290003258735,
+            "median": 0.02853290003258735,
+            "min": 0.02853290003258735,
+            "max": 0.02853290003258735
+          },
+          "score": {
+            "expected_count": 1,
+            "detected_count": 1,
+            "exact_matched_expected": 1,
+            "partial_matched_expected": 1,
+            "precision_exact": 1.0,
+            "recall_exact": 1.0,
+            "f1_exact": 1.0,
+            "precision_partial": 1.0,
+            "recall_partial": 1.0,
+            "f1_partial": 1.0
+          },
+          "entity_counts": {
+            "PERSON": 1
+          },
+          "detections": [
+            {
+              "start": 58,
+              "end": 77,
+              "entity_type": "PERSON",
+              "score": 0.9997016787528992,
+              "text": "Donald van der Voet"
+            }
+          ]
+        },
+        {
+          "case_id": "row_3_template_27",
+          "language": "en",
+          "engine": "transformers",
+          "model_id": "Babelscape/wikineural-multilingual-ner",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 5.450676099979319,
+          "latency_seconds": {
+            "runs": 1,
+            "first_run": 0.04771329998038709,
+            "mean": 0.04771329998038709,
+            "median": 0.04771329998038709,
+            "min": 0.04771329998038709,
+            "max": 0.04771329998038709
+          },
+          "score": {
+            "expected_count": 1,
+            "detected_count": 1,
+            "exact_matched_expected": 0,
+            "partial_matched_expected": 0,
+            "precision_exact": 0.0,
+            "recall_exact": 0.0,
+            "f1_exact": 0.0,
+            "precision_partial": 0.0,
+            "recall_partial": 0.0,
+            "f1_partial": 0.0
+          },
+          "entity_counts": {
+            "PERSON": 1
+          },
+          "detections": [
+            {
+              "start": 33,
+              "end": 47,
+              "entity_type": "PERSON",
+              "score": 0.9942577481269836,
+              "text": "Eusebio Dávila"
+            }
+          ]
+        },
+        {
+          "case_id": "row_4_template_120",
+          "language": "en",
+          "engine": "transformers",
+          "model_id": "Babelscape/wikineural-multilingual-ner",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 5.450676099979319,
+          "latency_seconds": {
+            "runs": 1,
+            "first_run": 0.0438583999639377,
+            "mean": 0.0438583999639377,
+            "median": 0.0438583999639377,
+            "min": 0.0438583999639377,
+            "max": 0.0438583999639377
+          },
+          "score": {
+            "expected_count": 4,
+            "detected_count": 4,
+            "exact_matched_expected": 4,
+            "partial_matched_expected": 4,
+            "precision_exact": 1.0,
+            "recall_exact": 1.0,
+            "f1_exact": 1.0,
+            "precision_partial": 1.0,
+            "recall_partial": 1.0,
+            "f1_partial": 1.0
+          },
+          "entity_counts": {
+            "ORGANIZATION": 1,
+            "PERSON": 3
+          },
+          "detections": [
+            {
+              "start": 0,
+              "end": 10,
+              "entity_type": "ORGANIZATION",
+              "score": 0.8448713421821594,
+              "text": "Smith Ltd."
+            },
+            {
+              "start": 48,
+              "end": 55,
+              "entity_type": "PERSON",
+              "score": 0.9957464337348938,
+              "text": "Kovalev"
+            },
+            {
+              "start": 57,
+              "end": 60,
+              "entity_type": "PERSON",
+              "score": 0.9929732084274292,
+              "text": "Lee"
+            },
+            {
+              "start": 65,
+              "end": 73,
+              "entity_type": "PERSON",
+              "score": 0.981306254863739,
+              "text": "Phillips"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

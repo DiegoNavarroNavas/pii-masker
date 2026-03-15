@@ -1,0 +1,193 @@
+{
+  "started_at_utc": "2026-03-15T00:48:04Z",
+  "dataset_path": "C:\\Users\\franc\\Documents\\GitHub\\pii-masker\\presidio-research\\tests\\data\\generated_large.json",
+  "dataset": "large",
+  "runs_per_case": 1,
+  "cases": [
+    {
+      "case_id": "row_0_template_100",
+      "language": "en",
+      "expected": [
+        {
+          "text": "Judy",
+          "entity_type": "PERSON"
+        },
+        {
+          "text": "Tamara",
+          "entity_type": "PERSON"
+        },
+        {
+          "text": "Austria",
+          "entity_type": "LOCATION"
+        }
+      ]
+    },
+    {
+      "case_id": "row_1_template_178",
+      "language": "en",
+      "expected": [
+        {
+          "text": "bahrain",
+          "entity_type": "LOCATION"
+        },
+        {
+          "text": "bauru",
+          "entity_type": "LOCATION"
+        }
+      ]
+    },
+    {
+      "case_id": "row_2_template_40",
+      "language": "en",
+      "expected": [
+        {
+          "text": "Donald van der Voet",
+          "entity_type": "PERSON"
+        }
+      ]
+    }
+  ],
+  "models": {
+    "Babelscape/wikineural-multilingual-ner": {
+      "ok": true,
+      "engine": "transformers",
+      "summary": {
+        "avg_load_seconds": 5.4507738999673165,
+        "avg_latency_mean_seconds": 0.08191310001226763,
+        "avg_precision_exact": 0.6666666666666666,
+        "avg_recall_exact": 0.6666666666666666,
+        "avg_f1_exact": 0.6666666666666666,
+        "avg_precision_partial": 0.6666666666666666,
+        "avg_recall_partial": 0.6666666666666666,
+        "avg_f1_partial": 0.6666666666666666
+      },
+      "results_by_case": [
+        {
+          "case_id": "row_0_template_100",
+          "language": "en",
+          "engine": "transformers",
+          "model_id": "Babelscape/wikineural-multilingual-ner",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 5.4507738999673165,
+          "latency_seconds": {
+            "runs": 1,
+            "first_run": 0.20580330002121627,
+            "mean": 0.20580330002121627,
+            "median": 0.20580330002121627,
+            "min": 0.20580330002121627,
+            "max": 0.20580330002121627
+          },
+          "score": {
+            "expected_count": 3,
+            "detected_count": 3,
+            "exact_matched_expected": 3,
+            "partial_matched_expected": 3,
+            "precision_exact": 1.0,
+            "recall_exact": 1.0,
+            "f1_exact": 1.0,
+            "precision_partial": 1.0,
+            "recall_partial": 1.0,
+            "f1_partial": 1.0
+          },
+          "entity_counts": {
+            "LOCATION": 1,
+            "PERSON": 2
+          },
+          "detections": [
+            {
+              "start": 84,
+              "end": 91,
+              "entity_type": "LOCATION",
+              "score": 0.9992458820343018,
+              "text": "Austria"
+            },
+            {
+              "start": 97,
+              "end": 103,
+              "entity_type": "PERSON",
+              "score": 0.7103555798530579,
+              "text": "Tamara"
+            },
+            {
+              "start": 144,
+              "end": 148,
+              "entity_type": "PERSON",
+              "score": 0.4127660393714905,
+              "text": "Judy"
+            }
+          ]
+        },
+        {
+          "case_id": "row_1_template_178",
+          "language": "en",
+          "engine": "transformers",
+          "model_id": "Babelscape/wikineural-multilingual-ner",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 5.4507738999673165,
+          "latency_seconds": {
+            "runs": 1,
+            "first_run": 0.01897650002501905,
+            "mean": 0.01897650002501905,
+            "median": 0.01897650002501905,
+            "min": 0.01897650002501905,
+            "max": 0.01897650002501905
+          },
+          "score": {
+            "expected_count": 2,
+            "detected_count": 0,
+            "exact_matched_expected": 0,
+            "partial_matched_expected": 0,
+            "precision_exact": 0.0,
+            "recall_exact": 0.0,
+            "f1_exact": 0.0,
+            "precision_partial": 0.0,
+            "recall_partial": 0.0,
+            "f1_partial": 0.0
+          },
+          "entity_counts": {},
+          "detections": []
+        },
+        {
+          "case_id": "row_2_template_40",
+          "language": "en",
+          "engine": "transformers",
+          "model_id": "Babelscape/wikineural-multilingual-ner",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 5.4507738999673165,
+          "latency_seconds": {
+            "runs": 1,
+            "first_run": 0.020959499990567565,
+            "mean": 0.020959499990567565,
+            "median": 0.020959499990567565,
+            "min": 0.020959499990567565,
+            "max": 0.020959499990567565
+          },
+          "score": {
+            "expected_count": 1,
+            "detected_count": 1,
+            "exact_matched_expected": 1,
+            "partial_matched_expected": 1,
+            "precision_exact": 1.0,
+            "recall_exact": 1.0,
+            "f1_exact": 1.0,
+            "precision_partial": 1.0,
+            "recall_partial": 1.0,
+            "f1_partial": 1.0
+          },
+          "entity_counts": {
+            "PERSON": 1
+          },
+          "detections": [
+            {
+              "start": 58,
+              "end": 77,
+              "entity_type": "PERSON",
+              "score": 0.9997016787528992,
+              "text": "Donald van der Voet"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

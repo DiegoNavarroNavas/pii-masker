@@ -1,0 +1,210 @@
+{
+  "started_at_utc": "2026-03-15T00:47:50Z",
+  "dataset_path": "C:\\Users\\franc\\Documents\\GitHub\\pii-masker\\presidio-research\\tests\\data\\generated_small.json",
+  "dataset": "small",
+  "runs_per_case": 1,
+  "cases": [
+    {
+      "case_id": "row_0_template_36",
+      "language": "en",
+      "expected": [
+        {
+          "text": "Wijtze",
+          "entity_type": "PERSON"
+        },
+        {
+          "text": "(96) 627-277",
+          "entity_type": "PHONE_NUMBER"
+        }
+      ]
+    },
+    {
+      "case_id": "row_1_template_151",
+      "language": "en",
+      "expected": [
+        {
+          "text": "77058",
+          "entity_type": "ADDRESS"
+        },
+        {
+          "text": "nan",
+          "entity_type": "ADDRESS"
+        },
+        {
+          "text": "polapit tamar",
+          "entity_type": "LOCATION"
+        },
+        {
+          "text": "suite 771",
+          "entity_type": "ADDRESS"
+        },
+        {
+          "text": "8 wressle road",
+          "entity_type": "ADDRESS"
+        },
+        {
+          "text": "23",
+          "entity_type": "ADDRESS"
+        },
+        {
+          "text": "tracy sukhorukova",
+          "entity_type": "PERSON"
+        }
+      ]
+    },
+    {
+      "case_id": "row_2_template_0",
+      "language": "en",
+      "expected": [
+        {
+          "text": "5213591727586604",
+          "entity_type": "CREDIT_CARD"
+        }
+      ]
+    }
+  ],
+  "models": {
+    "Babelscape/wikineural-multilingual-ner": {
+      "ok": true,
+      "engine": "transformers",
+      "summary": {
+        "avg_load_seconds": 5.468710499990266,
+        "avg_latency_mean_seconds": 0.09177093332012494,
+        "avg_precision_exact": 0.4444444444444444,
+        "avg_recall_exact": 0.5,
+        "avg_f1_exact": 0.38888888888888884,
+        "avg_precision_partial": 0.4444444444444444,
+        "avg_recall_partial": 0.5,
+        "avg_f1_partial": 0.38888888888888884
+      },
+      "results_by_case": [
+        {
+          "case_id": "row_0_template_36",
+          "language": "en",
+          "engine": "transformers",
+          "model_id": "Babelscape/wikineural-multilingual-ner",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 5.468710499990266,
+          "latency_seconds": {
+            "runs": 1,
+            "first_run": 0.2217207999783568,
+            "mean": 0.2217207999783568,
+            "median": 0.2217207999783568,
+            "min": 0.2217207999783568,
+            "max": 0.2217207999783568
+          },
+          "score": {
+            "expected_count": 2,
+            "detected_count": 1,
+            "exact_matched_expected": 1,
+            "partial_matched_expected": 1,
+            "precision_exact": 1.0,
+            "recall_exact": 0.5,
+            "f1_exact": 0.6666666666666666,
+            "precision_partial": 1.0,
+            "recall_partial": 0.5,
+            "f1_partial": 0.6666666666666666
+          },
+          "entity_counts": {
+            "PERSON": 1
+          },
+          "detections": [
+            {
+              "start": 83,
+              "end": 89,
+              "entity_type": "PERSON",
+              "score": 0.8912878632545471,
+              "text": "Wijtze"
+            }
+          ]
+        },
+        {
+          "case_id": "row_1_template_151",
+          "language": "en",
+          "engine": "transformers",
+          "model_id": "Babelscape/wikineural-multilingual-ner",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 5.468710499990266,
+          "latency_seconds": {
+            "runs": 1,
+            "first_run": 0.024380099959671497,
+            "mean": 0.024380099959671497,
+            "median": 0.024380099959671497,
+            "min": 0.024380099959671497,
+            "max": 0.024380099959671497
+          },
+          "score": {
+            "expected_count": 7,
+            "detected_count": 0,
+            "exact_matched_expected": 0,
+            "partial_matched_expected": 0,
+            "precision_exact": 0.0,
+            "recall_exact": 0.0,
+            "f1_exact": 0.0,
+            "precision_partial": 0.0,
+            "recall_partial": 0.0,
+            "f1_partial": 0.0
+          },
+          "entity_counts": {},
+          "detections": []
+        },
+        {
+          "case_id": "row_2_template_0",
+          "language": "en",
+          "engine": "transformers",
+          "model_id": "Babelscape/wikineural-multilingual-ner",
+          "spacy_model": "en_core_web_sm",
+          "load_seconds": 5.468710499990266,
+          "latency_seconds": {
+            "runs": 1,
+            "first_run": 0.029211900022346526,
+            "mean": 0.029211900022346526,
+            "median": 0.029211900022346526,
+            "min": 0.029211900022346526,
+            "max": 0.029211900022346526
+          },
+          "score": {
+            "expected_count": 1,
+            "detected_count": 3,
+            "exact_matched_expected": 1,
+            "partial_matched_expected": 1,
+            "precision_exact": 0.3333333333333333,
+            "recall_exact": 1.0,
+            "f1_exact": 0.5,
+            "precision_partial": 0.3333333333333333,
+            "recall_partial": 1.0,
+            "f1_partial": 0.5
+          },
+          "entity_counts": {
+            "CREDIT_CARD": 1,
+            "US_BANK_NUMBER": 1,
+            "US_DRIVER_LICENSE": 1
+          },
+          "detections": [
+            {
+              "start": 38,
+              "end": 54,
+              "entity_type": "CREDIT_CARD",
+              "score": 1.0,
+              "text": "5213591727586604"
+            },
+            {
+              "start": 38,
+              "end": 54,
+              "entity_type": "US_BANK_NUMBER",
+              "score": 0.05,
+              "text": "5213591727586604"
+            },
+            {
+              "start": 38,
+              "end": 54,
+              "entity_type": "US_DRIVER_LICENSE",
+              "score": 0.01,
+              "text": "5213591727586604"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

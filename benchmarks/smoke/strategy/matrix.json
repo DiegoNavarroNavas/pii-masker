@@ -1,0 +1,1354 @@
+{
+  "dataset_path": "C:\\Users\\franc\\Documents\\GitHub\\pii-masker\\presidio-research\\tests\\data\\generated_small.json",
+  "sample_count": 100,
+  "models": {
+    "Babelscape/wikineural-multilingual-ner": {
+      "default": {
+        "ok": true,
+        "aggregation_strategy": "default",
+        "load_seconds": 1.2123137999878963,
+        "eval_seconds": 3.4410564999998314,
+        "pii_precision": 0.9821428571428571,
+        "pii_recall": 0.6111111111111112,
+        "pii_f1": 0.7534246575342465,
+        "pii_f2": 0.6610576923076924,
+        "pii_f": 0.6610576923076924,
+        "entity_recall_top10": [
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_SSN",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "DATE_TIME",
+            0.875
+          ],
+          [
+            "PERSON",
+            0.8441558441558441
+          ],
+          [
+            "ORGANIZATION",
+            0.75
+          ],
+          [
+            "URL",
+            0.6666666666666666
+          ],
+          [
+            "PHONE_NUMBER",
+            0.43902439024390244
+          ]
+        ],
+        "entity_precision": {
+          "URL": 1.0,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.9027777777777778,
+          "PHONE_NUMBER": 0.9,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 1.0,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.6818181818181818,
+          "LOCATION": 0.9577464788732394,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 360
+      },
+      "simple": {
+        "ok": true,
+        "aggregation_strategy": "simple",
+        "load_seconds": 1.1329913999943528,
+        "eval_seconds": 3.251451799995266,
+        "pii_precision": 0.9823008849557522,
+        "pii_recall": 0.6166666666666667,
+        "pii_f1": 0.7576791808873721,
+        "pii_f2": 0.666266506602641,
+        "pii_f": 0.666266506602641,
+        "entity_recall_top10": [
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_SSN",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "DATE_TIME",
+            0.875
+          ],
+          [
+            "PERSON",
+            0.8701298701298701
+          ],
+          [
+            "URL",
+            0.6666666666666666
+          ],
+          [
+            "ORGANIZATION",
+            0.6
+          ],
+          [
+            "PHONE_NUMBER",
+            0.43902439024390244
+          ]
+        ],
+        "entity_precision": {
+          "URL": 1.0,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.9054054054054054,
+          "PHONE_NUMBER": 0.9,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 1.0,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.631578947368421,
+          "LOCATION": 0.9594594594594594,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 360
+      },
+      "first": {
+        "ok": true,
+        "aggregation_strategy": "first",
+        "load_seconds": 1.1288694000104442,
+        "eval_seconds": 3.321588499995414,
+        "pii_precision": 0.9824561403508771,
+        "pii_recall": 0.6222222222222222,
+        "pii_f1": 0.7619047619047619,
+        "pii_f2": 0.671462829736211,
+        "pii_f": 0.671462829736211,
+        "entity_recall_top10": [
+          [
+            "URL",
+            1.0
+          ],
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_SSN",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "DATE_TIME",
+            0.875
+          ],
+          [
+            "PERSON",
+            0.8701298701298701
+          ],
+          [
+            "ORGANIZATION",
+            0.7
+          ],
+          [
+            "PHONE_NUMBER",
+            0.43902439024390244
+          ]
+        ],
+        "entity_precision": {
+          "URL": 1.0,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.9054054054054054,
+          "PHONE_NUMBER": 0.9,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 1.0,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.7,
+          "LOCATION": 0.9594594594594594,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 360
+      },
+      "average": {
+        "ok": true,
+        "aggregation_strategy": "average",
+        "load_seconds": 1.1081621999910567,
+        "eval_seconds": 3.3250365999992937,
+        "pii_precision": 0.9819819819819819,
+        "pii_recall": 0.6055555555555555,
+        "pii_f1": 0.7491408934707904,
+        "pii_f2": 0.6558363417569194,
+        "pii_f": 0.6558363417569194,
+        "entity_recall_top10": [
+          [
+            "URL",
+            1.0
+          ],
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_SSN",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "DATE_TIME",
+            0.875
+          ],
+          [
+            "PERSON",
+            0.8441558441558441
+          ],
+          [
+            "ORGANIZATION",
+            0.75
+          ],
+          [
+            "PHONE_NUMBER",
+            0.43902439024390244
+          ]
+        ],
+        "entity_precision": {
+          "URL": 1.0,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.9027777777777778,
+          "PHONE_NUMBER": 0.9,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 1.0,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.7142857142857143,
+          "LOCATION": 0.9565217391304348,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 360
+      },
+      "max": {
+        "ok": true,
+        "aggregation_strategy": "max",
+        "load_seconds": 1.116236600006232,
+        "eval_seconds": 3.2064264999935403,
+        "pii_precision": 0.9821428571428571,
+        "pii_recall": 0.6111111111111112,
+        "pii_f1": 0.7534246575342465,
+        "pii_f2": 0.6610576923076924,
+        "pii_f": 0.6610576923076924,
+        "entity_recall_top10": [
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_SSN",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "DATE_TIME",
+            0.875
+          ],
+          [
+            "PERSON",
+            0.8441558441558441
+          ],
+          [
+            "ORGANIZATION",
+            0.75
+          ],
+          [
+            "URL",
+            0.6666666666666666
+          ],
+          [
+            "PHONE_NUMBER",
+            0.43902439024390244
+          ]
+        ],
+        "entity_precision": {
+          "URL": 1.0,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.9027777777777778,
+          "PHONE_NUMBER": 0.9,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 1.0,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.6818181818181818,
+          "LOCATION": 0.9577464788732394,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 360
+      }
+    },
+    "Jean-Baptiste/roberta-large-ner-english": {
+      "default": {
+        "ok": true,
+        "aggregation_strategy": "default",
+        "load_seconds": 0.991745199993602,
+        "eval_seconds": 8.55439760000445,
+        "pii_precision": 0.9808429118773946,
+        "pii_recall": 0.6808510638297872,
+        "pii_f1": 0.803767660910518,
+        "pii_f2": 0.7252124645892352,
+        "pii_f": 0.7252124645892352,
+        "entity_recall_top10": [
+          [
+            "URL",
+            1.0
+          ],
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_SSN",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "ORGANIZATION",
+            0.9130434782608695
+          ],
+          [
+            "DATE_TIME",
+            0.875
+          ],
+          [
+            "PERSON",
+            0.8441558441558441
+          ],
+          [
+            "LOCATION",
+            0.4639175257731959
+          ]
+        ],
+        "entity_precision": {
+          "URL": 1.0,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.9027777777777778,
+          "PHONE_NUMBER": 0.9,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 1.0,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.5675675675675675,
+          "LOCATION": 0.9782608695652174,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 376
+      },
+      "simple": {
+        "ok": true,
+        "aggregation_strategy": "simple",
+        "load_seconds": 1.1847888999909628,
+        "eval_seconds": 8.546608400007244,
+        "pii_precision": 0.9644128113879004,
+        "pii_recall": 0.728494623655914,
+        "pii_f1": 0.8300153139356816,
+        "pii_f2": 0.765969474279254,
+        "pii_f": 0.765969474279254,
+        "entity_recall_top10": [
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "ORGANIZATION",
+            1.0
+          ],
+          [
+            "US_SSN",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "PERSON",
+            0.974025974025974
+          ],
+          [
+            "DATE_TIME",
+            0.875
+          ],
+          [
+            "LOCATION",
+            0.5052631578947369
+          ],
+          [
+            "PHONE_NUMBER",
+            0.43902439024390244
+          ]
+        ],
+        "entity_precision": {
+          "URL": 1.0,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.9036144578313253,
+          "PHONE_NUMBER": 0.9,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 1.0,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.5609756097560976,
+          "LOCATION": 0.9696969696969697,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 372
+      },
+      "first": {
+        "ok": true,
+        "aggregation_strategy": "first",
+        "load_seconds": 1.074335900004371,
+        "eval_seconds": 8.669619799999055,
+        "pii_precision": 0.9714285714285714,
+        "pii_recall": 0.7253333333333334,
+        "pii_f1": 0.8305343511450383,
+        "pii_f2": 0.7640449438202246,
+        "pii_f": 0.7640449438202246,
+        "entity_recall_top10": [
+          [
+            "URL",
+            1.0
+          ],
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_SSN",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "PERSON",
+            0.9743589743589743
+          ],
+          [
+            "ORGANIZATION",
+            0.9130434782608695
+          ],
+          [
+            "DATE_TIME",
+            0.875
+          ],
+          [
+            "LOCATION",
+            0.4739583333333333
+          ]
+        ],
+        "entity_precision": {
+          "URL": 1.0,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.8837209302325582,
+          "PHONE_NUMBER": 0.9,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 1.0,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.5384615384615384,
+          "LOCATION": 0.9578947368421052,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 375
+      },
+      "average": {
+        "ok": true,
+        "aggregation_strategy": "average",
+        "load_seconds": 0.979393000001437,
+        "eval_seconds": 9.099374099998386,
+        "pii_precision": 0.9789473684210527,
+        "pii_recall": 0.7303664921465969,
+        "pii_f1": 0.8365817091454274,
+        "pii_f2": 0.7694429123000552,
+        "pii_f": 0.7694429123000552,
+        "entity_recall_top10": [
+          [
+            "URL",
+            1.0
+          ],
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_SSN",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "PERSON",
+            0.9487179487179487
+          ],
+          [
+            "DATE_TIME",
+            0.875
+          ],
+          [
+            "ORGANIZATION",
+            0.8636363636363636
+          ],
+          [
+            "LOCATION",
+            0.525
+          ]
+        ],
+        "entity_precision": {
+          "URL": 1.0,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.9024390243902439,
+          "PHONE_NUMBER": 0.9,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 1.0,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.5277777777777778,
+          "LOCATION": 0.9813084112149533,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 382
+      },
+      "max": {
+        "ok": true,
+        "aggregation_strategy": "max",
+        "load_seconds": 0.9866087999980664,
+        "eval_seconds": 8.473884999999427,
+        "pii_precision": 0.9808429118773946,
+        "pii_recall": 0.6808510638297872,
+        "pii_f1": 0.803767660910518,
+        "pii_f2": 0.7252124645892352,
+        "pii_f": 0.7252124645892352,
+        "entity_recall_top10": [
+          [
+            "URL",
+            1.0
+          ],
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_SSN",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "ORGANIZATION",
+            0.9130434782608695
+          ],
+          [
+            "DATE_TIME",
+            0.875
+          ],
+          [
+            "PERSON",
+            0.8441558441558441
+          ],
+          [
+            "LOCATION",
+            0.4639175257731959
+          ]
+        ],
+        "entity_precision": {
+          "URL": 1.0,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.9027777777777778,
+          "PHONE_NUMBER": 0.9,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 1.0,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.5675675675675675,
+          "LOCATION": 0.9782608695652174,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 376
+      }
+    },
+    "dslim/bert-base-NER-uncased": {
+      "default": {
+        "ok": true,
+        "aggregation_strategy": "default",
+        "load_seconds": 0.8439643000019714,
+        "eval_seconds": 3.081354599999031,
+        "pii_precision": 0.9589552238805971,
+        "pii_recall": 0.7021857923497268,
+        "pii_f1": 0.8107255520504731,
+        "pii_f2": 0.7419168591224018,
+        "pii_f": 0.7419168591224018,
+        "entity_recall_top10": [
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_SSN",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "PERSON",
+            0.9090909090909091
+          ],
+          [
+            "DATE_TIME",
+            0.875
+          ],
+          [
+            "ORGANIZATION",
+            0.8260869565217391
+          ],
+          [
+            "PHONE_NUMBER",
+            0.43902439024390244
+          ],
+          [
+            "LOCATION",
+            0.43478260869565216
+          ]
+        ],
+        "entity_precision": {
+          "URL": NaN,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.8860759493670886,
+          "PHONE_NUMBER": 0.9,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 1.0,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.3877551020408163,
+          "LOCATION": 0.963855421686747,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 366
+      },
+      "simple": {
+        "ok": true,
+        "aggregation_strategy": "simple",
+        "load_seconds": 0.8551605999964522,
+        "eval_seconds": 3.1405795000027865,
+        "pii_precision": 0.9586466165413534,
+        "pii_recall": 0.6986301369863014,
+        "pii_f1": 0.8082408874801901,
+        "pii_f2": 0.738702201622248,
+        "pii_f": 0.738702201622248,
+        "entity_recall_top10": [
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_SSN",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "PERSON",
+            0.9090909090909091
+          ],
+          [
+            "DATE_TIME",
+            0.875
+          ],
+          [
+            "ORGANIZATION",
+            0.782608695652174
+          ],
+          [
+            "PHONE_NUMBER",
+            0.43902439024390244
+          ],
+          [
+            "LOCATION",
+            0.4207650273224044
+          ]
+        ],
+        "entity_precision": {
+          "URL": NaN,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.8641975308641975,
+          "PHONE_NUMBER": 0.9,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 1.0,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.375,
+          "LOCATION": 0.9625,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 365
+      },
+      "first": {
+        "ok": true,
+        "aggregation_strategy": "first",
+        "load_seconds": 0.8539831999951275,
+        "eval_seconds": 3.0546031999983825,
+        "pii_precision": 0.9592592592592593,
+        "pii_recall": 0.7076502732240437,
+        "pii_f1": 0.8144654088050314,
+        "pii_f2": 0.7468281430219146,
+        "pii_f": 0.7468281430219146,
+        "entity_recall_top10": [
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_SSN",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "PERSON",
+            0.9090909090909091
+          ],
+          [
+            "DATE_TIME",
+            0.875
+          ],
+          [
+            "ORGANIZATION",
+            0.8260869565217391
+          ],
+          [
+            "PHONE_NUMBER",
+            0.43902439024390244
+          ],
+          [
+            "LOCATION",
+            0.43478260869565216
+          ]
+        ],
+        "entity_precision": {
+          "URL": NaN,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.8641975308641975,
+          "PHONE_NUMBER": 0.9,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 1.0,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.3877551020408163,
+          "LOCATION": 0.963855421686747,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 366
+      },
+      "average": {
+        "ok": true,
+        "aggregation_strategy": "average",
+        "load_seconds": 0.8410382000001846,
+        "eval_seconds": 3.2456740000052378,
+        "pii_precision": 0.9589552238805971,
+        "pii_recall": 0.7021857923497268,
+        "pii_f1": 0.8107255520504731,
+        "pii_f2": 0.7419168591224018,
+        "pii_f": 0.7419168591224018,
+        "entity_recall_top10": [
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_SSN",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "PERSON",
+            0.9090909090909091
+          ],
+          [
+            "DATE_TIME",
+            0.875
+          ],
+          [
+            "ORGANIZATION",
+            0.8260869565217391
+          ],
+          [
+            "PHONE_NUMBER",
+            0.43902439024390244
+          ],
+          [
+            "LOCATION",
+            0.43478260869565216
+          ]
+        ],
+        "entity_precision": {
+          "URL": 1.0,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.8860759493670886,
+          "PHONE_NUMBER": 0.9,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 1.0,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.3958333333333333,
+          "LOCATION": 0.963855421686747,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 366
+      },
+      "max": {
+        "ok": true,
+        "aggregation_strategy": "max",
+        "load_seconds": 1.0554854999936651,
+        "eval_seconds": 2.926172300009057,
+        "pii_precision": 0.9589552238805971,
+        "pii_recall": 0.7021857923497268,
+        "pii_f1": 0.8107255520504731,
+        "pii_f2": 0.7419168591224018,
+        "pii_f": 0.7419168591224018,
+        "entity_recall_top10": [
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_SSN",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "PERSON",
+            0.9090909090909091
+          ],
+          [
+            "DATE_TIME",
+            0.875
+          ],
+          [
+            "ORGANIZATION",
+            0.8260869565217391
+          ],
+          [
+            "PHONE_NUMBER",
+            0.43902439024390244
+          ],
+          [
+            "LOCATION",
+            0.43478260869565216
+          ]
+        ],
+        "entity_precision": {
+          "URL": NaN,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.8860759493670886,
+          "PHONE_NUMBER": 0.9,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 1.0,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.3877551020408163,
+          "LOCATION": 0.963855421686747,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 366
+      }
+    },
+    "StanfordAIMI/stanford-deidentifier-base": {
+      "default": {
+        "ok": true,
+        "aggregation_strategy": "default",
+        "load_seconds": 1.2822789000056218,
+        "eval_seconds": 2.9178053999930853,
+        "pii_precision": 0.9196428571428571,
+        "pii_recall": 0.8583333333333333,
+        "pii_f1": 0.8879310344827586,
+        "pii_f2": 0.8699324324324325,
+        "pii_f": 0.8699324324324325,
+        "entity_recall_top10": [
+          [
+            "URL",
+            1.0
+          ],
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "DATE_TIME",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "PHONE_NUMBER",
+            0.9591836734693877
+          ],
+          [
+            "PERSON",
+            0.8961038961038961
+          ],
+          [
+            "US_SSN",
+            0.7692307692307693
+          ],
+          [
+            "ORGANIZATION",
+            0.15789473684210525
+          ]
+        ],
+        "entity_precision": {
+          "URL": 1.0,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.5609756097560976,
+          "PHONE_NUMBER": 0.7014925373134329,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 0.42105263157894735,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.036585365853658534,
+          "LOCATION": 1.0,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 360
+      },
+      "simple": {
+        "ok": true,
+        "aggregation_strategy": "simple",
+        "load_seconds": 1.1320553999976255,
+        "eval_seconds": 2.940414199998486,
+        "pii_precision": 0.913946587537092,
+        "pii_recall": 0.853185595567867,
+        "pii_f1": 0.8825214899713467,
+        "pii_f2": 0.8646827624929815,
+        "pii_f": 0.8646827624929815,
+        "entity_recall_top10": [
+          [
+            "URL",
+            1.0
+          ],
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "DATE_TIME",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "PHONE_NUMBER",
+            0.96
+          ],
+          [
+            "PERSON",
+            0.8961038961038961
+          ],
+          [
+            "US_SSN",
+            0.7692307692307693
+          ],
+          [
+            "ORGANIZATION",
+            0.15789473684210525
+          ]
+        ],
+        "entity_precision": {
+          "URL": 1.0,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.552,
+          "PHONE_NUMBER": 0.7272727272727273,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 0.42105263157894735,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.0375,
+          "LOCATION": 1.0,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 361
+      },
+      "first": {
+        "ok": true,
+        "aggregation_strategy": "first",
+        "load_seconds": 1.1631953000032809,
+        "eval_seconds": 2.9067034000036074,
+        "pii_precision": 0.9196428571428571,
+        "pii_recall": 0.8583333333333333,
+        "pii_f1": 0.8879310344827586,
+        "pii_f2": 0.8699324324324325,
+        "pii_f": 0.8699324324324325,
+        "entity_recall_top10": [
+          [
+            "URL",
+            1.0
+          ],
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "DATE_TIME",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "PHONE_NUMBER",
+            0.9591836734693877
+          ],
+          [
+            "PERSON",
+            0.8961038961038961
+          ],
+          [
+            "US_SSN",
+            0.7692307692307693
+          ],
+          [
+            "ORGANIZATION",
+            0.15789473684210525
+          ]
+        ],
+        "entity_precision": {
+          "URL": 1.0,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.5564516129032258,
+          "PHONE_NUMBER": 0.7230769230769231,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 0.42105263157894735,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.037037037037037035,
+          "LOCATION": 1.0,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 360
+      },
+      "average": {
+        "ok": true,
+        "aggregation_strategy": "average",
+        "load_seconds": 1.1497174999967683,
+        "eval_seconds": 3.0247422000102233,
+        "pii_precision": 0.9196428571428571,
+        "pii_recall": 0.8583333333333333,
+        "pii_f1": 0.8879310344827586,
+        "pii_f2": 0.8699324324324325,
+        "pii_f": 0.8699324324324325,
+        "entity_recall_top10": [
+          [
+            "URL",
+            1.0
+          ],
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "DATE_TIME",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "PHONE_NUMBER",
+            0.9591836734693877
+          ],
+          [
+            "PERSON",
+            0.8961038961038961
+          ],
+          [
+            "US_SSN",
+            0.7692307692307693
+          ],
+          [
+            "ORGANIZATION",
+            0.15789473684210525
+          ]
+        ],
+        "entity_precision": {
+          "URL": 1.0,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.5564516129032258,
+          "PHONE_NUMBER": 0.7014925373134329,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 0.42105263157894735,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.037037037037037035,
+          "LOCATION": 1.0,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 360
+      },
+      "max": {
+        "ok": true,
+        "aggregation_strategy": "max",
+        "load_seconds": 1.169692399998894,
+        "eval_seconds": 2.918942699994659,
+        "pii_precision": 0.9196428571428571,
+        "pii_recall": 0.8583333333333333,
+        "pii_f1": 0.8879310344827586,
+        "pii_f2": 0.8699324324324325,
+        "pii_f": 0.8699324324324325,
+        "entity_recall_top10": [
+          [
+            "URL",
+            1.0
+          ],
+          [
+            "CREDIT_CARD",
+            1.0
+          ],
+          [
+            "EMAIL_ADDRESS",
+            1.0
+          ],
+          [
+            "DATE_TIME",
+            1.0
+          ],
+          [
+            "IP_ADDRESS",
+            1.0
+          ],
+          [
+            "US_DRIVER_LICENSE",
+            1.0
+          ],
+          [
+            "PHONE_NUMBER",
+            0.9591836734693877
+          ],
+          [
+            "PERSON",
+            0.8961038961038961
+          ],
+          [
+            "US_SSN",
+            0.7692307692307693
+          ],
+          [
+            "ORGANIZATION",
+            0.15789473684210525
+          ]
+        ],
+        "entity_precision": {
+          "URL": 1.0,
+          "CREDIT_CARD": 1.0,
+          "PERSON": 0.5609756097560976,
+          "PHONE_NUMBER": 0.7014925373134329,
+          "EMAIL_ADDRESS": 1.0,
+          "DATE_TIME": 0.42105263157894735,
+          "IP_ADDRESS": 1.0,
+          "ORGANIZATION": 0.036585365853658534,
+          "LOCATION": 1.0,
+          "US_SSN": 1.0,
+          "US_DRIVER_LICENSE": 1.0
+        },
+        "n_tokens_scored": 360
+      }
+    }
+  }
+}
