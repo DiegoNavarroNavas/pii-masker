@@ -1,0 +1,3287 @@
+[
+  {
+    "template": "Als {{FIRSTNAME}} {{LASTNAME}} ({{DOB}}) am {{DATE}} bei der {{COMPANY}} in {{CITY}} vorstellig wurde, präsentierte er seine {{IDENTITY_CARD_NUMBER}} sowie den {{PASSPORT_NUMBER}}. Sein Konto {{IBAN}} wurde mit der Kreditkarte {{CREDIT_CARD}} (gültig bis {{CREDIT_CARD_EXPIRATION}}, CVV: {{CVV}}) verknüpft. Die Adresse {{STREET}} {{POSTCODE}} {{CITY}} wurde im System hinterlegt, erreichbar unter {{EMAIL_ADDRESS}} oder {{PHONE}}.",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "narrative",
+    "estimated_word_count": 48,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{NAME}}, {{AGE}}-jährige Patientin mit {{BLOOD_TYPE}}, wurde am {{DATE}} um {{TIME}} in die {{MEDICAL_FACILITY}} eingeliefert. Ihre {{HEALTHCARE_NUMBER}} wurde registriert. Dr. {{MEDICAL_PROFESSIONAL}} (Lizenz {{MEDICAL_LICENSE}}) diagnostizierte {{CONDITION}} und verschrieb {{DRUG}} {{DOSE}}. Erreichbar unter {{EMAIL_ADDRESS}}.",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "narrative",
+    "estimated_word_count": 30,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Die Versicherungsnehmerin {{FIRSTNAME}} {{LASTNAME}}, geboren {{DOB}}, wohnhaft {{LOCATION_ADDRESS}}, hat am {{DATE}} einen Schaden gemeldet. Ihre {{POLICY_NUMBER}} ist mit dem Fahrzeug {{VEHICLE_ID}} verknüpft. Die Schadensumme beträgt {{MONEY}} {{CURRENCY}}. Erreichbar unter {{PHONE}} oder {{EMAIL_ADDRESS}}. Fahrerlaubnis: {{DRIVER_LICENSE}}.",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "narrative",
+    "estimated_word_count": 34,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Mitarbeiter {{NAME}} ({{SSN}}, {{TAX_ID_NUMBER}}) trat am {{DATE}} als {{JOB_TITLE}} bei {{COMPANY}} in {{CITY}} an. Gehalt: {{MONEY}} {{CURRENCY}} jährlich. Bankverbindung: {{IBAN}}. Privat: {{EMAIL_ADDRESS}}, {{PHONE}}. Adresse: {{STREET}} {{POSTCODE}}. Nationalität: {{NATIONALITY}}, Familienstand: {{MARITAL_STATUS}}.",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "narrative",
+    "estimated_word_count": 30,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{FIRSTNAME}} {{LASTNAME}}, âgé de {{AGE}} ans et de nationalité {{NATIONALITY}}, a déménagé à {{CITY}} le {{DATE}}. Sa carte d'identité {{IDENTITY_CARD_NUMBER}} et son permis {{DRIVER_LICENSE}} ont été vérifiés. Contact: {{EMAIL_ADDRESS}}, téléphone {{PHONE}}. Adresse: {{STREET}}, {{POSTCODE}} {{CITY}}. Numéro AVS: {{SSN}}.",
+    "locale": "fr_CH",
+    "domain": "government",
+    "structure_type": "narrative",
+    "estimated_word_count": 38,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Il signor {{NAME}}, nato il {{DOB}}, ha presentato domanda a {{CITY}} il {{DATE}}. Documenti: {{PASSPORT_NUMBER}}, {{IDENTITY_CARD_NUMBER}}. Contatto: {{EMAIL_ADDRESS}}, {{PHONE}}. Indirizzo: {{STREET}}, {{POSTCODE}} {{CITY}}, {{CANTON}}. Codice fiscale: {{TAX_IDENTIFICATION_NUMBER}}. Professione: {{JOB_TITLE}} presso {{COMPANY}}.",
+    "locale": "it_CH",
+    "domain": "government",
+    "structure_type": "narrative",
+    "estimated_word_count": 31,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Bestellung {{REFERENCE_NUMBER}}: Kunde {{NAME}} ({{CUSTOMER_ID}}) kaufte am {{DATE}} um {{TIME}} für {{MONEY}} {{CURRENCY}}. Lieferadresse: {{STREET}} {{POSTCODE}} {{CITY}}. Zahlung mit {{CREDIT_CARD}} ({{CVV}}). Benachrichtigung: {{EMAIL_ADDRESS}}. IP: {{IP_ADDRESS}}.",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "narrative",
+    "estimated_word_count": 25,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Im Verfahren gegen {{NAME}} ({{DOB}}, {{NATIONALITY}}) wurde festgestellt, dass der Beschuldigte am {{DATE}} in {{CITY}} seine {{IDENTITY_CARD_NUMBER}} verwendete. Wohnhaft: {{LOCATION_ADDRESS}}. Erreicht unter {{PHONE}}. Anwalt: {{FIRSTNAME}} {{LASTNAME}}, {{EMAIL_ADDRESS}}. Aktenzeichen: {{REFERENCE_NUMBER}}.",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "narrative",
+    "estimated_word_count": 29,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "contact",
+      "gdpr_sensitive",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{NAME}}, {{GENDER}}, {{SEXUAL_ORIENTATION}}, Mitglied der {{RELIGION}} und {{ETHNICITY}}, engagiert sich bei {{POLITICAL_AFFILIATION}} und {{TRADE_UNION}}. Genetischer Marker: {{GENETIC_DATA}}. Registriert unter {{EMAIL_ADDRESS}}. Wohnort: {{CITY}}, {{CANTON}}. Geboren: {{DOB}}.",
+    "locale": "de_CH",
+    "domain": "non-profit",
+    "structure_type": "narrative",
+    "estimated_word_count": 25,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "contact",
+      "gdpr_sensitive",
+      "location",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "Reisebuchung {{REFERENCE_NUMBER}} für {{NAME}} ({{PASSPORT_NUMBER}}). Flug am {{DATE}}, Sitz {{VEHICLE_ID}}. Hotel {{COMPANY}}, {{STREET}}, {{CITY}}. Notfallkontakt: {{PHONE}} / {{EMAIL_ADDRESS}}. Kreditkarte {{CREDIT_CARD}} belastet mit {{MONEY}} {{CURRENCY}}.",
+    "locale": "de_CH",
+    "domain": "travel",
+    "structure_type": "narrative",
+    "estimated_word_count": 24,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Vertragsabschluss am {{DATE}}: {{NAME}} ({{DOB}}, {{SSN}}) schloss einen Vertrag bei {{COMPANY}} ab. Rufnummer: {{PHONE}}. Gerät: {{DEVICE_IDENTIFIER}}. MAC-Adresse: {{MAC_ADDRESS}}. IP zugewiesen: {{IP_ADDRESS}}. Rechnung an {{EMAIL_ADDRESS}}. Adresse: {{STREET}} {{POSTCODE}}.",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "structure_type": "narrative",
+    "estimated_word_count": 27,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Mietvertrag {{REFERENCE_NUMBER}}: Mieter {{NAME}} ({{DOB}}) übernimmt die Wohnung {{STREET}} {{POSTCODE}} {{CITY}} ab {{DATE}}. Miete: {{MONEY}} {{CURRENCY}}/Monat. Kaution auf {{IBAN}}. Erreichbar unter {{EMAIL_ADDRESS}} oder {{PHONE}}. Arbeitgeber: {{COMPANY}} als {{JOB_TITLE}}.",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "structure_type": "narrative",
+    "estimated_word_count": 26,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Studienteilnehmer {{CODE}}: {{FIRSTNAME}} {{LASTNAME}}, {{AGE}}, {{GENDER}}, {{BLOOD_TYPE}}, mit {{MEDICAL_CONDITION}}. Einverständnis unterzeichnet {{DATE}}. Kontakt {{EMAIL_ADDRESS}}. Biometrie: {{BIOMETRIC_IDENTIFIER}}. Genetische Probe: {{GENETIC_DATA}}. Gesundheitsnummer: {{HEALTHCARE_NUMBER}}.",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "narrative",
+    "estimated_word_count": 21,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "contact",
+      "gdpr_sensitive",
+      "healthcare",
+      "hipaa",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Stromanschluss für {{NAME}} ({{SSN}}) an {{LOCATION_ADDRESS}} aktiviert am {{DATE}}. Vertragsnummer {{CUSTOMER_ID}}. Zähler-ID: {{DEVICE_IDENTIFIER}}. Abbuchung von {{IBAN}}. Rechnung an {{EMAIL_ADDRESS}}. Telefonisch: {{PHONE}}. Zahlungsbetrag: {{MONEY}} {{CURRENCY}}.",
+    "locale": "de_CH",
+    "domain": "utilities",
+    "structure_type": "narrative",
+    "estimated_word_count": 24,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Immatrikulation {{DATE}}: Student {{NAME}} ({{DOB}}, {{NATIONALITY}}) für {{COURSE}} an {{ORGANIZATION}}. Studentenausweis {{IDENTITY_CARD_NUMBER}}. Email {{EMAIL_ADDRESS}}. Telefon {{PHONE}}. Adresse: {{STREET}} {{POSTCODE}} {{CITY}}. Notfallkontakt: {{PHONE}} ({{NAME}}).",
+    "locale": "de_CH",
+    "domain": "education",
+    "structure_type": "narrative",
+    "estimated_word_count": 23,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "contact",
+      "gdpr_sensitive",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Madame {{LASTNAME}}, née le {{DOB}}, a consulté le Dr {{MEDICAL_PROFESSIONAL}} le {{DATE}} à {{CITY}}. Numéro de sécurité sociale: {{SSN}}. Téléphone: {{PHONE}}. Email: {{EMAIL_ADDRESS}}. Adresse: {{STREET}}, {{POSTCODE}}. Groupe sanguin: {{BLOOD_TYPE}}. Traitement: {{DRUG}} {{DOSE}}.",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "narrative",
+    "estimated_word_count": 32,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "healthcare",
+      "location",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Il dottor {{MEDICAL_PROFESSIONAL}} ha visitato {{NAME}} ({{HEALTHCARE_NUMBER}}) il {{DATE}}. Condizione: {{CONDITION}}. Prescrizione: {{DRUG}} {{DOSE}}. Contatto paziente: {{EMAIL_ADDRESS}}, {{PHONE}}. Indirizzo: {{STREET}}, {{POSTCODE}} {{CITY}}. Tipo di sangue: {{BLOOD_TYPE}}.",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "narrative",
+    "estimated_word_count": 26,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "location",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Sendung {{REFERENCE_NUMBER}} für {{NAME}} ({{CUSTOMER_ID}}) versandt am {{DATE}}. Lieferadresse: {{STREET}} {{POSTCODE}} {{CITY}}. Empfänger erreicht unter {{PHONE}} oder {{EMAIL_ADDRESS}}. Sendungsverfolgung: {{URL}}. Wert: {{MONEY}} {{CURRENCY}}. Bezahlt mit {{CREDIT_CARD}}.",
+    "locale": "de_CH",
+    "domain": "logistics",
+    "structure_type": "narrative",
+    "estimated_word_count": 26,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Benutzerkonto erstellt für {{NAME}} ({{EMAIL_ADDRESS}}) am {{TIMESTAMP}}. Username: {{USERNAME}}, Passwort: {{PASSWORD}}. API-Key: {{API_KEY}}. Private Key: {{PRIVATE_KEY}}. Wallet: {{CRYPTO_WALLET}}. IP: {{IP_ADDRESS}}. Gerät: {{DEVICE_IDENTIFIER}}.",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "narrative",
+    "estimated_word_count": 22,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "id_documents",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Ermittlungsbericht {{REFERENCE_NUMBER}}: {{NAME}}, geboren {{DOB}}, AHV {{SSN}}, wohnhaft {{STREET}} {{POSTCODE}} {{CITY}}, verdächtigt am {{DATE}}. Fahrzeug {{VEHICLE_ID}}. Kontaktversuch unter {{PHONE}}. Email-Trace: {{EMAIL_ADDRESS}}. Konto: {{IBAN}}. Krypto-Wallet: {{CRYPTO_WALLET}}.",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 25,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Dr. {{MEDICAL_PROFESSIONAL}}: \"Guten Tag, {{NAME}}. Ihre {{HEALTHCARE_NUMBER}} bitte?\"\nPatient: \"Hier, {{HEALTHCARE_NUMBER}}.\"\nDr: \"Geboren {{DOB}}, Blutgruppe {{BLOOD_TYPE}}?\"\nPatient: \"Ja. Ich nehme {{DRUG}} {{DOSE}}.\"\nDr: \"Ihr Rezept geht an {{EMAIL_ADDRESS}}. Notfallnummer: {{PHONE}}.\"",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "dialog",
+    "estimated_word_count": 30,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "Agent: \"{{COMPANY}} Kundenservice, mein Name ist {{FIRSTNAME}}.\"\nKunde: \"Ich bin {{NAME}}, Kundennummer {{CUSTOMER_ID}}.\"\nAgent: \"Danke. Ihre hinterlegte Nummer {{PHONE}}?\"\nKunde: \"Ja, und Email {{EMAIL_ADDRESS}}.\"\nAgent: \"Problem mit Gerät {{DEVICE_IDENTIFIER}}?\"\nKunde: \"Ja, MAC {{MAC_ADDRESS}} funktioniert nicht.\"",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "structure_type": "dialog",
+    "estimated_word_count": 35,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "contact",
+      "hipaa",
+      "organization",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "Berater: \"Grüezi {{NAME}}, Ihre {{IDENTITY_CARD_NUMBER}} bitte.\"\nKunde: \"Hier. Mein Konto ist {{IBAN}}.\"\nBerater: \"Danke. Adresse {{STREET}} {{POSTCODE}} {{CITY}}?\"\nKunde: \"Korrekt. Erreichen Sie mich unter {{EMAIL_ADDRESS}}.\"\nBerater: \"Neue Karte {{CREDIT_CARD}} wird an {{LOCATION_ADDRESS}} gesendet.\"",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "dialog",
+    "estimated_word_count": 33,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "Dr {{MEDICAL_PROFEFESSIONAL}}: \"Bonjour {{NAME}}, votre numéro {{HEALTHCARE_NUMBER}}?\"\nPatient: \"{{HEALTHCARE_NUMBER}}, né le {{DOB}}.\"\nDr: \"Email {{EMAIL_ADDRESS}}?\"\nPatient: \"Oui, et téléphone {{PHONE}}.\"\nDr: \"Votre traitement {{DRUG}} {{DOSE}} est prêt.\"",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "dialog",
+    "estimated_word_count": 27,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "Schaden: \"Hier {{NAME}}, Policennummer {{POLICY_NUMBER}}.\"\nMitarbeiter: \"Danke, Geburtsdatum {{DOB}}?\"\nSchaden: \"Ja, Fahrzeug {{VEHICLE_ID}}.\"\nMitarbeiter: \"Schadensdatum {{DATE}}?\"\nSchaden: \"{{DATE}}. Erreichen Sie mich unter {{PHONE}} oder {{EMAIL_ADDRESS}}.\"",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "dialog",
+    "estimated_word_count": 25,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "contact",
+      "id_documents",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "HR: \"{{NAME}}, Ihre Bewerbung auf {{JOB_TITLE}}.\"\nBewerber: \"Ja, geboren {{DOB}}.\"\nHR: \"Steuer-ID {{TAX_ID_NUMBER}}?\"\nBewerber: \"{{TAX_ID_NUMBER}}, AHV {{SSN}}.\"\nHR: \"Kontakt {{EMAIL_ADDRESS}}? Gehalt {{MONEY}} {{CURRENCY}}?\"\nBewerber: \"Einverstanden. Bank {{IBAN}}.\"",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "dialog",
+    "estimated_word_count": 27,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "organization",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] User_{{CUSTOMER_ID}}: Hilfe!\n[{{TIMESTAMP}}] Support: Hallo {{NAME}}, Ihre Email {{EMAIL_ADDRESS}}?\n[{{TIMESTAMP}}] User: {{EMAIL_ADDRESS}}, IP {{IP_ADDRESS}}\n[{{TIMESTAMP}}] Support: Gerät {{DEVICE_IDENTIFIER}}?\n[{{TIMESTAMP}}] User: Ja, MAC {{MAC_ADDRESS}}. Problem mit Login {{USERNAME}}.",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "chat",
+    "estimated_word_count": 28,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "contact",
+      "hipaa",
+      "id_documents",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Dottore: \"Buongiorno {{NAME}}, carta {{IDENTITY_CARD_NUMBER}}?\"\nPaziente: \"{{IDENTITY_CARD_NUMBER}}, nato {{DOB}}.\"\nDottore: \"Email {{EMAIL_ADDRESS}}?\"\nPaziente: \"Sì, telefono {{PHONE}}.\"\nDottore: \"Ricetta {{DRUG}} inviata a {{EMAIL_ADDRESS}}.\"",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "dialog",
+    "estimated_word_count": 22,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "id_documents",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "Makler: \"{{NAME}}? Besichtigung {{STREET}} {{POSTCODE}}.\"\nInteressent: \"Ja, {{EMAIL_ADDRESS}}, {{PHONE}}.\"\nMakler: \"Miete {{MONEY}} {{CURRENCY}}, Kaution auf {{IBAN}}.\"\nInteressent: \"Ok. Arbeitgeber {{COMPANY}} als {{JOB_TITLE}}.\"\nMakler: \"Vertrag ab {{DATE}}. Ihre {{IDENTITY_CARD_NUMBER}}?\"",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "structure_type": "dialog",
+    "estimated_word_count": 28,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Anwalt: \"{{NAME}}, Fall {{REFERENCE_NUMBER}}?\"\nMandant: \"Ja, geboren {{DOB}}, wohnhaft {{CITY}}.\"\nAnwalt: \"{{SSN}} und {{IDENTITY_CARD_NUMBER}}?\"\nMandant: \"Korrekt. Erreichbar {{EMAIL_ADDRESS}}.\"\nAnwalt: \"Honorar {{MONEY}} {{CURRENCY}}. Konto {{IBAN}}.\"",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "dialog",
+    "estimated_word_count": 24,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "Agent: \"{{NAME}}, Buchung {{REFERENCE_NUMBER}}?\"\nKunde: \"Ja, Pass {{PASSPORT_NUMBER}}.\"\nAgent: \"Flug {{DATE}}, Sitz {{VEHICLE_ID}}?\"\nKunde: \"Korrekt. Karte {{CREDIT_CARD}}.\"\nAgent: \"Bestätigung an {{EMAIL_ADDRESS}}. Notfall {{PHONE}}.\"",
+    "locale": "de_CH",
+    "domain": "travel",
+    "structure_type": "dialog",
+    "estimated_word_count": 23,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Support: \"{{NAME}}, Kunde {{CUSTOMER_ID}}?\"\nUser: \"Ja, Problem mit API-Key {{API_KEY}}.\"\nSupport: \"Private Key {{PRIVATE_KEY}}?\"\nUser: \"Korrekt. Wallet {{CRYPTO_WALLET}}.\"\nSupport: \"IP {{IP_ADDRESS}} gesperrt. Neue Zugangsdaten an {{EMAIL_ADDRESS}}.\"",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "dialog",
+    "estimated_word_count": 26,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "Conseiller: \"Bonjour {{NAME}}, numéro client {{CUSTOMER_ID}}?\"\nClient: \"{{CUSTOMER_ID}}, email {{EMAIL_ADDRESS}}.\"\nConseiller: \"Téléphone {{PHONE}}?\"\nClient: \"Oui, adresse {{STREET}} {{POSTCODE}}.\"\nConseiller: \"Votre carte {{CREDIT_CARD}} expire {{CREDIT_CARD_EXPIRATION}}.\"",
+    "locale": "fr_CH",
+    "domain": "customer_service",
+    "structure_type": "dialog",
+    "estimated_word_count": 24,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "Studienberatung: \"{{NAME}} für {{COURSE}}?\"\nStudent: \"Ja, {{DOB}}, {{NATIONALITY}}.\"\nBeratung: \"{{IDENTITY_CARD_NUMBER}} und {{SSN}}?\"\nStudent: \"Korrekt. Email {{EMAIL_ADDRESS}}.\"\nBeratung: \"Gebühr {{MONEY}} {{CURRENCY}} auf {{IBAN}}.\"",
+    "locale": "de_CH",
+    "domain": "education",
+    "structure_type": "dialog",
+    "estimated_word_count": 22,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "id_documents",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "Arzt: \"{{NAME}}, {{HEALTHCARE_NUMBER}}?\"\nPatient: \"Ja, {{DOB}}, {{BLOOD_TYPE}}.\"\nArzt: \"{{CONDITION}} bestätigt. {{DRUG}} {{DOSE}}.\"\nPatient: \"Ok, Rechnung an {{INSURANCE_NUMBER}}.\"\nArzt: \"Bericht an {{EMAIL_ADDRESS}}. Telefonisch {{PHONE}}.\"",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "dialog",
+    "estimated_word_count": 23,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "Beamter: \"{{NAME}}, {{IDENTITY_CARD_NUMBER}}?\"\nBürger: \"Ja, wohnhaft {{STREET}} {{POSTCODE}} {{CITY}}.\"\nBeamter: \"{{SSN}} und {{TAX_ID_NUMBER}}?\"\nBürger: \"Korrekt. Kontakt {{EMAIL_ADDRESS}}.\"\nBeamter: \"Bescheid an {{LOCATION_ADDRESS}}. Fragen unter {{PHONE}}.\"",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "dialog",
+    "estimated_word_count": 24,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "Service: \"Retoure {{REFERENCE_NUMBER}}?\"\nKunde: \"Ja, {{NAME}}, {{CUSTOMER_ID}}.\"\nService: \"{{EMAIL_ADDRESS}} und {{PHONE}}?\"\nKunde: \"Korrekt. Rückzahlung auf {{IBAN}}.\"\nService: \"{{MONEY}} {{CURRENCY}} in 3 Tagen. Bestätigung an {{EMAIL_ADDRESS}}.\"",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "dialog",
+    "estimated_word_count": 25,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "Verkäufer: \"{{NAME}}, Vertrag {{DATE}}?\"\nKunde: \"Ja, {{DOB}}, {{SSN}}.\"\nVerkäufer: \"Nummer {{PHONE}}, Gerät {{DEVICE_IDENTIFIER}}?\"\nKunde: \"Korrekt. MAC {{MAC_ADDRESS}}.\"\nVerkäufer: \"Rechnung an {{EMAIL_ADDRESS}}. Adresse {{STREET}} {{POSTCODE}}.\"",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "structure_type": "dialog",
+    "estimated_word_count": 24,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Forscher: \"{{NAME}}, Studie {{REFERENCE_NUMBER}}?\"\nProband: \"Ja, {{DOB}}, {{BLOOD_TYPE}}.\"\nForscher: \"{{HEALTHCARE_NUMBER}} und {{BIOMETRIC_IDENTIFIER}}?\"\nProband: \"Einverstanden. Kontakt {{EMAIL_ADDRESS}}.\"\nForscher: \"Genetik {{GENETIC_DATA}} dokumentiert. Honorar auf {{IBAN}}.\"",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "dialog",
+    "estimated_word_count": 23,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "healthcare",
+      "hipaa",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "Techniker: \"{{NAME}}, Anschluss {{STREET}} {{POSTCODE}}?\"\nKunde: \"Ja, {{CUSTOMER_ID}}, {{SSN}}.\"\nTechniker: \"Zähler {{DEVICE_IDENTIFIER}} aktiv.\"\nKunde: \"Ok. Rechnung an {{EMAIL_ADDRESS}}.\"\nTechniker: \"Abbuchung von {{IBAN}}. Betrag {{MONEY}} {{CURRENCY}}.\"",
+    "locale": "de_CH",
+    "domain": "utilities",
+    "structure_type": "dialog",
+    "estimated_word_count": 25,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] AUTH: user={{USERNAME}}|{{PASSWORD}} ip={{IP_ADDRESS}} mac={{MAC_ADDRESS}}\n[{{TIMESTAMP}}] VERIFY: device={{DEVICE_IDENTIFIER}} biometric={{BIOMETRIC_IDENTIFIER}}\n[{{TIMESTAMP}}] GRANT: session={{API_KEY}} cert={{CERTIFICATE_NUMBER}}\n[{{TIMESTAMP}}] ACCESS: resource={{REFERENCE_NUMBER}} customer={{CUSTOMER_ID}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 17,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "hipaa",
+      "id_documents",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] TXN: iban={{IBAN}} amt={{MONEY}} curr={{CURRENCY}}\n[{{TIMESTAMP}}] CARD: cc={{CREDIT_CARD}} cvv={{CVV}} exp={{CREDIT_CARD_EXPIRATION}}\n[{{TIMESTAMP}}] CRYPTO: wallet={{CRYPTO_WALLET}} key={{PRIVATE_KEY}}\n[{{TIMESTAMP}}] NOTIFY: email={{EMAIL_ADDRESS}} phone={{PHONE}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 18,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] PATIENT: id={{HEALTHCARE_NUMBER}} name={{NAME}} dob={{DOB}}\n[{{TIMESTAMP}}] VITAL: blood={{BLOOD_TYPE}} condition={{CONDITION}} drug={{DRUG}} dose={{DOSE}}\n[{{TIMESTAMP}}] DOC: license={{MEDICAL_LICENSE}} facility={{MEDICAL_FACILITY}}\n[{{TIMESTAMP}}] ALERT: sent={{EMAIL_ADDRESS}} device={{DEVICE_IDENTIFIER}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "log",
+    "estimated_word_count": 19,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "hipaa",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] LOGIN: user={{USERNAME}} from={{IP_ADDRESS}}\n[{{TIMESTAMP}}] AUTH: key={{API_KEY}} priv={{PRIVATE_KEY}}\n[{{TIMESTAMP}}] CMD: exec=\"db_query {{CUSTOMER_ID}}\"\n[{{TIMESTAMP}}] LOGOUT: mac={{MAC_ADDRESS}} session_end={{TIMESTAMP}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 16,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "contact",
+      "id_documents",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] CLAIM: policy={{POLICY_NUMBER}} cust={{NAME}} ssn={{SSN}}\n[{{TIMESTAMP}}] VEHICLE: id={{VEHICLE_ID}} license={{DRIVER_LICENSE}}\n[{{TIMESTAMP}}] ASSESS: damage={{MONEY}} {{CURRENCY}} ref={{REFERENCE_NUMBER}}\n[{{TIMESTAMP}}] PAY: iban={{IBAN}} notify={{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "log",
+    "estimated_word_count": 18,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] HIRE: emp={{NAME}} dob={{DOB}} ssn={{SSN}} tax={{TAX_ID_NUMBER}}\n[{{TIMESTAMP}}] ROLE: title={{JOB_TITLE}} dept={{ORGANIZATION}} comp={{MONEY}} {{CURRENCY}}\n[{{TIMESTAMP}}] BANK: iban={{IBAN}} account={{ACCOUNT_NUMBER}}\n[{{TIMESTAMP}}] CONTACT: email={{EMAIL_ADDRESS}} phone={{PHONE}} addr={{STREET}} {{POSTCODE}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "log",
+    "estimated_word_count": 22,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] CONNEXION: client={{CUSTOMER_ID}} tel={{PHONE}} ip={{IP_ADDRESS}}\n[{{TIMESTAMP}}] APPAREIL: mac={{MAC_ADDRESS}} id={{DEVICE_IDENTIFIER}}\n[{{TIMESTAMP}}] FACTURE: montant={{MONEY}} {{CURRENCY}} email={{EMAIL_ADDRESS}}\n[{{TIMESTAMP}}] ADRESSE: {{STREET}} {{POSTCODE}} {{CITY}}",
+    "locale": "fr_CH",
+    "domain": "telecom",
+    "structure_type": "log",
+    "estimated_word_count": 19,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] ORDER: ref={{REFERENCE_NUMBER}} cust={{CUSTOMER_ID}} name={{NAME}}\n[{{TIMESTAMP}}] PAYMENT: cc={{CREDIT_CARD}} cvv={{CVV}} exp={{CREDIT_CARD_EXPIRATION}}\n[{{TIMESTAMP}}] SHIP: addr={{STREET}} {{POSTCODE}} {{CITY}} value={{MONEY}} {{CURRENCY}}\n[{{TIMESTAMP}}] CONFIRM: email={{EMAIL_ADDRESS}} phone={{PHONE}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "log",
+    "estimated_word_count": 21,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] ACCESS: user={{NAME}} id={{IDENTITY_CARD_NUMBER}} ssn={{SSN}}\n[{{TIMESTAMP}}] QUERY: tax={{TAX_IDENTIFICATION_NUMBER}} dob={{DOB}}\n[{{TIMESTAMP}}] RESULT: addr={{LOCATION_ADDRESS}} canton={{CANTON}}\n[{{TIMESTAMP}}] AUDIT: ip={{IP_ADDRESS}} email={{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "log",
+    "estimated_word_count": 17,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] SUBJECT: id={{REFERENCE_NUMBER}} name={{NAME}} dob={{DOB}}\n[{{TIMESTAMP}}] SAMPLE: blood={{BLOOD_TYPE}} genetic={{GENETIC_DATA}} bio={{BIOMETRIC_IDENTIFIER}}\n[{{TIMESTAMP}}] MEDICAL: code={{MEDICAL_CODE}} condition={{CONDITION}} drug={{DRUG}}\n[{{TIMESTAMP}}] CONSENT: signed={{DATE}} contact={{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "log",
+    "estimated_word_count": 19,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "gdpr_sensitive",
+      "healthcare",
+      "hipaa",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] BOOKING: ref={{REFERENCE_NUMBER}} pass={{PASSPORT_NUMBER}} name={{NAME}}\n[{{TIMESTAMP}}] FLIGHT: date={{DATE}} seat={{VEHICLE_ID}} route={{CITY}}-{{CITY}}\n[{{TIMESTAMP}}] PAY: cc={{CREDIT_CARD}} amt={{MONEY}} {{CURRENCY}}\n[{{TIMESTAMP}}] NOTIFY: email={{EMAIL_ADDRESS}} emergency={{PHONE}}",
+    "locale": "de_CH",
+    "domain": "travel",
+    "structure_type": "log",
+    "estimated_word_count": 19,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] CASE: ref={{REFERENCE_NUMBER}} client={{NAME}} dob={{DOB}}\n[{{TIMESTAMP}}] ID: card={{IDENTITY_CARD_NUMBER}} ssn={{SSN}} passport={{PASSPORT_NUMBER}}\n[{{TIMESTAMP}}] CONTACT: addr={{STREET}} {{POSTCODE}} {{CITY}} email={{EMAIL_ADDRESS}} phone={{PHONE}}\n[{{TIMESTAMP}}] FEE: amt={{MONEY}} {{CURRENCY}} iban={{IBAN}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "log",
+    "estimated_word_count": 22,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] PROPERTY: addr={{STREET}} {{POSTCODE}} {{CITY}} ref={{REFERENCE_NUMBER}}\n[{{TIMESTAMP}}] TENANT: name={{NAME}} dob={{DOB}} id={{IDENTITY_CARD_NUMBER}}\n[{{TIMESTAMP}}] LEASE: start={{DATE}} rent={{MONEY}} {{CURRENCY}} deposit={{IBAN}}\n[{{TIMESTAMP}}] CONTACT: email={{EMAIL_ADDRESS}} employer={{COMPANY}}",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "structure_type": "log",
+    "estimated_word_count": 21,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] ACCESSO: cliente={{CUSTOMER_ID}} iban={{IBAN}}\n[{{TIMESTAMP}}] CARTA: cc={{CREDIT_CARD}} scad={{CREDIT_CARD_EXPIRATION}} cvv={{CVV}}\n[{{TIMESTAMP}}] TRANSAZIONE: importo={{MONEY}} {{CURRENCY}} wallet={{CRYPTO_WALLET}}\n[{{TIMESTAMP}}] NOTIFICA: email={{EMAIL_ADDRESS}} tel={{PHONE}}",
+    "locale": "it_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 18,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] ENROLL: student={{NAME}} dob={{DOB}} id={{IDENTITY_CARD_NUMBER}}\n[{{TIMESTAMP}}] COURSE: code={{REFERENCE_NUMBER}} dept={{ORGANIZATION}}\n[{{TIMESTAMP}}] FEE: amt={{MONEY}} {{CURRENCY}} iban={{IBAN}}\n[{{TIMESTAMP}}] CONTACT: email={{EMAIL_ADDRESS}} phone={{PHONE}} addr={{STREET}} {{POSTCODE}}",
+    "locale": "de_CH",
+    "domain": "education",
+    "structure_type": "log",
+    "estimated_word_count": 20,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] METER: id={{DEVICE_IDENTIFIER}} cust={{CUSTOMER_ID}} ssn={{SSN}}\n[{{TIMESTAMP}}] READING: value={{MONEY}} {{CURRENCY}} addr={{STREET}} {{POSTCODE}} {{CITY}}\n[{{TIMESTAMP}}] BILL: amt={{MONEY}} {{CURRENCY}} iban={{IBAN}}\n[{{TIMESTAMP}}] NOTIFY: email={{EMAIL_ADDRESS}} phone={{PHONE}}",
+    "locale": "de_CH",
+    "domain": "utilities",
+    "structure_type": "log",
+    "estimated_word_count": 21,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] DONOR: name={{NAME}} email={{EMAIL_ADDRESS}} phone={{PHONE}}\n[{{TIMESTAMP}}] DONATION: amt={{MONEY}} {{CURRENCY}} iban={{IBAN}} ref={{REFERENCE_NUMBER}}\n[{{TIMESTAMP}}] PROFILE: dob={{DOB}} nationality={{NATIONALITY}} religion={{RELIGION}}\n[{{TIMESTAMP}}] TAX: id={{TAX_ID_NUMBER}} cert={{CERTIFICATE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "non-profit",
+    "structure_type": "log",
+    "estimated_word_count": 20,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "hipaa",
+      "id_documents",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] SHIPMENT: ref={{REFERENCE_NUMBER}} cust={{CUSTOMER_ID}} name={{NAME}}\n[{{TIMESTAMP}}] ORIGIN: addr={{STREET}} {{POSTCODE}} {{CITY}} contact={{PHONE}}\n[{{TIMESTAMP}}] VALUE: amt={{MONEY}} {{CURRENCY}} cc={{CREDIT_CARD}}\n[{{TIMESTAMP}}] TRACK: url={{URL}} notify={{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "logistics",
+    "structure_type": "log",
+    "estimated_word_count": 20,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] PROFILE: name={{NAME}} ethnicity={{ETHNICITY}} race={{RACE}}\n[{{TIMESTAMP}}] SENSITIVE: religion={{RELIGION}} orientation={{SEXUAL_ORIENTATION}} union={{TRADE_UNION}}\n[{{TIMESTAMP}}] POLITICAL: affiliation={{POLITICAL_AFFILIATION}} genetic={{GENETIC_DATA}}\n[{{TIMESTAMP}}] AUDIT: ip={{IP_ADDRESS}} email={{EMAIL_ADDRESS}} session={{API_KEY}}",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "log",
+    "estimated_word_count": 19,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "gdpr_sensitive",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] DEVICE: id={{DEVICE_IDENTIFIER}} patient={{HEALTHCARE_NUMBER}} name={{NAME}}\n[{{TIMESTAMP}}] READING: biometric={{BIOMETRIC_IDENTIFIER}} blood={{BLOOD_TYPE}} code={{MEDICAL_CODE}}\n[{{TIMESTAMP}}] ALERT: condition={{CONDITION}} drug={{DRUG}} dose={{DOSE}}\n[{{TIMESTAMP}}] NOTIFY: doc={{MEDICAL_LICENSE}} facility={{MEDICAL_FACILITY}} email={{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "log",
+    "estimated_word_count": 20,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "hipaa",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "PATIENTENREGISTRIERUNG\nName: {{NAME}}\nGeburtsdatum: {{DOB}}\nVersichertennummer: {{HEALTHCARE_NUMBER}}\nBlutgruppe: {{BLOOD_TYPE}}\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}\nTelefon: {{PHONE}}\nEmail: {{EMAIL_ADDRESS}}\nNotfallkontakt: {{PHONE}} ({{NAME}})\nKrankenkasse: {{INSURANCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "form",
+    "estimated_word_count": 23,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "KONTOERÖFFNUNG\nName: {{FIRSTNAME}} {{LASTNAME}}\nGeburtsdatum: {{DOB}}\nNationalität: {{NATIONALITY}}\nAusweis: {{IDENTITY_CARD_NUMBER}}\nAHV-Nummer: {{SSN}}\nSteuer-ID: {{TAX_ID_NUMBER}}\nAdresse: {{LOCATION_ADDRESS}}\nTelefon: {{PHONE}}\nEmail: {{EMAIL_ADDRESS}}\nBeruf: {{JOB_TITLE}} bei {{COMPANY}}\nErste Einzahlung: {{MONEY}} {{CURRENCY}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "form",
+    "estimated_word_count": 28,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "VERSICHERUNGSANTRAG\nAntragsteller: {{NAME}}\nGeburtsdatum: {{DOB}}\nFührerschein: {{DRIVER_LICENSE}}\nFahrzeug: {{VEHICLE_ID}}\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\nTelefon: {{PHONE}}\nEmail: {{EMAIL_ADDRESS}}\nBeruf: {{JOB_TITLE}}\nJahreseinkommen: {{MONEY}} {{CURRENCY}}\nBankverbindung: {{IBAN}}\nGewünschte Deckung: {{POLICY_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "form",
+    "estimated_word_count": 27,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "DOSSIER EMPLOYÉ\nNom: {{LASTNAME}}\nPrénom: {{FIRSTNAME}}\nDate de naissance: {{DOB}}\nNationalité: {{NATIONALITY}}\nNuméro AVS: {{SSN}}\nNuméro fiscal: {{TAX_IDENTIFICATION_NUMBER}}\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\nTéléphone: {{PHONE}}\nEmail: {{EMAIL_ADDRESS}}\nPoste: {{JOB_TITLE}}\nSalaire: {{MONEY}} {{CURRENCY}}\nIBAN: {{IBAN}}",
+    "locale": "fr_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 33,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "REISEPLAN {{REFERENCE_NUMBER}}\nReisender: {{NAME}} ({{PASSPORT_NUMBER}})\n{{DATE}}: Flug {{REFERENCE_NUMBER}}, Sitz {{VEHICLE_ID}}\nHotel: {{COMPANY}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\nNotfallkontakt: {{PHONE}} / {{EMAIL_ADDRESS}}\nKreditkarte: {{CREDIT_CARD}} ({{CVV}})\nVersicherung: {{POLICY_NUMBER}}\nGesamtkosten: {{MONEY}} {{CURRENCY}}",
+    "locale": "de_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 28,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "KONFIGURATION {{CUSTOMER_ID}}\nDatenbank: postgres://{{USERNAME}}:{{PASSWORD}}@{{IP_ADDRESS}}:5432/{{REFERENCE_NUMBER}}\nAPI-Key: {{API_KEY}}\nPrivate Key: {{PRIVATE_KEY}}\nWallet: {{CRYPTO_WALLET}}\nMAC-Adresse: {{MAC_ADDRESS}}\nGerät: {{DEVICE_IDENTIFIER}}\nBenachrichtigung: {{EMAIL_ADDRESS}}\nZertifikat: {{CERTIFICATE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 19,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "id_documents",
+      "technical"
+    ]
+  },
+  {
+    "template": "MEDIKAMENTENLISTE {{NAME}} ({{HEALTHCARE_NUMBER}})\n1. {{DRUG}} {{DOSE}} - {{DATE}}\n2. {{DRUG}} {{DOSE}} - {{DATE}}\n3. {{DRUG}} {{DOSE}} - {{DATE}}\nArzt: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nEinrichtung: {{MEDICAL_FACILITY}}\nBlutgruppe: {{BLOOD_TYPE}}\nErreichbar unter {{EMAIL_ADDRESS}} oder {{PHONE}}\nVersicherung: {{INSURANCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "list",
+    "estimated_word_count": 32,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "CONTRATTO DI AFFITTO\nAffittuario: {{NAME}} ({{IDENTITY_CARD_NUMBER}})\nData di nascita: {{DOB}}\nCodice fiscale: {{TAX_IDENTIFICATION_NUMBER}}\nIndirizzo: {{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}\nTelefono: {{PHONE}}\nEmail: {{EMAIL_ADDRESS}}\nLavoro: {{JOB_TITLE}} presso {{COMPANY}}\nIBAN: {{IBAN}}\nAffitto: {{MONEY}} {{CURRENCY}}/mese\nInizio: {{DATE}}",
+    "locale": "it_CH",
+    "domain": "real_estate",
+    "structure_type": "form",
+    "estimated_word_count": 33,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "BESTELLÜBERSICHT {{REFERENCE_NUMBER}}\nKunde: {{NAME}} ({{CUSTOMER_ID}})\nDatum: {{DATE}} {{TIME}}\nLieferadresse: {{STREET}} {{POSTCODE}} {{CITY}}\nRechnungsadresse: {{LOCATION_ADDRESS}}\nZahlung: {{CREDIT_CARD}} ({{CVV}})\nBetrag: {{MONEY}} {{CURRENCY}}\nEmail: {{EMAIL_ADDRESS}}\nIP-Adresse: {{IP_ADDRESS}}\nTracking: {{URL}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 26,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "STUDIENTEILNEHMER {{REFERENCE_NUMBER}}\nName: {{NAME}}\nGeburtsdatum: {{DOB}}\nGeschlecht: {{GENDER}}\nBlutgruppe: {{BLOOD_TYPE}}\nVersichertennummer: {{HEALTHCARE_NUMBER}}\nBiometrie: {{BIOMETRIC_IDENTIFIER}}\nGenetik: {{GENETIC_DATA}}\nErreichbar unter: {{EMAIL_ADDRESS}} / {{PHONE}}\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\nEinverständnis: {{DATE}}\nHonorar: {{MONEY}} {{CURRENCY}} auf {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "form",
+    "estimated_word_count": 31,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "healthcare",
+      "hipaa",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "DATENSUBJEKT {{NAME}}\nGeburtsdatum: {{DOB}}\nNationalität: {{NATIONALITY}}\nEthnizität: {{ETHNICITY}}\nRasse: {{RACE}}\nReligion: {{RELIGION}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nGewerkschaft: {{TRADE_UNION}}\nPolitische Zugehörigkeit: {{POLITICAL_AFFILIATION}}\nGenetische Daten: {{GENETIC_DATA}}\nErreichbar unter: {{EMAIL_ADDRESS}}\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 29,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "gdpr_sensitive",
+      "location",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "VERTRAG {{CUSTOMER_ID}}\nName: {{NAME}}\nGeburtsdatum: {{DOB}}\nAHV: {{SSN}}\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}\nTelefon: {{PHONE}}\nEmail: {{EMAIL_ADDRESS}}\nGerät: {{DEVICE_IDENTIFIER}}\nMAC: {{MAC_ADDRESS}}\nIP: {{IP_ADDRESS}}\nMonatliche Kosten: {{MONEY}} {{CURRENCY}}\nAbbuchung: {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "structure_type": "form",
+    "estimated_word_count": 29,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "AKTE {{REFERENCE_NUMBER}}\nMandant: {{NAME}}\nGeburtsdatum: {{DOB}}\nAusweis: {{IDENTITY_CARD_NUMBER}}\nPass: {{PASSPORT_NUMBER}}\nAHV: {{SSN}}\nAdresse: {{LOCATION_ADDRESS}}\nTelefon: {{PHONE}}\nEmail: {{EMAIL_ADDRESS}}\nAnwalt: {{FIRSTNAME}} {{LASTNAME}}\nHonorar: {{MONEY}} {{CURRENCY}}\nKonto: {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "form",
+    "estimated_word_count": 26,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "DOSSIER MÉDICAL {{HEALTHCARE_NUMBER}}\nPatient: {{NAME}}\nDate de naissance: {{DOB}}\nGroupe sanguin: {{BLOOD_TYPE}}\nMédecin: Dr {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nÉtablissement: {{MEDICAL_FACILITY}}\nCondition: {{CONDITION}}\nTraitement: {{DRUG}} {{DOSE}}\nTéléphone: {{PHONE}}\nEmail: {{EMAIL_ADDRESS}}\nAssurance: {{INSURANCE_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "form",
+    "estimated_word_count": 29,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "organization",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "IMMATRIKULATION {{REFERENCE_NUMBER}}\nStudent: {{NAME}}\nGeburtsdatum: {{DOB}}\nNationalität: {{NATIONALITY}}\nAusweis: {{IDENTITY_CARD_NUMBER}}\nAHV: {{SSN}}\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\nTelefon: {{PHONE}}\nEmail: {{EMAIL_ADDRESS}}\nStudiengang: {{COURSE}}\nGebühr: {{MONEY}} {{CURRENCY}}\nKonto: {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "education",
+    "structure_type": "form",
+    "estimated_word_count": 27,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "VERTRAG {{CUSTOMER_ID}}\nName: {{NAME}}\nAHV: {{SSN}}\nAdresse: {{LOCATION_ADDRESS}}\nZähler: {{DEVICE_IDENTIFIER}}\nTelefon: {{PHONE}}\nEmail: {{EMAIL_ADDRESS}}\nBankverbindung: {{IBAN}}\nMonatlicher Abschlag: {{MONEY}} {{CURRENCY}}\nVertragsbeginn: {{DATE}}\nKanton: {{CANTON}}",
+    "locale": "de_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 24,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "SPENDER {{REFERENCE_NUMBER}}\nName: {{NAME}}\nGeburtsdatum: {{DOB}}\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\nTelefon: {{PHONE}}\nEmail: {{EMAIL_ADDRESS}}\nSpende: {{MONEY}} {{CURRENCY}}\nIBAN: {{IBAN}}\nReligion: {{RELIGION}}\nNationalität: {{NATIONALITY}}\nSpendenbescheinigung: {{CERTIFICATE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "non-profit",
+    "structure_type": "form",
+    "estimated_word_count": 25,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "hipaa",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "SENDUNG {{REFERENCE_NUMBER}}\nEmpfänger: {{NAME}} ({{CUSTOMER_ID}})\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}\nTelefon: {{PHONE}}\nEmail: {{EMAIL_ADDRESS}}\nWarenwert: {{MONEY}} {{CURRENCY}}\nZahlung: {{CREDIT_CARD}} ({{CVV}})\nTracking: {{URL}}\nIP: {{IP_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "logistics",
+    "structure_type": "form",
+    "estimated_word_count": 24,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "BEWEISSTÜCK {{REFERENCE_NUMBER}}\nVerdächtiger: {{NAME}}\nGeburtsdatum: {{DOB}}\nAHV: {{SSN}}\nAusweis: {{IDENTITY_CARD_NUMBER}}\nFührerschein: {{DRIVER_LICENSE}}\nFahrzeug: {{VEHICLE_ID}}\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\nTelefon: {{PHONE}}\nEmail: {{EMAIL_ADDRESS}}\nKonto: {{IBAN}}\nKrypto: {{CRYPTO_WALLET}}\nIP: {{IP_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "form",
+    "estimated_word_count": 28,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "KREDITKARTENANTRAG\nName: {{FIRSTNAME}} {{LASTNAME}}\nGeburtsdatum: {{DOB}}\nNationalität: {{NATIONALITY}}\nBeruf: {{JOB_TITLE}} bei {{COMPANY}}\nEinkommen: {{MONEY}} {{CURRENCY}}/Jahr\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\nTelefon: {{PHONE}}\nEmail: {{EMAIL_ADDRESS}}\nBankverbindung: {{IBAN}}\nGewünschtes Limit: {{MONEY}} {{CURRENCY}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "form",
+    "estimated_word_count": 29,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "location",
+      "organization",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "AW: Terminbestätigung\n\nVon: {{NAME}} <{{EMAIL_ADDRESS}}>\nGesendet: {{DATE}} {{TIME}}\nAn: {{MEDICAL_FACILITY}} <{{EMAIL_ADDRESS}}>\n\nMeine {{MEDICAL_LICENSE}}-Nummer ist {{REFERENCE_NUMBER}}. Blutgruppe {{BLOOD_TYPE}}. Medikament {{DRUG}} {{DOSE}}.\n\n> Am {{DATE}} schrieb Dr. {{MEDICAL_PROFESSIONAL}}:\n> Patient {{NAME}} ({{HEALTHCARE_NUMBER}}) hat {{CONDITION}}.\n> Termin: {{DATE}} {{TIME}}\n> Adresse: {{STREET}} {{POSTCODE}} {{CITY}}\n\nErreichbar unter: {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "dialog",
+    "estimated_word_count": 43,
+    "pii_count": 22,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "WG: Rechnung {{REFERENCE_NUMBER}}\n\nVon: {{COMPANY}} <{{EMAIL_ADDRESS}}>\nGesendet: {{DATE}} {{TIME}}\nAn: {{NAME}} <{{EMAIL_ADDRESS}}>\n\nSehr geehrte/r {{NAME}},\n\nIhre Rechnung über {{MONEY}} {{CURRENCY}} für Kunde {{CUSTOMER_ID}}.\nZahlung auf {{IBAN}}.\n\n---\nUrsprüngliche Nachricht:\nVon: {{NAME}} <{{EMAIL_ADDRESS}}>\nDatum: {{DATE}}\nBetreff: Bestellung {{REFERENCE_NUMBER}}\n\nBitte an {{STREET}} {{POSTCODE}} {{CITY}} liefern.\nTel: {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "dialog",
+    "estimated_word_count": 45,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "RE: Demande {{REFERENCE_NUMBER}}\n\nDe: {{NAME}} <{{EMAIL_ADDRESS}}>\nDate: {{DATE}} {{TIME}}\nÀ: {{ORGANIZATION}} <{{EMAIL_ADDRESS}}>\n\nMa carte {{IDENTITY_CARD_NUMBER}} et mon numéro AVS {{SSN}}.\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}.\n\n> Le {{DATE}}, {{ORGANIZATION}} a écrit:\n> Cher {{NAME}}, né le {{DOB}},\n> Votre demande est en cours.\n> Téléphone: {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "government",
+    "structure_type": "dialog",
+    "estimated_word_count": 45,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "AW: Kontoeröffnung {{CUSTOMER_ID}}\n\nVon: {{BANK}} <{{EMAIL_ADDRESS}}>\nGesendet: {{DATE}} {{TIME}}\nAn: {{NAME}} <{{EMAIL_ADDRESS}}>\n\nIhr Konto {{IBAN}} ist aktiv.\nKreditkarte {{CREDIT_CARD}} ({{CVV}}, {{CREDIT_CARD_EXPIRATION}}).\n\n---\nVon: {{NAME}} <{{EMAIL_ADDRESS}}>\nGesendet: {{DATE}}\nAn: {{BANK}}\n\nAnlage: Ausweis {{IDENTITY_CARD_NUMBER}}, AHV {{SSN}}.\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}.\nTelefon: {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "dialog",
+    "estimated_word_count": 40,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "WG: Schaden {{REFERENCE_NUMBER}}\n\nVon: {{NAME}} <{{EMAIL_ADDRESS}}>\nGesendet: {{DATE}} {{TIME}}\nAn: {{COMPANY}} <{{EMAIL_ADDRESS}}>\n\nPolize {{POLICY_NUMBER}}, Fahrzeug {{VEHICLE_ID}}.\nSchaden am {{DATE}}, Führerschein {{DRIVER_LICENSE}}.\n\n> Am {{DATE}} schrieb {{COMPANY}}:\n> Sehr geehrte/r {{NAME}}, geboren {{DOB}},\n> Bitte um Unterlagen für Fahrzeug {{VEHICLE_ID}}.\n> Ihre Adresse: {{STREET}} {{POSTCODE}} {{CITY}}?",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "dialog",
+    "estimated_word_count": 45,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "contact",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "AW: Arbeitsvertrag\n\nVon: {{COMPANY}} <{{EMAIL_ADDRESS}}>\nGesendet: {{DATE}} {{TIME}}\nAn: {{NAME}} <{{EMAIL_ADDRESS}}>\n\nVertrag für {{JOB_TITLE}} bereit.\nGehalt: {{MONEY}} {{CURRENCY}}.\nBitte IBAN: {{IBAN}}.\n\n---\nVon: {{NAME}} <{{EMAIL_ADDRESS}}>\nGesendet: {{DATE}}\n\nBewerbung als {{JOB_TITLE}}.\nGeboren {{DOB}}, AHV {{SSN}}, Steuer-ID {{TAX_ID_NUMBER}}.\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}.\nTel: {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "dialog",
+    "estimated_word_count": 42,
+    "pii_count": 23,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "R: Prenotazione {{REFERENCE_NUMBER}}\n\nDa: {{NAME}} <{{EMAIL_ADDRESS}}>\nData: {{DATE}} {{TIME}}\nA: {{COMPANY}} <{{EMAIL_ADDRESS}}>\n\nPassaporto {{PASSPORT_NUMBER}}, carta {{CREDIT_CARD}} ({{CVV}}).\n\n> Il {{DATE}} ha scritto {{COMPANY}}:\n> Gentile {{NAME}}, nato {{DOB}},\n> Conferma prenotazione per {{DATE}}.\n> Telefono: {{PHONE}}\n> Indirizzo: {{STREET}} {{POSTCODE}} {{CITY}}",
+    "locale": "it_CH",
+    "domain": "travel",
+    "structure_type": "dialog",
+    "estimated_word_count": 41,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "AW: Mandat {{REFERENCE_NUMBER}}\n\nVon: {{FIRSTNAME}} {{LASTNAME}} <{{EMAIL_ADDRESS}}>\nGesendet: {{DATE}} {{TIME}}\nAn: {{NAME}} <{{EMAIL_ADDRESS}}>\n\nHonorar: {{MONEY}} {{CURRENCY}}.\nKonto: {{IBAN}}.\nBitte Ausweis {{IDENTITY_CARD_NUMBER}}.\n\n---\nVon: {{NAME}} <{{EMAIL_ADDRESS}}>\nGesendet: {{DATE}}\n\nRechtsberatung benötigt.\nGeboren {{DOB}}, wohnhaft {{STREET}} {{POSTCODE}} {{CITY}}.\nAHV {{SSN}}, Tel {{PHONE}}.",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "dialog",
+    "estimated_word_count": 39,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "WG: Support Ticket {{REFERENCE_NUMBER}}\n\nVon: Support <{{EMAIL_ADDRESS}}>\nGesendet: {{DATE}} {{TIME}}\nAn: {{NAME}} <{{EMAIL_ADDRESS}}>\n\nProblem mit API-Key {{API_KEY}} gelöst.\nGerät {{DEVICE_IDENTIFIER}} neu registriert.\n\n---\nVon: {{NAME}} <{{EMAIL_ADDRESS}}>\nGesendet: {{DATE}}\n\nLogin-Probleme mit {{USERNAME}}.\nIP: {{IP_ADDRESS}}, MAC: {{MAC_ADDRESS}}.\nKunde: {{CUSTOMER_ID}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "dialog",
+    "estimated_word_count": 37,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "hipaa",
+      "id_documents",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "AW: Studienteilnahme {{REFERENCE_NUMBER}}\n\nVon: {{ORGANIZATION}} <{{EMAIL_ADDRESS}}>\nGesendet: {{DATE}} {{TIME}}\nAn: {{NAME}} <{{EMAIL_ADDRESS}}>\n\nEinverständnis erhalten.\nBiometrie {{BIOMETRIC_IDENTIFIER}} und Genetik {{GENETIC_DATA}} dokumentiert.\nHonorar auf {{IBAN}}.\n\n---\nVon: {{NAME}} <{{EMAIL_ADDRESS}}>\nGesendet: {{DATE}}\n\nTeilnahme an Studie {{REFERENCE_NUMBER}}.\n{{DOB}}, {{BLOOD_TYPE}}, {{HEALTHCARE_NUMBER}}.\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}.",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "dialog",
+    "estimated_word_count": 40,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "healthcare",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{TIMESTAMP}} SMS an {{PHONE}}:\n\"Ihr Code: {{REFERENCE_NUMBER}}. Konto {{IBAN}} belastet mit {{MONEY}} {{CURRENCY}}. Rückfragen: {{EMAIL_ADDRESS}}\"\n\n{{TIMESTAMP}} SMS an {{PHONE}}:\n\"Termin {{DATE}} {{TIME}} bei {{MEDICAL_FACILITY}}. Patient {{HEALTHCARE_NUMBER}}. Dr. {{MEDICAL_PROFESSIONAL}}\"",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "structure_type": "chat",
+    "estimated_word_count": 29,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "healthcare",
+      "organization",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] Push: \"{{NAME}}, Zahlung {{MONEY}} {{CURRENCY}} von {{IBAN}}\"\n[{{TIMESTAMP}}] Push: \"Login {{USERNAME}} von IP {{IP_ADDRESS}}\"\n[{{TIMESTAMP}}] Push: \"Karte {{CREDIT_CARD}} verwendet, CVV {{CVV}}\"\n[{{TIMESTAMP}}] Push: \"Termin {{DATE}} {{TIME}}, {{MEDICAL_FACILITY}}\"",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "chat",
+    "estimated_word_count": 28,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{DATE}} {{TIME}}] {{NAME}}: Mein Konto {{IBAN}}\n[{{DATE}} {{TIME}}] Bot: Danke {{NAME}}, Email {{EMAIL_ADDRESS}}?\n[{{DATE}} {{TIME}}] {{NAME}}: {{EMAIL_ADDRESS}}, Telefon {{PHONE}}\n[{{DATE}} {{TIME}}] Bot: Karte {{CREDIT_CARD}} ({{CVV}}) bestätigt\n[{{DATE}} {{TIME}}] {{NAME}}: Adresse {{STREET}} {{POSTCODE}} {{CITY}}",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "structure_type": "chat",
+    "estimated_word_count": 33,
+    "pii_count": 23,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{DATE}} {{TIME}}] {{NAME}}: Mon numéro {{CUSTOMER_ID}}\n[{{DATE}} {{TIME}}] Agent: Bonjour {{NAME}}, email {{EMAIL_ADDRESS}}?\n[{{DATE}} {{TIME}}] {{NAME}}: {{EMAIL_ADDRESS}}, téléphone {{PHONE}}\n[{{DATE}} {{TIME}}] Agent: Carte {{CREDIT_CARD}} exp {{CREDIT_CARD_EXPIRATION}}?\n[{{DATE}} {{TIME}}] {{NAME}}: Oui, adresse {{STREET}} {{POSTCODE}} {{CITY}}",
+    "locale": "fr_CH",
+    "domain": "customer_service",
+    "structure_type": "chat",
+    "estimated_word_count": 34,
+    "pii_count": 23,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{DATE}} {{TIME}}] {{NAME}}: Prenotazione {{REFERENCE_NUMBER}}\n[{{DATE}} {{TIME}}] Operatore: Buongiorno {{NAME}}, passaporto {{PASSPORT_NUMBER}}?\n[{{DATE}} {{TIME}}] {{NAME}}: {{PASSPORT_NUMBER}}, carta {{CREDIT_CARD}} ({{CVV}})\n[{{DATE}} {{TIME}}] Operatore: Email {{EMAIL_ADDRESS}}?\n[{{DATE}} {{TIME}}] {{NAME}}: Sì, telefono {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "travel",
+    "structure_type": "chat",
+    "estimated_word_count": 30,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "ALERT [{{TIMESTAMP}}]: User {{USERNAME}} from {{IP_ADDRESS}}\nWARN [{{TIMESTAMP}}]: Failed login {{PASSWORD}} for {{CUSTOMER_ID}}\nINFO [{{TIMESTAMP}}]: New device {{DEVICE_IDENTIFIER}} MAC {{MAC_ADDRESS}}\nALERT [{{TIMESTAMP}}]: API access {{API_KEY}} from {{IP_ADDRESS}}\nINFO [{{TIMESTAMP}}]: Email sent to {{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 33,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "hipaa",
+      "id_documents",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{DATE}}] Dr. {{MEDICAL_PROFESSIONAL}}: Patient {{NAME}} ({{HEALTHCARE_NUMBER}})\n[{{DATE}}] Dr. {{MEDICAL_PROFESSIONAL}}: {{CONDITION}}, Blut {{BLOOD_TYPE}}\n[{{DATE}}] Apotheke: {{DRUG}} {{DOSE}} bereit\n[{{DATE}}] Dr. {{MEDICAL_PROFESSIONAL}}: Rezept an {{EMAIL_ADDRESS}}\n[{{DATE}}] Patient: Bestätigt, Tel {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "chat",
+    "estimated_word_count": 28,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{DATE}}] {{NAME}}: Schaden {{REFERENCE_NUMBER}}\n[{{DATE}}] Agent: Polize {{POLICY_NUMBER}}, Fahrzeug {{VEHICLE_ID}}?\n[{{DATE}}] {{NAME}}: Ja, Führerschein {{DRIVER_LICENSE}}\n[{{DATE}}] Agent: Adresse {{STREET}} {{POSTCODE}} {{CITY}}?\n[{{DATE}}] {{NAME}}: Korrekt, Email {{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "chat",
+    "estimated_word_count": 26,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{DATE}}] HR: {{NAME}}, Einstellung {{DATE}}?\n[{{DATE}}] Bewerber: Ja, {{JOB_TITLE}}, Gehalt {{MONEY}} {{CURRENCY}}\n[{{DATE}}] HR: AHV {{SSN}}, Steuer {{TAX_ID_NUMBER}}?\n[{{DATE}}] Bewerber: Korrekt, IBAN {{IBAN}}\n[{{DATE}}] HR: Vertrag an {{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "chat",
+    "estimated_word_count": 28,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Email an {{EMAIL_ADDRESS}}: \"Konto {{IBAN}}: {{MONEY}} {{CURRENCY}} abgebucht\"\nSMS an {{PHONE}}: \"Code {{REFERENCE_NUMBER}}\"\nPush: \"Login {{USERNAME}} von {{IP_ADDRESS}}\"\nEmail: \"Termin {{DATE}} {{TIME}} {{MEDICAL_FACILITY}}\"\nSMS: \"Karte {{CREDIT_CARD}} verwendet\"",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "chat",
+    "estimated_word_count": 27,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "organization",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "ERMITTUNGSBERICHT {{REFERENCE_NUMBER}}\n\nBeschuldigter: {{NAME}}, geboren {{DOB}}, AHV-Nummer {{SSN}}.\nWohnhaft: {{STREET}} {{POSTCODE}} {{CITY}}, Kanton {{CANTON}}.\nStaatsangehörigkeit: {{NATIONALITY}}, Beruf: {{JOB_TITLE}} bei {{COMPANY}}.\n\nAm {{DATE}} gegen {{TIME}} wurde {{NAME}} an der Adresse {{LOCATION_ADDRESS}} angetroffen. Bei der Durchsuchung wurden folgende Dokumente sichergestellt:\n- Identitätskarte {{IDENTITY_CARD_NUMBER}}\n- Führerschein {{DRIVER_LICENSE}}\n- Fahrzeugschein {{VEHICLE_ID}}\n- Kreditkarte {{CREDIT_CARD}} (gültig bis {{CREDIT_CARD_EXPIRATION}})\n\nDigitale Spuren:\n- IP-Adresse {{IP_ADDRESS}}\n- MAC-Adresse {{MAC_ADDRESS}}\n- Krypto-Wallet {{CRYPTO_WALLET}}\n- Email-Konto {{EMAIL_ADDRESS}}\n\nBankverbindung: {{IBAN}} bei {{COMPANY}}. Kontaktversuche unter {{PHONE}} blieben erfolglos.",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 76,
+    "pii_count": 28,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "RAPPORT D'ENQUÊTE {{REFERENCE_NUMBER}}\n\nSuspect: {{NAME}}, né le {{DOB}}, numéro AVS {{SSN}}.\nDomicile: {{STREET}} {{POSTCODE}} {{CITY}}, canton {{CANTON}}.\nNationalité: {{NATIONALITY}}, profession: {{JOB_TITLE}} chez {{COMPANY}}.\n\nLe {{DATE}} à {{TIME}}, {{NAME}} a été rencontré à {{LOCATION_ADDRESS}}. Lors de la perquisition, documents saisis:\n- Carte d'identité {{IDENTITY_CARD_NUMBER}}\n- Permis {{DRIVER_LICENSE}}\n- Véhicule {{VEHICLE_ID}}\n- Carte crédit {{CREDIT_CARD}}\n\nTraces numériques:\n- IP {{IP_ADDRESS}}\n- MAC {{MAC_ADDRESS}}\n- Email {{EMAIL_ADDRESS}}\n- Wallet crypto {{CRYPTO_WALLET}}\n\nCompte bancaire: {{IBAN}}. Contact {{PHONE}} sans succès.",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 75,
+    "pii_count": 26,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "VERSICHERUNGSBETRUGSVERDACHT {{REFERENCE_NUMBER}}\n\nVersicherungsnehmer {{NAME}} ({{DOB}}, {{SSN}}) meldete am {{DATE}} einen Schaden für Fahrzeug {{VEHICLE_ID}} unter Policennummer {{POLICY_NUMBER}}.\n\nAuffälligkeiten:\n- Adresse {{STREET}} {{POSTCODE}} {{CITY}} nicht auffindbar\n- Telefonnummer {{PHONE}} nicht erreichbar\n- Email {{EMAIL_ADDRESS}} bounce-back\n- Führerschein {{DRIVER_LICENSE}} als gefälscht identifiziert\n- Kreditkarte {{CREDIT_CARD}} ({{CVV}}) gestohlen gemeldet\n\nBanktransaktionen über {{IBAN}} zeigen ungewöhnliche Muster. Krypto-Transaktionen an {{CRYPTO_WALLET}} nachverfolgbar. IP {{IP_ADDRESS}} geortet in {{CITY}}.",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "investigation",
+    "estimated_word_count": 61,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "CYBERCRIME-ERMittlung {{REFERENCE_NUMBER}}\n\nVerdächtiger Account: {{USERNAME}} ({{EMAIL_ADDRESS}})\nRegistriert: {{DATE}} {{TIMESTAMP}} von IP {{IP_ADDRESS}}\nGerät: {{DEVICE_IDENTIFIER}}, MAC {{MAC_ADDRESS}}\n\nAktivitäten:\n- {{TIMESTAMP}}: Login mit Passwort {{PASSWORD}}\n- {{TIMESTAMP}}: API-Zugriff mit Key {{API_KEY}}\n- {{TIMESTAMP}}: Transaktion an Wallet {{CRYPTO_WALLET}}\n- {{TIMESTAMP}}: Private Key {{PRIVATE_KEY}} exportiert\n\nIdentifizierte Person: {{NAME}} ({{DOB}}, {{SSN}}), wohnhaft {{STREET}} {{POSTCODE}} {{CITY}}.\nBankkonto: {{IBAN}}. Telefon: {{PHONE}}. Ausweis: {{IDENTITY_CARD_NUMBER}}.",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 56,
+    "pii_count": 25,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "BERUFSVERGEHEN-UNTERSUCHUNG {{REFERENCE_NUMBER}}\n\nBeschuldigt: Dr. {{MEDICAL_PROFESSIONAL}} (Lizenz {{MEDICAL_LICENSE}})\nTätig in: {{MEDICAL_FACILITY}}, {{STREET}} {{POSTCODE}} {{CITY}}\n\nVorwurf: Unautorisierte Zugriffe auf Patientendaten.\nBetroffene Patienten:\n- {{NAME}} ({{HEALTHCARE_NUMBER}}, {{DOB}})\n- {{NAME}} ({{HEALTHCARE_NUMBER}}, {{DOB}})\n\nZugriffsprotokoll:\n- {{TIMESTAMP}}: Zugriff auf {{GENETIC_DATA}}\n- {{TIMESTAMP}}: Biometrie {{BIOMETRIC_IDENTIFIER}} kopiert\n- {{TIMESTAMP}}: Device {{DEVICE_IDENTIFIER}} synchronisiert\n\nErreichbar unter: {{EMAIL_ADDRESS}}, {{PHONE}}. Untersuchungsleiter: {{FIRSTNAME}} {{LASTNAME}}.",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 50,
+    "pii_count": 23,
+    "pii_categories_used": [
+      "contact",
+      "gdpr_sensitive",
+      "healthcare",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "FINANZERMittlung {{REFERENCE_NUMBER}}\n\nVerdächtige Transaktionen auf Konto {{IBAN}} ({{NAME}}, {{DOB}}, {{SSN}}):\n- {{DATE}}: {{MONEY}} {{CURRENCY}} an {{CRYPTO_WALLET}}\n- {{DATE}}: {{MONEY}} {{CURRENCY}} von Karte {{CREDIT_CARD}}\n- {{DATE}}: {{MONEY}} {{CURRENCY}} Überweisung\n\nKontoinhaber: {{NAME}}, {{JOB_TITLE}} bei {{COMPANY}}\nAdresse: {{LOCATION_ADDRESS}}\nErreichbar unter: {{EMAIL_ADDRESS}}, {{PHONE}}\n\nVerdacht auf Geldwäsche. IP-Logs zeigen Zugriff von {{IP_ADDRESS}} (MAC {{MAC_ADDRESS}}).\nZugehörige Accounts: {{USERNAME}} / {{PASSWORD}}. API-Key {{API_KEY}} gesperrt.",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 56,
+    "pii_count": 28,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "INCHIESTA {{REFERENCE_NUMBER}}\n\nSospettato: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_IDENTIFICATION_NUMBER}}.\nResidente: {{STREET}} {{POSTCODE}} {{CITY}}, {{CANTON}}.\nNazionalità: {{NATIONALITY}}, lavoro: {{JOB_TITLE}} presso {{COMPANY}}.\n\nIl {{DATE}} alle {{TIME}}, {{NAME}} trovato in {{LOCATION_ADDRESS}}.\nDocumenti sequestrati:\n- Carta identità {{IDENTITY_CARD_NUMBER}}\n- Patente {{DRIVER_LICENSE}}\n- Veicolo {{VEHICLE_ID}}\n- Carta credito {{CREDIT_CARD}}\n\nTracce digitali:\n- IP {{IP_ADDRESS}}\n- MAC {{MAC_ADDRESS}}\n- Email {{EMAIL_ADDRESS}}\n- Wallet {{CRYPTO_WALLET}}\n\nConto: {{IBAN}}. Telefono {{PHONE}} non raggiungibile.",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 64,
+    "pii_count": 26,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "DSGVO-VERSTOSS {{REFERENCE_NUMBER}}\n\nBetroffene Person: {{NAME}} ({{DOB}}, {{SSN}})\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\nErreichbar unter: {{EMAIL_ADDRESS}}, {{PHONE}}\n\nVerletzte Daten:\n- Ethnische Herkunft: {{ETHNICITY}}\n- Rasse: {{RACE}}\n- Religion: {{RELIGION}}\n- Sexuelle Orientierung: {{SEXUAL_ORIENTATION}}\n- Politische Meinung: {{POLITICAL_AFFILIATION}}\n- Gewerkschaft: {{TRADE_UNION}}\n- Genetische Daten: {{GENETIC_DATA}}\n\nVerantwortliche Stelle: {{COMPANY}}, {{MEDICAL_FACILITY}}\nVerarbeitung ohne Einwilligung festgestellt am {{DATE}}.\nBiometrie {{BIOMETRIC_IDENTIFIER}} und Device-ID {{DEVICE_IDENTIFIER}} ungeschützt gespeichert.",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 58,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "STEUERHINTERZIEHUNG {{REFERENCE_NUMBER}}\n\nSteuerpflichtiger: {{NAME}} ({{DOB}}, {{TAX_ID_NUMBER}}, {{SSN}})\nBeruf: {{JOB_TITLE}} bei {{COMPANY}}\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}\nErreichbar unter: {{EMAIL_ADDRESS}}, {{PHONE}}\n\nErmittelte Einkünfte:\n- Lohn: {{MONEY}} {{CURRENCY}} (offiziell)\n- Krypto-Gewinne: {{MONEY}} {{CURRENCY}} (Wallet {{CRYPTO_WALLET}})\n- Bareinzahlungen: {{MONEY}} {{CURRENCY}} (Konto {{IBAN}})\n\nKreditkartenumsätze {{CREDIT_CARD}} ({{CVV}}): {{MONEY}} {{CURRENCY}}.\nFahrzeug {{VEHICLE_ID}} nicht deklariert.\nIdentität {{IDENTITY_CARD_NUMBER}} überprüft.",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 50,
+    "pii_count": 28,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "DATENLECK-UNTERSUCHUNG {{REFERENCE_NUMBER}}\n\nBetroffenes System: {{COMPANY}}\nZeitraum: {{DATE}} {{TIME}} bis {{DATE}} {{TIME}}\n\nExfiltrierte Daten:\n- {{NAME}}: {{EMAIL_ADDRESS}}, {{PHONE}}, {{SSN}}, {{IBAN}}\n- {{NAME}}: {{EMAIL_ADDRESS}}, {{HEALTHCARE_NUMBER}}, {{BLOOD_TYPE}}\n- {{NAME}}: {{EMAIL_ADDRESS}}, {{CREDIT_CARD}}, {{CVV}}\n\nAngreifer-IP: {{IP_ADDRESS}}\nVerwendeter API-Key: {{API_KEY}}\nKompromittierte Credentials: {{USERNAME}} / {{PASSWORD}}\nGerät: {{DEVICE_IDENTIFIER}}, MAC {{MAC_ADDRESS}}\nZertifikat {{CERTIFICATE_NUMBER}} widerrufen.",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "investigation",
+    "estimated_word_count": 46,
+    "pii_count": 26,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "healthcare",
+      "hipaa",
+      "id_documents",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "ARBEITSRECHTLICHER STREIT {{REFERENCE_NUMBER}}\n\nKläger: {{NAME}} ({{DOB}}, {{SSN}}, {{TAX_ID_NUMBER}})\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\nErreichbar unter: {{EMAIL_ADDRESS}}, {{PHONE}}\nBeschäftigt bei: {{COMPANY}} als {{JOB_TITLE}}\nEinkommen: {{MONEY}} {{CURRENCY}}\nBank: {{IBAN}}\n\nBeklagte: {{COMPANY}}, {{STREET}} {{POSTCODE}} {{CITY}}\n\nStreitgegenstand: Ungerechtfertigte Kündigung am {{DATE}}.\nNachweis: Ausweis {{IDENTITY_CARD_NUMBER}}, Arbeitsvertrag {{REFERENCE_NUMBER}}.\nZeuge: {{FIRSTNAME}} {{LASTNAME}} ({{EMAIL_ADDRESS}}).",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 44,
+    "pii_count": 26,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "BEHANDLUNGSFEHLER {{REFERENCE_NUMBER}}\n\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}}, {{DOB}}, {{BLOOD_TYPE}})\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\nErreichbar unter: {{EMAIL_ADDRESS}}, {{PHONE}}\nVersicherung: {{INSURANCE_NUMBER}}\n\nBehandelnder Arzt: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nEinrichtung: {{MEDICAL_FACILITY}}\nBehandlungszeitraum: {{DATE}} bis {{DATE}}\n\nDiagnose: {{CONDITION}}\nVerschrieben: {{DRUG}} {{DOSE}}\nAufgetreten: {{INJURY}} am {{DATE}} {{TIME}}\n\nBeweismittel: Medizinischer Bericht {{REFERENCE_NUMBER}}, Biometrie {{BIOMETRIC_IDENTIFIER}}.",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 43,
+    "pii_count": 24,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "IDENTITÄTSDIEBSTAHL {{REFERENCE_NUMBER}}\n\nGeschädigter: {{NAME}} ({{DOB}}, {{SSN}})\nAdresse: {{LOCATION_ADDRESS}}\nErreichbar unter: {{EMAIL_ADDRESS}}, {{PHONE}}\nAusweis: {{IDENTITY_CARD_NUMBER}}\n\nFeststellungen:\n- Unautorisierte Kontoeröffnung {{IBAN}} am {{DATE}}\n- Kreditkarte {{CREDIT_CARD}} beantragt\n- Kredit {{MONEY}} {{CURRENCY}} aufgenommen\n- Falscher Führerschein {{DRIVER_LICENSE}} ausgestellt\n\nVerdächtiger Zugriff von IP {{IP_ADDRESS}}, MAC {{MAC_ADDRESS}}.\nGerät {{DEVICE_IDENTIFIER}} registriert.\nEmail-Account {{EMAIL_ADDRESS}} kompromittiert.",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 47,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "FRAUDE {{REFERENCE_NUMBER}}\n\nVictime: {{NAME}}, né {{DOB}}, AVS {{SSN}}\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\nContact: {{EMAIL_ADDRESS}}, {{PHONE}}\nCarte identité: {{IDENTITY_CARD_NUMBER}}\n\nConstatations:\n- Compte {{IBAN}} ouvert sans autorisation\n- Carte {{CREDIT_CARD}} demandée\n- Crédit {{MONEY}} {{CURRENCY}} contracté\n- Faux permis {{DRIVER_LICENSE}}\n\nAccès suspect IP {{IP_ADDRESS}}, MAC {{MAC_ADDRESS}}.\nAppareil {{DEVICE_IDENTIFIER}} enregistré.\nCompte email {{EMAIL_ADDRESS}} compromis.",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 51,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "WISSENSCHAFTLICHES FEHLVERHALTEN {{REFERENCE_NUMBER}}\n\nForscher: {{NAME}} ({{DOB}}, {{SSN}})\nInstitution: {{ORGANIZATION}}\nProjekt: {{REFERENCE_NUMBER}}\n\nVorwürfe:\n- Manipulation von {{GENETIC_DATA}}\n- Fälschung von {{BIOMETRIC_IDENTIFIER}}\n- Unethische Verwendung von {{HEALTHCARE_NUMBER}}\n\nBetroffene Probanden:\n- {{NAME}} ({{DOB}}, {{BLOOD_TYPE}})\n- {{NAME}} ({{DOB}}, {{CONDITION}})\n\nNachweis: Laborprotokolle {{DATE}}-{{DATE}}, Device-Logs {{DEVICE_IDENTIFIER}}.\nErreichbar unter: {{EMAIL_ADDRESS}}, {{PHONE}}.",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "investigation",
+    "estimated_word_count": 43,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "healthcare",
+      "hipaa",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "IMMOBILIENBETRUG {{REFERENCE_NUMBER}}\n\nVerkäufer: {{NAME}} ({{DOB}}, {{SSN}})\nAdresse Objekt: {{STREET}} {{POSTCODE}} {{CITY}}\nVerkaufspreis: {{MONEY}} {{CURRENCY}}\nKäufer: {{NAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})\n\nAuffälligkeiten:\n- Eigentumsnachweis {{IDENTITY_CARD_NUMBER}} gefälscht\n- Bankverbindung {{IBAN}} nicht existent\n- Kaution {{MONEY}} {{CURRENCY}} auf Krypto-Wallet {{CRYPTO_WALLET}}\n- Notar {{FIRSTNAME}} {{LASTNAME}} nicht registriert\n\nIP-Adresse des Verkäufers: {{IP_ADDRESS}}\nTelefon {{PHONE}} nicht erreichbar.",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "structure_type": "investigation",
+    "estimated_word_count": 49,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "TELEKOM-BETRUG {{REFERENCE_NUMBER}}\n\nVerdächtiger Vertrag: {{CUSTOMER_ID}}\nName: {{NAME}} ({{DOB}}, {{SSN}})\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\nTelefon: {{PHONE}}\nEmail: {{EMAIL_ADDRESS}}\n\nAuffälligkeiten:\n- SIM-Karte {{DEVICE_IDENTIFIER}} am {{DATE}} aktiviert\n- Premium-Rufnummern: {{MONEY}} {{CURRENCY}}\n- Gerät {{DEVICE_IDENTIFIER}} in {{CITY}} geortet\n- MAC {{MAC_ADDRESS}} mehrfach verwendet\n\nZahlung über Karte {{CREDIT_CARD}} ({{CVV}}) rückgebucht.\nIP {{IP_ADDRESS}} aus dem Ausland.",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "structure_type": "investigation",
+    "estimated_word_count": 50,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "INDAGINE FISCALE {{REFERENCE_NUMBER}}\n\nContribuente: {{NAME}}, nato {{DOB}}, CF {{TAX_IDENTIFICATION_NUMBER}}\nLavoro: {{JOB_TITLE}} presso {{COMPANY}}\nIndirizzo: {{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}\nContatto: {{EMAIL_ADDRESS}}, {{PHONE}}\n\nRedditi accertati:\n- Stipendio: {{MONEY}} {{CURRENCY}} (ufficiale)\n- Crypto: {{MONEY}} {{CURRENCY}} (Wallet {{CRYPTO_WALLET}})\n- Contanti: {{MONEY}} {{CURRENCY}} (Conto {{IBAN}})\n\nSpese carta {{CREDIT_CARD}}: {{MONEY}} {{CURRENCY}}.\nVeicolo {{VEHICLE_ID}} non dichiarato.\nIdentità {{IDENTITY_CARD_NUMBER}} verificata.",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 52,
+    "pii_count": 26,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "GEMEINNÜTZIGER BETRUG {{REFERENCE_NUMBER}}\n\nSpender: {{NAME}} ({{DOB}}, {{SSN}})\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\nErreichbar unter: {{EMAIL_ADDRESS}}, {{PHONE}}\nReligion: {{RELIGION}}, Nationalität: {{NATIONALITY}}\n\nSpendenbescheinigung {{CERTIFICATE_NUMBER}} für {{MONEY}} {{CURRENCY}}:\n- Spende nie eingegangen auf {{IBAN}}\n- Quittung {{REFERENCE_NUMBER}} gefälscht\n- Steuervorteil {{MONEY}} {{CURRENCY}} unrechtmäßig beansprucht\n\nVerdächtige Transaktionen an {{CRYPTO_WALLET}}.\nIP {{IP_ADDRESS}} identifiziert.",
+    "locale": "de_CH",
+    "domain": "non-profit",
+    "structure_type": "investigation",
+    "estimated_word_count": 46,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "hipaa",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "REISEBETRUG {{REFERENCE_NUMBER}}\n\nBuchung: {{REFERENCE_NUMBER}}\nKunde: {{NAME}} ({{DOB}}, {{PASSPORT_NUMBER}})\nErreichbar unter: {{EMAIL_ADDRESS}}, {{PHONE}}\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\n\nAuffälligkeiten:\n- Kreditkarte {{CREDIT_CARD}} ({{CVV}}) gestohlen\n- Pass {{PASSPORT_NUMBER}} als vermisst gemeldet\n- Buchung {{MONEY}} {{CURRENCY}} am {{DATE}}\n- Flug {{DATE}} nicht angetreten\n- Rückerstattung auf {{IBAN}} beantragt\n\nIP-Adresse {{IP_ADDRESS}}, Gerät {{DEVICE_IDENTIFIER}}.",
+    "locale": "de_CH",
+    "domain": "travel",
+    "structure_type": "investigation",
+    "estimated_word_count": 47,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Notiz v. {{DATE}} - {{NAME}} anrufen! Tel {{PHONE}} od. {{EMAIL_ADDRESS}}\nPersönlich: {{FIRSTNAME}} {{LASTNAME}}, geb. {{DOB}}, {{AGE}} J.\nAHV: {{SSN}} (check!)\nAdr: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nBank: {{IBAN}} bei {{COMPANY}}\nKarte: {{CREDIT_CARD}} ({{CVV}}) gültig {{CREDIT_CARD_EXPIRATION}}\nJob: {{JOB_TITLE}}",
+    "locale": "de_CH",
+    "domain": "other",
+    "structure_type": "other",
+    "estimated_word_count": 36,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{DATE}} - Pat. {{NAME}} ({{HEALTHCARE_NUMBER}}) \nDr. {{MEDICAL_PROFESSIONAL}} / Liz {{MEDICAL_LICENSE}}\n{{CONDITION}} - Blut {{BLOOD_TYPE}}\nMed: {{DRUG}} {{DOSE}} - Rezept an {{EMAIL_ADDRESS}}\nTel: {{PHONE}} / {{FAX}}\nNächster Term: {{DATE}} {{TIME}}\n{{MEDICAL_FACILITY}} - {{STREET}} {{POSTCODE}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 33,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{DATE}} - {{NAME}} (né {{DOB}})\nAVS: {{SSN}} / Fiscal: {{TAX_IDENTIFICATION_NUMBER}}\nAdr: {{STREET}} {{POSTCODE}} {{CITY}}\nTel: {{PHONE}} / Email: {{EMAIL_ADDRESS}}\nCarte: {{IDENTITY_CARD_NUMBER}}\nCompte: {{IBAN}}\nTravail: {{JOB_TITLE}} chez {{COMPANY}}\nCarte crédit: {{CREDIT_CARD}} ({{CVV}})",
+    "locale": "fr_CH",
+    "domain": "other",
+    "structure_type": "other",
+    "estimated_word_count": 31,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Einkauf {{DATE}}:\n- {{NAME}} ({{CUSTOMER_ID}}) - {{EMAIL_ADDRESS}}\n- Adresse: {{STREET}} {{POSTCODE}} {{CITY}}\n- Tel: {{PHONE}}\n- Karte: {{CREDIT_CARD}} ({{CVV}})\n- Betrag: {{MONEY}} {{CURRENCY}}\n- Tracking: {{URL}}\n- IP: {{IP_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "list",
+    "estimated_word_count": 29,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Kunde: {{NAME}} ({{DOB}})\nID: {{IDENTITY_CARD_NUMBER}}\nSSN: {{SSN}}\nAddr: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nPh: {{PHONE}} / Fx: {{FAX}}\nMail: {{EMAIL_ADDRESS}}\nIBAN: {{IBAN}}\nCC: {{CREDIT_CARD}} / {{CVV}} / {{CREDIT_CARD_EXPIRATION}}\nJob: {{JOB_TITLE}} @ {{COMPANY}}\nRef: {{REFERENCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "structure_type": "other",
+    "estimated_word_count": 33,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "Appuntamento {{DATE}} {{TIME}}\n{{NAME}} ({{DOB}}) - CF {{TAX_IDENTIFICATION_NUMBER}}\nTel: {{PHONE}} / Email: {{EMAIL_ADDRESS}}\nIndirizzo: {{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}\nCarta: {{IDENTITY_CARD_NUMBER}}\nConto: {{IBAN}}\nLavoro: {{JOB_TITLE}} presso {{COMPANY}}\nCarta credito: {{CREDIT_CARD}} ({{CVV}})",
+    "locale": "it_CH",
+    "domain": "other",
+    "structure_type": "other",
+    "estimated_word_count": 30,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Kundendaten {{DATE}}:\n{{NAME}}, geb {{DOB}}, {{AGE}} Jahre\nEmial: {{EMAIL_ADDRESS}} (korrigieren!)\nTel: {{PHONE}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\nAusweiss: {{IDENTITY_CARD_NUMBER}}\nAHV: {{SSN}}\nBank: {{IBAN}}\nKredtikarte: {{CREDIT_CARD}} ({{CVV}}, gültig {{CREDIT_CARD_EXPIRATION}})\nArbeit: {{JOB_TITLE}} bei {{COMPANY}}",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "structure_type": "other",
+    "estimated_word_count": 31,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{DATE}} - {{NAME}} ({{HEALTHCARE_NUMBER}})\nDr. {{MEDICAL_PROFESSIONAL}} (Liz {{MEDICAL_LICENSE}})\nDx: {{CONDITION}} / {{MEDICAL_CODE}}\nRx: {{DRUG}} {{DOSE}}\nBG: {{BLOOD_TYPE}}\nTermin: {{DATE}} {{TIME}}\nErreichbar unter: {{EMAIL_ADDRESS}} / {{PHONE}}\n{{MEDICAL_FACILITY}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 25,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Schaden {{DATE}}:\nVN: {{NAME}} ({{DOB}})\nPol: {{POLICY_NUMBER}}\nFS: {{DRIVER_LICENSE}}\nFZ: {{VEHICLE_ID}}\nSchaden: {{MONEY}} {{CURRENCY}}\nAddr: {{STREET}} {{POSTCODE}} {{CITY}}\nTel: {{PHONE}}\nMail: {{EMAIL_ADDRESS}}\nIBAN: {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "other",
+    "estimated_word_count": 24,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "MA: {{NAME}} ({{DOB}})\nEinstellung: {{DATE}}\nSSN: {{SSN}}\nSt-ID: {{TAX_ID_NUMBER}}\nPosition: {{JOB_TITLE}}\nGehalt: {{MONEY}} {{CURRENCY}}\nBank: {{IBAN}}\nAddr: {{STREET}} {{POSTCODE}} {{CITY}}\nTel: {{PHONE}}\nMail: {{EMAIL_ADDRESS}}\nID: {{IDENTITY_CARD_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "other",
+    "estimated_word_count": 26,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "// User config for {{CUSTOMER_ID}}\n// Name: {{NAME}} ({{DOB}})\n// Email: {{EMAIL_ADDRESS}}\n// Phone: {{PHONE}}\n// IP: {{IP_ADDRESS}}\n// MAC: {{MAC_ADDRESS}}\n// Device: {{DEVICE_IDENTIFIER}}\n// API Key: {{API_KEY}}\n// Private Key: {{PRIVATE_KEY}}\n// Wallet: {{CRYPTO_WALLET}}\n// Cert: {{CERTIFICATE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 38,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "https://example.com/profile?user={{USERNAME}}&id={{CUSTOMER_ID}}&email={{EMAIL_ADDRESS}}\nhttps://example.com/payment?cc={{CREDIT_CARD}}&cvv={{CVV}}&exp={{CREDIT_CARD_EXPIRATION}}\nhttps://example.com/shipping?addr={{STREET}}&zip={{POSTCODE}}&city={{CITY}}\nhttps://example.com/tracking?ref={{REFERENCE_NUMBER}}&phone={{PHONE}}\nhttps://example.com/api?key={{API_KEY}}&ip={{IP_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 5,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "technical"
+    ]
+  },
+  {
+    "template": "{{NAME}} | {{DOB}} | {{SSN}}\n{{STREET}}, {{POSTCODE}} {{CITY}}\n{{EMAIL_ADDRESS}} | {{PHONE}}\n{{IDENTITY_CARD_NUMBER}}\n{{IBAN}}\n{{CREDIT_CARD}} | {{CVV}} | {{CREDIT_CARD_EXPIRATION}}\n{{JOB_TITLE}} @ {{COMPANY}}\nRef: {{REFERENCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "other",
+    "structure_type": "list",
+    "estimated_word_count": 23,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "Rdv {{DATE}} - {{NAME}} (né {{DOB}})\nAVS: {{SSN}} / Impôt: {{TAX_IDENTIFICATION_NUMBER}}\nAdr: {{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}\nTél: {{PHONE}} / Courriel: {{EMAIL_ADDRESS}}\nCI: {{IDENTITY_CARD_NUMBER}}\nCompte: {{IBAN}}\nTravail: {{JOB_TITLE}} chez {{COMPANY}}\nCB: {{CREDIT_CARD}} ({{CVV}})",
+    "locale": "fr_CH",
+    "domain": "other",
+    "structure_type": "other",
+    "estimated_word_count": 32,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Proband {{REFERENCE_NUMBER}}: {{NAME}}\n{{DOB}}, {{GENDER}}, {{BLOOD_TYPE}}\n{{HEALTHCARE_NUMBER}}\n{{GENETIC_DATA}}\n{{BIOMETRIC_IDENTIFIER}}\n{{CONDITION}}\n{{DRUG}} {{DOSE}}\nErreichbar unter: {{EMAIL_ADDRESS}} / {{PHONE}}\n{{STREET}} {{POSTCODE}} {{CITY}}\nHonorar: {{MONEY}} {{CURRENCY}} -> {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "medical_record",
+    "estimated_word_count": 24,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "healthcare",
+      "hipaa",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "Reise {{DATE}}:\n{{NAME}} ({{PASSPORT_NUMBER}})\nFlug {{REFERENCE_NUMBER}}, Sitz {{VEHICLE_ID}}\nHotel: {{COMPANY}}\n{{STREET}}, {{POSTCODE}} {{CITY}}\nNotfall: {{PHONE}}\n{{EMAIL_ADDRESS}}\nKarte: {{CREDIT_CARD}} ({{CVV}})\n{{MONEY}} {{CURRENCY}}\nVersicherung: {{POLICY_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 23,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Mandat {{REFERENCE_NUMBER}}:\n{{NAME}} ({{DOB}})\nSSN: {{SSN}}\nID: {{IDENTITY_CARD_NUMBER}}\nPass: {{PASSPORT_NUMBER}}\nAdr: {{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}\nTel: {{PHONE}}\nMail: {{EMAIL_ADDRESS}}\nHonorar: {{MONEY}} {{CURRENCY}}\nKonto: {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "other",
+    "estimated_word_count": 24,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "DSGVO-Daten {{NAME}}:\nGeb: {{DOB}}\nNat: {{NATIONALITY}}\nEthn: {{ETHNICITY}}\nRasse: {{RACE}}\nRel: {{RELIGION}}\nOrient: {{SEXUAL_ORIENTATION}}\nPolitik: {{POLITICAL_AFFILIATION}}\nGewerkschaft: {{TRADE_UNION}}\nGenetik: {{GENETIC_DATA}}\nErreichbar unter: {{EMAIL_ADDRESS}}\nAdr: {{STREET}} {{POSTCODE}} {{CITY}}",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "other",
+    "estimated_word_count": 26,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "gdpr_sensitive",
+      "location",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "Kunde {{CUSTOMER_ID}}:\n{{NAME}} ({{DOB}}, {{SSN}})\n{{STREET}} {{POSTCODE}} {{CITY}}\nTel: {{PHONE}}\nMail: {{EMAIL_ADDRESS}}\nGerät: {{DEVICE_IDENTIFIER}}\nMAC: {{MAC_ADDRESS}}\nIP: {{IP_ADDRESS}}\nKosten: {{MONEY}} {{CURRENCY}}\nIBAN: {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "structure_type": "other",
+    "estimated_word_count": 23,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "Ref{{REFERENCE_NUMBER}}X - {{NAME}}\nID{{IDENTITY_CARD_NUMBER}} - SSN{{SSN}}\nDr. {{MEDICAL_PROFESSIONAL}} (Liz{{MEDICAL_LICENSE}})\n{{HEALTHCARE_NUMBER}}\n{{STREET}} {{POSTCODE}} {{CITY}}\n{{EMAIL_ADDRESS}}\n{{PHONE}}\nKarte{{CREDIT_CARD}}CVV{{CVV}}\nIBAN{{IBAN}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "other",
+    "estimated_word_count": 17,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "healthcare",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "# Configuration for customer {{CUSTOMER_ID}}\nUSER_NAME = \"{{USERNAME}}\"\nUSER_PASS = \"{{PASSWORD}}\"\nAPI_KEY = \"{{API_KEY}}\"\nPRIVATE_KEY = \"{{PRIVATE_KEY}}\"\nWALLET_ADDRESS = \"{{CRYPTO_WALLET}}\"\nDB_HOST = \"{{IP_ADDRESS}}\"\nDB_PORT = 5432\nDEVICE_ID = \"{{DEVICE_IDENTIFIER}}\"\nMAC_ADDRESS = \"{{MAC_ADDRESS}}\"\nCERT = \"{{CERTIFICATE_NUMBER}}\"\nNOTIFY_EMAIL = \"{{EMAIL_ADDRESS}}\"",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 38,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "id_documents",
+      "technical"
+    ]
+  },
+  {
+    "template": "{\n  \"customer_id\": \"{{CUSTOMER_ID}}\",\n  \"name\": \"{{NAME}}\",\n  \"email\": \"{{EMAIL_ADDRESS}}\",\n  \"phone\": \"{{PHONE}}\",\n  \"address\": {\n    \"street\": \"{{STREET}}\",\n    \"postcode\": \"{{POSTCODE}}\",\n    \"city\": \"{{CITY}}\",\n    \"canton\": \"{{CANTON}}\"\n  },\n  \"bank\": \"{{IBAN}}\",\n  \"credit_card\": \"{{CREDIT_CARD}}\",\n  \"cvv\": \"{{CVV}}\",\n  \"expiry\": \"{{CREDIT_CARD_EXPIRATION}}\",\n  \"ip_address\": \"{{IP_ADDRESS}}\",\n  \"mac\": \"{{MAC_ADDRESS}}\"\n}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 33,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "INSERT INTO customers (id, name, email, phone, ssn, dob)\nVALUES ('{{CUSTOMER_ID}}', '{{NAME}}', '{{EMAIL_ADDRESS}}', '{{PHONE}}', '{{SSN}}', '{{DOB}}');\n\nINSERT INTO addresses (customer_id, street, postcode, city)\nVALUES ('{{CUSTOMER_ID}}', '{{STREET}}', '{{POSTCODE}}', '{{CITY}}');\n\nINSERT INTO payments (customer_id, iban, cc, cvv, expiry)\nVALUES ('{{CUSTOMER_ID}}', '{{IBAN}}', '{{CREDIT_CARD}}', '{{CVV}}', '{{CREDIT_CARD_EXPIRATION}}');",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 42,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "<customer>\n  <id>{{CUSTOMER_ID}}</id>\n  <name>{{NAME}}</name>\n  <email>{{EMAIL_ADDRESS}}</email>\n  <phone>{{PHONE}}</phone>\n  <dob>{{DOB}}</dob>\n  <ssn>{{SSN}}</ssn>\n  <address>\n    <street>{{STREET}}</street>\n    <postcode>{{POSTCODE}}</postcode>\n    <city>{{CITY}}</city>\n    <canton>{{CANTON}}</canton>\n  </address>\n  <bank>\n    <iban>{{IBAN}}</iban>\n  </bank>\n  <payment>\n    <card>{{CREDIT_CARD}}</card>\n    <cvv>{{CVV}}</cvv>\n    <expiry>{{CREDIT_CARD_EXPIRATION}}</expiry>\n  </payment>\n</customer>",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 22,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "customer:\n  id: {{CUSTOMER_ID}}\n  name: {{NAME}}\n  email: {{EMAIL_ADDRESS}}\n  phone: {{PHONE}}\n  dob: {{DOB}}\n  ssn: {{SSN}}\n  address:\n    street: {{STREET}}\n    postcode: {{POSTCODE}}\n    city: {{CITY}}\n    canton: {{CANTON}}\n  bank:\n    iban: {{IBAN}}\n  payment:\n    card: {{CREDIT_CARD}}\n    cvv: {{CVV}}\n    expiry: {{CREDIT_CARD_EXPIRATION}}\n  device:\n    id: {{DEVICE_IDENTIFIER}}\n    mac: {{MAC_ADDRESS}}\n    ip: {{IP_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 39,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "# Customer {{CUSTOMER_ID}} Environment\nDB_USER={{USERNAME}}\nDB_PASS={{PASSWORD}}\nDB_HOST={{IP_ADDRESS}}\nAPI_KEY={{API_KEY}}\nPRIVATE_KEY={{PRIVATE_KEY}}\nWALLET={{CRYPTO_WALLET}}\nDEVICE_ID={{DEVICE_IDENTIFIER}}\nMAC={{MAC_ADDRESS}}\nCERT={{CERTIFICATE_NUMBER}}\nNOTIFY_EMAIL={{EMAIL_ADDRESS}}\nCUSTOMER_IP={{IP_ADDRESS}}\nSESSION_TOKEN={{API_KEY}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 16,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "id_documents",
+      "technical"
+    ]
+  },
+  {
+    "template": "# Patient Configuration\nPATIENT_ID={{HEALTHCARE_NUMBER}}\nPATIENT_NAME={{NAME}}\nDOB={{DOB}}\nBLOOD_TYPE={{BLOOD_TYPE}}\nDOCTOR={{MEDICAL_PROFESSIONAL}}\nLICENSE={{MEDICAL_LICENSE}}\nFACILITY={{MEDICAL_FACILITY}}\nCONDITION={{CONDITION}}\nDRUG={{DRUG}}\nDOSE={{DOSE}}\nCONTACT_EMAIL={{EMAIL_ADDRESS}}\nCONTACT_PHONE={{PHONE}}\nDEVICE={{DEVICE_IDENTIFIER}}\nBIOMETRIC={{BIOMETRIC_IDENTIFIER}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "code_config",
+    "estimated_word_count": 17,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "hipaa",
+      "organization",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "# Configuration client {{CUSTOMER_ID}}\nNOM={{NAME}}\nEMAIL={{EMAIL_ADDRESS}}\nTELEPHONE={{PHONE}}\nADRESSE={{STREET}} {{POSTCODE}} {{CITY}}\nCARTE={{IDENTITY_CARD_NUMBER}}\nNSS={{SSN}}\nFISCAL={{TAX_IDENTIFICATION_NUMBER}}\nIBAN={{IBAN}}\nCARTE_CREDIT={{CREDIT_CARD}}\nCVV={{CVV}}\nEXPIRATION={{CREDIT_CARD_EXPIRATION}}\nIP={{IP_ADDRESS}}\nMAC={{MAC_ADDRESS}}",
+    "locale": "fr_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 19,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "# Configurazione cliente {{CUSTOMER_ID}}\nNOME={{NAME}}\nEMAIL={{EMAIL_ADDRESS}}\nTELEFONO={{PHONE}}\nINDIRIZZO={{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}\nCARTA={{IDENTITY_CARD_NUMBER}}\nCF={{TAX_IDENTIFICATION_NUMBER}}\nIBAN={{IBAN}}\nCARTA_CREDITO={{CREDIT_CARD}}\nCVV={{CVV}}\nSCADENZA={{CREDIT_CARD_EXPIRATION}}\nIP={{IP_ADDRESS}}\nMAC={{MAC_ADDRESS}}\nDISPOSITIVO={{DEVICE_IDENTIFIER}}",
+    "locale": "it_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 20,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "{\n  \"status\": \"success\",\n  \"data\": {\n    \"user\": {\n      \"id\": \"{{CUSTOMER_ID}}\",\n      \"username\": \"{{USERNAME}}\",\n      \"email\": \"{{EMAIL_ADDRESS}}\",\n      \"phone\": \"{{PHONE}}\",\n      \"ssn\": \"{{SSN}}\",\n      \"dob\": \"{{DOB}}\"\n    },\n    \"address\": {\n      \"street\": \"{{STREET}}\",\n      \"city\": \"{{CITY}}\",\n      \"postcode\": \"{{POSTCODE}}\",\n      \"canton\": \"{{CANTON}}\"\n    },\n    \"payment\": {\n      \"iban\": \"{{IBAN}}\",\n      \"card\": \"{{CREDIT_CARD}}\",\n      \"cvv\": \"{{CVV}}\",\n      \"expiry\": \"{{CREDIT_CARD_EXPIRATION}}\"\n    },\n    \"device\": {\n      \"ip\": \"{{IP_ADDRESS}}\",\n      \"mac\": \"{{MAC_ADDRESS}}\",\n      \"id\": \"{{DEVICE_IDENTIFIER}}\"\n    }\n  }\n}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 53,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "version: '3'\nservices:\n  app:\n    environment:\n      - DB_USER={{USERNAME}}\n      - DB_PASS={{PASSWORD}}\n      - API_KEY={{API_KEY}}\n      - PRIVATE_KEY={{PRIVATE_KEY}}\n      - WALLET={{CRYPTO_WALLET}}\n    networks:\n      - network_{{IP_ADDRESS}}\n    devices:\n      - {{DEVICE_IDENTIFIER}}\n    mac_address: {{MAC_ADDRESS}}\n    extra_hosts:\n      - \"api:{{IP_ADDRESS}}\"\n    labels:\n      - customer={{CUSTOMER_ID}}\n      - cert={{CERTIFICATE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 31,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "id_documents",
+      "technical"
+    ]
+  },
+  {
+    "template": "apiVersion: v1\nkind: Secret\nmetadata:\n  name: customer-{{CUSTOMER_ID}}\ntype: Opaque\nstringData:\n  username: {{USERNAME}}\n  password: {{PASSWORD}}\n  api-key: {{API_KEY}}\n  private-key: {{PRIVATE_KEY}}\n  wallet: {{CRYPTO_WALLET}}\n  email: {{EMAIL_ADDRESS}}\n  phone: {{PHONE}}\n  ssn: {{SSN}}\n  iban: {{IBAN}}\n  credit-card: {{CREDIT_CARD}}\n  cvv: {{CVV}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 32,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "technical"
+    ]
+  },
+  {
+    "template": "timestamp={{TIMESTAMP}} level=INFO user={{USERNAME}} ip={{IP_ADDRESS}} mac={{MAC_ADDRESS}} device={{DEVICE_IDENTIFIER}} action=login\ntimestamp={{TIMESTAMP}} level=INFO user={{USERNAME}} api_key={{API_KEY}} action=api_call\ntimestamp={{TIMESTAMP}} level=INFO user={{USERNAME}} txn=success iban={{IBAN}} amount={{MONEY}} currency={{CURRENCY}}\ntimestamp={{TIMESTAMP}} level=INFO user={{USERNAME}} card={{CREDIT_CARD}} cvv={{CVV}} expiry={{CREDIT_CARD_EXPIRATION}}\ntimestamp={{TIMESTAMP}} level=INFO user={{USERNAME}} email={{EMAIL_ADDRESS}} phone={{PHONE}} notify=sent",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 31,
+    "pii_count": 22,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "id_documents",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "customer_id,name,email,phone,ssn,dob,street,postcode,city,iban,credit_card,cvv,expiry\n{{CUSTOMER_ID}},{{NAME}},{{EMAIL_ADDRESS}},{{PHONE}},{{SSN}},{{DOB}},{{STREET}},{{POSTCODE}},{{CITY}},{{IBAN}},{{CREDIT_CARD}},{{CVV}},{{CREDIT_CARD_EXPIRATION}}\n{{CUSTOMER_ID}},{{NAME}},{{EMAIL_ADDRESS}},{{PHONE}},{{SSN}},{{DOB}},{{STREET}},{{POSTCODE}},{{CITY}},{{IBAN}},{{CREDIT_CARD}},{{CVV}},{{CREDIT_CARD_EXPIRATION}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 3,
+    "pii_count": 26,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "<form id=\"customer-{{CUSTOMER_ID}}\">\n  <input type=\"text\" name=\"name\" value=\"{{NAME}}\">\n  <input type=\"email\" name=\"email\" value=\"{{EMAIL_ADDRESS}}\">\n  <input type=\"tel\" name=\"phone\" value=\"{{PHONE}}\">\n  <input type=\"text\" name=\"ssn\" value=\"{{SSN}}\">\n  <input type=\"date\" name=\"dob\" value=\"{{DOB}}\">\n  <input type=\"text\" name=\"street\" value=\"{{STREET}}\">\n  <input type=\"text\" name=\"postcode\" value=\"{{POSTCODE}}\">\n  <input type=\"text\" name=\"city\" value=\"{{CITY}}\">\n  <input type=\"text\" name=\"iban\" value=\"{{IBAN}}\">\n  <input type=\"text\" name=\"credit_card\" value=\"{{CREDIT_CARD}}\">\n  <input type=\"text\" name=\"cvv\" value=\"{{CVV}}\">\n  <input type=\"text\" name=\"expiry\" value=\"{{CREDIT_CARD_EXPIRATION}}\">\n</form>",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 51,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "GET /api/customer/{{CUSTOMER_ID}}?name={{NAME}}&email={{EMAIL_ADDRESS}}&phone={{PHONE}} HTTP/1.1\nHost: {{IP_ADDRESS}}\nX-API-Key: {{API_KEY}}\nX-Device-ID: {{DEVICE_IDENTIFIER}}\n\nPOST /payment HTTP/1.1\nHost: {{IP_ADDRESS}}\nContent-Type: application/json\n\n{\n  \"iban\": \"{{IBAN}}\",\n  \"card\": \"{{CREDIT_CARD}}\",\n  \"cvv\": \"{{CVV}}\",\n  \"expiry\": \"{{CREDIT_CARD_EXPIRATION}}\",\n  \"amount\": \"{{MONEY}}\",\n  \"currency\": \"{{CURRENCY}}\"\n}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 30,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "{\n  \"patient\": {\n    \"id\": \"{{HEALTHCARE_NUMBER}}\",\n    \"name\": \"{{NAME}}\",\n    \"dob\": \"{{DOB}}\",\n    \"blood_type\": \"{{BLOOD_TYPE}}\"\n  },\n  \"doctor\": {\n    \"name\": \"{{MEDICAL_PROFESSIONAL}}\",\n    \"license\": \"{{MEDICAL_LICENSE}}\"\n  },\n  \"facility\": \"{{MEDICAL_FACILITY}}\",\n  \"diagnosis\": \"{{CONDITION}}\",\n  \"medication\": {\n    \"drug\": \"{{DRUG}}\",\n    \"dose\": \"{{DOSE}}\"\n  },\n  \"contact\": {\n    \"email\": \"{{EMAIL_ADDRESS}}\",\n    \"phone\": \"{{PHONE}}\"\n  },\n  \"device\": \"{{DEVICE_IDENTIFIER}}\",\n  \"biometric\": \"{{BIOMETRIC_IDENTIFIER}}\"\n}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "code_config",
+    "estimated_word_count": 42,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "hipaa",
+      "organization",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "POLICY={{POLICY_NUMBER}}\nINSURED={{NAME}}\nDOB={{DOB}}\nSSN={{SSN}}\nDRIVER_LICENSE={{DRIVER_LICENSE}}\nVEHICLE={{VEHICLE_ID}}\nADDRESS={{STREET}} {{POSTCODE}} {{CITY}}\nPHONE={{PHONE}}\nEMAIL={{EMAIL_ADDRESS}}\nPREMIUM={{MONEY}}\nCURRENCY={{CURRENCY}}\nIBAN={{IBAN}}\nCREDIT_CARD={{CREDIT_CARD}}\nCVV={{CVV}}\nEXPIRY={{CREDIT_CARD_EXPIRATION}}\nINSURANCE_NUMBER={{INSURANCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "code_config",
+    "estimated_word_count": 18,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "EMPLOYEE={{NAME}}\nDOB={{DOB}}\nSSN={{SSN}}\nTAX_ID={{TAX_ID_NUMBER}}\nJOB_TITLE={{JOB_TITLE}}\nCOMPANY={{COMPANY}}\nSALARY={{MONEY}}\nCURRENCY={{CURRENCY}}\nIBAN={{IBAN}}\nADDRESS={{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}\nPHONE={{PHONE}}\nEMAIL={{EMAIL_ADDRESS}}\nID_CARD={{IDENTITY_CARD_NUMBER}}\nSTART_DATE={{DATE}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "code_config",
+    "estimated_word_count": 17,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "# Secrets for {{CUSTOMER_ID}}\nDATABASE_URL=postgresql://{{USERNAME}}:{{PASSWORD}}@{{IP_ADDRESS}}:5432/{{REFERENCE_NUMBER}}\nREDIS_URL=redis://{{USERNAME}}:{{PASSWORD}}@{{IP_ADDRESS}}:6379\nAPI_KEY={{API_KEY}}\nSECRET_KEY={{PRIVATE_KEY}}\nJWT_TOKEN={{API_KEY}}\nENCRYPTION_KEY={{PRIVATE_KEY}}\nWALLET_PRIVATE_KEY={{PRIVATE_KEY}}\nWALLET_ADDRESS={{CRYPTO_WALLET}}\nAWS_ACCESS_KEY={{API_KEY}}\nAWS_SECRET_KEY={{PRIVATE_KEY}}\nEMAIL_PASSWORD={{PASSWORD}}\nDEVICE_TOKEN={{DEVICE_IDENTIFIER}}\nBIOMETRIC_KEY={{BIOMETRIC_IDENTIFIER}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 17,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "id_documents",
+      "technical"
+    ]
+  },
+  {
+    "template": "MEDIZINISCHER BERICHT\n\nPatient: {{NAME}}\nVersichertennummer: {{HEALTHCARE_NUMBER}}\nGeburtsdatum: {{DOB}}\nGeschlecht: {{GENDER}}\nBlutgruppe: {{BLOOD_TYPE}}\n\nEinweisung: {{DATE}} {{TIME}}\nEinweisende Einrichtung: {{MEDICAL_FACILITY}}\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\n\nAnamnese:\nDer Patient wurde mit {{CONDITION}} aufgenommen. Vorerkrankungen wurden dokumentiert. Aktuelle Medikation: {{DRUG}} {{DOSE}}.\n\nUntersuchung:\nDurchgeführt von Dr. {{MEDICAL_PROFESSIONAL}} (Lizenznummer {{MEDICAL_LICENSE}}). Biometrische Daten erfasst: {{BIOMETRIC_IDENTIFIER}}.\n\nDiagnose:\n{{MEDICAL_CODE}} - {{CONDITION}}\n\nTherapie:\nVerabreicht: {{DRUG}} {{DOSE}}\n\nErreichbar unter:\n{{EMAIL_ADDRESS}} / {{PHONE}}\nVersicherung: {{INSURANCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 61,
+    "pii_count": 24,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "RAPPORT MÉDICAL\n\nPatient: {{NAME}}\nNuméro d'assurance: {{HEALTHCARE_NUMBER}}\nDate de naissance: {{DOB}}\nGroupe sanguin: {{BLOOD_TYPE}}\n\nAdmission: {{DATE}} {{TIME}}\nÉtablissement: {{MEDICAL_FACILITY}}\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\n\nAnamnèse:\nPatient admis pour {{CONDITION}}. Traitement actuel: {{DRUG}} {{DOSE}}.\n\nExamen:\nDr {{MEDICAL_PROFESSIONAL}} (licence {{MEDICAL_LICENSE}}). Données biométriques: {{BIOMETRIC_IDENTIFIER}}.\n\nDiagnostic:\n{{MEDICAL_CODE}} - {{CONDITION}}\n\nTraitement:\n{{DRUG}} {{DOSE}}\n\nContact:\n{{EMAIL_ADDRESS}} / {{PHONE}}\nAssurance: {{INSURANCE_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 53,
+    "pii_count": 23,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "REFERTO MEDICO\n\nPaziente: {{NAME}}\nNumero assicurativo: {{HEALTHCARE_NUMBER}}\nData di nascita: {{DOB}}\nGruppo sanguigno: {{BLOOD_TYPE}}\n\nRicovero: {{DATE}} {{TIME}}\nStruttura: {{MEDICAL_FACILITY}}\nIndirizzo: {{STREET}} {{POSTCODE}} {{CITY}}\n\nAnamnesi:\nPaziente ricoverato per {{CONDITION}}. Terapia attuale: {{DRUG}} {{DOSE}}.\n\nEsame:\nDott. {{MEDICAL_PROFESSIONAL}} (licenza {{MEDICAL_LICENSE}}). Dati biometrici: {{BIOMETRIC_IDENTIFIER}}.\n\nDiagnosi:\n{{MEDICAL_CODE}} - {{CONDITION}}\n\nTerapia:\n{{DRUG}} {{DOSE}}\n\nContatto:\n{{EMAIL_ADDRESS}} / {{PHONE}}\nAssicurazione: {{INSURANCE_NUMBER}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 53,
+    "pii_count": 23,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "ENTLASSUNGSBERICHT\n\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\nAufnahme: {{DATE}} {{TIME}}\nEntlassung: {{DATE}} {{TIME}}\n\nDiagnose bei Aufnahme: {{CONDITION}}\nEnddiagnose: {{CONDITION}}\n\nBehandlung:\n{{DRUG}} {{DOSE}} über {{DATE}} bis {{DATE}}\nDurchgeführt in: {{MEDICAL_FACILITY}}\nBehandelnder Arzt: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\n\nEmpfehlungen:\nWeiterbehandlung durch Hausarzt. Medikation {{DRUG}} fortsetzen.\n\nErreichbar unter:\n{{EMAIL_ADDRESS}} / {{PHONE}}\nNotfallkontakt: {{PHONE}} ({{NAME}})\nVersicherung: {{INSURANCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 47,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "LABORBEFUND\n\nPatient: {{NAME}}\nVersichertennummer: {{HEALTHCARE_NUMBER}}\nGeburtsdatum: {{DOB}}\nBlutgruppe: {{BLOOD_TYPE}}\nEingang: {{DATE}} {{TIME}}\n\nBefunde:\n- Blutbild: {{MEDICAL_CODE}}\n- Genetischer Marker: {{GENETIC_DATA}}\n- Biometrische ID: {{BIOMETRIC_IDENTIFIER}}\n\nBewertung:\n{{CONDITION}} bestätigt. {{DRUG}} {{DOSE}} empfohlen.\n\nDurchgeführt in: {{MEDICAL_FACILITY}}\nVerantwortlich: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\n\nBefund wurde übermittelt an:\n{{EMAIL_ADDRESS}} / {{PHONE}}\n{{STREET}} {{POSTCODE}} {{CITY}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 47,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "contact",
+      "gdpr_sensitive",
+      "healthcare",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "VERTRAG\n\nZwischen:\n{{COMPANY}}, vertreten durch {{FIRSTNAME}} {{LASTNAME}}, {{JOB_TITLE}}\n{{STREET}} {{POSTCODE}} {{CITY}}\n\nund\n\n{{NAME}}, geboren {{DOB}}, AHV {{SSN}}\n{{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}\n{{EMAIL_ADDRESS}} / {{PHONE}}\n\nGegenstand:\n{{REFERENCE_NUMBER}}\n\nKonditionen:\nBetrag: {{MONEY}} {{CURRENCY}}\nZahlung auf: {{IBAN}}\nKreditkarte: {{CREDIT_CARD}} ({{CVV}}, {{CREDIT_CARD_EXPIRATION}})\n\nUnterschrieben am {{DATE}} {{TIME}}\n{{NAME}} ({{IDENTITY_CARD_NUMBER}})",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 43,
+    "pii_count": 28,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "CONTRAT\n\nEntre:\n{{COMPANY}}, représentée par {{FIRSTNAME}} {{LASTNAME}}, {{JOB_TITLE}}\n{{STREET}} {{POSTCODE}} {{CITY}}\n\net\n\n{{NAME}}, né {{DOB}}, AVS {{SSN}}\n{{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}\n{{EMAIL_ADDRESS}} / {{PHONE}}\n\nObjet:\n{{REFERENCE_NUMBER}}\n\nConditions:\nMontant: {{MONEY}} {{CURRENCY}}\nPaiement sur: {{IBAN}}\nCarte: {{CREDIT_CARD}} ({{CVV}}, {{CREDIT_CARD_EXPIRATION}})\n\nSigné le {{DATE}} {{TIME}}\n{{NAME}} ({{IDENTITY_CARD_NUMBER}})",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 43,
+    "pii_count": 28,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "VOLLMACHT\n\nIch, {{NAME}}, geboren {{DOB}}, wohnhaft {{STREET}} {{POSTCODE}} {{CITY}}, AHV-Nummer {{SSN}}, Ausweis {{IDENTITY_CARD_NUMBER}},\nbevollmächtige hiermit {{FIRSTNAME}} {{LASTNAME}}, geboren {{DOB}}, wohnhaft {{STREET}} {{POSTCODE}} {{CITY}}, {{EMAIL_ADDRESS}},\nin allen Angelegenheiten betreffend {{REFERENCE_NUMBER}} zu handeln.\n\nDiese Vollmacht gilt ab {{DATE}} bis {{DATE}}.\n\nErreichbar unter:\n{{EMAIL_ADDRESS}} / {{PHONE}}\nBankverbindung: {{IBAN}}\n\nOrt, Datum: {{CITY}}, {{DATE}}\nUnterschrift: {{NAME}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 50,
+    "pii_count": 23,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "GERICHTSURKUNDE\n\nAktenzeichen: {{REFERENCE_NUMBER}}\nParteien: {{NAME}} (Kläger) vs. {{COMPANY}} (Beklagte)\n\nDer Kläger {{NAME}}, geboren {{DOB}}, AHV {{SSN}}, wohnhaft {{STREET}} {{POSTCODE}} {{CITY}}, vertreten durch {{FIRSTNAME}} {{LASTNAME}}, Rechtsanwalt, {{EMAIL_ADDRESS}},\nklagt gegen die Beklagte {{COMPANY}}, {{STREET}} {{POSTCODE}} {{CITY}}, vertreten durch {{FIRSTNAME}} {{LASTNAME}}, {{JOB_TITLE}}.\n\nStreitgegenstand:\nForderung in Höhe von {{MONEY}} {{CURRENCY}}.\n\nBeweismittel:\nVertrag {{REFERENCE_NUMBER}}, Konto {{IBAN}}, Kreditkarte {{CREDIT_CARD}}.\n\nTermin: {{DATE}} {{TIME}}\nGericht: {{CITY}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 58,
+    "pii_count": 28,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "ATTO GIUDIZIARIO\n\nNumero: {{REFERENCE_NUMBER}}\nParti: {{NAME}} (attore) vs. {{COMPANY}} (convenuto)\n\nL'attore {{NAME}}, nato {{DOB}}, CF {{TAX_IDENTIFICATION_NUMBER}}, residente {{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}, rappresentato da {{FIRSTNAME}} {{LASTNAME}}, avvocato, {{EMAIL_ADDRESS}},\ndenuncia il convenuto {{COMPANY}}, {{STREET}} {{POSTCODE}} {{CITY}}.\n\nOggetto:\nRichiesta di {{MONEY}} {{CURRENCY}}.\n\nProve:\nContratto {{REFERENCE_NUMBER}}, conto {{IBAN}}, carta {{CREDIT_CARD}}.\n\nUdienza: {{DATE}} {{TIME}}\nTribunale: {{CITY}}",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 51,
+    "pii_count": 25,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "REZEPT\n\n{{MEDICAL_FACILITY}}\n{{STREET}} {{POSTCODE}} {{CITY}}\n\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\nGeburtsdatum: {{DOB}}\nBlutgruppe: {{BLOOD_TYPE}}\n\nVerschreibung:\n{{DRUG}} {{DOSE}}\n{{MEDICAL_PROCESS}}\n\nDiagnose: {{CONDITION}} ({{MEDICAL_CODE}})\n\nArzt: Dr. {{MEDICAL_PROFESSIONAL}}\nLizenz: {{MEDICAL_LICENSE}}\nDatum: {{DATE}} {{TIME}}\n\nErreichbar unter:\n{{EMAIL_ADDRESS}} / {{PHONE}}\nNotfall: {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 33,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "ÜBERWEISUNG\n\nVon: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\n{{MEDICAL_FACILITY}}\n{{STREET}} {{POSTCODE}} {{CITY}}\n{{EMAIL_ADDRESS}} / {{PHONE}}\n\nAn: {{MEDICAL_FACILITY}}\n{{STREET}} {{POSTCODE}} {{CITY}}\n\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\nGeburtsdatum: {{DOB}}\nBlutgruppe: {{BLOOD_TYPE}}\n\nÜberweisungsgrund:\n{{CONDITION}} ({{MEDICAL_CODE}}). Aktuelle Medikation: {{DRUG}} {{DOSE}}.\nBiometrische Daten: {{BIOMETRIC_IDENTIFIER}}.\n\nTerminwunsch: {{DATE}} {{TIME}}\nVersicherung: {{INSURANCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 39,
+    "pii_count": 24,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "NOTFALLPROTOKOLL\n\nEingang: {{DATE}} {{TIME}}\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\nGeburtsdatum: {{DOB}}\nBlutgruppe: {{BLOOD_TYPE}}\n\nNotfallkontakt: {{PHONE}} ({{NAME}})\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\n\nVorfall: {{INJURY}}\nZustand: {{CONDITION}}\n\nBehandlung:\n{{DRUG}} {{DOSE}} verabreicht.\n{{MEDICAL_PROCESS}} durchgeführt.\n\nBehandelnd:\nDr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\n{{MEDICAL_FACILITY}}\n\nGerät: {{DEVICE_IDENTIFIER}}\nBiometrie: {{BIOMETRIC_IDENTIFIER}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 37,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "ORDONNANCE\n\n{{MEDICAL_FACILITY}}\n{{STREET}} {{POSTCODE}} {{CITY}}\n\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\nNé: {{DOB}}\nGroupe: {{BLOOD_TYPE}}\n\nPrescription:\n{{DRUG}} {{DOSE}}\n{{MEDICAL_PROCESS}}\n\nDiagnostic: {{CONDITION}} ({{MEDICAL_CODE}})\n\nDr {{MEDICAL_PROFESSIONAL}}\nLicence: {{MEDICAL_LICENSE}}\nDate: {{DATE}} {{TIME}}\n\nContact:\n{{EMAIL_ADDRESS}} / {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 30,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "EINWILLIGERKLÄRUNG\n\nStudie: {{REFERENCE_NUMBER}}\nProband: {{NAME}} ({{HEALTHCARE_NUMBER}})\nGeburtsdatum: {{DOB}}\nGeschlecht: {{GENDER}}\nBlutgruppe: {{BLOOD_TYPE}}\n\nIch willige ein in:\n- Erhebung genetischer Daten: {{GENETIC_DATA}}\n- Biometrische Erfassung: {{BIOMETRIC_IDENTIFIER}}\n- Verarbeitung meiner {{HEALTHCARE_NUMBER}}\n\nErreichbar unter:\n{{EMAIL_ADDRESS}} / {{PHONE}}\n{{STREET}} {{POSTCODE}} {{CITY}}\n\nHonorar: {{MONEY}} {{CURRENCY}} auf {{IBAN}}\n\nOrt, Datum: {{CITY}}, {{DATE}}\nUnterschrift: {{NAME}}",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "medical_record",
+    "estimated_word_count": 47,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "healthcare",
+      "hipaa",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Kontaktaktualisierung für {{NAME}} ({{SSN}}):\nPrimär: {{EMAIL_ADDRESS}} (Backup: {{PHONE}}, ext {{FAX}})\nSekundär: {{EMAIL_ADDRESS}} (Weiterleitung an {{PHONE}})\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}} ({{CANTON}})\nZahlung: {{IBAN}} (Karte: {{CREDIT_CARD}}, CVV: {{CVV}})\nNotfall: {{NAME}} unter {{PHONE}} ({{EMAIL_ADDRESS}})",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "structure_type": "other",
+    "estimated_word_count": 31,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "Kunde {{NAME}} (ID: {{CUSTOMER_ID}}) - auch bekannt als {{FIRSTNAME}} {{LASTNAME}}\nGeboren: {{DOB}} (Alter: {{AGE}})\nErreichbar unter: {{EMAIL_ADDRESS}} (alternativ {{EMAIL_ADDRESS}})\nTelefon: {{PHONE}} (Festnetz: {{FAX}})\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\nBank: {{IBAN}} (Konto {{ACCOUNT_NUMBER}})\nKarte: {{CREDIT_CARD}} (gültig {{CREDIT_CARD_EXPIRATION}}, Prüfziffer {{CVV}})\n{{NAME}} ist erreichbar unter {{PHONE}} oder {{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "other",
+    "estimated_word_count": 43,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "Datei: Dokument_{{REFERENCE_NUMBER}}.pdf\nErstellt: {{TIMESTAMP}}\nAutor: {{NAME}} ({{EMAIL_ADDRESS}})\nFirma: {{COMPANY}}\nBetreff: {{NAME}} ({{SSN}}, {{DOB}})\nSchlüsselwörter: {{CUSTOMER_ID}}, {{IBAN}}, {{CREDIT_CARD}}\nOrt: {{STREET}} {{POSTCODE}} {{CITY}}\nTelefon: {{PHONE}}\nGerät: {{DEVICE_IDENTIFIER}}\nMAC: {{MAC_ADDRESS}}\nIP: {{IP_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "other",
+    "estimated_word_count": 29,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "BEGIN:VCARD\nVERSION:3.0\nN:{{LASTNAME}};{{FIRSTNAME}}\nFN:{{NAME}}\nEMAIL:{{EMAIL_ADDRESS}}\nTEL:{{PHONE}}\nTEL;FAX:{{FAX}}\nADR:;;{{STREET}};{{CITY}};;{{POSTCODE}};{{COUNTRY}}\nBDAY:{{DOB}}\nNOTE:AHV {{SSN}}, IBAN {{IBAN}}\nUID:{{CUSTOMER_ID}}\nEND:VCARD",
+    "locale": "de_CH",
+    "domain": "other",
+    "structure_type": "other",
+    "estimated_word_count": 15,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "BEGIN:VCALENDAR\nMETHOD:REQUEST\nBEGIN:VEVENT\nDTSTART:{{DATE}}T{{TIME}}\nDTEND:{{DATE}}T{{TIME}}\nSUMMARY:Termin {{NAME}} ({{HEALTHCARE_NUMBER}})\nLOCATION:{{MEDICAL_FACILITY}}, {{STREET}} {{POSTCODE}} {{CITY}}\nDESCRIPTION:Patient {{NAME}}, {{DOB}}, Blut {{BLOOD_TYPE}}. Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}}). Kontakt {{EMAIL_ADDRESS}} {{PHONE}}\nATTENDEE:mailto:{{EMAIL_ADDRESS}}\nORGANIZER:mailto:{{EMAIL_ADDRESS}}\nUID:{{REFERENCE_NUMBER}}\nEND:VEVENT\nEND:VCALENDAR",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "other",
+    "estimated_word_count": 28,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Mise à jour contact {{NAME}} (AVS {{SSN}}):\nPrincipal: {{EMAIL_ADDRESS}} (secours: {{PHONE}})\nSecondaire: {{EMAIL_ADDRESS}} (transfert {{PHONE}})\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}} ({{CANTON}})\nPaiement: {{IBAN}} (carte {{CREDIT_CARD}}, CVV {{CVV}})\nUrgence: {{NAME}} au {{PHONE}} ({{EMAIL_ADDRESS}})",
+    "locale": "fr_CH",
+    "domain": "customer_service",
+    "structure_type": "other",
+    "estimated_word_count": 31,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "Aggiornamento contatto {{NAME}} (CF {{TAX_IDENTIFICATION_NUMBER}}):\nPrincipale: {{EMAIL_ADDRESS}} (backup: {{PHONE}})\nSecondario: {{EMAIL_ADDRESS}} (inoltro {{PHONE}})\nIndirizzo: {{STREET}} {{POSTCODE}} {{CITY}} ({{CANTON}})\nPagamento: {{IBAN}} (carta {{CREDIT_CARD}}, CVV {{CVV}})\nEmergenza: {{NAME}} al {{PHONE}} ({{EMAIL_ADDRESS}})",
+    "locale": "it_CH",
+    "domain": "customer_service",
+    "structure_type": "other",
+    "estimated_word_count": 29,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "@{{USERNAME}} posted: \"Gerade bei {{COMPANY}} in {{CITY}}! {{STREET}} ist super 🏢 #arbeit #{{JOB_TITLE}}\"\nProfil: {{NAME}}, {{DOB}}, {{CITY}}\nErreichbar unter: {{EMAIL_ADDRESS}} / {{PHONE}}\nIP: {{IP_ADDRESS}}\nGerät: {{DEVICE_IDENTIFIER}}\nMAC: {{MAC_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "chat",
+    "estimated_word_count": 27,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "hipaa",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "VERSANDETIKETT {{REFERENCE_NUMBER}}\n\nAn:\n{{NAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}}\n{{CANTON}}\n\nTel: {{PHONE}}\nEmail: {{EMAIL_ADDRESS}}\n\nWert: {{MONEY}} {{CURRENCY}}\nZahlung: {{CREDIT_CARD}} ({{CVV}})\nTracking: {{URL}}\n\nAbsender:\n{{COMPANY}}\n{{STREET}} {{POSTCODE}} {{CITY}}\nKundennummer: {{CUSTOMER_ID}}\nIP: {{IP_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "logistics",
+    "structure_type": "form",
+    "estimated_word_count": 29,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "RECHNUNG {{REFERENCE_NUMBER}}\n\nRechnung an:\n{{NAME}}\n{{STREET}} {{POSTCODE}} {{CITY}}\n{{EMAIL_ADDRESS}} / {{PHONE}}\nKundennummer: {{CUSTOMER_ID}}\n\nPositionen:\n1. Dienstleistung {{DATE}} - {{MONEY}} {{CURRENCY}}\n2. Material - {{MONEY}} {{CURRENCY}}\n\nGesamt: {{MONEY}} {{CURRENCY}}\n\nZahlung auf:\n{{IBAN}} ({{COMPANY}})\noder Karte {{CREDIT_CARD}} ({{CVV}})\n\nFällig: {{DATE}}\nReferenz: {{REFERENCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 40,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "FACTURE {{REFERENCE_NUMBER}}\n\nFacturer à:\n{{NAME}}\n{{STREET}} {{POSTCODE}} {{CITY}}\n{{EMAIL_ADDRESS}} / {{PHONE}}\nClient: {{CUSTOMER_ID}}\n\nArticles:\n1. Service {{DATE}} - {{MONEY}} {{CURRENCY}}\n2. Matériel - {{MONEY}} {{CURRENCY}}\n\nTotal: {{MONEY}} {{CURRENCY}}\n\nPaiement sur:\n{{IBAN}} ({{COMPANY}})\nou carte {{CREDIT_CARD}} ({{CVV}})\n\nÉchéance: {{DATE}}\nRéférence: {{REFERENCE_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 40,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "PROTOKOLL Sitzung {{REFERENCE_NUMBER}}\n\nDatum: {{DATE}} {{TIME}}\nOrt: {{COMPANY}}, {{STREET}} {{POSTCODE}} {{CITY}}\n\nTeilnehmer:\n- {{NAME}} ({{JOB_TITLE}}, {{EMAIL_ADDRESS}}, {{PHONE}})\n- {{NAME}} ({{JOB_TITLE}}, {{EMAIL_ADDRESS}})\n\nThema: Vertrag {{REFERENCE_NUMBER}}\n\nBeschlüsse:\n1. Zahlung {{MONEY}} {{CURRENCY}} auf {{IBAN}}\n2. Kreditkarte {{CREDIT_CARD}} ({{CVV}}) hinterlegen\n3. Kontakt über {{EMAIL_ADDRESS}}\n\nNächster Termin: {{DATE}} {{TIME}}\nProtokoll: {{FIRSTNAME}} {{LASTNAME}}",
+    "locale": "de_CH",
+    "domain": "other",
+    "structure_type": "other",
+    "estimated_word_count": 47,
+    "pii_count": 27,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "ZERTIFIKAT {{CERTIFICATE_NUMBER}}\n\nHiermit wird bestätigt, dass\n{{NAME}}, geboren {{DOB}}, AHV {{SSN}},\nwohnhaft {{STREET}} {{POSTCODE}} {{CITY}},\ndie Prüfung {{REFERENCE_NUMBER}} bestanden hat.\n\nAusgestellt von {{COMPANY}} am {{DATE}}.\nGültig bis {{DATE}}.\n\nErreichbar unter:\n{{EMAIL_ADDRESS}} / {{PHONE}}\n{{STREET}} {{POSTCODE}} {{CITY}}\n\nUnterschrift:\n{{FIRSTNAME}} {{LASTNAME}}, {{JOB_TITLE}}",
+    "locale": "de_CH",
+    "domain": "education",
+    "structure_type": "form",
+    "estimated_word_count": 39,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "GARANTIESCHEIN {{REFERENCE_NUMBER}}\n\nProdukt: {{DEVICE_IDENTIFIER}}\nKunde: {{NAME}} ({{CUSTOMER_ID}})\nKaufdatum: {{DATE}}\nGarantie bis: {{DATE}}\n\nErreichbar unter:\n{{EMAIL_ADDRESS}} / {{PHONE}}\n{{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}\n\nZahlungsmittel:\n{{CREDIT_CARD}} ({{CVV}}, {{CREDIT_CARD_EXPIRATION}})\n{{IBAN}}\n\nHändler:\n{{COMPANY}}, {{STREET}} {{POSTCODE}} {{CITY}}\nMAC-Adresse: {{MAC_ADDRESS}}\nIP-Registrierung: {{IP_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 34,
+    "pii_count": 22,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "UMFRAGEERGEBNIS {{REFERENCE_NUMBER}}\n\nTeilnehmer: {{NAME}} ({{DOB}}, {{GENDER}})\nNationalität: {{NATIONALITY}}\nReligion: {{RELIGION}}\nEthnizität: {{ETHNICITY}}\nPolitik: {{POLITICAL_AFFILIATION}}\nGewerkschaft: {{TRADE_UNION}}\n\nErreichbar unter:\n{{EMAIL_ADDRESS}} / {{PHONE}}\n{{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}\n\nIP: {{IP_ADDRESS}}\nGerät: {{DEVICE_IDENTIFIER}}\nMAC: {{MAC_ADDRESS}}\nZeitstempel: {{TIMESTAMP}}\n\nBelohnung: {{MONEY}} {{CURRENCY}} auf {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "form",
+    "estimated_word_count": 37,
+    "pii_count": 22,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "gdpr_sensitive",
+      "hipaa",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "BENACHRICHTIGUNG {{REFERENCE_NUMBER}}\n\nSehr geehrte/r {{NAME}},\n\nIhr Konto {{IBAN}} wurde am {{DATE}} um {{TIME}} belastet.\nBetrag: {{MONEY}} {{CURRENCY}}\nKarte: {{CREDIT_CARD}} ({{CVV}})\nOrt: {{CITY}}\nGerät: {{DEVICE_IDENTIFIER}}\nIP: {{IP_ADDRESS}}\n\nBei Nichtkenntnis dieser Transaktion kontaktieren Sie uns unter {{PHONE}} oder {{EMAIL_ADDRESS}}.\n\nIhre {{COMPANY}}\n{{STREET}} {{POSTCODE}} {{CITY}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "other",
+    "estimated_word_count": 42,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "NOTIFICATION {{REFERENCE_NUMBER}}\n\nCher/Chère {{NAME}},\n\nVotre compte {{IBAN}} a été débité le {{DATE}} à {{TIME}}.\nMontant: {{MONEY}} {{CURRENCY}}\nCarte: {{CREDIT_CARD}} ({{CVV}})\nLieu: {{CITY}}\nAppareil: {{DEVICE_IDENTIFIER}}\nIP: {{IP_ADDRESS}}\n\nSi vous ne reconnaissez pas cette transaction, contactez-nous au {{PHONE}} ou {{EMAIL_ADDRESS}}.\n\nVotre {{COMPANY}}\n{{STREET}} {{POSTCODE}} {{CITY}}",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "structure_type": "other",
+    "estimated_word_count": 43,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "NOTIFICA {{REFERENCE_NUMBER}}\n\nGentile {{NAME}},\n\nIl suo conto {{IBAN}} è stato addebitato il {{DATE}} alle {{TIME}}.\nImporto: {{MONEY}} {{CURRENCY}}\nCarta: {{CREDIT_CARD}} ({{CVV}})\nLuogo: {{CITY}}\nDispositivo: {{DEVICE_IDENTIFIER}}\nIP: {{IP_ADDRESS}}\n\nSe non riconosce questa transazione, contatti {{PHONE}} o {{EMAIL_ADDRESS}}.\n\nLa sua {{COMPANY}}\n{{STREET}} {{POSTCODE}} {{CITY}}",
+    "locale": "it_CH",
+    "domain": "banking",
+    "structure_type": "other",
+    "estimated_word_count": 42,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "TERMINERINNERUNG\n\nGuten Tag {{NAME}},\n\nIhr Termin am {{DATE}} um {{TIME}}:\n{{MEDICAL_FACILITY}}\n{{STREET}} {{POSTCODE}} {{CITY}}\n\nGrund: {{CONDITION}}\nArzt: Dr. {{MEDICAL_PROFESSIONAL}}\n\nBitte mitbringen:\n- Versichertenkarte {{HEALTHCARE_NUMBER}}\n- Ausweis {{IDENTITY_CARD_NUMBER}}\n\nBei Verhinderung bitte anrufen: {{PHONE}}\noder schreiben an: {{EMAIL_ADDRESS}}\n\nIhr Praxisteam",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "other",
+    "estimated_word_count": 38,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "PASSWORT ZURÜCKSETZEN\n\nHallo {{NAME}},\n\nWir haben eine Anfrage zum Zurücksetzen Ihres Passworts erhalten.\nBenutzername: {{USERNAME}}\nIP-Adresse: {{IP_ADDRESS}}\nGerät: {{DEVICE_IDENTIFIER}}\nMAC: {{MAC_ADDRESS}}\nZeit: {{TIMESTAMP}}\n\nWenn Sie dies waren, klicken Sie auf den Link.\nWenn nicht, kontaktieren Sie uns unter {{PHONE}} oder {{EMAIL_ADDRESS}}.\n\nIhre Daten:\nKunde: {{CUSTOMER_ID}}\nEmail: {{EMAIL_ADDRESS}}\nTelefon: {{PHONE}}\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "other",
+    "estimated_word_count": 53,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "contact",
+      "hipaa",
+      "id_documents",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "LIEFERBESTÄTIGUNG {{REFERENCE_NUMBER}}\n\nHallo {{NAME}},\n\nIhre Bestellung wurde an folgende Adresse geliefert:\n{{STREET}} {{POSTCODE}} {{CITY}}\n\nLieferdatum: {{DATE}} {{TIME}}\nUnterschrieben von: {{NAME}}\n\nZahlung: {{CREDIT_CARD}} ({{CVV}}) - {{MONEY}} {{CURRENCY}}\nTracking: {{URL}}\n\nRückfragen: {{PHONE}} oder {{EMAIL_ADDRESS}}\n\nIhr {{COMPANY}}-Team",
+    "locale": "de_CH",
+    "domain": "logistics",
+    "structure_type": "other",
+    "estimated_word_count": 35,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "ABONNEMENT BESTÄTIGT\n\nWillkommen {{NAME}}!\n\nIhr Abonnement {{REFERENCE_NUMBER}} ist aktiv.\nKunde: {{CUSTOMER_ID}}\nBetrag: {{MONEY}} {{CURRENCY}}/Monat\nZahlung: {{IBAN}} / {{CREDIT_CARD}} ({{CVV}})\n\nKontaktdaten:\n{{EMAIL_ADDRESS}}\n{{PHONE}}\n{{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}\n\nGerät: {{DEVICE_IDENTIFIER}}\nIP: {{IP_ADDRESS}}\nMAC: {{MAC_ADDRESS}}\n\nKündigung unter {{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "structure_type": "other",
+    "estimated_word_count": 35,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "ARBEITSANGEBOT {{REFERENCE_NUMBER}}\n\nSehr geehrte/r {{NAME}},\n\nwir freuen uns, Ihnen die Stelle als {{JOB_TITLE}} anzubieten.\n\nGehalt: {{MONEY}} {{CURRENCY}} jährlich\nStart: {{DATE}}\n\nBitte senden Sie uns:\n- Ausweiskopie {{IDENTITY_CARD_NUMBER}}\n- AHV-Nummer {{SSN}}\n- Steuer-ID {{TAX_ID_NUMBER}}\n- IBAN {{IBAN}}\n\nErreichbar unter:\n{{EMAIL_ADDRESS}} / {{PHONE}}\n{{COMPANY}}, {{STREET}} {{POSTCODE}} {{CITY}}\n\nWir freuen uns auf Sie!",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "other",
+    "estimated_word_count": 49,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "VERSICHERUNGSANGEBOT {{REFERENCE_NUMBER}}\n\nSehr geehrte/r {{NAME}},\n\nhier ist Ihr Angebot für Policennummer {{POLICY_NUMBER}}:\n\nVersicherungsnehmer: {{NAME}} ({{DOB}}, {{SSN}})\nFahrzeug: {{VEHICLE_ID}}\nFührerschein: {{DRIVER_LICENSE}}\nAdresse: {{STREET}} {{POSTCODE}} {{CITY}}\n\nPrämie: {{MONEY}} {{CURRENCY}}/Jahr\nZahlung: {{IBAN}} oder {{CREDIT_CARD}} ({{CVV}})\n\nErreichbar unter:\n{{EMAIL_ADDRESS}} / {{PHONE}}\n\n\n{{FIRSTNAME}} {{LASTNAME}}\n{{COMPANY}}",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "other",
+    "estimated_word_count": 42,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "id_documents",
+      "location",
+      "organization",
+      "personal_identity",
+      "technical"
+    ]
+  },
+  {
+    "template": "KONTOAUSZUG {{REFERENCE_NUMBER}}\n\nKontoinhaber: {{NAME}}\nKonto: {{IBAN}}\nZeitraum: {{DATE}} - {{DATE}}\n\n{{DATE}} {{TIME}} Überweisung -{{MONEY}} {{CURRENCY}}\n{{DATE}} {{TIME}} Karte {{CREDIT_CARD}} -{{MONEY}} {{CURRENCY}}\n{{DATE}} {{TIME}} Krypto {{CRYPTO_WALLET}} -{{MONEY}} {{CURRENCY}}\n\nErreichbar unter:\n{{EMAIL_ADDRESS}}\n{{PHONE}}\n{{STREET}} {{POSTCODE}} {{CITY}}\n\nGerät: {{DEVICE_IDENTIFIER}}\nIP: {{IP_ADDRESS}}\nMAC: {{MAC_ADDRESS}}\nSession: {{API_KEY}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "other",
+    "estimated_word_count": 41,
+    "pii_count": 28,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "hipaa",
+      "location",
+      "personal_identity",
+      "technical",
+      "temporal"
+    ]
+  }
+]

@@ -1,0 +1,1602 @@
+[
+  {
+    "template": "Sehr geehrte Damen und Herren, hiermit kündige ich mein Konto {{IBAN}}. Meine Kundennummer ist {{CUSTOMER_ID}}. Freundliche Grüsse {{NAME}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Zahlungsbestätigung: Von {{IBAN}} an {{NAME}}, Betrag {{AMOUNT}} {{CURRENCY}}, Referenz {{REFERENCE_NUMBER}}, Datum {{DATE}} {{TIME}}.",
+    "locale": "de_CH",
+    "domain": "banking",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Ihre Kreditkarte {{REFERENCE_NUMBER}} wurde gesperrt. Kontakt: {{PHONE}} oder {{EMAIL}}. Kundennummer: {{CUSTOMER_ID}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "urgent"
+  },
+  {
+    "template": "Schadenmeldung: Versicherungsnehmer {{NAME}}, Police {{POLICY_NUMBER}}, AHV {{AHV}}. Kontakt: {{PHONE}} / {{EMAIL}}",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Prämienrechnung {{COMPANY}}: {{NAME}}, Versicherungsnummer {{INSURANCE_NUMBER}}, Betrag {{AMOUNT}} {{CURRENCY}} auf {{IBAN}}.",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Terminbestätigung: Patient {{NAME}}, {{DOB}}, AHV {{AHV}}, am {{DATE}} um {{TIME}}. {{STREET}}, {{POSTCODE}} {{CITY}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Laborresultate für {{NAME}}, Versichertennummer {{INSURANCE_NUMBER}}, geb. {{DOB}}. Abholung: {{STREET}}, {{CITY}}. {{EMAIL}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Gehaltsabrechnung {{DATE}}: {{NAME}}, Personalnummer {{CUSTOMER_ID}}, AHV {{AHV}}, IBAN {{IBAN}}, Brutto {{AMOUNT}} {{CURRENCY}}.",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Bewerbung: {{NAME}}, {{STREET}}, {{POSTCODE}} {{CITY}}, {{EMAIL}}, {{PHONE}}, Geburtsdatum {{DOB}}, AHV {{AHV}}. Freundliche Grüsse",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Support-Ticket #{{REFERENCE_NUMBER}}: Hallo {{FIRSTNAME}}, wir haben Ihre Anfrage erhalten. Kundennummer {{CUSTOMER_ID}}, {{EMAIL}}.",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "informal"
+  },
+  {
+    "template": "DRINGEND: Kunde {{NAME}}, Kundennummer {{CUSTOMER_ID}}, Rechnung {{REFERENCE_NUMBER}}, {{AMOUNT}} {{CURRENCY}} auf {{IBAN}} bis {{DATE}}.",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "urgent"
+  },
+  {
+    "template": "Vollmacht: Ich {{NAME}}, geb. {{DOB}}, AHV {{AHV}}, bevollmächtige {{NAME}}. {{PHONE}}, {{DATE}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Bestellbestätigung #{{REFERENCE_NUMBER}}: Liebe/r {{FIRSTNAME}}, Lieferung an {{NAME}}, {{STREET}}, {{POSTCODE}} {{CITY}}. {{EMAIL}} / {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "informal"
+  },
+  {
+    "template": "Retoure genehmigt: Auftrag {{REFERENCE_NUMBER}}, Kunde {{NAME}}, Kundennummer {{CUSTOMER_ID}}, Rückerstattung auf {{IBAN}}. {{EMAIL}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Mietvertrag: Vermieter {{COMPANY}}, Mieter {{NAME}}, {{DOB}}, AHV {{AHV}}, Objekt {{STREET}}, {{POSTCODE}} {{CITY}}, Miete {{AMOUNT}} {{CURRENCY}}.",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Vertragsänderung: Kunde {{NAME}}, Kundennummer {{CUSTOMER_ID}}, Rufnummer {{PHONE}} portiert. Neuer Vertrag ab {{DATE}}. {{EMAIL}}",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Steuererklärung: Steuerpflichtige/r {{NAME}}, AHV {{AHV}}, geb. {{DOB}}, Wohnsitz {{STREET}}, {{POSTCODE}} {{CITY}}, Rückerstattung {{AMOUNT}} {{CURRENCY}} auf {{IBAN}}.",
+    "locale": "de_CH",
+    "domain": "government",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Hi {{FIRSTNAME}}, deine Bestellung #{{REFERENCE_NUMBER}} ist unterwegs! {{STREET}}, {{POSTCODE}} {{CITY}}. Fragen? {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "informal"
+  },
+  {
+    "template": "{{COMPANY}}: Zahlung {{AMOUNT}} {{CURRENCY}} eingegangen. Ref: {{REFERENCE_NUMBER}}. Danke! {{NAME}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "length_category": "short",
+    "pii_density": "low",
+    "tone": "neutral"
+  },
+  {
+    "template": "Willkommen {{FIRSTNAME}}! Ihre Kundennummer: {{CUSTOMER_ID}}, Email: {{EMAIL}}. Fragen? {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "length_category": "short",
+    "pii_density": "low",
+    "tone": "informal"
+  },
+  {
+    "template": "Madame, Monsieur, je vous informe de la clôture de mon compte {{IBAN}}. Mon numéro client est {{CUSTOMER_ID}}. Cordialement {{NAME}}",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Confirmation paiement: De {{IBAN}} à {{NAME}}, montant {{AMOUNT}} {{CURRENCY}}, référence {{REFERENCE_NUMBER}}, date {{DATE}} {{TIME}}.",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Votre carte crédit {{REFERENCE_NUMBER}} a été bloquée. Contactez {{PHONE}} ou {{EMAIL}}. N° client: {{CUSTOMER_ID}}",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "urgent"
+  },
+  {
+    "template": "Déclaration sinistre: Assuré {{NAME}}, police {{POLICY_NUMBER}}, AVS {{AHV}}. Contact: {{PHONE}} / {{EMAIL}}",
+    "locale": "fr_CH",
+    "domain": "insurance",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Facture primes {{COMPANY}}: {{NAME}}, n° assurance {{INSURANCE_NUMBER}}, montant {{AMOUNT}} {{CURRENCY}} sur {{IBAN}}.",
+    "locale": "fr_CH",
+    "domain": "insurance",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Confirmation RDV: Patient {{NAME}}, {{DOB}}, AVS {{AHV}}, le {{DATE}} à {{TIME}}. {{STREET}}, {{POSTCODE}} {{CITY}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Résultats labo pour {{NAME}}, n° assuré {{INSURANCE_NUMBER}}, né {{DOB}}. Retrait: {{STREET}}, {{CITY}}. {{EMAIL}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Bulletin salaire {{DATE}}: {{NAME}}, n° personnel {{CUSTOMER_ID}}, AVS {{AHV}}, IBAN {{IBAN}}, brut {{AMOUNT}} {{CURRENCY}}.",
+    "locale": "fr_CH",
+    "domain": "hr_admin",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Candidature: {{NAME}}, {{STREET}}, {{POSTCODE}} {{CITY}}, {{EMAIL}}, {{PHONE}}, né {{DOB}}, AVS {{AHV}}. Cordialement",
+    "locale": "fr_CH",
+    "domain": "hr_admin",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Ticket support #{{REFERENCE_NUMBER}}: Bonjour {{FIRSTNAME}}, nous avons reçu votre demande. N° client {{CUSTOMER_ID}}, {{EMAIL}}.",
+    "locale": "fr_CH",
+    "domain": "customer_service",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "informal"
+  },
+  {
+    "template": "URGENT: Client {{NAME}}, n° client {{CUSTOMER_ID}}, facture {{REFERENCE_NUMBER}}, {{AMOUNT}} {{CURRENCY}} sur {{IBAN}} avant {{DATE}}.",
+    "locale": "fr_CH",
+    "domain": "customer_service",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "urgent"
+  },
+  {
+    "template": "Procuration: Je {{NAME}}, né {{DOB}}, AVS {{AHV}}, mandate {{NAME}}. {{PHONE}}, {{DATE}}",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Confirmation commande #{{REFERENCE_NUMBER}}: Cher/Chère {{FIRSTNAME}}, livraison à {{NAME}}, {{STREET}}, {{POSTCODE}} {{CITY}}. {{EMAIL}} / {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "ecommerce",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "informal"
+  },
+  {
+    "template": "Retour approuvé: Commande {{REFERENCE_NUMBER}}, client {{NAME}}, n° client {{CUSTOMER_ID}}, remboursement sur {{IBAN}}. {{EMAIL}}",
+    "locale": "fr_CH",
+    "domain": "ecommerce",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Contrat bail: Bailleur {{COMPANY}}, locataire {{NAME}}, {{DOB}}, AVS {{AHV}}, objet {{STREET}}, {{POSTCODE}} {{CITY}}, loyer {{AMOUNT}} {{CURRENCY}}.",
+    "locale": "fr_CH",
+    "domain": "real_estate",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Modification contrat: Client {{NAME}}, n° client {{CUSTOMER_ID}}, numéro {{PHONE}} porté. Nouveau contrat dès {{DATE}}. {{EMAIL}}",
+    "locale": "fr_CH",
+    "domain": "telecom",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Déclaration impôts: Contribuable {{NAME}}, AVS {{AHV}}, né {{DOB}}, domicile {{STREET}}, {{POSTCODE}} {{CITY}}, remboursement {{AMOUNT}} {{CURRENCY}} sur {{IBAN}}.",
+    "locale": "fr_CH",
+    "domain": "government",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Salut {{FIRSTNAME}}, ta commande #{{REFERENCE_NUMBER}} est en route! {{STREET}}, {{POSTCODE}} {{CITY}}. Questions? {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "ecommerce",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "informal"
+  },
+  {
+    "template": "{{COMPANY}}: Paiement {{AMOUNT}} {{CURRENCY}} reçu. Réf: {{REFERENCE_NUMBER}}. Merci! {{NAME}}",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "length_category": "short",
+    "pii_density": "low",
+    "tone": "neutral"
+  },
+  {
+    "template": "Bienvenue {{FIRSTNAME}}! Votre n° client: {{CUSTOMER_ID}}, Email: {{EMAIL}}. Questions? {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "customer_service",
+    "length_category": "short",
+    "pii_density": "low",
+    "tone": "informal"
+  },
+  {
+    "template": "Gentili Signore e Signori, La informo della chiusura del mio conto {{IBAN}}. Il mio numero cliente è {{CUSTOMER_ID}}. Cordiali saluti {{NAME}}",
+    "locale": "it_CH",
+    "domain": "banking",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Conferma pagamento: Da {{IBAN}} a {{NAME}}, importo {{AMOUNT}} {{CURRENCY}}, riferimento {{REFERENCE_NUMBER}}, data {{DATE}} {{TIME}}.",
+    "locale": "it_CH",
+    "domain": "banking",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "La sua carta di credito {{REFERENCE_NUMBER}} è stata bloccata. Contatti {{PHONE}} o {{EMAIL}}. N° cliente: {{CUSTOMER_ID}}",
+    "locale": "it_CH",
+    "domain": "banking",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "urgent"
+  },
+  {
+    "template": "Denuncia sinistro: Assicurato {{NAME}}, polizza {{POLICY_NUMBER}}, AVS {{AHV}}. Contatto: {{PHONE}} / {{EMAIL}}",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Fattura premi {{COMPANY}}: {{NAME}}, n° assicurazione {{INSURANCE_NUMBER}}, importo {{AMOUNT}} {{CURRENCY}} su {{IBAN}}.",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Conferma appuntamento: Paziente {{NAME}}, {{DOB}}, AVS {{AHV}}, il {{DATE}} alle {{TIME}}. {{STREET}}, {{POSTCODE}} {{CITY}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Risultati labo per {{NAME}}, n° assicurato {{INSURANCE_NUMBER}}, nato {{DOB}}. Ritiro: {{STREET}}, {{CITY}}. {{EMAIL}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Busta paga {{DATE}}: {{NAME}}, n° personale {{CUSTOMER_ID}}, AVS {{AHV}}, IBAN {{IBAN}}, lordo {{AMOUNT}} {{CURRENCY}}.",
+    "locale": "it_CH",
+    "domain": "hr_admin",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Candidatura: {{NAME}}, {{STREET}}, {{POSTCODE}} {{CITY}}, {{EMAIL}}, {{PHONE}}, nato {{DOB}}, AVS {{AHV}}. Cordiali saluti",
+    "locale": "it_CH",
+    "domain": "hr_admin",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Ticket supporto #{{REFERENCE_NUMBER}}: Ciao {{FIRSTNAME}}, abbiamo ricevuto la sua richiesta. N° cliente {{CUSTOMER_ID}}, {{EMAIL}}.",
+    "locale": "it_CH",
+    "domain": "customer_service",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "informal"
+  },
+  {
+    "template": "URGENTE: Cliente {{NAME}}, n° cliente {{CUSTOMER_ID}}, fattura {{REFERENCE_NUMBER}}, {{AMOUNT}} {{CURRENCY}} su {{IBAN}} entro {{DATE}}.",
+    "locale": "it_CH",
+    "domain": "customer_service",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "urgent"
+  },
+  {
+    "template": "Procura: Io {{NAME}}, nato {{DOB}}, AVS {{AHV}}, mando {{NAME}}. {{PHONE}}, {{DATE}}",
+    "locale": "it_CH",
+    "domain": "legal",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Conferma ordine #{{REFERENCE_NUMBER}}: Gentile {{FIRSTNAME}}, consegna a {{NAME}}, {{STREET}}, {{POSTCODE}} {{CITY}}. {{EMAIL}} / {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "ecommerce",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "informal"
+  },
+  {
+    "template": "Reso approvato: Ordine {{REFERENCE_NUMBER}}, cliente {{NAME}}, n° cliente {{CUSTOMER_ID}}, rimborso su {{IBAN}}. {{EMAIL}}",
+    "locale": "it_CH",
+    "domain": "ecommerce",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Contratto locazione: Locatore {{COMPANY}}, affittuario {{NAME}}, {{DOB}}, AVS {{AHV}}, oggetto {{STREET}}, {{POSTCODE}} {{CITY}}, affitto {{AMOUNT}} {{CURRENCY}}.",
+    "locale": "it_CH",
+    "domain": "real_estate",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Modifica contratto: Cliente {{NAME}}, n° cliente {{CUSTOMER_ID}}, numero {{PHONE}} portato. Nuovo contratto dal {{DATE}}. {{EMAIL}}",
+    "locale": "it_CH",
+    "domain": "telecom",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Dichiarazione fiscale: Contribuente {{NAME}}, AVS {{AHV}}, nato {{DOB}}, domicilio {{STREET}}, {{POSTCODE}} {{CITY}}, rimborso {{AMOUNT}} {{CURRENCY}} su {{IBAN}}.",
+    "locale": "it_CH",
+    "domain": "government",
+    "length_category": "short",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Ciao {{FIRSTNAME}}, il tuo ordine #{{REFERENCE_NUMBER}} è in arrivo! {{STREET}}, {{POSTCODE}} {{CITY}}. Domande? {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "ecommerce",
+    "length_category": "short",
+    "pii_density": "medium",
+    "tone": "informal"
+  },
+  {
+    "template": "{{COMPANY}}: Pagamento {{AMOUNT}} {{CURRENCY}} ricevuto. Rif: {{REFERENCE_NUMBER}}. Grazie! {{NAME}}",
+    "locale": "it_CH",
+    "domain": "banking",
+    "length_category": "short",
+    "pii_density": "low",
+    "tone": "neutral"
+  },
+  {
+    "template": "Benvenuto {{FIRSTNAME}}! Il tuo n° cliente: {{CUSTOMER_ID}}, Email: {{EMAIL}}. Domande? {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "customer_service",
+    "length_category": "short",
+    "pii_density": "low",
+    "tone": "informal"
+  },
+  {
+    "template": "Kontoauszug {{COMPANY}}\n\nKunde: {{NAME}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\nKonto: {{IBAN}}\nKundennummer: {{CUSTOMER_ID}}\n\nWir haben am {{DATE}} eine Abbuchung über {{AMOUNT}} {{CURRENCY}} festgestellt.\n\nBei Unstimmigkeiten kontaktieren Sie uns unter {{PHONE}} oder {{EMAIL}}.",
+    "locale": "de_CH",
+    "domain": "banking",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Hypothekarbrief\n\nWir bestätigen den Erhalt Ihrer Unterlagen für das Objekt in {{CITY}}.\n\nKreditnehmer: {{NAME}}\nGeburtsdatum: {{DOB}}\nAHV-Nummer: {{AHV}}\nKontakt: {{EMAIL}} / {{PHONE}}\n\nDie Bearbeitung dauert ca. 10 Arbeitstage.\nReferenz: {{REFERENCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Kreditgesuch\n\nAntragsteller: {{NAME}}\nGeburtsdatum: {{DOB}}\nAHV: {{AHV}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nTelefon: {{PHONE}}\nE-Mail: {{EMAIL}}\n\nGewünschter Kreditbetrag: {{AMOUNT}} {{CURRENCY}}\nKontonummer: {{IBAN}}\nReferenz: {{REFERENCE_NUMBER}}\n\nWir bearbeiten Ihr Gesuch innerhalb von 5 Tagen.",
+    "locale": "de_CH",
+    "domain": "banking",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Prämienrechnung {{COMPANY}}\n\n{{NAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}} ({{CANTON}})\n\nVersicherungsnummer: {{INSURANCE_NUMBER}}\nFälliger Betrag: {{AMOUNT}} {{CURRENCY}}\nZahlbar bis: {{DATE}}\n\nBitte überweisen Sie auf: {{IBAN}}\nReferenz: {{REFERENCE_NUMBER}}\n\nBei Fragen: {{EMAIL}} / {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "{{COMPANY}}\nSchadenabteilung\n\nBetrifft: Schadenfall {{REFERENCE_NUMBER}}\n\nSehr geehrter Herr {{LASTNAME}},\n\nwir benötigen folgende Unterlagen:\n- Kopie des Führerausweises: {{DRIVER_LICENSE}}\n- Kopie des Passes: {{PASSPORT_NUMBER}}\n- Kontaktdaten: {{PHONE}}\n\nMit freundlichen Grüssen\n{{JOB_TITLE}} {{NAME}}",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Vertragsänderung\n\nSehr geehrte/r {{NAME}},\n\nwir haben Ihre Adressänderung erfasst:\nNeue Adresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nPolizze: {{POLICY_NUMBER}}\nKontakt: {{EMAIL}} / {{PHONE}}\n\nDie Änderung ist ab {{DATE}} wirksam.",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Überweisung an Facharzt\n\nPatient: {{NAME}}\nAHV: {{AHV}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nTel: {{PHONE}}\n\nDiagnose: [...]\n\nBitte um Terminvereinbarung unter {{EMAIL}} oder {{PHONE}}.\nVersicherungsnummer: {{INSURANCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Impf-Einladung\n\nSehr geehrte/r {{NAME}},\n\nwir laden Sie zur Impfung ein.\n\nTermin: {{DATE}} um {{TIME}}\nOrt: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nBitte mitbringen:\n- ID / Pass: {{PASSPORT_NUMBER}}\n- Versicherungskarte: {{INSURANCE_NUMBER}}\n\nBei Fragen: {{EMAIL}} / {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Arbeitszeugnis\n\n{{NAME}}, geboren am {{DOB}}, AHV {{AHV}}, wohnhaft in {{CITY}},\nwar vom {{DATE}} bis {{DATE}} als {{JOB_TITLE}} bei {{COMPANY}} beschäftigt.\n\nKontakt HR: {{EMAIL}} / {{PHONE}}\nReferenz: {{REFERENCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Bewerbung\n\n{{NAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}}\n{{EMAIL}} / {{PHONE}}\n\nSehr geehrte Damen und Herren,\n\nhiermit bewerbe ich mich um die Stelle als {{JOB_TITLE}} bei {{COMPANY}}.\n\nMeine Geburtsdaten: {{DOB}}\nAHV: {{AHV}}\n\nFreundliche Grüsse\n{{NAME}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Bewerbungsbestätigung\n\nSehr geehrte/r {{NAME}},\n\nwir bestätigen den Eingang Ihrer Bewerbung vom {{DATE}}.\n\nBewerberdaten:\nName: {{NAME}}\nGeburtsdatum: {{DOB}}\nAHV: {{AHV}}\nKontakt: {{EMAIL}} / {{PHONE}}\nReferenz: {{REFERENCE_NUMBER}}\n\nWir werden uns innerhalb von 2 Wochen bei Ihnen melden.",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Chat-Verlauf:\nAgent: Guten Tag, wie kann ich helfen?\nKunde: Ich habe ein Problem mit meiner Bestellung {{REFERENCE_NUMBER}}.\nAgent: Kann ich Ihre Kundennummer?\nKunde: {{CUSTOMER_ID}}\nAgent: Danke {{FIRSTNAME}}. Ihre Email ist {{EMAIL}}, korrekt?\nKunde: Ja, und mein Telefon ist {{PHONE}}.",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "informal"
+  },
+  {
+    "template": "Rückruf-Anfrage\n\nKunde: {{NAME}}\nKundennummer: {{CUSTOMER_ID}}\nTelefon: {{PHONE}}\nE-Mail: {{EMAIL}}\n\nRückruf erwünscht am {{DATE}} zwischen {{TIME}} und {{TIME}}.\n\nReferenz: {{REFERENCE_NUMBER}}\n\nWir melden uns bei Ihnen.",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Beschwerdebearbeitung\n\nSehr geehrte/r {{NAME}},\n\nwir haben Ihre Beschwerde vom {{DATE}} bearbeitet.\n\nBeschwerde-Nr.: {{REFERENCE_NUMBER}}\nKundennummer: {{CUSTOMER_ID}}\n\nErgebnis: Ihr Anliegen wurde positiv entschieden.\n\nBei Fragen: {{EMAIL}} / {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Vollmacht\n\nIch, {{NAME}}, geboren am {{DOB}}, AHV-Nummer {{AHV}}, wohnhaft in {{CITY}},\nbevollmächtige {{NAME}} für alle Rechtsgeschäfte.\n\nUnterschrift: _______________\nDatum: {{DATE}}\n\nKontakt: {{PHONE}} / {{EMAIL}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Testament\n\nIch, {{NAME}}, geboren am {{DOB}}, AHV {{AHV}}, wohnhaft in {{CITY}},\nsetze zu meinen Erben ein: {{NAME}}\n\nKontakt Notar:\n{{NAME}}\n{{STREET}}, {{POSTCODE}} {{CITY}}\n{{EMAIL}} / {{PHONE}}\n\nOrt, Datum: {{CITY}}, {{DATE}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Versandbestätigung\n\nHallo {{FIRSTNAME}},\n\ndeine Bestellung #{{REFERENCE_NUMBER}} wurde versandt!\n\nLieferadresse:\n{{NAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}} ({{CANTON}})\n\nTracking: {{EMAIL}}\nFragen? {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "informal"
+  },
+  {
+    "template": "Gutschrift\n\nKunde: {{NAME}}\nKundennummer: {{CUSTOMER_ID}}\nBestellung: {{REFERENCE_NUMBER}}\n\nGutschrift: {{AMOUNT}} {{CURRENCY}}\nauf IBAN: {{IBAN}}\n\nFragen? {{EMAIL}} / {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Mietzinserhöhung\n\nSehr geehrte/r {{NAME}},\n\ngemäss Mietvertrag informieren wir Sie über die Mietzinserhöhung.\n\nObjekt: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nNeuer Mietzins: {{AMOUNT}} {{CURRENCY}}\nGültig ab: {{DATE}}\n\nBei Fragen: {{EMAIL}} oder {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Wohnungsübergabe\n\nSehr geehrte/r {{NAME}},\n\nwir vereinbaren die Übergabe Ihrer Wohnung:\n\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\nDatum: {{DATE}} um {{TIME}}\n\nIhre Kontaktdaten:\n{{PHONE}} / {{EMAIL}}\n\nFreundliche Grüsse\n{{COMPANY}}",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Nebenkostenabrechnung {{DATE}}\n\nMieter: {{NAME}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nNachzahlung: {{AMOUNT}} {{CURRENCY}}\nZahlbar auf: {{IBAN}}\nReferenz: {{REFERENCE_NUMBER}}\n\nFragen: {{EMAIL}} / {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "SIM-Karten-Aktivierung\n\nKunde: {{NAME}}\nKundennummer: {{CUSTOMER_ID}}\nRufnummer: {{PHONE}}\n\nIhre SIM-Karte ist aktiviert.\n\nVertrag beginnt am {{DATE}}.\n\nFragen? {{EMAIL}} / {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Tarifwechsel\n\nSehr geehrte/r {{NAME}},\n\nIhr Tarif wurde gewechselt.\n\nKundennummer: {{CUSTOMER_ID}}\nRufnummer: {{PHONE}}\nNeuer Tarif ab: {{DATE}}\n\nFragen? {{EMAIL}} / {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Einwohnerkontrolle {{CITY}}\n\nSehr geehrte/r {{NAME}},\n\nbitte aktualisieren Sie Ihre Meldeangaben:\n- Adresse: {{STREET}}, {{POSTCODE}} {{CITY}}\n- Telefon: {{PHONE}}\n- Email: {{EMAIL}}\n\nMit freundlichen Grüssen\n{{CANTON}}",
+    "locale": "de_CH",
+    "domain": "government",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Heimatschein\n\nName: {{NAME}}\nGeburtsdatum: {{DOB}}\nAHV: {{AHV}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nIhr Heimatschein ist bereit zur Abholung.\n\nÖffnungszeiten: {{TIME}} - {{TIME}}\n\nKontakt: {{EMAIL}} / {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "government",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Bewilligung\n\nAntragsteller: {{NAME}}\nGeburtsdatum: {{DOB}}\nAHV: {{AHV}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nIhr Antrag {{REFERENCE_NUMBER}} wurde bewilligt.\n\nKontakt: {{EMAIL}} / {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "government",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Kontaktformular\n\nName:          {{NAME}}\nVorname:       {{FIRSTNAME}}\nStrasse:       {{STREET}}\nPLZ/Ort:       {{POSTCODE}} {{CITY}}\nKanton:        {{CANTON}}\nTelefon:       {{PHONE}}\nE-Mail:        {{EMAIL}}\nKunden-Nr.:    {{CUSTOMER_ID}}\n\nAnfrage: Bitte kontaktieren Sie mich.",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Patientenregistrierung\n\nName:           {{NAME}}\nGeburtsdatum:   {{DOB}}\nAHV:            {{AHV}}\nVersicherung:   {{INSURANCE_NUMBER}}\nAdresse:        {{STREET}}\n                {{POSTCODE}} {{CITY}} ({{CANTON}})\nTelefon:        {{PHONE}}\nE-Mail:         {{EMAIL}}\n\nNotfallkontakt: {{NAME}} / {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Rechnung\n================================\nRechnung Nr:    {{REFERENCE_NUMBER}}\nDatum:          {{DATE}}\n\nRechnung an:\n{{NAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}}\n\nBetrag:         {{AMOUNT}} {{CURRENCY}}\nZahlbar bis:    {{DATE}}\nIBAN:           {{IBAN}}\nReferenz:       {{CUSTOMER_ID}}\n================================",
+    "locale": "de_CH",
+    "domain": "banking",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Sehr geehrte Damen und Herren,\n\nich habe eine Frage zu meinem Vertrag {{POLICY_NUMBER}}.\n\nMit freundlichen Grüssen\n\n--\n{{NAME}}\n{{JOB_TITLE}}\n{{COMPANY}}\n{{STREET}}, {{POSTCODE}} {{CITY}}\nTel: {{PHONE}}\nE-Mail: {{EMAIL}}\nAHV: {{AHV}}",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Guten Tag,\n\nanbei die gewünschten Unterlagen.\n\nFreundliche Grüsse\n\n{{FIRSTNAME}} {{LASTNAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}} ({{CANTON}})\n{{EMAIL}} / {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Wartungsbenachrichtigung\n\nKunde: {{NAME}}\nKundennummer: {{CUSTOMER_ID}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\n\nWartungstermin: {{DATE}} zwischen {{TIME}} und {{TIME}}\n\nKontakt: {{PHONE}} / {{EMAIL}}",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Parkplatzvergabe\n\nBewerber: {{NAME}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\nAHV: {{AHV}}\n\nIhr Antrag {{REFERENCE_NUMBER}} wurde genehmigt.\n\nParkplatznummer: {{CUSTOMER_ID}}\nKontakt: {{EMAIL}}",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Reisebuchung\n\nBuchungsbestätigung #{{REFERENCE_NUMBER}}\n\nReisende/r: {{NAME}}\nGeburtsdatum: {{DOB}}\nPassnummer: {{PASSPORT_NUMBER}}\n\nKontakt: {{EMAIL}} / {{PHONE}}\n\nZahlung: {{AMOUNT}} {{CURRENCY}} auf {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Relevé de compte {{COMPANY}}\n\nClient: {{NAME}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\nCompte: {{IBAN}}\nN° client: {{CUSTOMER_ID}}\n\nNous avons constaté un prélèvement de {{AMOUNT}} {{CURRENCY}} le {{DATE}}.\n\nEn cas de problème: {{PHONE}} ou {{EMAIL}}",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Demande de crédit\n\nDemandeur: {{NAME}}\nDate de naissance: {{DOB}}\nAVS: {{AHV}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nTéléphone: {{PHONE}}\nE-mail: {{EMAIL}}\n\nMontant souhaité: {{AMOUNT}} {{CURRENCY}}\nN° compte: {{IBAN}}\nRéférence: {{REFERENCE_NUMBER}}\n\nNous traitons votre demande sous 5 jours.",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Facture de primes {{COMPANY}}\n\n{{NAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}} ({{CANTON}})\n\nNuméro d'assurance: {{INSURANCE_NUMBER}}\nMontant dû: {{AMOUNT}} {{CURRENCY}}\nPayable avant: {{DATE}}\n\nVirement sur: {{IBAN}}\nRéférence: {{REFERENCE_NUMBER}}\n\nQuestions: {{EMAIL}} / {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "insurance",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Changement d'adresse\n\nMadame, Monsieur {{NAME}},\n\nnous avons enregistré votre changement d'adresse:\nNouvelle adresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nPolice: {{POLICY_NUMBER}}\nContact: {{EMAIL}} / {{PHONE}}\n\nLe changement est effectif dès {{DATE}}.",
+    "locale": "fr_CH",
+    "domain": "insurance",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Invitation vaccination\n\nMadame, Monsieur {{NAME}},\n\nnous vous invitons à la vaccination.\n\nRendez-vous: {{DATE}} à {{TIME}}\nLieu: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nÀ apporter:\n- ID / Passeport: {{PASSPORT_NUMBER}}\n- Carte d'assurance: {{INSURANCE_NUMBER}}\n\nQuestions: {{EMAIL}} / {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Certificat de travail\n\n{{NAME}}, né le {{DOB}}, AVS {{AHV}}, domicilié à {{CITY}},\na travaillé du {{DATE}} au {{DATE}} comme {{JOB_TITLE}} chez {{COMPANY}}.\n\nContact RH: {{EMAIL}} / {{PHONE}}\nRéférence: {{REFERENCE_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "hr_admin",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Confirmation candidature\n\nMadame, Monsieur {{NAME}},\n\nnous confirmons la réception de votre candidature du {{DATE}}.\n\nDonnées candidat:\nNom: {{NAME}}\nDate naissance: {{DOB}}\nAVS: {{AHV}}\nContact: {{EMAIL}} / {{PHONE}}\nRéférence: {{REFERENCE_NUMBER}}\n\nNous vous recontactons sous 2 semaines.",
+    "locale": "fr_CH",
+    "domain": "hr_admin",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Ticket support #{{REFERENCE_NUMBER}}\n\nBonjour {{FIRSTNAME}},\n\nnous avons reçu votre demande.\n\nVos données:\nN° client: {{CUSTOMER_ID}}\nE-mail: {{EMAIL}}\nTéléphone: {{PHONE}}\n\nNous revenons vers vous sous 24 heures.\n\nCordialement\n{{COMPANY}}",
+    "locale": "fr_CH",
+    "domain": "customer_service",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "informal"
+  },
+  {
+    "template": "Demande de rappel\n\nClient: {{NAME}}\nN° client: {{CUSTOMER_ID}}\nTéléphone: {{PHONE}}\nE-mail: {{EMAIL}}\n\nRappel souhaité le {{DATE}} entre {{TIME}} et {{TIME}}.\n\nRéférence: {{REFERENCE_NUMBER}}\n\nNous vous rappelons.",
+    "locale": "fr_CH",
+    "domain": "customer_service",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Procuration\n\nJe soussigné {{NAME}}, né le {{DOB}}, AVS {{AHV}}, domicilié à {{CITY}},\nmandate {{NAME}} pour tous actes juridiques.\n\nSignature: _______________\nDate: {{DATE}}\n\nContact: {{PHONE}} / {{EMAIL}}",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Confirmation d'expédition\n\nBonjour {{FIRSTNAME}},\n\nvotre commande #{{REFERENCE_NUMBER}} a été expédiée!\n\nAdresse de livraison:\n{{NAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}} ({{CANTON}})\n\nSuivi: {{EMAIL}}\nQuestions? {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "ecommerce",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "informal"
+  },
+  {
+    "template": "Décompte charges {{DATE}}\n\nLocataire: {{NAME}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nComplément: {{AMOUNT}} {{CURRENCY}}\nPayable sur: {{IBAN}}\nRéférence: {{REFERENCE_NUMBER}}\n\nQuestions: {{EMAIL}} / {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "real_estate",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Activation SIM\n\nClient: {{NAME}}\nN° client: {{CUSTOMER_ID}}\nNuméro: {{PHONE}}\n\nVotre carte SIM est activée.\n\nContrat commence le {{DATE}}.\n\nQuestions? {{EMAIL}} / {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "telecom",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Certificat de domicile\n\nNom: {{NAME}}\nDate de naissance: {{DOB}}\nAVS: {{AHV}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nVotre certificat de domicile est prêt au retrait.\n\nHoraires: {{TIME}} - {{TIME}}\n\nContact: {{EMAIL}} / {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "government",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Formulaire de contact\n\nNom:           {{NAME}}\nPrénom:        {{FIRSTNAME}}\nRue:           {{STREET}}\nNPA/Ville:     {{POSTCODE}} {{CITY}}\nCanton:        {{CANTON}}\nTéléphone:     {{PHONE}}\nE-mail:        {{EMAIL}}\nN° client:     {{CUSTOMER_ID}}\n\nDemande: Veuillez me contacter.",
+    "locale": "fr_CH",
+    "domain": "customer_service",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Enregistrement patient\n\nNom:            {{NAME}}\nDate naissance: {{DOB}}\nAVS:            {{AHV}}\nAssurance:      {{INSURANCE_NUMBER}}\nAdresse:        {{STREET}}\n                {{POSTCODE}} {{CITY}} ({{CANTON}})\nTéléphone:      {{PHONE}}\nE-mail:         {{EMAIL}}\n\nContact urgence: {{NAME}} / {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Facture\n================================\nN° facture:     {{REFERENCE_NUMBER}}\nDate:           {{DATE}}\n\nFacture à:\n{{NAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}}\n\nMontant:        {{AMOUNT}} {{CURRENCY}}\nPayable avant:  {{DATE}}\nIBAN:           {{IBAN}}\nRéférence:      {{CUSTOMER_ID}}\n================================",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Madame, Monsieur,\n\nj'ai une question concernant mon contrat {{POLICY_NUMBER}}.\n\nCordialement\n\n--\n{{NAME}}\n{{JOB_TITLE}}\n{{COMPANY}}\n{{STREET}}, {{POSTCODE}} {{CITY}}\nTél: {{PHONE}}\nE-mail: {{EMAIL}}\nAVS: {{AHV}}",
+    "locale": "fr_CH",
+    "domain": "insurance",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Bonjour,\n\nci-joint les documents demandés.\n\nCordialement\n\n{{FIRSTNAME}} {{LASTNAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}} ({{CANTON}})\n{{EMAIL}} / {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "customer_service",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Notification maintenance\n\nClient: {{NAME}}\nN° client: {{CUSTOMER_ID}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\n\nDate maintenance: {{DATE}} entre {{TIME}} et {{TIME}}\n\nContact: {{PHONE}} / {{EMAIL}}",
+    "locale": "fr_CH",
+    "domain": "real_estate",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Attribution place de parc\n\nDemandeur: {{NAME}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\nAVS: {{AHV}}\n\nVotre demande {{REFERENCE_NUMBER}} est approuvée.\n\nN° place: {{CUSTOMER_ID}}\nContact: {{EMAIL}}",
+    "locale": "fr_CH",
+    "domain": "real_estate",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Réservation voyage\n\nConfirmation #{{REFERENCE_NUMBER}}\n\nVoyageur: {{NAME}}\nDate naissance: {{DOB}}\nPasseport: {{PASSPORT_NUMBER}}\n\nContact: {{EMAIL}} / {{PHONE}}\n\nPaiement: {{AMOUNT}} {{CURRENCY}} sur {{IBAN}}",
+    "locale": "fr_CH",
+    "domain": "ecommerce",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Contrôle de l'habitant {{CITY}}\n\nMadame, Monsieur {{NAME}},\n\nveuillez mettre à jour vos données:\n- Adresse: {{STREET}}, {{POSTCODE}} {{CITY}}\n- Téléphone: {{PHONE}}\n- Email: {{EMAIL}}\n\nCordialement\n{{CANTON}}",
+    "locale": "fr_CH",
+    "domain": "government",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Déclaration d'impôt {{DATE}}\n\nContribuable: {{NAME}}\nNuméro AVS: {{AHV}}\nNé le: {{DOB}}\nDomicile: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nRemboursement: {{AMOUNT}} {{CURRENCY}} sur {{IBAN}}\n\nContact: {{EMAIL}}",
+    "locale": "fr_CH",
+    "domain": "government",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Tarifwechsel\n\nMadame, Monsieur {{NAME}},\n\nvotre tarif a été changé.\n\nN° client: {{CUSTOMER_ID}}\nNuméro: {{PHONE}}\nNouveau tarif dès: {{DATE}}\n\nQuestions? {{EMAIL}} / {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "telecom",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Décompte de prestations\n\nAssuré: {{NAME}}\nN° assurance: {{INSURANCE_NUMBER}}\nAVS: {{AHV}}\n\nPrestation du {{DATE}}: {{AMOUNT}} {{CURRENCY}}\nViré sur: {{IBAN}}\nRéférence: {{REFERENCE_NUMBER}}\n\nQuestions: {{EMAIL}} / {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "insurance",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Réclamation traitée\n\nMadame, Monsieur {{NAME}},\n\nvotre réclamation du {{DATE}} a été traitée.\n\nN° réclamation: {{REFERENCE_NUMBER}}\nN° client: {{CUSTOMER_ID}}\n\nRésultat: Votre demande a été acceptée.\n\nQuestions: {{EMAIL}} / {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "customer_service",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Testament\n\nJe {{NAME}}, né le {{DOB}}, AVS {{AHV}}, domicilié à {{CITY}},\ndésigne comme héritier: {{NAME}}\n\nContact notaire:\n{{NAME}}\n{{STREET}}, {{POSTCODE}} {{CITY}}\n{{EMAIL}} / {{PHONE}}\n\nLieu, date: {{CITY}}, {{DATE}}",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Visite appartement\n\nMadame, Monsieur {{NAME}},\n\nnous confirmons votre visite le {{DATE}} à {{TIME}}.\n\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\n\nVos coordonnées: {{PHONE}} / {{EMAIL}}\n\nCordialement\n{{JOB_TITLE}} {{NAME}}",
+    "locale": "fr_CH",
+    "domain": "real_estate",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Augmentation loyer\n\nMadame, Monsieur {{NAME}},\n\nselon le contrat de bail, nous vous informons de l'augmentation de loyer.\n\nObjet: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nNouveau loyer: {{AMOUNT}} {{CURRENCY}}\nEffectif dès: {{DATE}}\n\nQuestions: {{EMAIL}} ou {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "real_estate",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Estratto conto {{COMPANY}}\n\nCliente: {{NAME}}\nIndirizzo: {{STREET}}, {{POSTCODE}} {{CITY}}\nConto: {{IBAN}}\nN° cliente: {{CUSTOMER_ID}}\n\nAbbiamo rilevato un addebito di {{AMOUNT}} {{CURRENCY}} il {{DATE}}.\n\nIn caso di problemi: {{PHONE}} o {{EMAIL}}",
+    "locale": "it_CH",
+    "domain": "banking",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Richiesta di credito\n\nRichiedente: {{NAME}}\nData di nascita: {{DOB}}\nAVS: {{AHV}}\nIndirizzo: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nTelefono: {{PHONE}}\nE-mail: {{EMAIL}}\n\nImporto desiderato: {{AMOUNT}} {{CURRENCY}}\nN° conto: {{IBAN}}\nRiferimento: {{REFERENCE_NUMBER}}\n\nTrattiamo la sua richiesta entro 5 giorni.",
+    "locale": "it_CH",
+    "domain": "banking",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Fattura premi {{COMPANY}}\n\n{{NAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}} ({{CANTON}})\n\nNumero assicurazione: {{INSURANCE_NUMBER}}\nImporto dovuto: {{AMOUNT}} {{CURRENCY}}\nPagabile entro: {{DATE}}\n\nBonifico su: {{IBAN}}\nRiferimento: {{REFERENCE_NUMBER}}\n\nDomande: {{EMAIL}} / {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Cambio indirizzo\n\nGentile {{NAME}},\n\nabbiamo registrato il suo cambio di indirizzo:\nNuovo indirizzo: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nPolizza: {{POLICY_NUMBER}}\nContatto: {{EMAIL}} / {{PHONE}}\n\nIl cambio è effettivo dal {{DATE}}.",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Invito vaccinazione\n\nGentile {{NAME}},\n\nla invitiamo alla vaccinazione.\n\nAppuntamento: {{DATE}} alle {{TIME}}\nLuogo: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nDa portare:\n- ID / Passaporto: {{PASSPORT_NUMBER}}\n- Carta assicurazione: {{INSURANCE_NUMBER}}\n\nDomande: {{EMAIL}} / {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Certificato di lavoro\n\n{{NAME}}, nato il {{DOB}}, AVS {{AHV}}, domiciliato a {{CITY}},\nha lavorato dal {{DATE}} al {{DATE}} come {{JOB_TITLE}} presso {{COMPANY}}.\n\nContatto HR: {{EMAIL}} / {{PHONE}}\nRiferimento: {{REFERENCE_NUMBER}}",
+    "locale": "it_CH",
+    "domain": "hr_admin",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Conferma candidatura\n\nGentile {{NAME}},\n\nconfermiamo la ricezione della sua candidatura del {{DATE}}.\n\nDati candidato:\nNome: {{NAME}}\nData nascita: {{DOB}}\nAVS: {{AHV}}\nContatto: {{EMAIL}} / {{PHONE}}\nRiferimento: {{REFERENCE_NUMBER}}\n\nLa ricontattiamo entro 2 settimane.",
+    "locale": "it_CH",
+    "domain": "hr_admin",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Ticket supporto #{{REFERENCE_NUMBER}}\n\nCiao {{FIRSTNAME}},\n\nabbiamo ricevuto la sua richiesta.\n\nI suoi dati:\nN° cliente: {{CUSTOMER_ID}}\nE-mail: {{EMAIL}}\nTelefono: {{PHONE}}\n\nLa ricontattiamo entro 24 ore.\n\nCordiali saluti\n{{COMPANY}}",
+    "locale": "it_CH",
+    "domain": "customer_service",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "informal"
+  },
+  {
+    "template": "Richiesta richiamata\n\nCliente: {{NAME}}\nN° cliente: {{CUSTOMER_ID}}\nTelefono: {{PHONE}}\nE-mail: {{EMAIL}}\n\nRichiamo desiderato il {{DATE}} tra {{TIME}} e {{TIME}}.\n\nRiferimento: {{REFERENCE_NUMBER}}\n\nLa richiamiamo.",
+    "locale": "it_CH",
+    "domain": "customer_service",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Procura\n\nIo sottoscritto {{NAME}}, nato il {{DOB}}, AVS {{AHV}}, domiciliato a {{CITY}},\nmando {{NAME}} per tutti gli atti giuridici.\n\nFirma: _______________\nData: {{DATE}}\n\nContatto: {{PHONE}} / {{EMAIL}}",
+    "locale": "it_CH",
+    "domain": "legal",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Conferma spedizione\n\nCiao {{FIRSTNAME}},\n\nil suo ordine #{{REFERENCE_NUMBER}} è stato spedito!\n\nIndirizzo di consegna:\n{{NAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}} ({{CANTON}})\n\nTracking: {{EMAIL}}\nDomande? {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "ecommerce",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "informal"
+  },
+  {
+    "template": "Spese accessorie {{DATE}}\n\nAffittuario: {{NAME}}\nIndirizzo: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nConguaglio: {{AMOUNT}} {{CURRENCY}}\nPagabile su: {{IBAN}}\nRiferimento: {{REFERENCE_NUMBER}}\n\nDomande: {{EMAIL}} / {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "real_estate",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Attivazione SIM\n\nCliente: {{NAME}}\nN° cliente: {{CUSTOMER_ID}}\nNumero: {{PHONE}}\n\nLa sua SIM è attivata.\n\nContratto inizia il {{DATE}}.\n\nDomande? {{EMAIL}} / {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "telecom",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Certificato domicilio\n\nNome: {{NAME}}\nData di nascita: {{DOB}}\nAVS: {{AHV}}\nIndirizzo: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nIl suo certificato di domicilio è pronto per il ritiro.\n\nOrari: {{TIME}} - {{TIME}}\n\nContatto: {{EMAIL}} / {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "government",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Modulo di contatto\n\nCognome:       {{NAME}}\nNome:          {{FIRSTNAME}}\nVia:           {{STREET}}\nNPA/Città:     {{POSTCODE}} {{CITY}}\nCantone:       {{CANTON}}\nTelefono:      {{PHONE}}\nE-mail:        {{EMAIL}}\nN° cliente:    {{CUSTOMER_ID}}\n\nRichiesta: La prego di contattarmi.",
+    "locale": "it_CH",
+    "domain": "customer_service",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Registrazione paziente\n\nNome:           {{NAME}}\nData nascita:   {{DOB}}\nAVS:            {{AHV}}\nAssicurazione:  {{INSURANCE_NUMBER}}\nIndirizzo:      {{STREET}}\n                {{POSTCODE}} {{CITY}} ({{CANTON}})\nTelefono:       {{PHONE}}\nE-mail:         {{EMAIL}}\n\nContatto emergenza: {{NAME}} / {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Fattura\n================================\nN° fattura:     {{REFERENCE_NUMBER}}\nData:           {{DATE}}\n\nFattura a:\n{{NAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}}\n\nImporto:        {{AMOUNT}} {{CURRENCY}}\nPagabile entro: {{DATE}}\nIBAN:           {{IBAN}}\nRiferimento:    {{CUSTOMER_ID}}\n================================",
+    "locale": "it_CH",
+    "domain": "banking",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Gentili Signore e Signori,\n\nho una domanda riguardante il mio contratto {{POLICY_NUMBER}}.\n\nCordiali saluti\n\n--\n{{NAME}}\n{{JOB_TITLE}}\n{{COMPANY}}\n{{STREET}}, {{POSTCODE}} {{CITY}}\nTel: {{PHONE}}\nE-mail: {{EMAIL}}\nAVS: {{AHV}}",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Buongiorno,\n\nin allegato i documenti richiesti.\n\nCordiali saluti\n\n{{FIRSTNAME}} {{LASTNAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}} ({{CANTON}})\n{{EMAIL}} / {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "customer_service",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Notifica manutenzione\n\nCliente: {{NAME}}\nN° cliente: {{CUSTOMER_ID}}\nIndirizzo: {{STREET}}, {{POSTCODE}} {{CITY}}\n\nData manutenzione: {{DATE}} tra {{TIME}} e {{TIME}}\n\nContatto: {{PHONE}} / {{EMAIL}}",
+    "locale": "it_CH",
+    "domain": "real_estate",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Attribuzione posto auto\n\nRichiedente: {{NAME}}\nIndirizzo: {{STREET}}, {{POSTCODE}} {{CITY}}\nAVS: {{AHV}}\n\nLa sua richiesta {{REFERENCE_NUMBER}} è approvata.\n\nN° posto: {{CUSTOMER_ID}}\nContatto: {{EMAIL}}",
+    "locale": "it_CH",
+    "domain": "real_estate",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Prenotazione viaggio\n\nConferma #{{REFERENCE_NUMBER}}\n\nViaggiatore: {{NAME}}\nData nascita: {{DOB}}\nPassaporto: {{PASSPORT_NUMBER}}\n\nContatto: {{EMAIL}} / {{PHONE}}\n\nPagamento: {{AMOUNT}} {{CURRENCY}} su {{IBAN}}",
+    "locale": "it_CH",
+    "domain": "ecommerce",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Controllo abitante {{CITY}}\n\nGentile {{NAME}},\n\nla preghiamo di aggiornare i suoi dati:\n- Indirizzo: {{STREET}}, {{POSTCODE}} {{CITY}}\n- Telefono: {{PHONE}}\n- Email: {{EMAIL}}\n\nCordiali saluti\n{{CANTON}}",
+    "locale": "it_CH",
+    "domain": "government",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Dichiarazione fiscale {{DATE}}\n\nContribuente: {{NAME}}\nNumero AVS: {{AHV}}\nNato il: {{DOB}}\nDomicilio: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nRimborso: {{AMOUNT}} {{CURRENCY}} su {{IBAN}}\n\nContatto: {{EMAIL}}",
+    "locale": "it_CH",
+    "domain": "government",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Cambio tariffa\n\nGentile {{NAME}},\n\nla sua tariffa è stata cambiata.\n\nN° cliente: {{CUSTOMER_ID}}\nNumero: {{PHONE}}\nNuova tariffa dal: {{DATE}}\n\nDomande? {{EMAIL}} / {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "telecom",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Prospetto prestazioni\n\nAssicurato: {{NAME}}\nN° assicurazione: {{INSURANCE_NUMBER}}\nAVS: {{AHV}}\n\nPrestazione del {{DATE}}: {{AMOUNT}} {{CURRENCY}}\nTrasferito su: {{IBAN}}\nRiferimento: {{REFERENCE_NUMBER}}\n\nDomande: {{EMAIL}} / {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "length_category": "medium",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Reclamo trattato\n\nGentile {{NAME}},\n\nil suo reclamo del {{DATE}} è stato trattato.\n\nN° reclamo: {{REFERENCE_NUMBER}}\nN° cliente: {{CUSTOMER_ID}}\n\nRisultato: La sua richiesta è stata accettata.\n\nDomande: {{EMAIL}} / {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "customer_service",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Testamento\n\nIo {{NAME}}, nato il {{DOB}}, AVS {{AHV}}, domiciliato a {{CITY}},\ndesigno come erede: {{NAME}}\n\nContatto notaio:\n{{NAME}}\n{{STREET}}, {{POSTCODE}} {{CITY}}\n{{EMAIL}} / {{PHONE}}\n\nLuogo, data: {{CITY}}, {{DATE}}",
+    "locale": "it_CH",
+    "domain": "legal",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Visita appartamento\n\nGentile {{NAME}},\n\nconfermiamo la sua visita il {{DATE}} alle {{TIME}}.\n\nIndirizzo: {{STREET}}, {{POSTCODE}} {{CITY}}\n\nI suoi contatti: {{PHONE}} / {{EMAIL}}\n\nDistinti saluti\n{{JOB_TITLE}} {{NAME}}",
+    "locale": "it_CH",
+    "domain": "real_estate",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Aumento affitto\n\nGentile {{NAME}},\n\nsecondo il contratto di locazione, La informiamo dell'aumento d'affitto.\n\nOggetto: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nNuovo affitto: {{AMOUNT}} {{CURRENCY}}\nEffettivo dal: {{DATE}}\n\nDomande: {{EMAIL}} o {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "real_estate",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Datenaktualisierung\n\nSehr geehrte/r {{NAME}},\n\nbitte bestätigen Sie Ihre aktuellen Daten:\n\nName: {{NAME}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nTelefon: {{PHONE}}\nE-Mail: {{EMAIL}}\n\nKundennummer: {{CUSTOMER_ID}}\n\nBestätigung bis {{DATE}} erbeten.\n\n{{COMPANY}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Elterngespräch\n\nSehr geehrte Eltern von {{FIRSTNAME}} {{LASTNAME}},\n\nwir laden Sie zum Elterngespräch ein.\n\nTermin: {{DATE}} um {{TIME}}\nOrt: {{STREET}}, {{POSTCODE}} {{CITY}}\n\nKontakt: {{EMAIL}} / {{PHONE}}\n\nReferenz: {{REFERENCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "government",
+    "length_category": "medium",
+    "pii_density": "low",
+    "tone": "formal"
+  },
+  {
+    "template": "Mise à jour données\n\nMadame, Monsieur {{NAME}},\n\nveuillez confirmer vos données actuelles:\n\nNom: {{NAME}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nTéléphone: {{PHONE}}\nE-mail: {{EMAIL}}\n\nN° client: {{CUSTOMER_ID}}\n\nConfirmation souhaitée avant {{DATE}}.\n\n{{COMPANY}}",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Entretien parents\n\nChers parents de {{FIRSTNAME}} {{LASTNAME}},\n\nnous vous invitons à l'entretien parents.\n\nRendez-vous: {{DATE}} à {{TIME}}\nLieu: {{STREET}}, {{POSTCODE}} {{CITY}}\n\nContact: {{EMAIL}} / {{PHONE}}\n\nRéférence: {{REFERENCE_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "government",
+    "length_category": "medium",
+    "pii_density": "low",
+    "tone": "formal"
+  },
+  {
+    "template": "Aggiornamento dati\n\nGentile {{NAME}},\n\nconfermi i suoi dati attuali:\n\nNome: {{NAME}}\nIndirizzo: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nTelefono: {{PHONE}}\nE-mail: {{EMAIL}}\n\nN° cliente: {{CUSTOMER_ID}}\n\nConferma desiderata entro {{DATE}}.\n\n{{COMPANY}}",
+    "locale": "it_CH",
+    "domain": "banking",
+    "length_category": "medium",
+    "pii_density": "medium",
+    "tone": "formal"
+  },
+  {
+    "template": "Colloquio genitori\n\nGentili genitori di {{FIRSTNAME}} {{LASTNAME}},\n\nla invitiamo al colloquio genitori.\n\nAppuntamento: {{DATE}} alle {{TIME}}\nLuogo: {{STREET}}, {{POSTCODE}} {{CITY}}\n\nContatto: {{EMAIL}} / {{PHONE}}\n\nRiferimento: {{REFERENCE_NUMBER}}",
+    "locale": "it_CH",
+    "domain": "government",
+    "length_category": "medium",
+    "pii_density": "low",
+    "tone": "formal"
+  },
+  {
+    "template": "Sehr geehrte Damen und Herren\n\nhiermit beantrage ich die Auszahlung meiner Vorsorge.\n\nPersönliche Angaben:\nName: {{NAME}}\nGeburtsdatum: {{DOB}}\nAHV-Nummer: {{AHV}}\nPassnummer: {{PASSPORT_NUMBER}}\n\nKontaktdaten:\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nTelefon: {{PHONE}}\nE-Mail: {{EMAIL}}\n\nZahlungsinformationen:\nIBAN: {{IBAN}}\nBetrag: {{AMOUNT}} {{CURRENCY}}\nReferenz: {{REFERENCE_NUMBER}}\n\nIch bitte um zeitnahe Bearbeitung.\n\nMit freundlichen Grüssen\n{{NAME}}\n{{DATE}}",
+    "locale": "de_CH",
+    "domain": "government",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Beschwerde\n\nSehr geehrte Damen und Herren,\n\nich reiche hiermit eine Beschwerde ein bezüglich meiner Police {{POLICY_NUMBER}} bei {{COMPANY}}.\n\nMeine Daten:\nVersicherungsnehmer: {{NAME}}\nGeburtsdatum: {{DOB}}\nAHV: {{AHV}}\nVersicherungsnummer: {{INSURANCE_NUMBER}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\n\nAm {{DATE}} um {{TIME}} ereignete sich ein Schaden. Trotz mehrfacher Kontaktaufnahme unter {{PHONE}} und {{EMAIL}} wurde mein Fall nicht bearbeitet.\n\nIch erwarte eine Rückmeldung innerhalb von 10 Tagen.\n\nMit freundlichen Grüssen\n{{NAME}}\n{{DATE}} {{TIME}}",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Arbeitsvertrag\n\nZwischen\n{{COMPANY}}, vertreten durch {{NAME}}, {{JOB_TITLE}}\nund\n{{NAME}}, geboren am {{DOB}}, AHV {{AHV}}\n\nwird folgender Arbeitsvertrag geschlossen:\n\n1. Arbeitsbeginn: {{DATE}}\n2. Funktion: {{JOB_TITLE}}\n3. Arbeitsort: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n4. Gehalt: {{AMOUNT}} {{CURRENCY}} monatlich auf {{IBAN}}\n\nKontakt HR:\n{{NAME}}\n{{EMAIL}}\n{{PHONE}}\n\nOrt, Datum: {{CITY}}, {{DATE}}\n\nUnterschrift Arbeitgeber: _______________\nUnterschrift Arbeitnehmer: _______________",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "URGENT: Kundennummer {{CUSTOMER_ID}} - Zahlungserinnerung\nSehr geehrter Herr {{LASTNAME}},\n\nTrotz unserer Mahnung vom {{DATE}} haben wir noch keinen Zahlungseingang für Rechnung {{REFERENCE_NUMBER}} erhalten. Bitte überweisen Sie den Betrag von {{AMOUNT}} {{CURRENCY}} auf folgendes Konto:\n{{IBAN}}\n\nBei Rückfragen: {{PHONE}}\n\nMit freundlichen Grüssen\n{{COMPANY}}",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "urgent"
+  },
+  {
+    "template": "Patient: {{NAME}}\nGeburtsdatum: {{DOB}}\nAHV-Nr.: {{AHV}}\nVersicherung: {{INSURANCE_NUMBER}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nDiagnose: Der Patient zeigt Symptome einer Erkältung.\nTermin: {{DATE}} um {{TIME}}\n\nKontakt: {{EMAIL}} / {{PHONE}}\nReferenz: {{REFERENCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Kündigung Mietvertrag\n\nSehr geehrte Damen und Herren,\n\nhiermit kündige ich den Mietvertrag für die Wohnung an der {{STREET}} in {{CITY}}.\n\nKündigender: {{NAME}}\nGeburtsdatum: {{DOB}}\nAHV: {{AHV}}\nKündigungstermin: {{DATE}}\n\nRückzahlung der Kaution auf: {{IBAN}}\nReferenz: {{REFERENCE_NUMBER}}\n\nFreundliche Grüsse\n{{NAME}}\n{{PHONE}} / {{EMAIL}}",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Gerichtliche Verfügung\n\nBeschwerdeführer: {{NAME}}, wohnhaft {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nAHV: {{AHV}}\nGeb. Datum: {{DOB}}\n\nTermin: {{DATE}} um {{TIME}}\nOrt: {{CITY}}\n\nKontakt Rechtsanwalt: {{EMAIL}} / {{PHONE}}\nReferenz: {{REFERENCE_NUMBER}}\n\nBitte erscheinen Sie pünktlich.",
+    "locale": "de_CH",
+    "domain": "legal",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Steuererklärung {{DATE}}\n\nSteuerpflichtige/r: {{NAME}}\nAHV-Nummer: {{AHV}}\nGeburtsdatum: {{DOB}}\nWohnsitz: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nEinkünfte: {{AMOUNT}} {{CURRENCY}}\nAbzüge: {{AMOUNT}} {{CURRENCY}}\n\nRückerstattung: {{AMOUNT}} {{CURRENCY}} auf {{IBAN}}\n\nKontakt: {{EMAIL}} / {{PHONE}}\nReferenz: {{REFERENCE_NUMBER}}\n\nBei Fragen wenden Sie sich an uns.",
+    "locale": "de_CH",
+    "domain": "government",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Mahnbescheid\n\nSchuldner: {{NAME}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\nAHV: {{AHV}}\n\nForderung: {{AMOUNT}} {{CURRENCY}}\nReferenz: {{REFERENCE_NUMBER}}\n\nZahlungseingang auf {{IBAN}} bis {{DATE}} erwartet.\n\nRechtsanwalt: {{NAME}} / {{EMAIL}} / {{PHONE}}\n\nBei Nichtzahlung werden weitere Schritte eingeleitet.",
+    "locale": "de_CH",
+    "domain": "legal",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "urgent"
+  },
+  {
+    "template": "Schadenmeldung Kfz\n\nVersicherungsnehmer: {{NAME}}\nGeburtsdatum: {{DOB}}\nAHV: {{AHV}}\nVersicherungsnummer: {{INSURANCE_NUMBER}}\nFührerausweis: {{DRIVER_LICENSE}}\n\nUnfall am {{DATE}} um {{TIME}}\nOrt: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nBeschädigtes Fahrzeug: [...]\n\nKontakt: {{PHONE}} / {{EMAIL}}\nReferenz: {{REFERENCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Kontoauszug {{DATE}}\n\n{{COMPANY}}\n{{STREET}}, {{POSTCODE}} {{CITY}}\n\nKunde: {{NAME}}\nKonto: {{IBAN}}\nKundennummer: {{CUSTOMER_ID}}\n\nUmsätze im Zeitraum {{DATE}} - {{DATE}}:\n- Einzahlung: {{AMOUNT}} {{CURRENCY}}\n- Auszahlung: {{AMOUNT}} {{CURRENCY}}\n\nSaldo: {{AMOUNT}} {{CURRENCY}}\n\nBei Fragen: {{EMAIL}} / {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "length_category": "long",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Rechnung {{COMPANY}}\n\nRechnung Nr.: {{REFERENCE_NUMBER}}\nDatum: {{DATE}}\n\nRechnung an:\n{{NAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}} ({{CANTON}})\n\nLeistung: [...]\nBetrag: {{AMOUNT}} {{CURRENCY}}\nMWST: {{AMOUNT}} {{CURRENCY}}\nTotal: {{AMOUNT}} {{CURRENCY}}\n\nZahlbar bis {{DATE}} auf:\n{{IBAN}}\n\nKontakt: {{EMAIL}} / {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "length_category": "long",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Bewerbung ausführlich\n\n{{NAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}} ({{CANTON}})\n{{EMAIL}}\n{{PHONE}}\n\n{{COMPANY}}\nPersonalabteilung\n{{STREET}}\n{{POSTCODE}} {{CITY}}\n\nBewerbung als {{JOB_TITLE}}\n\nSehr geehrte Damen und Herren,\n\nmit grossem Interesse bewerbe ich mich um die ausgeschriebene Stelle.\n\nPersönliche Daten:\nName: {{NAME}}\nGeburtsdatum: {{DOB}}\nAHV: {{AHV}}\n\nIch freue mich auf ein persönliches Gespräch.\n\nFreundliche Grüsse\n{{NAME}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Mietvertrag ausführlich\n\nVermieter:\n{{COMPANY}}\n{{STREET}}\n{{POSTCODE}} {{CITY}} ({{CANTON}})\n{{EMAIL}} / {{PHONE}}\n\nMieter:\n{{NAME}}\nGeburtsdatum: {{DOB}}\nAHV: {{AHV}}\n{{STREET}}\n{{POSTCODE}} {{CITY}}\n{{EMAIL}} / {{PHONE}}\n\nMietobjekt:\n{{STREET}}\n{{POSTCODE}} {{CITY}} ({{CANTON}})\n\nMietzins: {{AMOUNT}} {{CURRENCY}} monatlich\nKaution: {{AMOUNT}} {{CURRENCY}}\nÜberweisung auf: {{IBAN}}\n\nMietbeginn: {{DATE}}\nReferenz: {{REFERENCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Versicherungsvertrag\n\nVersicherungsnehmer: {{NAME}}\nGeburtsdatum: {{DOB}}\nAHV-Nummer: {{AHV}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nVersicherung: {{COMPANY}}\nPolizzennummer: {{POLICY_NUMBER}}\nVersicherungsnummer: {{INSURANCE_NUMBER}}\n\nVersicherungssumme: {{AMOUNT}} {{CURRENCY}}\nPrämie: {{AMOUNT}} {{CURRENCY}} jährlich\nZahlung auf: {{IBAN}}\n\nVertragsbeginn: {{DATE}}\n\nKontakt: {{EMAIL}} / {{PHONE}}\nReferenz: {{REFERENCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Madame, Monsieur,\n\npar la présente, je demande le versement de ma prévoyance.\n\nDonnées personnelles:\nNom: {{NAME}}\nDate de naissance: {{DOB}}\nNuméro AVS: {{AHV}}\nPasseport: {{PASSPORT_NUMBER}}\n\nCoordonnées:\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nTéléphone: {{PHONE}}\nE-mail: {{EMAIL}}\n\nInformations de paiement:\nIBAN: {{IBAN}}\nMontant: {{AMOUNT}} {{CURRENCY}}\nRéférence: {{REFERENCE_NUMBER}}\n\nJe vous prie de traiter ma demande rapidement.\n\nCordialement\n{{NAME}}\n{{DATE}}",
+    "locale": "fr_CH",
+    "domain": "government",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Réclamation\n\nMadame, Monsieur,\n\nje dépose par la présente une réclamation concernant ma police {{POLICY_NUMBER}} chez {{COMPANY}}.\n\nMes données:\nAssuré: {{NAME}}\nDate de naissance: {{DOB}}\nAVS: {{AHV}}\nNuméro d'assurance: {{INSURANCE_NUMBER}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\n\nLe {{DATE}} à {{TIME}}, un sinistre est survenu. Malgré plusieurs contacts au {{PHONE}} et {{EMAIL}}, mon cas n'a pas été traité.\n\nJ'attends une réponse sous 10 jours.\n\nCordialement\n{{NAME}}\n{{DATE}} {{TIME}}",
+    "locale": "fr_CH",
+    "domain": "insurance",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Contrat de travail\n\nEntre\n{{COMPANY}}, représentée par {{NAME}}, {{JOB_TITLE}}\net\n{{NAME}}, né le {{DOB}}, AVS {{AHV}}\n\nest conclu le contrat de travail suivant:\n\n1. Début: {{DATE}}\n2. Fonction: {{JOB_TITLE}}\n3. Lieu: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n4. Salaire: {{AMOUNT}} {{CURRENCY}} mensuel sur {{IBAN}}\n\nContact RH:\n{{NAME}}\n{{EMAIL}}\n{{PHONE}}\n\nLieu, date: {{CITY}}, {{DATE}}\n\nSignature employeur: _______________\nSignature employé: _______________",
+    "locale": "fr_CH",
+    "domain": "hr_admin",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "URGENT: N° client {{CUSTOMER_ID}} - Rappel paiement\nMadame, Monsieur {{LASTNAME}},\n\nmalgré notre rappel du {{DATE}}, nous n'avons reçu aucun paiement pour la facture {{REFERENCE_NUMBER}}. Veuillez virer le montant de {{AMOUNT}} {{CURRENCY}} sur le compte suivant:\n{{IBAN}}\n\nPour questions: {{PHONE}}\n\nCordialement\n{{COMPANY}}",
+    "locale": "fr_CH",
+    "domain": "customer_service",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "urgent"
+  },
+  {
+    "template": "Patient: {{NAME}}\nDate naissance: {{DOB}}\nN° AVS: {{AHV}}\nAssurance: {{INSURANCE_NUMBER}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nDiagnostic: Le patient présente des symptômes de rhume.\nRendez-vous: {{DATE}} à {{TIME}}\n\nContact: {{EMAIL}} / {{PHONE}}\nRéférence: {{REFERENCE_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Résiliation bail\n\nMadame, Monsieur,\n\npar la présente, je résilie le contrat de bail pour l'appartement situé {{STREET}} à {{CITY}}.\n\nRésiliant: {{NAME}}\nDate naissance: {{DOB}}\nAVS: {{AHV}}\nDate résiliation: {{DATE}}\n\nRemboursement caution sur: {{IBAN}}\nRéférence: {{REFERENCE_NUMBER}}\n\nCordialement\n{{NAME}}\n{{PHONE}} / {{EMAIL}}",
+    "locale": "fr_CH",
+    "domain": "real_estate",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Ordonnance judiciaire\n\nPlaignant: {{NAME}}, domicilié {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nAVS: {{AHV}}\nNé le: {{DOB}}\n\nAudience: {{DATE}} à {{TIME}}\nLieu: {{CITY}}\n\nContact avocat: {{EMAIL}} / {{PHONE}}\nRéférence: {{REFERENCE_NUMBER}}\n\nVeuillez arriver à l'heure.",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Déclaration d'impôt {{DATE}}\n\nContribuable: {{NAME}}\nNuméro AVS: {{AHV}}\nNé le: {{DOB}}\nDomicile: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nRevenus: {{AMOUNT}} {{CURRENCY}}\nDéductions: {{AMOUNT}} {{CURRENCY}}\n\nRemboursement: {{AMOUNT}} {{CURRENCY}} sur {{IBAN}}\n\nContact: {{EMAIL}} / {{PHONE}}\nRéférence: {{REFERENCE_NUMBER}}\n\nPour questions, contactez-nous.",
+    "locale": "fr_CH",
+    "domain": "government",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Commandement de payer\n\nDébiteur: {{NAME}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\nAVS: {{AHV}}\n\nCréance: {{AMOUNT}} {{CURRENCY}}\nRéférence: {{REFERENCE_NUMBER}}\n\nPaiement sur {{IBAN}} attendu avant {{DATE}}.\n\nAvocat: {{NAME}} / {{EMAIL}} / {{PHONE}}\n\nEn cas de non-paiement, des poursuites seront engagées.",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "urgent"
+  },
+  {
+    "template": "Déclaration sinistre auto\n\nAssuré: {{NAME}}\nDate naissance: {{DOB}}\nAVS: {{AHV}}\nN° assurance: {{INSURANCE_NUMBER}}\nPermis: {{DRIVER_LICENSE}}\n\nAccident le {{DATE}} à {{TIME}}\nLieu: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nVéhicule endommagé: [...]\n\nContact: {{PHONE}} / {{EMAIL}}\nRéférence: {{REFERENCE_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "insurance",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Relevé de compte {{DATE}}\n\n{{COMPANY}}\n{{STREET}}, {{POSTCODE}} {{CITY}}\n\nClient: {{NAME}}\nCompte: {{IBAN}}\nN° client: {{CUSTOMER_ID}}\n\nOpérations période {{DATE}} - {{DATE}}:\n- Dépôt: {{AMOUNT}} {{CURRENCY}}\n- Retrait: {{AMOUNT}} {{CURRENCY}}\n\nSolde: {{AMOUNT}} {{CURRENCY}}\n\nQuestions: {{EMAIL}} / {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "length_category": "long",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Facture {{COMPANY}}\n\nN° facture: {{REFERENCE_NUMBER}}\nDate: {{DATE}}\n\nFacture à:\n{{NAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}} ({{CANTON}})\n\nPrestation: [...]\nMontant: {{AMOUNT}} {{CURRENCY}}\nTVA: {{AMOUNT}} {{CURRENCY}}\nTotal: {{AMOUNT}} {{CURRENCY}}\n\nPayable avant {{DATE}} sur:\n{{IBAN}}\n\nContact: {{EMAIL}} / {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "length_category": "long",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Candidature détaillée\n\n{{NAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}} ({{CANTON}})\n{{EMAIL}}\n{{PHONE}}\n\n{{COMPANY}}\nService personnel\n{{STREET}}\n{{POSTCODE}} {{CITY}}\n\nCandidature pour {{JOB_TITLE}}\n\nMadame, Monsieur,\n\ncec est avec grand intérêt que je postule pour le poste annoncé.\n\nDonnées personnelles:\nNom: {{NAME}}\nDate naissance: {{DOB}}\nAVS: {{AHV}}\n\nDans l'attente d'un entretien.\n\nCordialement\n{{NAME}}",
+    "locale": "fr_CH",
+    "domain": "hr_admin",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Gentili Signore e Signori,\n\ncon la presente richiedo il pagamento della mia previdenza.\n\nDati personali:\nNome: {{NAME}}\nData di nascita: {{DOB}}\nNumero AVS: {{AHV}}\nPassaporto: {{PASSPORT_NUMBER}}\n\nContatti:\nIndirizzo: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nTelefono: {{PHONE}}\nE-mail: {{EMAIL}}\n\nInformazioni di pagamento:\nIBAN: {{IBAN}}\nImporto: {{AMOUNT}} {{CURRENCY}}\nRiferimento: {{REFERENCE_NUMBER}}\n\nLa prego di trattare la mia richiesta rapidamente.\n\nCordiali saluti\n{{NAME}}\n{{DATE}}",
+    "locale": "it_CH",
+    "domain": "government",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Reclamo\n\nGentili Signore e Signori,\n\ncon la presente deposito un reclamo riguardante la mia polizza {{POLICY_NUMBER}} presso {{COMPANY}}.\n\nI miei dati:\nAssicurato: {{NAME}}\nData di nascita: {{DOB}}\nAVS: {{AHV}}\nNumero assicurazione: {{INSURANCE_NUMBER}}\nIndirizzo: {{STREET}}, {{POSTCODE}} {{CITY}}\n\nIl {{DATE}} alle {{TIME}} si è verificato un sinistro. Nonostante diversi contatti al {{PHONE}} e {{EMAIL}}, il mio caso non è stato trattato.\n\nAttendo una risposta entro 10 giorni.\n\nCordiali saluti\n{{NAME}}\n{{DATE}} {{TIME}}",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Contratto di lavoro\n\nTra\n{{COMPANY}}, rappresentata da {{NAME}}, {{JOB_TITLE}}\ne\n{{NAME}}, nato il {{DOB}}, AVS {{AHV}}\n\nè concluso il seguente contratto di lavoro:\n\n1. Inizio: {{DATE}}\n2. Funzione: {{JOB_TITLE}}\n3. Luogo: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n4. Stipendio: {{AMOUNT}} {{CURRENCY}} mensile su {{IBAN}}\n\nContatto HR:\n{{NAME}}\n{{EMAIL}}\n{{PHONE}}\n\nLuogo, data: {{CITY}}, {{DATE}}\n\nFirma datore: _______________\nFirma dipendente: _______________",
+    "locale": "it_CH",
+    "domain": "hr_admin",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "URGENTE: N° cliente {{CUSTOMER_ID}} - Sollecito pagamento\nGentile {{LASTNAME}},\n\nnonostante il nostro sollecito del {{DATE}}, non abbiamo ricevuto alcun pagamento per la fattura {{REFERENCE_NUMBER}}. La preghiamo di bonificare l'importo di {{AMOUNT}} {{CURRENCY}} sul seguente conto:\n{{IBAN}}\n\nPer domande: {{PHONE}}\n\nCordiali saluti\n{{COMPANY}}",
+    "locale": "it_CH",
+    "domain": "customer_service",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "urgent"
+  },
+  {
+    "template": "Paziente: {{NAME}}\nData nascita: {{DOB}}\nN° AVS: {{AHV}}\nAssicurazione: {{INSURANCE_NUMBER}}\nIndirizzo: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nDiagnosi: Il paziente presenta sintomi di raffreddore.\nAppuntamento: {{DATE}} alle {{TIME}}\n\nContatto: {{EMAIL}} / {{PHONE}}\nRiferimento: {{REFERENCE_NUMBER}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Disdetta contratto locazione\n\nGentili Signore e Signori,\n\ncon la presente disdico il contratto di locazione per l'appartamento sito in {{STREET}} a {{CITY}}.\n\nDisdente: {{NAME}}\nData nascita: {{DOB}}\nAVS: {{AHV}}\nData disdetta: {{DATE}}\n\nRimborso cauzione su: {{IBAN}}\nRiferimento: {{REFERENCE_NUMBER}}\n\nCordiali saluti\n{{NAME}}\n{{PHONE}} / {{EMAIL}}",
+    "locale": "it_CH",
+    "domain": "real_estate",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Ordinanza giudiziaria\n\nAttore: {{NAME}}, domiciliato {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nAVS: {{AHV}}\nNato il: {{DOB}}\n\nUdienza: {{DATE}} alle {{TIME}}\nLuogo: {{CITY}}\n\nContatto avvocato: {{EMAIL}} / {{PHONE}}\nRiferimento: {{REFERENCE_NUMBER}}\n\nLa preghiamo di arrivare puntuale.",
+    "locale": "it_CH",
+    "domain": "legal",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Dichiarazione fiscale {{DATE}}\n\nContribuente: {{NAME}}\nNumero AVS: {{AHV}}\nNato il: {{DOB}}\nDomicilio: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nRedditi: {{AMOUNT}} {{CURRENCY}}\nDetrazioni: {{AMOUNT}} {{CURRENCY}}\n\nRimborso: {{AMOUNT}} {{CURRENCY}} su {{IBAN}}\n\nContatto: {{EMAIL}} / {{PHONE}}\nRiferimento: {{REFERENCE_NUMBER}}\n\nPer domande, ci contatti.",
+    "locale": "it_CH",
+    "domain": "government",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "formal"
+  },
+  {
+    "template": "Ingiunzione di pagamento\n\nDebitore: {{NAME}}\nIndirizzo: {{STREET}}, {{POSTCODE}} {{CITY}}\nAVS: {{AHV}}\n\nCredito: {{AMOUNT}} {{CURRENCY}}\nRiferimento: {{REFERENCE_NUMBER}}\n\nPagamento su {{IBAN}} atteso entro {{DATE}}.\n\nAvvocato: {{NAME}} / {{EMAIL}} / {{PHONE}}\n\nIn caso di mancato pagamento, saranno avviate azioni legali.",
+    "locale": "it_CH",
+    "domain": "legal",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "urgent"
+  },
+  {
+    "template": "Denuncia sinistro auto\n\nAssicurato: {{NAME}}\nData di nascita: {{DOB}}\nAVS: {{AHV}}\nN° assicurazione: {{INSURANCE_NUMBER}}\nPatente: {{DRIVER_LICENSE}}\n\nInfortunio il {{DATE}} alle {{TIME}}\nLuogo: {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\n\nVeicolo danneggiato: [...]\n\nContatto: {{PHONE}} / {{EMAIL}}\nRiferimento: {{REFERENCE_NUMBER}}",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "length_category": "long",
+    "pii_density": "high",
+    "tone": "neutral"
+  },
+  {
+    "template": "Estratto conto {{DATE}}\n\n{{COMPANY}}\n{{STREET}}, {{POSTCODE}} {{CITY}}\n\nCliente: {{NAME}}\nConto: {{IBAN}}\nN° cliente: {{CUSTOMER_ID}}\n\nOperazioni periodo {{DATE}} - {{DATE}}:\n- Versamento: {{AMOUNT}} {{CURRENCY}}\n- Prelievo: {{AMOUNT}} {{CURRENCY}}\n\nSaldo: {{AMOUNT}} {{CURRENCY}}\n\nDomande: {{EMAIL}} / {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "banking",
+    "length_category": "long",
+    "pii_density": "medium",
+    "tone": "neutral"
+  },
+  {
+    "template": "Fattura {{COMPANY}}\n\nN° fattura: {{REFERENCE_NUMBER}}\nData: {{DATE}}\n\nFattura a:\n{{NAME}}\n{{STREET}}\n{{POSTCODE}} {{CITY}} ({{CANTON}})\n\nPrestazione: [...]\nImporto: {{AMOUNT}} {{CURRENCY}}\nIVA: {{AMOUNT}} {{CURRENCY}}\nTotale: {{AMOUNT}} {{CURRENCY}}\n\nPagabile entro {{DATE}} su:\n{{IBAN}}\n\nContatto: {{EMAIL}} / {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "banking",
+    "length_category": "long",
+    "pii_density": "medium",
+    "tone": "neutral"
+  }
+]

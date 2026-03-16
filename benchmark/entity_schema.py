@@ -32,6 +32,10 @@ class CoarseEntityType(str, Enum):
     ADDRESS = "ADDRESS"
     IBAN = "IBAN"
     US_SSN = "US_SSN"
+    FINANCIAL = "FINANCIAL"  # Monetary amounts, prices
+    MEDICAL = "MEDICAL"  # Medical conditions, treatments
+    LEGAL = "LEGAL"  # Legal proceedings, offenses
+    EDUCATION = "EDUCATION"  # Educational information
     OTHER = "OTHER"
 
 

@@ -7,9 +7,12 @@ from pathlib import Path
 
 from benchmark.evaluators.presidio_eval import run_benchmark
 from benchmark.loaders.base import FilterSpec
+from benchmark.loaders.synthetic import SyntheticDatasetLoader
 
 
-DATASET_LOADERS = {}
+DATASET_LOADERS = {
+    "synthetic": SyntheticDatasetLoader,
+}
 
 
 def parse_filter_value(filter_str: str) -> tuple[str, str]:
