@@ -140,6 +140,28 @@ This repository includes a v1 Chrome extension and native host bridge for **manu
 - Native host path: `native_host/`
 - Protocol spec: `native_host/PROTOCOL.md`
 
+### Public distribution (no repo clone)
+
+For public users, package and distribute as:
+
+1. Browser extension via store (Chrome Web Store / Edge Add-ons)
+2. Companion native app installer per OS (registers Native Messaging host)
+
+Platform packaging docs:
+
+- Windows: `docs/release/windows-public-distribution.md`
+- macOS: `docs/release/macos-public-distribution.md`
+- Linux: `docs/release/linux-public-distribution.md`
+- Release scripts: `scripts/release/README.md`
+
+CI automation:
+
+- Workflow: `.github/workflows/release-native-host.yml`
+- Builds host artifacts for Windows/macOS/Linux on PRs and pushes
+- Publishes release assets on version tags like `v1.2.3`
+
+The setup steps below are for local development/unpacked testing from this repository.
+
 ### Supported v1 file types
 
 - PDF (`.pdf`)

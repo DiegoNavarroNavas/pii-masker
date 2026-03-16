@@ -20,6 +20,7 @@ from typing import Any
 from uuid import uuid4
 
 MAX_REQUEST_BYTES = 15 * 1024 * 1024
+HOST_VERSION = "0.2.0"
 SUPPORTED_TEXT_EXTENSIONS = {".txt", ".md", ".csv", ".json"}
 SUPPORTED_TEXT_MIME_PREFIXES = ("text/",)
 SUPPORTED_MIME_TYPES = {
@@ -170,6 +171,7 @@ def error_response(job_id: str, code: str, message: str) -> dict[str, Any]:
         "ok": False,
         "status": "error",
         "jobId": job_id,
+        "hostVersion": HOST_VERSION,
         "error": {"code": code, "message": message},
     }
 
@@ -177,6 +179,30 @@ def error_response(job_id: str, code: str, message: str) -> dict[str, Any]:
 def bool_value(data: dict[str, Any], key: str, default: bool = False) -> bool:
     value = data.get(key, default)
     return value if isinstance(value, bool) else default
+
+
+def parse_semver(value: str) -> tuple[int, int, int] | None:
+    """Parse `major.minor.patch` values used by the extension/host handshake."""
+    if not isinstance(value, str):
+        return None
+    parts = value.strip().split(".")
+    if len(parts) != 3:
+        return None
+    try:
+        major, minor, patch = (int(parts[0]), int(parts[1]), int(parts[2]))
+    except ValueError:
+        return None
+    if major < 0 or minor < 0 or patch < 0:
+        return None
+    return major, minor, patch
+
+
+def host_meets_minimum(min_host_version: str) -> bool:
+    min_parsed = parse_semver(min_host_version)
+    host_parsed = parse_semver(HOST_VERSION)
+    if not min_parsed or not host_parsed:
+        return False
+    return host_parsed >= min_parsed
 
 
 def is_text_file(file_name: str, mime_type: str) -> bool:
@@ -238,6 +264,7 @@ def parse_request(request: dict[str, Any]) -> tuple[dict[str, Any] | None, dict[
         "transformersModel": request.get("transformersModel"),
         "localEncoderModel": request.get("localEncoderModel"),
         "keyFile": request["keyFile"],
+        "minHostVersion": request.get("minHostVersion"),
         "includeMapping": bool_value(request, "includeMapping", False),
     }
     LOGGER.info(
@@ -263,9 +290,12 @@ def masker_command(repo_root: Path) -> list[str]:
         # Space-separated command override, e.g.:
         # PII_MASKER_CMD="uv run python pii_masker.py --json-mode"
         return env_command.split(" ")
-    venv_python = repo_root / ".venv" / "Scripts" / "python.exe"
-    if venv_python.exists():
-        return [str(venv_python), "pii_masker.py", "--json-mode"]
+    venv_python_windows = repo_root / ".venv" / "Scripts" / "python.exe"
+    venv_python_unix = repo_root / ".venv" / "bin" / "python"
+    if venv_python_windows.exists():
+        return [str(venv_python_windows), "pii_masker.py", "--json-mode"]
+    if venv_python_unix.exists():
+        return [str(venv_python_unix), "pii_masker.py", "--json-mode"]
     if os.name == "nt":
         uv_exe = shutil.which("uv")
         if uv_exe:
@@ -305,9 +335,12 @@ def parse_json_from_stdout(stdout: str) -> dict[str, Any]:
 def runtime_worker_command(repo_root: Path) -> list[str]:
     """Command for the venv worker handling runtime-heavy formats."""
     worker_script = repo_root / "native_host" / "runtime_worker.py"
-    venv_python = repo_root / ".venv" / "Scripts" / "python.exe"
-    if venv_python.exists():
-        return [str(venv_python), str(worker_script)]
+    venv_python_windows = repo_root / ".venv" / "Scripts" / "python.exe"
+    venv_python_unix = repo_root / ".venv" / "bin" / "python"
+    if venv_python_windows.exists():
+        return [str(venv_python_windows), str(worker_script)]
+    if venv_python_unix.exists():
+        return [str(venv_python_unix), str(worker_script)]
     return [sys.executable, str(worker_script)]
 
 
@@ -521,6 +554,24 @@ def process_request(repo_root: Path, request: dict[str, Any]) -> dict[str, Any]:
     local_encoder_model = parsed["localEncoderModel"]
     job_id = parsed["jobId"]
     include_mapping = parsed["includeMapping"]
+    min_host_version = parsed["minHostVersion"]
+
+    if isinstance(min_host_version, str) and min_host_version.strip():
+        if not host_meets_minimum(min_host_version):
+            LOGGER.warning(
+                "host_version_unsupported jobId=%s hostVersion=%s minHostVersion=%s",
+                job_id,
+                HOST_VERSION,
+                min_host_version,
+            )
+            return error_response(
+                job_id,
+                "HOST_VERSION_UNSUPPORTED",
+                (
+                    f"Native host {HOST_VERSION} is older than required "
+                    f"minimum {min_host_version}. Please update the companion app."
+                ),
+            )
 
     try:
         if is_pdf(file_name, mime_type):
@@ -582,6 +633,7 @@ def process_request(repo_root: Path, request: dict[str, Any]) -> dict[str, Any]:
         "ok": True,
         "status": "ok",
         "jobId": job_id,
+        "hostVersion": HOST_VERSION,
         "fileName": output_name,
         "mimeType": output_mime,
         "contentBase64": base64.b64encode(redacted_bytes).decode("ascii"),

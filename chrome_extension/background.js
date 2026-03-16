@@ -1,5 +1,6 @@
 const NATIVE_HOST_NAME = "com.pii_masker.host";
 const PROTOCOL_VERSION = 1;
+const MIN_HOST_VERSION = "0.2.0";
 const DEFAULT_ENGINE = "transformers";
 const DEFAULT_TRANSFORMERS_MODEL = "Babelscape/wikineural-multilingual-ner";
 const DEFAULT_LOCAL_MODEL_PATH = "local_models/multihead_model.pt";
@@ -94,6 +95,54 @@ function sendNative(requestPayload) {
   });
 }
 
+function parseSemver(value) {
+  if (typeof value !== "string") {
+    return null;
+  }
+  const parts = value.trim().split(".");
+  if (parts.length !== 3) {
+    return null;
+  }
+  const parsed = parts.map((part) => Number.parseInt(part, 10));
+  if (parsed.some((valuePart) => Number.isNaN(valuePart) || valuePart < 0)) {
+    return null;
+  }
+  return parsed;
+}
+
+function isHostCompatible(hostVersion, minVersion) {
+  const host = parseSemver(hostVersion);
+  const min = parseSemver(minVersion);
+  if (!host || !min) {
+    return false;
+  }
+  for (let idx = 0; idx < 3; idx += 1) {
+    if (host[idx] > min[idx]) {
+      return true;
+    }
+    if (host[idx] < min[idx]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function assertCompatibleHost(response) {
+  const hostVersion = response && typeof response.hostVersion === "string"
+    ? response.hostVersion
+    : "";
+  if (!hostVersion) {
+    throw new Error(
+      `Native host is missing version metadata. Please reinstall/upgrade the companion app (need >= ${MIN_HOST_VERSION}).`
+    );
+  }
+  if (!isHostCompatible(hostVersion, MIN_HOST_VERSION)) {
+    throw new Error(
+      `Native host ${hostVersion} is too old. Please upgrade to ${MIN_HOST_VERSION} or later.`
+    );
+  }
+}
+
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   if (message && message.type === "DIAG_NATIVE_HOST") {
     (async () => {
@@ -112,6 +161,7 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
           transformersModel: settings.transformersModel || DEFAULT_TRANSFORMERS_MODEL,
           localEncoderModel: settings.localEncoderModel || DEFAULT_LOCAL_ENCODER_MODEL,
           keyFile: settings.keyFile || "C:\\invalid\\missing.key",
+          minHostVersion: MIN_HOST_VERSION,
           includeMapping: false,
         };
         const resolvedModel = resolveModelForEngine(settings);
@@ -119,6 +169,7 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
           nativeRequest.model = resolvedModel;
         }
         const response = await sendNative(nativeRequest);
+        assertCompatibleHost(response);
         sendResponse({ ok: true, nativeResponse: response });
       } catch (error) {
         sendResponse({
@@ -157,6 +208,7 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
         transformersModel: settings.transformersModel || DEFAULT_TRANSFORMERS_MODEL,
         localEncoderModel: settings.localEncoderModel || DEFAULT_LOCAL_ENCODER_MODEL,
         keyFile: settings.keyFile,
+        minHostVersion: MIN_HOST_VERSION,
         includeMapping: Boolean(settings.includeMapping),
       };
       const resolvedModel = resolveModelForEngine(settings);
@@ -165,6 +217,7 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
       }
 
       const response = await sendNative(nativeRequest);
+      assertCompatibleHost(response);
       sendResponse({ ok: true, nativeResponse: response });
     } catch (error) {
       sendResponse({

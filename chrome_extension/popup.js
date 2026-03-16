@@ -11,6 +11,20 @@ function status(message, state = "ok") {
   el.className = `status ${state}`;
 }
 
+function toFriendlyHostError(message) {
+  const text = String(message || "");
+  if (text.includes("Specified native messaging host not found")) {
+    return "Companion app is not installed. Install/repair the native host package, then retry.";
+  }
+  if (text.includes("missing version metadata")) {
+    return "Companion app is outdated. Reinstall or upgrade it, then retry.";
+  }
+  if (text.includes("too old")) {
+    return text;
+  }
+  return text;
+}
+
 function setRunButtonBusy(isBusy, label = "Processing requested") {
   const btn = document.getElementById("runRedaction");
   if (!btn) {
@@ -121,7 +135,7 @@ async function runManualRedaction() {
   } catch (error) {
     pendingRequestId = null;
     setRunButtonBusy(false);
-    status(String(error && error.message ? error.message : error), "error");
+    status(toFriendlyHostError(String(error && error.message ? error.message : error)), "error");
   }
 }
 
@@ -141,7 +155,7 @@ async function diagnoseNativeHost() {
     status("Host reachable: diagnostic call succeeded", "ok");
   } catch (error) {
     status(
-      `Host unreachable: ${String(error && error.message ? error.message : error)}`,
+      `Host unreachable: ${toFriendlyHostError(String(error && error.message ? error.message : error))}`,
       "error"
     );
   }

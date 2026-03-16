@@ -21,11 +21,12 @@ The extension sends one JSON object:
   "spacyModel": "en_core_web_lg",
   "transformersModel": "Babelscape/wikineural-multilingual-ner",
   "localEncoderModel": "answerdotai/ModernBERT-base",
+  "minHostVersion": "0.2.0",
   "includeMapping": false
 }
 ```
 
-`model`, `spacyModel`, `transformersModel`, and `localEncoderModel` are optional. The extension sends `model` resolved from the selected engine plus engine-specific fields.
+`model`, `spacyModel`, `transformersModel`, `localEncoderModel`, and `minHostVersion` are optional. The extension sends `model` resolved from the selected engine plus engine-specific fields. `minHostVersion` is used by newer extension builds to enforce companion-app compatibility.
 
 ## Success Response
 
@@ -34,6 +35,7 @@ The extension sends one JSON object:
   "ok": true,
   "status": "ok",
   "jobId": "uuid-string",
+  "hostVersion": "0.2.0",
   "fileName": "document.redacted.pdf",
   "mimeType": "application/pdf",
   "contentBase64": "base64-encoded-redacted-bytes",
@@ -50,6 +52,7 @@ The extension sends one JSON object:
   "ok": false,
   "status": "error",
   "jobId": "uuid-string",
+  "hostVersion": "0.2.0",
   "error": {
     "code": "UNSUPPORTED_FILE_TYPE",
     "message": "Only PDF and text formats are supported."
@@ -65,6 +68,7 @@ The extension sends one JSON object:
 - `UNSUPPORTED_FILE_TYPE`: Unsupported extension/MIME type.
 - `UNSUPPORTED_TEXT_ENCODING`: Text file is not UTF-8 decodable.
 - `DEPENDENCY_MISSING`: PDF support dependency missing locally.
+- `HOST_VERSION_UNSUPPORTED`: Native host is older than extension-required minimum.
 - `MASKER_COMMAND_FAILED`: `pii_masker.py` call failed.
 - `MASKER_TIMEOUT`: `pii_masker.py` call timed out.
 - `INTERNAL_ERROR`: Unexpected host error.
