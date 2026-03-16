@@ -1,0 +1,11 @@
+name: xlmr_de
+description: XLM-RoBERTa large model fine-tuned for German NER
+engine: transformers
+model: xlm-roberta-large-finetuned-conll03-german
+language: de
+
+# Filter predictions below this confidence score (0-1)
+score_threshold: 0.5
+
+recognizers:
+  - transformers

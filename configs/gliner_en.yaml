@@ -1,0 +1,140 @@
+name: gliner_en
+description: GLiNER multi-PII model for English with comprehensive label coverage
+engine: spacy
+model: en_core_web_sm
+language: en
+
+# Filter predictions below this confidence score (0-1)
+# Higher value = fewer false positives but more missed entities
+# Lower value = more entities caught but more false positives
+score_threshold: 0.5
+
+recognizers:
+  - name: GLiNERRecognizer
+    model_name: knowledgator/gliner-pii-edge-v1.0
+    map_location: cpu
+    threshold: 0.3
+    labels:
+      # =====================================================================
+      # PII LABELS - Organized by Data Source (Most → Least Relevant)
+      # =====================================================================
+      # Sources:
+      #   [GLiNER] - Trained labels (highest accuracy)
+      #   [Presidio] - Microsoft Presidio industry standard
+      #   [HIPAA] - HIPAA 18 PHI identifiers (45 CFR 164.514)
+      #   [GDPR] - GDPR Article 9 sensitive data categories
+      # =====================================================================
+
+      # === [GLiNER] PERSONAL IDENTIFIERS ===
+      - person
+      - first name
+      - last name
+      - dob                    # [GLiNER] date of birth
+      - age
+      - gender
+      - marital status
+
+      # === [GLiNER] CONTACT INFORMATION ===
+      - email address
+      - phone number
+      - fax number
+      - ip address
+      - url
+      - mac address            # [Presidio] device network identifier
+
+      # === [GLiNER] LOCATION ===
+      - location address       # street address
+      - location street
+      - location city
+      # - city                 # [GLiNER alt] use location_city
+      - location state
+      # - state                # [GLiNER alt] use location_state
+      - location country
+      # - country              # [GLiNER alt] use location_country
+      - location zip           # postal code
+      # - postal code          # [GLiNER alt] use location_zip
+
+      # === [GLiNER] FINANCIAL ===
+      - credit card
+      # - credit card number   # [GLiNER alt] use credit_card
+      - credit card expiration
+      - cvv
+      - bank account
+      # - bank account number  # [GLiNER alt] use bank_account
+      - routing number
+      - iban
+      - account number         # generic account numbers
+      - money                  # monetary amounts
+      - ssn                    # social security number
+      # - social security number  # [GLiNER alt] use ssn
+      - crypto wallet address  # [Presidio] cryptocurrency wallet
+
+      # === [GLiNER] IDENTIFICATION DOCUMENTS ===
+      - passport number
+      # - passport             # [GLiNER alt] use passport_number
+      - driver license
+      # - driver's license number  # [GLiNER alt] use driver_license
+      - vehicle id             # license plates, registration
+      # - license plate number # [GLiNER alt] use vehicle_id
+      # - vehicle registration number  # [GLiNER alt] use vehicle_id
+      - identity card number
+      - national id number
+      - tax identification number
+      - username
+      - password
+
+      # === [GLiNER] HEALTHCARE (PHI) ===
+      - healthcare number      # medical record numbers, MRN
+      - medical code           # ICD codes, procedure codes
+      - name medical professional
+      - medical license        # [Presidio] medical license numbers
+      - condition              # [GLiNER] medical conditions
+      - medical process        # [GLiNER] procedures, treatments
+      - drug                   # [GLiNER] medications
+      - dose                   # [GLiNER] dosage information
+      - blood type             # [GLiNER] blood types
+      - injury                 # [GLiNER] injuries
+
+      # === [GLiNER] ORGANIZATION ===
+      - organization
+      - organization medical facility
+      # - company              # [GLiNER alt] use organization
+
+      # === [HIPAA] ADDITIONAL IDENTIFIERS ===
+      - device identifier      # [HIPAA #12] device serial numbers
+      - biometric identifier   # [HIPAA #15] fingerprints, retina scans
+      - certificate number     # [HIPAA #10] certificates, licenses
+
+      # === [GDPR Art.9] SENSITIVE DEMOGRAPHICS ===
+      # Source: EUR-Lex CELEX:32016R0679 Article 9
+      - nationality
+      - religion
+      - race                   # [GDPR] racial or ethnic origin
+      - ethnicity              # [GDPR] racial or ethnic origin
+      - political affiliation  # [GDPR] political opinions
+      - trade union membership # [GDPR] trade union membership
+      - sexual orientation     # [GDPR] sex life or sexual orientation
+      - genetic data           # [GDPR] genetic data
+
+      # === [Zero-shot] WORK ===
+      - job title
+      # - title                # [GLiNER alt] use job_title
+
+      # === [Zero-shot] SECRETS ===
+      - api key
+      - private key
+      # - secret key           # [Zero-shot alt] use private_key
+      # - token                # [Zero-shot alt] use api_key
+
+      # =====================================================================
+      # COUNTRY-SPECIFIC IDs (Presidio - uncomment as needed)
+      # =====================================================================
+      # - us_itin              # US Individual Taxpayer ID
+      # - us_mbi               # US Medicare Beneficiary ID
+      # - uk_nhs               # UK NHS number
+      # - uk_nino              # UK National Insurance
+      # - es_nif               # Spanish NIF
+      # - es_nie               # Spanish NIE
+      # - it_fiscal_code       # Italian Codice Fiscale
+      # - in_aadhaar           # Indian Aadhaar
+      # - in_pan               # Indian PAN

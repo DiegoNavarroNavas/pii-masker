@@ -1,0 +1,147 @@
+{
+  "en": {
+    "first_names_male": [
+      "James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph",
+      "Thomas", "Christopher", "Charles", "Daniel", "Matthew", "Anthony", "Mark",
+      "Donald", "Steven", "Paul", "Andrew", "Joshua", "Kenneth", "Kevin", "Brian",
+      "George", "Timothy", "Ronald", "Edward", "Jason", "Jeffrey", "Ryan",
+      "Jacob", "Gary", "Nicholas", "Eric", "Jonathan", "Stephen", "Larry", "Justin",
+      "Scott", "Brandon", "Benjamin", "Samuel", "Raymond", "Gregory", "Frank",
+      "Alexander", "Patrick", "Jack", "Dennis", "Jerry", "Tyler", "Aaron", "Jose",
+      "Adam", "Nathan", "Henry", "Douglas", "Zachary", "Peter", "Kyle"
+    ],
+    "first_names_female": [
+      "Mary", "Patricia", "Jennifer", "Linda", "Barbara", "Elizabeth", "Susan",
+      "Jessica", "Sarah", "Karen", "Lisa", "Nancy", "Betty", "Margaret", "Sandra",
+      "Ashley", "Kimberly", "Emily", "Donna", "Michelle", "Dorothy", "Carol",
+      "Amanda", "Melissa", "Deborah", "Stephanie", "Rebecca", "Sharon", "Laura",
+      "Cynthia", "Kathleen", "Amy", "Angela", "Shirley", "Anna", "Brenda", "Pamela",
+      "Emma", "Nicole", "Helen", "Samantha", "Katherine", "Christine", "Debra",
+      "Rachel", "Carolyn", "Janet", "Catherine", "Maria", "Heather", "Diane",
+      "Ruth", "Julie", "Olivia", "Joyce", "Virginia", "Victoria", "Kelly", "Lauren"
+    ],
+    "last_names": [
+      "Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis",
+      "Rodriguez", "Martinez", "Hernandez", "Lopez", "Gonzalez", "Wilson", "Anderson",
+      "Thomas", "Taylor", "Moore", "Jackson", "Martin", "Lee", "Perez", "Thompson",
+      "White", "Harris", "Sanchez", "Clark", "Ramirez", "Lewis", "Robinson",
+      "Walker", "Young", "Allen", "King", "Wright", "Scott", "Torres", "Nguyen",
+      "Hill", "Flores", "Green", "Adams", "Nelson", "Baker", "Hall", "Rivera",
+      "Campbell", "Mitchell", "Carter", "Roberts", "Turner", "Phillips", "Evans",
+      "Parker", "Edwards", "Collins", "Stewart", "Morris", "Murphy", "Cook"
+    ]
+  },
+  "de": {
+    "first_names_male": [
+      "Hans", "Klaus", "Peter", "Wolfgang", "Michael", "Thomas", "Andreas", "Stefan",
+      "Markus", "Christian", "Frank", "Martin", "Alexander", "Manfred", "Karl",
+      "Werner", "Heinz", "Gerhard", "Friedrich", "Jürgen", "Dieter", "Helmut",
+      "Bernhard", "Wilhelm", "Ernst", "Günther", "Herbert", "Rudolf", "Heinrich",
+      "Otto", "Josef", "Richard", "Georg", "Franz", "Paul", "Alfred", "Walter",
+      "Bernd", "Uwe", "Siegfried", "Joachim", "Rolf", "Karl-Heinz", "Horst",
+      "Jan", "Felix", "Maximilian", "Sebastian", "Benjamin", "Jonas", "Tim",
+      "Lukas", "Finn", "Leon", "Niklas", "Julian", "Max", "David", "Daniel"
+    ],
+    "first_names_female": [
+      "Maria", "Anna", "Elisabeth", "Margarete", "Gertrud", "Hildegard", "Irmgard",
+      "Helga", "Ilse", "Edith", "Ruth", "Gisela", "Ursula", "Ingeborg", "Erika",
+      "Helene", "Olga", "Irma", "Waltraud", "Hannelore", "Monika", "Karin", "Brigitte",
+      "Christa", "Petra", "Sabine", "Ute", "Sylvia", "Angela", "Nicole", "Sandra",
+      "Julia", "Sarah", "Laura", "Lisa", "Sophie", "Marie", "Leonie", "Hannah",
+      "Lena", "Mia", "Emilia", "Emma", "Lina", "Clara", "Elena", "Lea", "Johanna",
+      "Charlotte", "Amelie", "Theresa", "Katharina", "Victoria", "Magdalena"
+    ],
+    "last_names": [
+      "Müller", "Schmidt", "Schneider", "Fischer", "Weber", "Meyer", "Wagner",
+      "Becker", "Schulz", "Hoffmann", "Schäfer", "Koch", "Bauer", "Richter",
+      "Klein", "Wolf", "Schröder", "Neumann", "Schwarz", "Braun", "Zimmermann",
+      "Krüger", "Hofmann", "Hartmann", "Lange", "Schmitt", "Werner", "Krause",
+      "Meier", "Lehmann", "Schmid", "Schulze", "Maier", "Köhler", "Herrmann",
+      "König", "Walter", "Mayer", "Huber", "Kaiser", "Fuchs", "Peters", "Lang",
+      "Scholz", "Möller", "Weiß", "Jung", "Hahn", "Schubert", "Vogel", "Friedrich",
+      "Keller", "Günther", "Frank", "Berger", "Winkler", "Roth", "Lorenz"
+    ]
+  },
+  "fr": {
+    "first_names_male": [
+      "Jean", "Pierre", "Michel", "André", "Philippe", "Jacques", "François",
+      "Louis", "René", "Bernard", "Marcel", "Daniel", "Christian", "Claude",
+      "Gérard", "Alain", "Nicolas", "David", "Patrick", "Christophe", "Stéphane",
+      "Laurent", "Sébastien", "Thomas", "Julien", "Antoine", "Mathieu", "Alexandre",
+      "Benoît", "Vincent", "Pierre", "Marc", "Jérôme", "Olivier", "Éric", "Thierry",
+      "Bruno", "Frédéric", "Pascal", "Jean-Pierre", "Jean-Luc", "Jean-Claude",
+      "Pierre-Marie", "Guillaume", "Raphaël", "Hugo", "Lucas", "Nathan", "Théo"
+    ],
+    "first_names_female": [
+      "Marie", "Françoise", "Monique", "Catherine", "Nathalie", "Isabelle",
+      "Sylvie", "Annie", "Jacqueline", "Hélène", "Christiane", "Danielle",
+      "Martine", "Christine", "Marguerite", "Denise", "Simone", "Jeannine",
+      "Brigitte", "Claudine", "Suzanne", "Édith", "Paulette", "Yvonne",
+      "Sophie", "Anne", "Julie", "Émilie", "Camille", "Sarah", "Léa", "Manon",
+      "Chloé", "Alice", "Charlotte", "Louise", "Emma", "Pauline", "Marine",
+      "Juliette", "Clara", "Inès", "Zoé", "Lina", "Romane", "Mathilde"
+    ],
+    "last_names": [
+      "Martin", "Bernard", "Dubois", "Thomas", "Robert", "Richard", "Petit",
+      "Durand", "Leroy", "Moreau", "Simon", "Laurent", "Lefebvre", "Michel",
+      "Garcia", "David", "Bertrand", "Roux", "Vincent", "Fournier", "Morel",
+      "Girard", "André", "Lefèvre", "Mercier", "Dupont", "Lambert", "Bonnet",
+      "François", "Martinez", "Legrand", "Garnier", "Faure", "Rousseau", "Blanc",
+      "Guerin", "Muller", "Henry", "Roussel", "Nicolas", "Perrin", "Morin",
+      "Clement", "Laroche", "Fontaine", "Chevalier", "Roy", "Brisson", "Colin"
+    ]
+  },
+  "it": {
+    "first_names_male": [
+      "Giuseppe", "Giovanni", "Antonio", "Mario", "Luigi", "Francesco", "Angelo",
+      "Vincenzo", "Pietro", "Salvatore", "Carlo", "Domenico", "Paolo", "Rocco",
+      "Nicola", "Michele", "Marco", "Giuseppe", "Bruno", "Roberto", "Sergio",
+      "Luciano", "Giorgio", "Franco", "Enzo", "Renato", "Stefano", "Alessandro",
+      "Andrea", "Simone", "Davide", "Matteo", "Lorenzo", "Federico", "Filippo",
+      "Riccardo", "Emanuele", "Luca", "Fabio", "Massimo", "Claudio", "Marcello"
+    ],
+    "first_names_female": [
+      "Maria", "Anna", "Giuseppina", "Rosa", "Angela", "Giovanna", "Teresa",
+      "Lucia", "Francesca", "Caterina", "Rosa", "Giulia", "Concetta", "Antonietta",
+      "Elena", "Michela", "Daniela", "Sandra", "Patrizia", "Monica", "Roberta",
+      "Silvia", "Claudia", "Valentina", "Alessandra", "Federica", "Martina",
+      "Chiara", "Sara", "Elisa", "Laura", "Paola", "Alessia", "Sofia", "Aurora",
+      "Giorgia", "Alice", "Beatrice", "Greta", "Camilla", "Emma", "Asia"
+    ],
+    "last_names": [
+      "Rossi", "Russo", "Ferrari", "Esposito", "Bianchi", "Romano", "Colombo",
+      "Ricci", "Marino", "Greco", "Bruno", "Gallo", "Conti", "Costa", "Giordano",
+      "Mancini", "Rizzo", "Lombardi", "Moretti", "Barbieri", "Fontana", "Santoro",
+      "Mariani", "Rinaldi", "Caruso", "Ferrara", "Galli", "Martini", "Leone",
+      "Lombardo", "Vitale", "Milani", "Villa", "Ferretti", "Bianco", "Serra",
+      "Conte", "De Luca", "Marchetti", "Parisi", "Venditti", "Testa", "Romeo"
+    ]
+  },
+  "es": {
+    "first_names_male": [
+      "José", "Antonio", "Manuel", "Francisco", "David", "Juan", "Javier",
+      "Daniel", "Carlos", "Miguel", "Rafael", "Pedro", "Pablo", "Alejandro",
+      "Jorge", "Sergio", "Fernando", "Luis", "Alberto", "Andrés", "Diego",
+      "Adrián", "Raúl", "Enrique", "Vicente", "Óscar", "Rubén", "Santiago",
+      "Ángel", "Ramón", "Ignacio", "Alfonso", "Ricardo", "Eduardo", "Hugo",
+      "Marcos", "Gonzalo", "Iván", "Roberto", "Jaime", "Guillermo", "Gabriel"
+    ],
+    "first_names_female": [
+      "María", "Carmen", "Ana", "Isabel", "Laura", "Cristina", "Rosa", "Pilar",
+      "Marta", "Lucía", "Sofía", "Paula", "Elena", "Patricia", "Sara", "Andrea",
+      "Silvia", "Nuria", "Teresa", "Claudia", "Alba", "Julia", "Irene", "Raquel",
+      "Virginia", "Miriam", "Alicia", "Lorena", "Eva", "Gabriela", "Mónica",
+      "Beatriz", "Natalia", "Rocío", "Alejandra", "Sandra", "Esther", "Amparo",
+      "Purificación", "Dolores", "Francisca", "Antonia", "Manuela", "Encarnación"
+    ],
+    "last_names": [
+      "García", "Rodríguez", "Martínez", "López", "González", "Hernández",
+      "Pérez", "Sánchez", "Ramírez", "Torres", "Flores", "Rivera", "Gómez",
+      "Díaz", "Morales", "Reyes", "Cruz", "Gutiérrez", "Ortiz", "Jiménez",
+      "Castro", "Vargas", "Romero", "Álvarez", "Mendoza", "Herrera", "Medina",
+      "Aguilar", "Vargas", "Domínguez", "Ruiz", "Moreno", "Muñoz", "Alvarez",
+      "Serrano", "Navarro", "Suárez", "Fernández", "Molina", "Ramos", "Blanco",
+      "Santos", "Castillo", "Delgado", "Camacho", "Rojas", "Herrera", "Arias"
+    ]
+  }
+}

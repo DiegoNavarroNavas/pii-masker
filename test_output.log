@@ -1,0 +1,44 @@
+
+============================================================
+PII Masker Test Suite
+============================================================
+Output directory: /home/diego/Agents/pii_masker/test/output/20260314_210153
+Key file: /home/diego/Agents/pii_masker/pii.key
+Testing 24 presets...
+============================================================
+
+[1] Testing spacy_lg_en with en... ✓ PASSED (49.18s, 1650 entities)
+[2] Testing spacy_sm_en with en... ✓ PASSED (46.54s, 1778 entities)
+[3] Testing stanza_en with en... ✓ PASSED (169.78s, 1547 entities)
+[4] Testing stanza_de with de... ✓ PASSED (142.66s, 428 entities)
+[5] Testing stanza_fr with fr... ✓ PASSED (127.92s, 331 entities)
+[6] Testing stanza_it with it... ✓ PASSED (147.81s, 291 entities)
+[7] Testing stanza_es with es... ✓ PASSED (131.59s, 166 entities)
+[8] Testing bert_en with en... ✓ PASSED (99.10s, 1613 entities)
+[9] Testing distilbert_en with en... ✓ PASSED (69.87s, 1600 entities)
+[10] Testing xlmr_en with en... ✓ PASSED (270.12s, 1201 entities)
+[11] Testing xlmr_de with de... ✓ PASSED (192.54s, 1122 entities)
+[12] Testing xlmr_fr with fr... ✓ PASSED (173.98s, 862 entities)
+[13] Testing xlmr_it with it... ✓ PASSED (221.35s, 837 entities)
+[14] Testing xlmr_es with es... ✓ PASSED (147.53s, 696 entities)
+[15] Testing wikineural_en with en... ✓ PASSED (85.68s, 1567 entities)
+[16] Testing wikineural_de with de... ✓ PASSED (78.20s, 1421 entities)
+[17] Testing wikineural_fr with fr... ✓ PASSED (73.94s, 1233 entities)
+[18] Testing wikineural_it with it... ✓ PASSED (83.56s, 1255 entities)
+[19] Testing wikineural_es with es... ✓ PASSED (82.41s, 1062 entities)
+[20] Testing gliner_en with en... ✓ PASSED (431.77s, 1871 entities)
+[21] Testing gliner_de with de... ✓ PASSED (329.27s, 1533 entities)
+[22] Testing gliner_fr with fr... ✓ PASSED (276.27s, 1357 entities)
+[23] Testing gliner_it with it... ✓ PASSED (285.01s, 1442 entities)
+[24] Testing gliner_es with es... ✓ PASSED (293.93s, 1397 entities)
+
+============================================================
+Test Summary
+============================================================
+Total:  24
+Passed: 24
+Failed: 0
+
+Summary saved to: /home/diego/Agents/pii_masker/test/output/20260314_210153/summary.json
+============================================================
+

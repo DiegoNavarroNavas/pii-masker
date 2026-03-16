@@ -1,0 +1,11 @@
+name: stanza_es
+description: Stanza NLP model for Spanish
+engine: stanza
+model: es
+language: es
+
+# Filter predictions below this confidence score (0-1)
+score_threshold: 0.5
+
+recognizers:
+  - stanza

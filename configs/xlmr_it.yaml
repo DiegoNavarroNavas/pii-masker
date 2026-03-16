@@ -1,0 +1,11 @@
+name: xlmr_it
+description: XLM-RoBERTa multilingual model for Italian NER
+engine: transformers
+model: xlm-roberta-large-finetuned-conll03-english
+language: it
+
+# Filter predictions below this confidence score (0-1)
+score_threshold: 0.5
+
+recognizers:
+  - transformers

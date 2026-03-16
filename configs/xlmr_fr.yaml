@@ -1,0 +1,11 @@
+name: xlmr_fr
+description: XLM-RoBERTa multilingual model for French NER
+engine: transformers
+model: xlm-roberta-large-finetuned-conll03-english
+language: fr
+
+# Filter predictions below this confidence score (0-1)
+score_threshold: 0.5
+
+recognizers:
+  - transformers

@@ -1,0 +1,11 @@
+name: spacy_sm_en
+description: spaCy small model for English NER
+engine: spacy
+model: en_core_web_sm
+language: en
+
+# Filter predictions below this confidence score (0-1)
+score_threshold: 0.5
+
+recognizers:
+  - spacy

@@ -1,0 +1,152 @@
+{
+  "en": {
+    "email_domains": [
+      "gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "aol.com",
+      "icloud.com", "mail.com", "protonmail.com", "zoho.com", "yandex.com",
+      "comcast.net", "verizon.net", "att.net", "sbcglobal.net", "cox.net"
+    ],
+    "email_patterns": [
+      "{first}.{last}@{domain}",
+      "{first_initial}{last}@{domain}",
+      "{first}_{last}@{domain}",
+      "{first}-{last}@{domain}",
+      "{first}{last_initial}@{domain}",
+      "{first}@{domain}",
+      "{last}.{first}@{domain}",
+      "{first}{numbers}@{domain}"
+    ],
+    "phone_formats": [
+      "+1 ({area}) {exchange}-{number}",
+      "({area}) {exchange}-{number}",
+      "{area}-{exchange}-{number}",
+      "{area}.{exchange}.{number}",
+      "+1 {area} {exchange} {number}"
+    ],
+    "area_codes": [
+      "212", "646", "917", "718", "347", "310", "424", "323", "213",
+      "415", "510", "650", "312", "773", "872", "617", "857", "508",
+      "202", "301", "240", "703", "571", "404", "678", "770", "470",
+      "214", "469", "972", "210", "713", "281", "832", "720", "303"
+    ],
+    "phone_examples": [
+      "+1 (212) 555-1234",
+      "(310) 555-5678",
+      "415-555-9012",
+      "617.555.3456",
+      "+1 202 555 7890"
+    ]
+  },
+  "de": {
+    "email_domains": [
+      "gmail.com", "web.de", "gmx.de", "t-online.de", "freenet.de",
+      "yahoo.de", "hotmail.de", "outlook.de", "mail.de", "posteo.de",
+      "mailbox.org", "zoho.eu", "protonmail.com", "yandex.com"
+    ],
+    "email_patterns": [
+      "{first}.{last}@{domain}",
+      "{first_initial}.{last}@{domain}",
+      "{first}_{last}@{domain}",
+      "{first}-{last}@{domain}",
+      "{first}@{domain}",
+      "{last}.{first}@{domain}"
+    ],
+    "phone_formats": [
+      "+49 {area} {number}",
+      "0{area} {number}",
+      "+49 ({area}) {number}",
+      "0{area} / {number}"
+    ],
+    "area_codes": [
+      "30", "40", "69", "89", "221", "211", "201", "621", "711",
+      "89", "511", "531", "351", "341", "203", "231", "241", "421"
+    ],
+    "phone_examples": [
+      "+49 30 12345678",
+      "040 98765432",
+      "+49 (89) 11223344",
+      "0221 / 55667788"
+    ]
+  },
+  "fr": {
+    "email_domains": [
+      "gmail.com", "orange.fr", "free.fr", "sfr.fr", "laposte.net",
+      "yahoo.fr", "hotmail.fr", "outlook.fr", "live.fr", "bbox.fr",
+      "wanadoo.fr", "neuf.fr", "club-internet.fr", "aliceadsl.fr"
+    ],
+    "email_patterns": [
+      "{first}.{last}@{domain}",
+      "{first_initial}.{last}@{domain}",
+      "{first}_{last}@{domain}",
+      "{first}-{last}@{domain}",
+      "{first}@{domain}"
+    ],
+    "phone_formats": [
+      "+33 {area} {group1} {group2} {group3} {group4}",
+      "0{area} {group1} {group2} {group3} {group4}",
+      "+33 {area} {group1}.{group2}.{group3}.{group4}"
+    ],
+    "area_codes": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "phone_examples": [
+      "+33 1 23 45 67 89",
+      "06 12 34 56 78",
+      "+33 6.98.76.54.32"
+    ]
+  },
+  "it": {
+    "email_domains": [
+      "gmail.com", "libero.it", "virgilio.it", "tiscali.it", "alice.it",
+      "yahoo.it", "hotmail.it", "outlook.it", "live.it", "fastwebnet.it",
+      "inwind.it", "tin.it", "poste.it", "email.it", "aruba.it"
+    ],
+    "email_patterns": [
+      "{first}.{last}@{domain}",
+      "{first_initial}{last}@{domain}",
+      "{first}_{last}@{domain}",
+      "{first}@{domain}"
+    ],
+    "phone_formats": [
+      "+39 {area} {number}",
+      "0{area} {number}",
+      "+39 {area}.{number}",
+      "3{mobile} {group1} {group2}"
+    ],
+    "area_codes": [
+      "02", "06", "011", "051", "041", "055", "081", "091", "070",
+      "010", "045", "049", "031", "0444", "085", "080", "089", "059"
+    ],
+    "phone_examples": [
+      "+39 02 1234567",
+      "06 9876543",
+      "+39 333.456.7890",
+      "340 123 4567"
+    ]
+  },
+  "es": {
+    "email_domains": [
+      "gmail.com", "hotmail.com", "yahoo.es", "outlook.es", "telefonica.net",
+      "terra.es", "ono.com", "orange.es", "vodafone.es", "movistar.es",
+      "ya.com", "mixmail.com", "latinmail.com", "latinmail.com"
+    ],
+    "email_patterns": [
+      "{first}.{last}@{domain}",
+      "{first_initial}{last}@{domain}",
+      "{first}_{last}@{domain}",
+      "{first}-{last}@{domain}",
+      "{first}@{domain}"
+    ],
+    "phone_formats": [
+      "+34 {area} {group1} {group2}",
+      "{area} {group1} {group2}",
+      "+34 {area}.{group1}.{group2}"
+    ],
+    "area_codes": [
+      "91", "93", "96", "95", "98", "94", "97", "922", "928",
+      "606", "607", "608", "609", "610", "611", "612", "613"
+    ],
+    "phone_examples": [
+      "+34 91 123 4567",
+      "93 987 6543",
+      "+34 612.345.678"
+    ]
+  }
+}

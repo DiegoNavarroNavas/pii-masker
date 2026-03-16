@@ -1,0 +1,11 @@
+name: stanza_de
+description: Stanza NLP model for German
+engine: stanza
+model: de
+language: de
+
+# Filter predictions below this confidence score (0-1)
+score_threshold: 0.5
+
+recognizers:
+  - stanza
