@@ -72,7 +72,7 @@ def run_masker_text(
         payload["local_encoder_model"] = local_encoder_model
 
     proc = subprocess.run(
-        [sys.executable, "pii_masker.py", "--json-mode"],
+        [sys.executable, "pii_masker.py", "anonymize", "--json-mode"],
         cwd=str(repo_root),
         input=json.dumps(payload),
         text=True,

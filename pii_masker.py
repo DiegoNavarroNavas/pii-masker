@@ -46,16 +46,25 @@ def status(msg: str):
     return lambda: print(" done", file=sys.stderr)
 
 
-def load_config(name: str | None) -> dict:
-    """Load config from file path."""
+def load_config(name: str | None, allow_missing: bool = False) -> dict:
+    """Load config from file path.
+
+    Args:
+        name: Path to config file, or None to use default.
+        allow_missing: If True, return empty dict if no config found (for JSON mode).
+    """
     if not name:
         local = Path.cwd() / DEFAULT_CONFIG_FILE
         if local.exists():
             name = str(local)
+        elif allow_missing:
+            return {}
         else:
             sys.exit(f"Error: No config specified. Use -c CONFIG_PATH or create {DEFAULT_CONFIG_FILE}")
     path = Path(name)
     if not path.exists():
+        if allow_missing:
+            return {}
         sys.exit(f"Error: Config file not found: {path}")
     try:
         return yaml.safe_load(open(path)) or {}
@@ -133,8 +142,9 @@ def _build_nlp_engine_simple(config: dict):
         return StanzaNlpEngine(models=[{"lang_code": lang, "model_name": model or lang}])
     elif engine == "transformers":
         from presidio_analyzer.nlp_engine import TransformersNlpEngine
-        spacy_model = SPACY_SMALL.get(lang, SPACY_SMALL["en"])
-        transformer = model or DEFAULT_TRANSFORMER
+        # Use config values first, then fall back to defaults
+        spacy_model = config.get("spacy_model") or SPACY_SMALL.get(lang, SPACY_SMALL["en"])
+        transformer = config.get("transformer_model") or config.get("model") or DEFAULT_TRANSFORMER
         if ":" in transformer:
             spacy_model, transformer = transformer.split(":", 1)
         return TransformersNlpEngine(
@@ -382,6 +392,8 @@ def run_json_mode(config: dict) -> int:
             "language": payload.get("language", config.get("language", "en")),
             "engine": payload.get("engine", config.get("engine", "spacy")),
             "model": payload.get("model", config.get("model")),
+            "spacy_model": payload.get("spacy_model", config.get("spacy_model")),
+            "transformer_model": payload.get("transformer_model", config.get("transformer_model")),
             "local_encoder_model": payload.get("local_encoder_model", config.get("local_encoder_model")),
             "score_threshold": payload.get("score_threshold", config.get("score_threshold")),
         }
@@ -479,7 +491,7 @@ Examples:
 
     anonymize_parser = subs.add_parser("anonymize", help="Anonymize PII")
     anonymize_parser.add_argument("-c", "--config", help="Config file path")
-    anonymize_parser.add_argument("--json", action="store_true", help="JSON mode for native host integration")
+    anonymize_parser.add_argument("--json-mode", action="store_true", help="JSON mode for native host integration")
     for args, kw in common:
         anonymize_parser.add_argument(*args, **kw)
 
@@ -529,10 +541,12 @@ Examples:
             from benchmark.cli import run as run_benchmark
             run_benchmark(args)
         case "anonymize":
-            config = load_config(args.config)
             # Handle JSON mode for native host integration
-            if args.json:
+            if args.json_mode:
+                # In JSON mode, config is optional since all settings come from stdin
+                config = load_config(args.config, allow_missing=True)
                 sys.exit(run_json_mode(config))
+            config = load_config(args.config)
             for k in ("input", "output", "key_file"):
                 if getattr(args, k, None):
                     config[k] = getattr(args, k)
