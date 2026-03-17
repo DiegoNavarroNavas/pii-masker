@@ -48,6 +48,17 @@ function defaults() {
   };
 }
 
+const ENGINE_GROUPS = ["spacy", "transformers", "local_multihead"];
+
+function updateEngineVisibility(engine) {
+  for (const key of ENGINE_GROUPS) {
+    const el = document.getElementById(`group-${key}`);
+    if (el) {
+      el.style.display = engine === key ? "" : "none";
+    }
+  }
+}
+
 function loadSettings() {
   chrome.storage.sync.get(defaults(), (data) => {
     document.getElementById("keyFile").value = data.keyFile || "";
@@ -62,6 +73,7 @@ function loadSettings() {
     document.getElementById("localEncoderModel").value =
       data.localEncoderModel || DEFAULT_LOCAL_ENCODER_MODEL;
     document.getElementById("includeMapping").checked = Boolean(data.includeMapping);
+    updateEngineVisibility(engine);
   });
 }
 
@@ -216,6 +228,7 @@ chrome.runtime.onMessage.addListener((message) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   loadSettings();
+  document.getElementById("engine").addEventListener("change", (e) => updateEngineVisibility(e.target.value));
   document.getElementById("saveSettings").addEventListener("click", saveSettings);
   document.getElementById("runRedaction").addEventListener("click", runManualRedaction);
   document.getElementById("refreshVaultPath").addEventListener("click", refreshVaultOutputPath);

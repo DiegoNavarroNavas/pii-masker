@@ -123,29 +123,22 @@
       <option value="local_multihead">local_multihead</option>
     </select>
 
-    <label for="spacyModel">spaCy model (used when engine=spacy)</label>
-    <input
-      id="spacyModel"
-      placeholder="en_core_web_lg"
-    />
+    <div id="group-spacy">
+      <label for="spacyModel">spaCy model</label>
+      <input id="spacyModel" placeholder="en_core_web_lg" />
+    </div>
 
-    <label for="transformersModel">Transformers model (used when engine=transformers)</label>
-    <input
-      id="transformersModel"
-      placeholder="Babelscape/wikineural-multilingual-ner"
-    />
+    <div id="group-transformers">
+      <label for="transformersModel">Transformers model</label>
+      <input id="transformersModel" placeholder="Babelscape/wikineural-multilingual-ner" />
+    </div>
 
-    <label for="localModelPath">Local multihead checkpoint (used when engine=local_multihead)</label>
-    <input
-      id="localModelPath"
-      placeholder="local_models/multihead_model.pt"
-    />
-
-    <label for="localEncoderModel">Local encoder/tokenizer (used when engine=local_multihead)</label>
-    <input
-      id="localEncoderModel"
-      placeholder="answerdotai/ModernBERT-base"
-    />
+    <div id="group-local_multihead">
+      <label for="localModelPath">Local multihead checkpoint</label>
+      <input id="localModelPath" placeholder="local_models/multihead_model.pt" />
+      <label for="localEncoderModel">Local encoder/tokenizer</label>
+      <input id="localEncoderModel" placeholder="answerdotai/ModernBERT-base" />
+    </div>
 
     <div class="checkbox">
       <input id="includeMapping" type="checkbox" />
