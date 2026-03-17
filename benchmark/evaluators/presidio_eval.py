@@ -1,6 +1,7 @@
 """Presidio evaluator wrapper for benchmarking PII detection."""
 
 import sys
+import time
 from collections import defaultdict
 
 from benchmark.entity_normalizer import normalize_entities
@@ -124,9 +125,22 @@ def run_benchmark(
     print(f"Loading config: {config_path}", file=sys.stderr)
     config = load_config(config_path)
 
+    engine = config.get("engine", "spacy")
+    lang = config.get("language", "en")
+
+    # Handle local_multihead engine separately (bypasses Presidio)
+    if engine == "local_multihead":
+        return _run_benchmark_local_multihead(
+            config_path=config_path,
+            config=config,
+            samples=samples,
+            dataset_name=dataset_name,
+            evaluation_mode=evaluation_mode,
+        )
+
+    start_time = time.time()
     # Create analyzer once (NLP engine loads once)
     analyzer = create_analyzer(config)
-    lang = config.get("language", "en")
 
     # Get entity type mapping if configured
     entity_type_mapping = config.get("entity_type_mapping", {})
@@ -176,6 +190,7 @@ def run_benchmark(
         if (i + 1) % 100 == 0:
             print(f"  Processed {i + 1}/{len(samples)} samples...", file=sys.stderr)
 
+    elapsed_time = time.time() - start_time
     print("Computing metrics...", file=sys.stderr)
     return _compute_metrics(
         predictions=all_predictions,
@@ -184,6 +199,100 @@ def run_benchmark(
         config_name=config_path,
         total_samples=len(samples),
         errors=errors,
+        total_time_seconds=elapsed_time,
+    )
+
+
+def _run_benchmark_local_multihead(
+    config_path: str,
+    config: dict,
+    samples: list[BenchmarkSample],
+    dataset_name: str,
+    evaluation_mode: str,
+) -> BenchmarkResult:
+    """Run benchmark for local_multihead engine (bypasses Presidio)."""
+    from benchmark.entity_normalizer import normalize_entities
+
+    # Import local_multihead detection functions
+    try:
+        from pii_masker_local import (
+            detect_pii_with_local_multihead,
+            resolve_local_multihead_checkpoint,
+        )
+    except ImportError:
+        import importlib.util
+        import pathlib
+        spec = importlib.util.spec_from_file_location(
+            "pii_masker_local",
+            pathlib.Path(__file__).parent.parent.parent / "pii_masker_local.py"
+        )
+        pii_masker_local = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(pii_masker_local)
+        detect_pii_with_local_multihead = pii_masker_local.detect_pii_with_local_multihead
+        resolve_local_multihead_checkpoint = pii_masker_local.resolve_local_multihead_checkpoint
+
+    # Resolve checkpoint path once
+    checkpoint_path = resolve_local_multihead_checkpoint(config.get("model"))
+    encoder_model = config.get("local_encoder_model")
+
+    # Get entity type mapping if configured
+    entity_type_mapping = config.get("entity_type_mapping", {})
+
+    print(f"Running benchmark on {len(samples)} samples (local_multihead)...", file=sys.stderr)
+
+    start_time = time.time()
+    all_predictions: list[list[dict]] = []
+    all_ground_truth: list[list[dict]] = []
+    errors: list[str] = []
+
+    for i, sample in enumerate(samples):
+        try:
+            # Get predictions from local_multihead model
+            detections = detect_pii_with_local_multihead(
+                sample.text,
+                checkpoint_path,
+                encoder_model,
+            )
+
+            # Convert to benchmark format (already dicts with entity_type, start, end)
+            predictions = [
+                {
+                    "entity_type": entity_type_mapping.get(d["entity_type"], d["entity_type"]),
+                    "start": d["start"],
+                    "end": d["end"],
+                }
+                for d in detections
+            ]
+
+            # Note: local_multihead already handles conflict resolution via NMS
+
+            # Normalize to coarse types if enabled
+            if evaluation_mode == "coarse":
+                predictions = normalize_entities(predictions)
+                ground_truth = normalize_entities(sample.ground_truth)
+            else:
+                ground_truth = sample.ground_truth
+
+            all_predictions.append(predictions)
+            all_ground_truth.append(ground_truth)
+        except Exception as e:
+            errors.append(f"Sample {i}: {str(e)}")
+            all_predictions.append([])
+            all_ground_truth.append(sample.ground_truth)
+
+        if (i + 1) % 100 == 0:
+            print(f"  Processed {i + 1}/{len(samples)} samples...", file=sys.stderr)
+
+    elapsed_time = time.time() - start_time
+    print("Computing metrics...", file=sys.stderr)
+    return _compute_metrics(
+        predictions=all_predictions,
+        ground_truth=all_ground_truth,
+        dataset_name=dataset_name,
+        config_name=config_path,
+        total_samples=len(samples),
+        errors=errors,
+        total_time_seconds=elapsed_time,
     )
 
 
@@ -194,6 +303,7 @@ def _compute_metrics(
     config_name: str,
     total_samples: int,
     errors: list[str],
+    total_time_seconds: float = 0.0,
 ) -> BenchmarkResult:
     """Compute precision, recall, and F1 metrics.
 
@@ -267,6 +377,7 @@ def _compute_metrics(
         overall_precision=overall_precision,
         overall_recall=overall_recall,
         overall_f1=overall_f1,
+        total_time_seconds=total_time_seconds,
         entity_metrics=entity_metrics,
         errors=errors,
     )

@@ -1,0 +1,9 @@
+Ground Truth Entities:
+==================================================
+- ID_NUMBER: 'ORZDSHGB' [10:18]
+- PERSON: 'Hilda' [50:55]
+- PERSON: 'Sölzer' [56:62]
+- DATE_TIME: '1938-12-29' [76:86]
+- NRP: 'Amerikanische Jungferninseln' [102:130]
+- EMAIL_ADDRESS: 'hermann-josefseip@example.net' [141:170]
+- PHONE_NUMBER: '+41 62 214 78 23' [177:193]

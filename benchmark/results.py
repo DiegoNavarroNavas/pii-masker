@@ -26,6 +26,7 @@ class BenchmarkResult:
     overall_precision: float
     overall_recall: float
     overall_f1: float
+    total_time_seconds: float = 0.0
     entity_metrics: list[EntityMetrics] = field(default_factory=list)
     errors: list[str] = field(default_factory=list)
     metadata: dict[str, Any] = field(default_factory=dict)
@@ -46,6 +47,8 @@ class BenchmarkResult:
             f"Config: {self.config_name}",
             f"{'=' * 60}",
             f"Samples: {self.total_samples}",
+            f"Total Time: {self.total_time_seconds:.1f}s ({self.total_time_seconds/60:.1f} min)",
+            f"Avg Time/Sample: {self.total_time_seconds/self.total_samples*1000:.1f}ms" if self.total_samples > 0 else "Avg Time/Sample: N/A",
             f"",
             f"Overall Metrics:",
             f"  Precision: {self.overall_precision:.4f}",

@@ -1,0 +1,14 @@
+<PERSON_4>,
+
+<OTHER_5> ich mein Konto<CREDIT_CARD_2> bei der Dippel Kensy GmbH per sofort.
+
+<OTHER_4>:
+Name:<PERSON_3>
+Adresse: Haufferplatz 5/2, 42138 Augsburg
+AHV-Nummer: 756.9088.3070.32
+
+Bitte bestätigen Sie die Kündigung unter<OTHER_3>.
+
+<OTHER_2>
+<PERSON_2>
+Total time: 24.5s

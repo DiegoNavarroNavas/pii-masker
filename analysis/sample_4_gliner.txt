@@ -1,0 +1,8 @@
+Anschlussgesuch ADOOEVNFOD
+Neukunde: <PERSON_3>
+Adresse: <PERSON_2>. 3549, 01818 <LOCATION_2>
+Kontakt: <phone number_2> | <EMAIL_ADDRESS_2>
+Bankverbindung: <IBAN_CODE_2> (<bank account_2>)
+Zähler-ID: D6270F6F
+Gewünschter Termin: <DATE_TIME_2>
+Total time: 21.7s

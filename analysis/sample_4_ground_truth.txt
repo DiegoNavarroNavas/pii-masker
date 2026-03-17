@@ -1,0 +1,15 @@
+Ground Truth Entities:
+==================================================
+- ID_NUMBER: 'ADOOEVNFOD' [16:26]
+- PERSON: 'Kunibert' [37:45]
+- PERSON: 'Fiebig' [46:52]
+- LOCATION: 'Heßstr. 3549' [62:74]
+- LOCATION: '01818' [76:81]
+- LOCATION: 'Schongau' [82:90]
+- LOCATION: 'TG' [91:93]
+- PHONE_NUMBER: '+41 26 329 35 75' [103:119]
+- EMAIL_ADDRESS: 'annemariejaentsch@example.net' [122:151]
+- IBAN: 'DE94111570347560164262' [168:190]
+- ID_NUMBER: '455462021354692239' [192:210]
+- ID_NUMBER: 'D6270F6F' [223:231]
+- DATE_TIME: '2018-05-05' [252:262]
