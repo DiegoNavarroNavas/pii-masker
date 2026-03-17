@@ -86,6 +86,42 @@ function saveSettings() {
   });
 }
 
+async function refreshVaultOutputPath() {
+  const outputEl = document.getElementById("vaultOutputPath");
+  if (!outputEl) {
+    return;
+  }
+  outputEl.value = "Checking...";
+  try {
+    const response = await chrome.runtime.sendMessage({
+      type: "GET_VAULT_OUTPUT_PATH",
+      jobId: `vault-path-${Date.now()}`,
+    });
+    if (!response) {
+      throw new Error("Popup and background are out of sync. Reload the extension, then retry.");
+    }
+    if (!response?.ok) {
+      throw new Error(response?.error?.message || "Could not load vault output path");
+    }
+    const nativeResponse = response.nativeResponse;
+    if (!nativeResponse?.ok) {
+      const code = nativeResponse?.error?.code || "UNKNOWN";
+      const message = nativeResponse?.error?.message || "Host returned an error";
+      throw new Error(`${code}: ${message}`);
+    }
+    const path = nativeResponse.vaultDirectory || "";
+    outputEl.value = path;
+    if (nativeResponse.exists) {
+      status("Vault output path loaded", "ok");
+    } else {
+      status("Vault output path loaded (directory will be created on first save)", "pending");
+    }
+  } catch (error) {
+    outputEl.value = "";
+    status(toFriendlyHostError(String(error && error.message ? error.message : error)), "error");
+  }
+}
+
 async function runManualRedaction() {
   try {
     const requestId = crypto.randomUUID();
@@ -182,5 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadSettings();
   document.getElementById("saveSettings").addEventListener("click", saveSettings);
   document.getElementById("runRedaction").addEventListener("click", runManualRedaction);
+  document.getElementById("refreshVaultPath").addEventListener("click", refreshVaultOutputPath);
   document.getElementById("diagnoseHost").addEventListener("click", diagnoseNativeHost);
+  refreshVaultOutputPath();
 });

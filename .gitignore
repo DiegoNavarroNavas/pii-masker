@@ -10,13 +10,15 @@ wheels/
 # Virtual environments
 .venv
 
-secret.key
+*.key
 document.txt
 native_host/*.installed.json
 native_host/host.exe
 native_host/host.log
 
 result_*
+results/exports/*
+results/restored/*
 
 node_modules/
 

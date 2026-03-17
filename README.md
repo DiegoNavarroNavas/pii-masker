@@ -205,6 +205,7 @@ The setup steps below are for local development/unpacked testing from this repos
    - Enable Developer mode
    - Click "Load unpacked"
    - Select the `chrome_extension` directory
+   - Verify extension version is `0.2.0` (includes vault output path visibility in popup)
 3. Build native host executable:
    - Run:
 
@@ -227,6 +228,46 @@ The setup steps below are for local development/unpacked testing from this repos
    - Click the file input and choose a file
    - Open the extension popup
    - Click **Redact Selected Upload**
+
+### Desktop vault export UI
+
+Vault records are now persisted by the native host on disk (default Windows path:
+`%LOCALAPPDATA%\PIIMasker\vaults`, override with `PII_MASKER_VAULT_DIR`).
+
+Launch the separate desktop UI with:
+
+```powershell
+uv run python scripts/desktop/vault_manager.py
+```
+
+The desktop UI lists saved vaults (document name + date), allows multi-select, and exports:
+
+- `selected-vaults-<timestamp>.zip` (selected `.vault.json` files)
+- `selected-keys-<timestamp>.zip` (deduplicated key files needed to decrypt those vaults)
+
+### Desktop unredact UI
+
+Use the separate restore UI when you have:
+
+- A vault export ZIP (`selected-vaults-*.zip`)
+- A keys export ZIP (`selected-keys-*.zip`)
+- The corresponding redacted files (`.txt`, `.md`, `.csv`, `.json`, `.pdf`)
+
+Launch:
+
+```powershell
+uv run python scripts/desktop/unredact_manager.py
+```
+
+In the UI, choose:
+
+- Vault ZIP
+- Keys ZIP
+- Redacted docs input (multiple files or a folder)
+- Output folder for restored files
+
+The tool matches vault records to redacted filenames, resolves decrypt keys from the keys ZIP, and writes restored files to the selected output directory.
+For PDF input, it restores using extracted text and re-renders a clean text PDF (layout is not preserved).
 
 ### Native Host command
 
