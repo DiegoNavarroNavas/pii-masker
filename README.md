@@ -181,6 +181,7 @@ The setup steps below are for local development/unpacked testing from this repos
    - Enable Developer mode
    - Click "Load unpacked"
    - Select the `chrome_extension` directory
+   - Verify extension version is `0.2.0` (includes vault output path visibility in popup)
 3. Build native host executable:
    - Run:
 
@@ -203,6 +204,22 @@ The setup steps below are for local development/unpacked testing from this repos
    - Click the file input and choose a file
    - Open the extension popup
    - Click **Redact Selected Upload**
+
+### Desktop vault export UI
+
+Vault records are now persisted by the native host on disk (default Windows path:
+`%LOCALAPPDATA%\PIIMasker\vaults`, override with `PII_MASKER_VAULT_DIR`).
+
+Launch the separate desktop UI with:
+
+```powershell
+python scripts/desktop/vault_manager.py
+```
+
+The desktop UI lists saved vaults (document name + date), allows multi-select, and exports:
+
+- `selected-vaults-<timestamp>.zip` (selected `.vault.json` files)
+- `selected-keys-<timestamp>.zip` (deduplicated key files needed to decrypt those vaults)
 
 ### Native Host command
 

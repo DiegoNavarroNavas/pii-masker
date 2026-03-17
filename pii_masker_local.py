@@ -1,3 +1,5 @@
+from pathlib import Path
+
 # Training taxonomy from the external multihead model project.
 DEFAULT_LOCAL_MULTIHEAD_MODEL = "local_models/multihead_model.pt"
 DEFAULT_LOCAL_ENCODER_MODEL = "answerdotai/ModernBERT-base"

@@ -144,6 +144,30 @@ function assertCompatibleHost(response) {
 }
 
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
+  if (message && message.type === "GET_VAULT_OUTPUT_PATH") {
+    (async () => {
+      try {
+        const response = await sendNative({
+          version: PROTOCOL_VERSION,
+          action: "get_vault_dir",
+          jobId: message.jobId || `vault-dir-${Date.now()}`,
+          minHostVersion: MIN_HOST_VERSION,
+        });
+        assertCompatibleHost(response);
+        sendResponse({ ok: true, nativeResponse: response });
+      } catch (error) {
+        sendResponse({
+          ok: false,
+          error: {
+            code: "GET_VAULT_OUTPUT_PATH_FAILED",
+            message: String(error && error.message ? error.message : error),
+          },
+        });
+      }
+    })();
+    return true;
+  }
+
   if (message && message.type === "DIAG_NATIVE_HOST") {
     (async () => {
       try {

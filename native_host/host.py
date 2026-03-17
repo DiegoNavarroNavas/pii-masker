@@ -15,6 +15,7 @@ import struct
 import subprocess
 import sys
 import threading
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 from uuid import uuid4
@@ -284,6 +285,78 @@ def parse_request(request: dict[str, Any]) -> tuple[dict[str, Any] | None, dict[
     return parsed, None
 
 
+def default_vault_dir() -> Path:
+    env_path = os.environ.get("PII_MASKER_VAULT_DIR")
+    if isinstance(env_path, str) and env_path.strip():
+        return Path(env_path).expanduser()
+    if os.name == "nt":
+        local_app_data = os.environ.get("LOCALAPPDATA")
+        if isinstance(local_app_data, str) and local_app_data.strip():
+            return Path(local_app_data) / "PIIMasker" / "vaults"
+    if sys.platform == "darwin":
+        return Path.home() / "Library" / "Application Support" / "PIIMasker" / "vaults"
+    xdg_data_home = os.environ.get("XDG_DATA_HOME")
+    if isinstance(xdg_data_home, str) and xdg_data_home.strip():
+        return Path(xdg_data_home) / "pii-masker" / "vaults"
+    return Path.home() / ".local" / "share" / "pii-masker" / "vaults"
+
+
+def save_vault_record(
+    *,
+    job_id: str,
+    original_file_name: str,
+    redacted_file_name: str,
+    mime_type: str,
+    language: str,
+    engine: str,
+    key_file: str,
+    mapping: dict[str, Any],
+) -> Path:
+    vault_dir = default_vault_dir()
+    vault_dir.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    payload = {
+        "id": str(uuid4()),
+        "jobId": job_id,
+        "createdAt": datetime.now(timezone.utc).isoformat(),
+        "originalFileName": original_file_name,
+        "redactedFileName": redacted_file_name,
+        "mimeType": mime_type,
+        "language": language,
+        "engine": engine,
+        "keyFile": key_file,
+        "mapping": mapping,
+    }
+    output_file = vault_dir / f"{timestamp}_{job_id}.vault.json"
+    output_file.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return output_file
+
+
+def process_get_vault_dir_request(request: dict[str, Any]) -> dict[str, Any]:
+    job_id = request.get("jobId") or str(uuid4())
+    min_host_version = request.get("minHostVersion")
+    if isinstance(min_host_version, str) and min_host_version.strip():
+        if not host_meets_minimum(min_host_version):
+            return error_response(
+                job_id,
+                "HOST_VERSION_UNSUPPORTED",
+                (
+                    f"Native host {HOST_VERSION} is older than required "
+                    f"minimum {min_host_version}. Please update the companion app."
+                ),
+            )
+    vault_dir = default_vault_dir()
+    exists = vault_dir.exists()
+    return {
+        "ok": True,
+        "status": "ok",
+        "jobId": job_id,
+        "hostVersion": HOST_VERSION,
+        "vaultDirectory": str(vault_dir),
+        "exists": exists,
+    }
+
+
 def masker_command(repo_root: Path) -> list[str]:
     env_command = os.environ.get("PII_MASKER_CMD")
     if env_command:
@@ -531,6 +604,9 @@ def redact_pdf_file(
 
 
 def process_request(repo_root: Path, request: dict[str, Any]) -> dict[str, Any]:
+    if request.get("action") == "get_vault_dir":
+        return process_get_vault_dir_request(request)
+
     parsed, error = parse_request(request)
     if error:
         LOGGER.error(
@@ -640,6 +716,20 @@ def process_request(repo_root: Path, request: dict[str, Any]) -> dict[str, Any]:
     }
     if include_mapping:
         response["mapping"] = mapping
+    try:
+        output_file = save_vault_record(
+            job_id=job_id,
+            original_file_name=file_name,
+            redacted_file_name=output_name,
+            mime_type=output_mime,
+            language=language,
+            engine=engine,
+            key_file=key_file,
+            mapping=mapping,
+        )
+        response["vaultFile"] = str(output_file)
+    except Exception as save_error:
+        LOGGER.warning("vault_save_failed jobId=%s error=%s", job_id, save_error)
     LOGGER.info(
         "request_success jobId=%s outputFile=%s outputMime=%s outputBytes=%s mappingCount=%s",
         job_id,

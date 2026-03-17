@@ -50,6 +50,40 @@ If distributing a zip archive instead of an installer:
 .\scripts\release\windows\package_portable.ps1
 ```
 
+## Reinstall companion from source (developer flow)
+
+Use this when host behavior changed in source (for example new vault persistence features) and your installed companion is stale.
+
+1. From repo root, rebuild the host executable:
+
+```powershell
+.\native_host\build_host_exe.ps1
+```
+
+2. Reinstall host registration (script auto-reuses existing extension ID when already installed):
+
+```powershell
+.\native_host\install_chrome_host.ps1
+```
+
+If this is the first install (or ID cannot be inferred), pass it once:
+
+```powershell
+.\native_host\install_chrome_host.ps1 -ExtensionId "<your_extension_id>"
+```
+
+Optional one-step rebuild + reinstall:
+
+```powershell
+.\native_host\install_chrome_host.ps1 -BuildExe
+```
+
+3. Reload the extension in browser, open popup, and run:
+   - **Refresh Vault Output Path**
+   - **Diagnose Native Host**
+
+4. Validate by redacting one small `.txt` upload and confirming a new `.vault.json` appears in the shown vault output folder.
+
 ## Verification checklist
 
 - Diagnose returns host reachable.
