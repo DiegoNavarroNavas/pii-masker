@@ -1,0 +1,55 @@
+# Test Matrix Configuration
+# Defines which preset/language combinations to test
+
+test_configs_dir: configs
+
+languages:
+  - code: en
+    name: English
+    input_file: test/data/input/en_sample.txt
+  - code: de
+    name: German
+    input_file: test/data/input/de_sample.txt
+  - code: fr
+    name: French
+    input_file: test/data/input/fr_sample.txt
+  - code: it
+    name: Italian
+    input_file: test/data/input/it_sample.txt
+  - code: es
+    name: Spanish
+    input_file: test/data/input/es_sample.txt
+
+# Test combinations: preset -> supported languages
+test_matrix:
+  # spaCy presets
+  spacy_sm_en: [en]
+
+  # Stanza presets
+  stanza_en: [en]
+  stanza_de: [de]
+  stanza_fr: [fr]
+  stanza_it: [it]
+  stanza_es: [es]
+
+  # XLM-RoBERTa
+  xlmr_en: [en]
+  xlmr_de: [de]
+  xlmr_fr: [fr]
+  xlmr_it: [it]
+  xlmr_es: [es]
+
+  # GLiNER
+  gliner_en: [en]
+  gliner_de: [de]
+  gliner_fr: [fr]
+  gliner_it: [it]
+  gliner_es: [es]
+
+# Global test settings
+settings:
+  key_file: pii.key
+  output_dir: test/output
+  timeout_seconds: 600
+  verify_roundtrip: true
+  collect_metrics: true

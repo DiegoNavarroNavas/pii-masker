@@ -1,0 +1,3358 @@
+[
+  {
+    "template": "Als {{FIRSTNAME}} {{LASTNAME}}, {{AGE}}-jährige {{NATIONALITY}} mit {{RELIGION}}-Hintergrund, zog am {{DOB}} nach {{CITY}}. Ihre {{POLITICAL_AFFILIATION}}-Mitgliedschaft und {{TRADE_UNION}}-Zugehörigkeit wurden unter {{EMAIL_ADDRESS}} registriert. Sie arbeitet als {{JOB_TITLE}} bei {{COMPANY}}.",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "narrative",
+    "estimated_word_count": 26,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "personal_identity",
+      "gdpr_sensitive",
+      "contact",
+      "organization",
+      "work"
+    ]
+  },
+  {
+    "template": "AW: Terminbestätigung\n\nVon: {{NAME}} <{{EMAIL_ADDRESS}}>\nGesendet: {{DATE}} {{TIME}}\nAn: {{MEDICAL_FACILITY}} <admin@spital.ch>\n\nMeine {{MEDICAL_LICENSE}}-Nummer ist {{REFERENCE_NUMBER}}. Blutgruppe: {{BLOOD_TYPE}}. Medikament: {{DRUG}} {{DOSE}}.\n\n> Am {{DATE}} schrieb Dr. {{MEDICAL_PROFESSIONAL}}:\n> Patient {{NAME}} ({{HEALTHCARE_NUMBER}}) hat {{CONDITION}}.",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "dialog",
+    "estimated_word_count": 32,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "contact",
+      "healthcare",
+      "temporal",
+      "organization"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] auth: user={{USERNAME}}|pass={{PASSWORD}} ip={{IP_ADDRESS}} mac={{MAC_ADDRESS}}\n[{{TIMESTAMP}}] txn: iban={{IBAN}} amt={{MONEY}} cc={{CREDIT_CARD}} cvv={{CVV}} exp={{CREDIT_CARD_EXPIRATION}}\n[{{TIMESTAMP}}] bio: {{BIOMETRIC_IDENTIFIER}} device={{DEVICE_IDENTIFIER}} api={{API_KEY}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 17,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "temporal",
+      "identification_documents",
+      "contact",
+      "location",
+      "financial",
+      "hipaa_additions",
+      "secrets/technical"
+    ]
+  },
+  {
+    "template": "{{NAME}}, geboren {{DOB}}, AHV-Nummer {{SSN}}, wohnhaft {{STREET}} {{POSTCODE}} {{CITY}} {{CANTON}}, beruflich tätig als {{JOB_TITLE}} bei {{COMPANY}}. Am {{DATE}} gegen {{TIME}} wurde eine verdächtige Transaktion über {{MONEY}} von Konto {{BANK_ACCOUNT}} bei der {{ORGANIZATION}} festgestellt. Die Untersuchung ergab Verbindungen zu {{CRYPTO_WALLET}}.",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 39,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "work",
+      "organization",
+      "temporal",
+      "financial"
+    ]
+  },
+  {
+    "template": "Reiseplan {{NAME}} ({{PASSPORT_NUMBER}})\n{{DATE}}: Flug {{REFERENCE_NUMBER}}, Sitz {{VEHICLE_ID}}\nHotel: {{COMPANY}}, {{STREET}}, {{CITY}}\nNotfallkontakt: {{PHONE}} / {{EMAIL_ADDRESS}}\nKreditkarte: {{CREDIT_CARD}} ({{CVV}})\nVersicherungspolice: {{POLICY_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 21,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "personal_identity",
+      "identification_documents",
+      "temporal",
+      "organization",
+      "location",
+      "contact",
+      "financial",
+      "secrets/technical"
+    ]
+  },
+  {
+    "template": "User Config for {{CUSTOMER_ID}}\ndb_url = \"postgres://{{USERNAME}}:{{PASSWORD}}@{{IP_ADDRESS}}:5432/{{REFERENCE_NUMBER}}\"\napi_key = \"{{API_KEY}}\"\nprivate_key = \"{{PRIVATE_KEY}}\"\nwallet = \"{{CRYPTO_WALLET}}\"\nnotify = \"{{EMAIL_ADDRESS}}\"",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "secrets/technical",
+      "contact",
+      "identification_documents",
+      "financial"
+    ]
+  },
+  {
+    "template": "HR-Notiz vertraulich: Mitarbeiter {{NAME}} ({{GENDER}}, {{SEXUAL_ORIENTATION}}, {{MARITAL_STATUS}}) hat {{GENETIC_DATA}}-Marker. Ethnische Zugehörigkeit: {{ETHNICITY}}/{{RACE}}. Religiöse Präferenz: {{RELIGION}}.",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "medical_record",
+    "estimated_word_count": 15,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions"
+    ]
+  },
+  {
+    "template": "{{FIRSTNAME}} {{LASTNAME}}, âgé de {{AGE}} ans et de nationalité {{NATIONALITY}}, a déménagé à {{CITY}} le {{DOB}}. Membre du syndicat {{TRADE_UNION}} et affilié {{POLITICAL_AFFILIATION}}, il peut être joint au {{PHONE}} ou par email à {{EMAIL_ADDRESS}}.",
+    "locale": "fr_CH",
+    "domain": "government",
+    "structure_type": "narrative",
+    "estimated_word_count": 34,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "personal_identity",
+      "gdpr_sensitive",
+      "contact",
+      "location",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Dr. {{MEDICAL_PROFESSIONAL}}: \"Bonjour, je vois que vous êtes {{NAME}}, née le {{DOB}}. Votre numéro d'assurance {{HEALTHCARE_NUMBER}} est bien enregistré.\"\nPatient: \"Oui, et je prends {{DRUG}} {{DOSE}} pour ma {{CONDITION}}.\"\nDr: \"D'accord, je note aussi votre groupe sanguin {{BLOOD_TYPE}} dans le dossier.",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "dialog",
+    "estimated_word_count": 41,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "healthcare",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Transaktionsprotokoll {{TIMESTAMP}}\nVon: IBAN {{IBAN}} ({{NAME}})\nAn: Konto {{ACCOUNT_NUMBER}} bei {{ORGANIZATION}}\nBetrag: {{MONEY}} {{CURRENCY}}\nReferenz: {{REFERENCE_NUMBER}}\nAuthentifizierung: {{PASSWORD}} / {{API_KEY}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 20,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "temporal",
+      "financial",
+      "personal_identity",
+      "organization",
+      "secrets/technical"
+    ]
+  },
+  {
+    "template": "Schadenmeldung {{REFERENCE_NUMBER}}: Versicherungsnehmer {{NAME}} ({{DOB}}, AHV {{SSN}}) meldet einen Unfall am {{DATE}} um {{TIME}} an der {{STREET}} in {{CITY}}. Fahrzeug: {{VEHICLE_ID}}, Führerschein {{DRIVER_LICENSE}}. Verletzung: {{INJURY}}. Behandelt in {{MEDICAL_FACILITY}} unter Nr. {{HEALTHCARE_NUMBER}}.",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "narrative",
+    "estimated_word_count": 31,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "healthcare",
+      "organization"
+    ]
+  },
+  {
+    "template": "Bestellung {{CUSTOMER_ID}} - {{DATE}}\nKunde: {{FIRSTNAME}} {{LASTNAME}} | {{EMAIL_ADDRESS}}\nLieferadresse: {{STREET}}, {{POSTCODE}} {{CITY}}, {{COUNTRY}}\nZahlung: Karte {{CREDIT_CARD}} (läuft {{CREDIT_CARD_EXPIRATION}}), CVV {{CVV}}\nRechnung an: {{NAME}}, {{LOCATION_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 25,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "contact",
+      "personal_identity",
+      "location",
+      "temporal",
+      "financial"
+    ]
+  },
+  {
+    "template": "Kundendaten {{CUSTOMER_ID}}:\n{{NAME}} | {{PHONE}} | {{EMAIL_ADDRESS}}\nIMEI: {{DEVICE_IDENTIFIER}} | MAC: {{MAC_ADDRESS}}\nIP-Zuweisung: {{IP_ADDRESS}}\nVertrag seit {{DATE}}, Zahlung via IBAN {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "structure_type": "form",
+    "estimated_word_count": 21,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "secrets/technical",
+      "contact",
+      "personal_identity",
+      "hipaa_additions",
+      "temporal",
+      "financial"
+    ]
+  },
+  {
+    "template": "Gentile {{TITLE}} {{LASTNAME}},\nla Sua richiesta del {{DATE}} è stata elaborata. I Suoi dati ({{FIRSTNAME}} {{LASTNAME}}, nato il {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}) sono stati registrati al sistema. Per qualsiasi comunicazione: {{EMAIL_ADDRESS}} o {{PHONE}}.",
+    "locale": "it_CH",
+    "domain": "government",
+    "structure_type": "narrative",
+    "estimated_word_count": 33,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "work",
+      "personal_identity",
+      "temporal",
+      "identification_documents",
+      "contact"
+    ]
+  },
+  {
+    "template": "Verkauft: Wohnung {{STREET}}, {{POSTCODE}} {{CITY}} ({{CANTON}})\nVerkäufer: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})\nNotar: {{ORGANIZATION}}, {{LOCATION_ADDRESS}}\nBankverbindung für Kaufpreis: {{IBAN}} ({{BANK_ACCOUNT}})\nReferenz: {{REFERENCE_NUMBER}} | Datum: {{DATE}}",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "structure_type": "list",
+    "estimated_word_count": 23,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "location",
+      "contact",
+      "personal_identity",
+      "organization",
+      "financial",
+      "secrets/technical",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Studienteilnehmer {{REFERENCE_NUMBER}}:\n{{NAME}}, {{AGE}} Jahre, {{GENDER}}, {{ETHNICITY}}\nKontakt: {{EMAIL_ADDRESS}} / {{PHONE}}\nBiometrische ID: {{BIOMETRIC_IDENTIFIER}}\nGenetische Daten: {{GENETIC_DATA}}\nEingewilligt am {{DATE}} um {{TIME}}",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "form",
+    "estimated_word_count": 22,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "contact",
+      "hipaa_additions",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIME}}] User_{{USERNAME}}: Hallo, mein Konto {{CUSTOMER_ID}} hat Probleme\n[{{TIME}}] Support: Guten Tag {{FIRSTNAME}}, ich sehe Ihre Email {{EMAIL_ADDRESS}}\n[{{TIME}}] User_{{USERNAME}}: Ja, und meine Karte {{CREDIT_CARD}} wird nicht akzeptiert\n[{{TIME}}] Support: Ich prüfe das mit Ihrer IBAN {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "structure_type": "chat",
+    "estimated_word_count": 37,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "temporal",
+      "identification_documents",
+      "contact",
+      "secrets/technical",
+      "financial"
+    ]
+  },
+  {
+    "template": "Gemäss Vertrag {{REFERENCE_NUMBER}} vom {{DATE}} zwischen {{ORGANIZATION}} und {{NAME}} ({{DOB}}, wohnhaft {{LOCATION_ADDRESS}}) wird hiermit bestätigt, dass die Partei mit Steuer-ID {{TAX_IDENTIFICATION_NUMBER}} und Handelsregister-Nr. {{COMPANY}} berechtigt ist. Notariell beglaubigt unter Nr. {{CERTIFICATE_NUMBER}}.",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 31,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "secrets/technical",
+      "temporal",
+      "organization",
+      "personal_identity",
+      "location",
+      "identification_documents",
+      "hipaa_additions"
+    ]
+  },
+  {
+    "template": "Rechnung {{REFERENCE_NUMBER}} - {{DATE}}\nKunde: {{NAME}} | Kunden-Nr. {{CUSTOMER_ID}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\nBetrag: {{MONEY}} {{CURRENCY}}\nZahlbar bis: {{DATE}} an IBAN {{IBAN}}\nBei Fragen: {{PHONE}} oder {{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 27,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "secrets/technical",
+      "temporal",
+      "personal_identity",
+      "location",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Spender {{REFERENCE_NUMBER}}: {{TITLE}} {{NAME}}\nAdresse: {{LOCATION_ADDRESS}}, {{COUNTRY}}\nKontakt: {{EMAIL_ADDRESS}} | {{FAX}}\nSpende: {{MONEY}} {{CURRENCY}} vom {{DATE}}\nZahlungsweise: Konto {{BANK_ACCOUNT}}, IBAN {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "non-profit",
+    "structure_type": "form",
+    "estimated_word_count": 21,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "secrets/technical",
+      "work",
+      "personal_identity",
+      "location",
+      "contact",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Studentendossier {{REFERENCE_NUMBER}}:\n{{FIRSTNAME}} {{LASTNAME}}, geb. {{DOB}}\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nKontakt: {{EMAIL_ADDRESS}} / {{PHONE}}\nImmatrikuliert: {{DATE}}",
+    "locale": "de_CH",
+    "domain": "education",
+    "structure_type": "form",
+    "estimated_word_count": 22,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Dossier médical {{HEALTHCARE_NUMBER}} - {{NAME}}\nNé le {{DOB}}, groupe sanguin {{BLOOD_TYPE}}\nAllergie: {{DRUG}} - contre-indiqué\nDiagnostic: {{MEDICAL_CONDITION}} (code {{MEDICAL_CODE}})\nTraité par Dr. {{MEDICAL_PROFESSIONAL}} (licence {{MEDICAL_LICENSE}})\nLe {{DATE}} à {{MEDICAL_FACILITY}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 29,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "healthcare",
+      "personal_identity",
+      "temporal",
+      "organization"
+    ]
+  },
+  {
+    "template": "Grüezi {{FIRSTNAME}}! Ihr Termin am {{DATE}} um {{TIME}} im {{MEDICAL_FACILITY}} ist bestätigt. Ihre Versicherten-Nr: {{HEALTHCARE_NUMBER}}. Bei Änderungen: {{PHONE}}. Merci vielmals!",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "other",
+    "estimated_word_count": 20,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "personal_identity",
+      "temporal",
+      "organization",
+      "healthcare",
+      "contact"
+    ]
+  },
+  {
+    "template": "{{TIMESTAMP}} - ACCESS GRANTED\nUser: {{USERNAME}} ({{EMAIL_ADDRESS}})\nSource IP: {{IP_ADDRESS}} | MAC: {{MAC_ADDRESS}}\nAuth method: {{PASSWORD}} + {{API_KEY}}\nResource: {{URL}}\nSession ID: {{REFERENCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 23,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "temporal",
+      "identification_documents",
+      "contact",
+      "secrets/technical"
+    ]
+  },
+  {
+    "template": "Passgesuch {{REFERENCE_NUMBER}}\nAntragsteller: {{FIRSTNAME}} {{LASTNAME}}\nGeburtsdatum: {{DOB}} | Geburtsort: {{CITY}}, {{COUNTRY}}\nNationalität: {{NATIONALITY}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\nTel: {{PHONE}} | Email: {{EMAIL_ADDRESS}}\nNotfallkontakt: {{NAME}} ({{PHONE}})",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 25,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "location",
+      "gdpr_sensitive",
+      "contact"
+    ]
+  },
+  {
+    "template": "[{{TIME}}] {{FIRSTNAME}}: Ciao, ho bisogno di aiuto con la mia polizza {{POLICY_NUMBER}}\n[{{TIME}}] Agente: Buongiorno {{TITLE}} {{LASTNAME}}, vedo il suo numero {{PHONE}}\n[{{TIME}}] {{FIRSTNAME}}: Sì, e il mio IBAN è {{IBAN}} per il rimborso\n[{{TIME}}] Agente: Perfetto, uso {{EMAIL_ADDRESS}} per la conferma",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "structure_type": "chat",
+    "estimated_word_count": 42,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "temporal",
+      "personal_identity",
+      "work",
+      "secrets/technical",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Sendung {{REFERENCE_NUMBER}} - Status update {{TIMESTAMP}}\nEmpfänger: {{NAME}} | {{PHONE}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nLieferdatum: {{DATE}} zwischen {{TIME}}-{{TIME}}\nUnterschrift erforderlich von: {{FIRSTNAME}} {{LASTNAME}} ({{IDENTITY_CARD_NUMBER}})",
+    "locale": "de_CH",
+    "domain": "logistics",
+    "structure_type": "form",
+    "estimated_word_count": 25,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "contact",
+      "personal_identity",
+      "location",
+      "temporal",
+      "identification_documents"
+    ]
+  },
+  {
+    "template": "Notification légale {{REFERENCE_NUMBER}} concernant {{NAME}}, né le {{DOB}}, domicilié {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}. Numéro d'identification fiscale: {{TAX_IDENTIFICATION_NUMBER}}. Affiliation {{TRADE_UNION_MEMBERSHIP}} confirmée. Orientation politique: {{POLITICAL}}. À contacter via {{EMAIL_ADDRESS}} avant le {{DATE}}.",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 29,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "gdpr_sensitive",
+      "contact"
+    ]
+  },
+  {
+    "template": "Hey, {{FIRSTNAME}}! Merci für dini Spende vo {{MONEY}} {{CURRENCY}}. Dini Daten: {{NAME}}, {{STREET}} {{CITY}}, {{EMAIL_ADDRESS}}. Dini Mitgliedernummer: {{CUSTOMER_ID}}. Bis bald!",
+    "locale": "de_CH",
+    "domain": "non-profit",
+    "structure_type": "other",
+    "estimated_word_count": 20,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "location",
+      "contact",
+      "secrets/technical"
+    ]
+  },
+  {
+    "template": "Systemmeldung {{TIMESTAMP}}: Termin für Patient {{NAME}} ({{HEALTHCARE_NUMBER}}) am {{DATE}} {{TIME}} bei Dr. {{MEDICAL_PROFESSIONAL}} in {{MEDICAL_FACILITY}}. Diagnose: {{MEDICAL_CONDITION}}. Medikation: {{DRUG}} {{DOSE}}. Notfallkontakt: {{PHONE}}.",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "log",
+    "estimated_word_count": 22,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "temporal",
+      "personal_identity",
+      "healthcare",
+      "organization",
+      "contact"
+    ]
+  },
+  {
+    "template": "Transaktion {{DATE}} {{TIME}}\nKarte: {{CREDIT_CARD}} (gültig bis {{CREDIT_CARD_EXPIRATION}})\nHändler: {{COMPANY}}, {{CITY}}\nBetrag: {{MONEY}} {{CURRENCY}}\nKarteninhaber: {{NAME}}\nAuthentifizierung: CVV {{CVV}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "form",
+    "estimated_word_count": 19,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "temporal",
+      "financial",
+      "organization",
+      "location",
+      "personal_identity"
+    ]
+  },
+  {
+    "template": "Modulo {{REFERENCE_NUMBER}} - Richiedente: {{FIRSTNAME}} {{LASTNAME}}, nato {{DOB}} a {{CITY}}, {{COUNTRY}}. Codice fiscale: {{TAX_ID_NUMBER}}. Residenza: {{STREET}}, {{POSTCODE}} {{CITY}}. Telefono: {{PHONE}}. Email: {{EMAIL_ADDRESS}}. Stato civile: {{MARITAL_STATUS}}.",
+    "locale": "it_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 25,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "contact"
+    ]
+  },
+  {
+    "template": "Objet: Réclamation {{REFERENCE_NUMBER}}\n\nMadame, Monsieur {{LASTNAME}},\nNous avons bien reçu votre demande du {{DATE}} concernant votre compte {{CUSTOMER_ID}}. Vos coordonnées: {{EMAIL_ADDRESS}}, {{PHONE}}. Votre IBAN {{IBAN}} sera crédité de {{MONEY}} {{CURRENCY}} sous 3 jours.",
+    "locale": "fr_CH",
+    "domain": "customer_service",
+    "structure_type": "narrative",
+    "estimated_word_count": 33,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "secrets/technical",
+      "work",
+      "personal_identity",
+      "temporal",
+      "contact",
+      "financial"
+    ]
+  },
+  {
+    "template": "Fahrzeugausweis {{VEHICLE_ID}}\nHaliter: {{NAME}}, {{DOB}}, wohnhaft {{STREET}} {{POSTCODE}} {{CITY}}\nFührerausweis Nr: {{DRIVER_LICENSE}}\nVersicherung: {{POLICY_NUMBER}} bei {{ORGANIZATION}}\nKontakt: {{PHONE}} / {{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 20,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "identification_documents",
+      "personal_identity",
+      "location",
+      "contact",
+      "secrets/technical",
+      "organization"
+    ]
+  },
+  {
+    "template": "Laborbericht {{REFERENCE_NUMBER}} - {{DATE}}\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\nGeb. {{DOB}} | Blutgruppe: {{BLOOD_TYPE}}\nTest: {{MEDICAL_PROCESS}} | Code: {{MEDICAL_CODE}}\nBefund: {{CONDITION}}\nEingereicht von: {{MEDICAL_FACILITY}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 22,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "temporal",
+      "organization"
+    ]
+  },
+  {
+    "template": "Police d'assurance {{POLICY_NUMBER}}\nAssuré: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}}\nAdresse: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}} {{COUNTRY}}\nTéléphone: {{PHONE}} | Courriel: {{EMAIL_ADDRESS}}\nPrime: {{MONEY}} {{CURRENCY}} / an\nBénéficiaire: {{NAME}} ({{RELATIONSHIP}})",
+    "locale": "fr_CH",
+    "domain": "insurance",
+    "structure_type": "form",
+    "estimated_word_count": 26,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "contact",
+      "financial"
+    ]
+  },
+  {
+    "template": "Bewerbung {{REFERENCE_NUMBER}} - {{DATE}}\n{{TITLE}} {{FIRSTNAME}} {{LASTNAME}}\n{{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\n{{EMAIL_ADDRESS}} | {{PHONE}}\nGeburtsdatum: {{DOB}} | AHV: {{SSN}}\nGewünschte Position: {{JOB_TITLE}} bei {{COMPANY}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 24,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "work",
+      "personal_identity",
+      "location",
+      "contact",
+      "temporal",
+      "identification_documents"
+    ]
+  },
+  {
+    "template": "Dott. {{MEDICAL_PROFESSIONAL}}: \"Buongiorno, sono il Dr. {{LASTNAME}}. Lei è {{NAME}}, giusto?\"\nPaziente: \"Sì, nato il {{DOB}}. Il mio codice sanitario è {{HEALTHCARE_NUMBER}}.\"\nDott.: \"Perfetto. Vedo che ha la {{CONDITION}} e prende {{DRUG}} {{DOSE}}.\"\nPaziente: \"Sì, e il mio gruppo sanguigno è {{BLOOD_TYPE}}.",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "dialog",
+    "estimated_word_count": 42,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "healthcare",
+      "personal_identity",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{TIMESTAMP}} POST /api/v1/users\nRequest: {\"customer_id\": \"{{CUSTOMER_ID}}\", \"name\": \"{{NAME}}\", \"email\": \"{{EMAIL_ADDRESS}}\", \"phone\": \"{{PHONE}}\", \"ssn\": \"{{SSN}}\", \"dob\": \"{{DOB}}\", \"iban\": \"{{IBAN}}\"}\nAuth: Bearer {{API_KEY}}\nIP: {{IP_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 23,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "temporal",
+      "secrets/technical",
+      "personal_identity",
+      "contact",
+      "identification_documents",
+      "financial"
+    ]
+  },
+  {
+    "template": "Formulaire de consentement {{REFERENCE_NUMBER}}\nParticipant: {{NAME}}, né {{DOB}}, {{AGE}} ans\nOrigine ethnique: {{ETHNICITY}} | Genre: {{GENDER}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nContact: {{EMAIL_ADDRESS}} / {{PHONE}}\nDate de signature: {{DATE}} {{TIME}}",
+    "locale": "fr_CH",
+    "domain": "research",
+    "structure_type": "form",
+    "estimated_word_count": 31,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Mietvertrag {{REFERENCE_NUMBER}} vom {{DATE}}\nVermieter: {{ORGANIZATION}}, {{LOCATION_ADDRESS}}\nMieter: {{NAME}} ({{DOB}}, AHV {{SSN}})\nObjekt: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nMietzins: {{MONEY}} {{CURRENCY}} / Monat\nKaution auf Konto: {{IBAN}} ({{BANK_ACCOUNT}})",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "structure_type": "legal_text",
+    "estimated_word_count": 27,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "organization",
+      "temporal",
+      "personal_identity",
+      "location",
+      "financial",
+      "identification_documents"
+    ]
+  },
+  {
+    "template": "Conferma ordine {{CUSTOMER_ID}} - {{DATE}}\nGentile {{FIRSTNAME}} {{LASTNAME}},\nIl suo ordine è stato confermato. Spedizione a: {{STREET}}, {{POSTCODE}} {{CITY}}, {{COUNTRY}}.\nPagamento con carta {{CREDIT_CARD}} (scadenza {{CREDIT_CARD_EXPIRATION}}).\nTotale: {{MONEY}} {{CURRENCY}}.\nPer assistenza: {{EMAIL_ADDRESS}} o {{PHONE}}.",
+    "locale": "it_CH",
+    "domain": "ecommerce",
+    "structure_type": "narrative",
+    "estimated_word_count": 34,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "location",
+      "temporal",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Cher {{FIRSTNAME}}, votre ligne {{PHONE}} sera activée le {{DATE}}. Votre IMEI: {{DEVICE_IDENTIFIER}}. Configuration IP: {{IP_ADDRESS}}. Pour toute question, contactez-nous à {{EMAIL_ADDRESS}} ou composez le {{PHONE}}. Merci!",
+    "locale": "fr_CH",
+    "domain": "telecom",
+    "structure_type": "other",
+    "estimated_word_count": 26,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "hipaa_additions",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Rezept {{REFERENCE_NUMBER}} - {{DATE}} {{TIME}}\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\nVerschreiber: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nMedikament: {{DRUG}} {{DOSE}}\nApotheke: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nKontakt Patient: {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "form",
+    "estimated_word_count": 22,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "secrets/technical",
+      "temporal",
+      "personal_identity",
+      "healthcare",
+      "organization",
+      "location",
+      "contact"
+    ]
+  },
+  {
+    "template": "Rapport d'enquête {{REFERENCE_NUMBER}}: Le suspect {{NAME}}, né le {{DOB}}, résidant {{STREET}} {{POSTCODE}} {{CITY}}, a effectué un virement de {{MONEY}} {{CURRENCY}} depuis le compte {{BANK_ACCOUNT}} (IBAN: {{IBAN}}) vers {{CRYPTO_WALLET}}. Son numéro de passeport {{PASSPORT_NUMBER}} a été signalé. Contact: {{EMAIL_ADDRESS}}.",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 38,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "financial",
+      "identification_documents",
+      "contact"
+    ]
+  },
+  {
+    "template": "Elternbrief {{REFERENCE_NUMBER}} - {{DATE}}\nBetrifft: {{FIRSTNAME}} {{LASTNAME}}, Klasse {{GRADE}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nNotfallkontakt: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})\nAllergien: {{MEDICAL_CONDITION}}\nKrankenversicherung: {{HEALTHCARE_NUMBER}} bei {{ORGANIZATION}}",
+    "locale": "de_CH",
+    "domain": "education",
+    "structure_type": "form",
+    "estimated_word_count": 24,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "location",
+      "contact",
+      "healthcare",
+      "organization",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Gentile {{TITLE}} {{LASTNAME}},\nle comunichiamo che il bonifico di {{MONEY}} {{CURRENCY}} dal conto {{ACCOUNT_NUMBER}} (IBAN: {{IBAN}}) è stato eseguito il {{DATE}} alle {{TIME}}. Per informazioni: {{EMAIL_ADDRESS}} o {{PHONE}}. Codice operazione: {{REFERENCE_NUMBER}}.",
+    "locale": "it_CH",
+    "domain": "banking",
+    "structure_type": "narrative",
+    "estimated_word_count": 31,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "work",
+      "personal_identity",
+      "financial",
+      "temporal",
+      "contact",
+      "secrets/technical"
+    ]
+  },
+  {
+    "template": "Note confidentielle RH {{REFERENCE_NUMBER}}: Employé {{NAME}} ({{GENDER}}, {{SEXUAL_ORIENTATION}}, {{MARITAL_STATUS}}). Données génétiques: {{GENETIC_DATA}}. Origine ethnique: {{ETHNICITY}}. Religion: {{RELIGION}}. Appartenance syndicale: {{TRADE_UNION_MEMBERSHIP}}. Orientation politique: {{POLITICAL_AFFILIATION}}.",
+    "locale": "fr_CH",
+    "domain": "hr_admin",
+    "structure_type": "medical_record",
+    "estimated_word_count": 23,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive"
+    ]
+  },
+  {
+    "template": "Buchung {{REFERENCE_NUMBER}} - {{DATE}}\nPassagier: {{NAME}} ({{PASSPORT_NUMBER}})\nFlug: {{DATE}}, {{TIME}}, Referenz {{REFERENCE_NUMBER}}\nSitz: {{VEHICLE_ID}}\nKontakt: {{EMAIL_ADDRESS}} / {{PHONE}}\nZahlung: {{CREDIT_CARD}} ({{CVV}})",
+    "locale": "de_CH",
+    "domain": "travel",
+    "structure_type": "form",
+    "estimated_word_count": 21,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "identification_documents",
+      "temporal",
+      "contact",
+      "financial"
+    ]
+  },
+  {
+    "template": "# Konfiguration für {{CUSTOMER_ID}}\nDATABASE_URL=postgresql://{{USERNAME}}:{{PASSWORD}}@{{IP_ADDRESS}}:5432/prod\nAPI_KEY={{API_KEY}}\nPRIVATE_KEY={{PRIVATE_KEY}}\nWALLET_ADDRESS={{CRYPTO_WALLET}}\nNOTIFICATION_EMAIL={{EMAIL_ADDRESS}}\nMAC_ADDRESS={{MAC_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 10,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "secrets/technical",
+      "contact",
+      "identification_documents"
+    ]
+  },
+  {
+    "template": "URGENCE - {{TIMESTAMP}}\nPatient: {{NAME}}, né {{DOB}}\nN° assurance: {{HEALTHCARE_NUMBER}}\nGroupe sanguin: {{BLOOD_TYPE}}\nAllergie: {{DRUG}}\nContact urgence: {{NAME}} ({{PHONE}})\nHôpital: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 23,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "temporal",
+      "personal_identity",
+      "healthcare",
+      "location",
+      "contact"
+    ]
+  },
+  {
+    "template": "Transaktion {{TIMESTAMP}}\nVon Wallet: {{CRYPTO_WALLET}}\nAn: {{CRYPTO_WALLET}}\nBetrag: {{MONEY}} {{CURRENCY}}\nUser: {{USERNAME}} ({{EMAIL_ADDRESS}})\nAuth: {{PRIVATE_KEY}} + {{API_KEY}}\nIP: {{IP_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 19,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "temporal",
+      "financial",
+      "identification_documents",
+      "contact",
+      "secrets/technical"
+    ]
+  },
+  {
+    "template": "Citazione {{REFERENCE_NUMBER}}\nIl Signor {{NAME}}, nato il {{DOB}} a {{CITY}}, residente in {{STREET}}, {{POSTCODE}} {{CITY}}, codice fiscale {{TAX_ID_NUMBER}}, è convocato il {{DATE}} alle {{TIME}}. Per informazioni: {{EMAIL_ADDRESS}} o {{PHONE}}.",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 29,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "contact"
+    ]
+  },
+  {
+    "template": "Conseiller: \"Bonjour, j'ai votre dossier {{POLICY_NUMBER}}. Vous êtes {{NAME}}, c'est bien ça?\"\nClient: \"Oui, et j'ai eu un accident le {{DATE}}.\"\nConseiller: \"Je vois votre véhicule {{VEHICLE_ID}}. Votre permis {{DRIVER_LICENSE}} est valide?\"\nClient: \"Oui, et ma carte {{CREDIT_CARD}} pour la franchise.",
+    "locale": "fr_CH",
+    "domain": "insurance",
+    "structure_type": "dialog",
+    "estimated_word_count": 41,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "identification_documents",
+      "temporal",
+      "financial"
+    ]
+  },
+  {
+    "template": "Anschlussgesuch {{REFERENCE_NUMBER}}\nNeukunde: {{FIRSTNAME}} {{LASTNAME}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nKontakt: {{PHONE}} | {{EMAIL_ADDRESS}}\nBankverbindung: {{IBAN}} ({{BANK_ACCOUNT}})\nZähler-ID: {{DEVICE_IDENTIFIER}}\nGewünschter Termin: {{DATE}}",
+    "locale": "de_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 22,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "location",
+      "contact",
+      "financial",
+      "hipaa_additions",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Prenotazione {{REFERENCE_NUMBER}} - {{DATE}} {{TIME}}\nCliente: {{FIRSTNAME}} {{LASTNAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})\nPersone: {{NUMBER}} | Tavolo: {{TABLE}}\nNote: Allergia {{MEDICAL_CONDITION}}, preferenza {{DIETARY_RESTRICTION}}\nCarta di credito garanzia: {{CREDIT_CARD}} ({{CVV}})",
+    "locale": "it_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 26,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "contact",
+      "healthcare",
+      "temporal",
+      "financial"
+    ]
+  },
+  {
+    "template": "Données participant {{REFERENCE_NUMBER}}:\n{{NAME}}, {{AGE}} ans, {{GENDER}}\nNationalité: {{NATIONALITY}} | Race: {{RACE}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nAppartenance syndicale: {{TRADE_UNION}}\nOrientation sexuelle: {{SEXUAL_ORIENTATION}}\nContact: {{EMAIL_ADDRESS}}",
+    "locale": "fr_CH",
+    "domain": "research",
+    "structure_type": "form",
+    "estimated_word_count": 26,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "contact"
+    ]
+  },
+  {
+    "template": "Pensionskassenausweis {{REFERENCE_NUMBER}}\nVersicherter: {{NAME}} ({{DOB}}, AHV {{SSN}})\nAdresse: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nKontakt: {{EMAIL_ADDRESS}} | {{FAX}}\nIBAN für Auszahlung: {{IBAN}}\nStand per {{DATE}}: {{MONEY}} {{CURRENCY}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "form",
+    "estimated_word_count": 24,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "identification_documents",
+      "location",
+      "contact",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Rapporto incidente {{REFERENCE_NUMBER}} - {{DATE}} {{TIME}}\nConducente: {{NAME}} ({{DOB}})\nPatente: {{DRIVER_LICENSE}} | Veicolo: {{VEHICLE_ID}}\nAssicurazione: {{POLICY_NUMBER}} ({{ORGANIZATION}})\nLuogo: {{STREET}}, {{CITY}}\nDanni: {{MONEY}} {{CURRENCY}}\nTestimone: {{NAME}} ({{PHONE}})",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "structure_type": "investigation",
+    "estimated_word_count": 26,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "identification_documents",
+      "location",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Contrat de travail {{REFERENCE_NUMBER}}\nEmployeur: {{ORGANIZATION}}, {{LOCATION_ADDRESS}}\nEmployé: {{FIRSTNAME}} {{LASTNAME}} ({{DOB}}, n° AVS {{SSN}})\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nFonction: {{JOB_TITLE}}\nSalaire: {{MONEY}} {{CURRENCY}} / mois\nIBAN: {{IBAN}} | Email: {{EMAIL_ADDRESS}}",
+    "locale": "fr_CH",
+    "domain": "hr_admin",
+    "structure_type": "legal_text",
+    "estimated_word_count": 31,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "secrets/technical",
+      "organization",
+      "personal_identity",
+      "location",
+      "work",
+      "financial",
+      "identification_documents",
+      "contact"
+    ]
+  },
+  {
+    "template": "Entlassungsbericht {{REFERENCE_NUMBER}} - {{DATE}}\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}}), geb. {{DOB}}\nAufenthalt: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nDiagnose: {{MEDICAL_CONDITION}} ({{MEDICAL_CODE}})\nMedikation: {{DRUG}} {{DOSE}}\nBlutgruppe: {{BLOOD_TYPE}}\nNachsorge: Dr. {{MEDICAL_PROFESSIONAL}} ({{PHONE}})",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 25,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "temporal",
+      "personal_identity",
+      "healthcare",
+      "location",
+      "contact"
+    ]
+  },
+  {
+    "template": "Ricevuta donazione {{REFERENCE_NUMBER}}\nDonatore: {{TITLE}} {{NAME}}\nIndirizzo: {{STREET}}, {{POSTCODE}} {{CITY}}, {{COUNTRY}}\nImporto: {{MONEY}} {{CURRENCY}}\nData: {{DATE}}\nMetodo: Bonifico IBAN {{IBAN}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "non-profit",
+    "structure_type": "form",
+    "estimated_word_count": 24,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "secrets/technical",
+      "work",
+      "personal_identity",
+      "location",
+      "financial",
+      "temporal",
+      "contact"
+    ]
+  },
+  {
+    "template": "Demande de visa {{REFERENCE_NUMBER}}\nDemandeur: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}} à {{CITY}}, {{COUNTRY}}\nNationalité: {{NATIONALITY}} | Religion: {{RELIGION}}\nPasseport: {{PASSPORT_NUMBER}}\nAdresse: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nContact: {{EMAIL_ADDRESS}} | {{PHONE}}\nProfession: {{JOB_TITLE}}",
+    "locale": "fr_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 29,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "identification_documents",
+      "location",
+      "contact",
+      "work"
+    ]
+  },
+  {
+    "template": "Kontoregistrierung {{TIMESTAMP}}\nBenutzer: {{USERNAME}}\nName: {{FIRSTNAME}} {{LASTNAME}}\nEmail: {{EMAIL_ADDRESS}}\nTelefon: {{PHONE}}\nPasswort: {{PASSWORD}}\nIP-Adresse: {{IP_ADDRESS}}\nGerät: {{DEVICE_IDENTIFIER}} (MAC: {{MAC_ADDRESS}})\nBestätigungscode: {{REFERENCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 21,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "temporal",
+      "identification_documents",
+      "contact",
+      "secrets/technical",
+      "hipaa_additions"
+    ]
+  },
+  {
+    "template": "Ricetta {{REFERENCE_NUMBER}} - {{DATE}}\nPaziente: {{NAME}} ({{HEALTHCARE_NUMBER}}), nato {{DOB}}\nPrescritto da: Dr. {{MEDICAL_PROFESSIONAL}} (licenza {{MEDICAL_LICENSE}})\nFarmaco: {{DRUG}} {{DOSE}}\nDiagnosi: {{CONDITION}}\nFarmacia: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nTelefono paziente: {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "form",
+    "estimated_word_count": 27,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "temporal",
+      "personal_identity",
+      "healthcare",
+      "organization",
+      "location",
+      "contact"
+    ]
+  },
+  {
+    "template": "Avis d'imposition {{REFERENCE_NUMBER}}\nContribuable: {{NAME}}, né {{DOB}}\nN° fiscal: {{TAX_IDENTIFICATION_NUMBER}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nRevenu imposable: {{MONEY}} {{CURRENCY}}\nImpôt dû: {{MONEY}} {{CURRENCY}}\nPaiement sur IBAN: {{IBAN}}\nContact: {{EMAIL_ADDRESS}}",
+    "locale": "fr_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 29,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "financial",
+      "identification_documents",
+      "contact"
+    ]
+  },
+  {
+    "template": "Mitgliedsantrag {{REFERENCE_NUMBER}} - {{DATE}}\n{{TITLE}} {{FIRSTNAME}} {{LASTNAME}}\n{{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\n{{EMAIL_ADDRESS}} | {{PHONE}}\nGeburtsdatum: {{DOB}}\nBeruf: {{JOB_TITLE}} bei {{COMPANY}}\nPolitische Orientierung: {{POLITICAL_AFFILIATION}}\nReligion: {{RELIGION}}",
+    "locale": "de_CH",
+    "domain": "non-profit",
+    "structure_type": "form",
+    "estimated_word_count": 25,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "secrets/technical",
+      "work",
+      "personal_identity",
+      "location",
+      "contact",
+      "temporal",
+      "gdpr_sensitive"
+    ]
+  },
+  {
+    "template": "Atto giudiziario {{REFERENCE_NUMBER}}\nParte: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nResidenza: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nAvvocato: {{ORGANIZATION}}, {{STREET}} {{CITY}}\nContatto legale: {{EMAIL_ADDRESS}} | {{PHONE}}\nUdienza fissata per: {{DATE}} alle {{TIME}}",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 29,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "organization",
+      "contact"
+    ]
+  },
+  {
+    "template": "Notification livraison {{REFERENCE_NUMBER}}\nDestinataire: {{FIRSTNAME}} {{LASTNAME}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nTéléphone: {{PHONE}} | Email: {{EMAIL_ADDRESS}}\nDate de livraison: {{DATE}} entre {{TIME}} et {{TIME}}\nSignature requise: {{NAME}} (carte d'identité {{IDENTITY_CARD_NUMBER}})",
+    "locale": "fr_CH",
+    "domain": "logistics",
+    "structure_type": "form",
+    "estimated_word_count": 30,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "location",
+      "contact",
+      "temporal",
+      "identification_documents"
+    ]
+  },
+  {
+    "template": "Patientenanmeldung {{REFERENCE_NUMBER}}\nName: {{FIRSTNAME}} {{LASTNAME}}\nGeburtsdatum: {{DOB}} | Geschlecht: {{GENDER}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\nTelefon: {{PHONE}} | Email: {{EMAIL_ADDRESS}}\nVersicherung: {{ORGANIZATION}}\nVersichertennummer: {{HEALTHCARE_NUMBER}}\nNotfallkontakt: {{NAME}} ({{PHONE}})\nBlutgruppe: {{BLOOD_TYPE}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "form",
+    "estimated_word_count": 28,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "location",
+      "contact",
+      "organization",
+      "healthcare",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Richiesta bonifico {{REFERENCE_NUMBER}}\nMittente: {{NAME}}, IBAN {{IBAN}}\nImporto: {{MONEY}} {{CURRENCY}}\nData valuta: {{DATE}}\nAutorizzazione: {{PASSWORD}} + {{API_KEY}}\nConferma a: {{EMAIL_ADDRESS}} o {{PHONE}}\nRiferimento operazione: {{CUSTOMER_ID}}",
+    "locale": "it_CH",
+    "domain": "banking",
+    "structure_type": "form",
+    "estimated_word_count": 25,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "financial",
+      "temporal",
+      "contact",
+      "identification_documents"
+    ]
+  },
+  {
+    "template": "Candidature bourse {{REFERENCE_NUMBER}}\nCandidat: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}}\nNationalité: {{NATIONALITY}} | Origine ethnique: {{ETHNICITY}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nEmail: {{EMAIL_ADDRESS}} | Téléphone: {{PHONE}}\nFormation: {{STUDY_PROGRAM}}\nRevenus parents: {{MONEY}} {{CURRENCY}} / an",
+    "locale": "fr_CH",
+    "domain": "education",
+    "structure_type": "form",
+    "estimated_word_count": 32,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "location",
+      "contact",
+      "financial"
+    ]
+  },
+  {
+    "template": "Anmeldebestätigung {{REFERENCE_NUMBER}}\nTeilnehmer: {{TITLE}} {{FIRSTNAME}} {{LASTNAME}}\nFirma: {{COMPANY}}\nPosition: {{JOB_TITLE}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nTeilnahmegebühr: {{MONEY}} {{CURRENCY}}\nBezahlt mit: {{CREDIT_CARD}} ({{CVV}})",
+    "locale": "de_CH",
+    "domain": "education",
+    "structure_type": "form",
+    "estimated_word_count": 25,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "work",
+      "personal_identity",
+      "organization",
+      "location",
+      "contact",
+      "financial"
+    ]
+  },
+  {
+    "template": "Rinnovo polizza {{POLICY_NUMBER}}\nAssicurato: {{NAME}}, nato {{DOB}}\nIndirizzo: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nPremio rinnovo: {{MONEY}} {{CURRENCY}}\nPagamento su IBAN: {{IBAN}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}\nScadenza precedente: {{DATE}}\nNuova scadenza: {{DATE}}",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "structure_type": "form",
+    "estimated_word_count": 29,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Résultats laboratoire {{REFERENCE_NUMBER}} - {{DATE}}\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}}), né {{DOB}}\nGroupe sanguin: {{BLOOD_TYPE}}\nTest: {{MEDICAL_PROCESS}}\nCode analyse: {{MEDICAL_CODE}}\nRésultat: {{CONDITION}}\nMédecin traitant: Dr. {{MEDICAL_PROFESSIONAL}} ({{PHONE}})\nÉtablissement: {{MEDICAL_FACILITY}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 27,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "secrets/technical",
+      "temporal",
+      "personal_identity",
+      "healthcare",
+      "contact",
+      "organization"
+    ]
+  },
+  {
+    "template": "ID-Antrag {{REFERENCE_NUMBER}}\nAntragsteller: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}\nGeburtsort: {{CITY}}, {{COUNTRY}}\nStaatsangehörigkeit: {{NATIONALITY}}\nReligion: {{RELIGION}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nTelefon: {{PHONE}} | Email: {{EMAIL_ADDRESS}}\nNotfallkontakt: {{NAME}} ({{PHONE}})",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 26,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "location",
+      "contact"
+    ]
+  },
+  {
+    "template": "Colloquio {{REFERENCE_NUMBER}} - {{DATE}} {{TIME}}\nCandidato: {{FIRSTNAME}} {{LASTNAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})\nData di nascita: {{DOB}} | Età: {{AGE}}\nNazionalità: {{NATIONALITY}} | Orientamento politico: {{POLITICAL}}\nEsperienza: {{JOB_TITLE}} presso {{COMPANY}}\nAspettativa salariale: {{MONEY}} {{CURRENCY}}\nNote HR: {{ETHNICITY}}, {{RELIGION}}",
+    "locale": "it_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 35,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "contact",
+      "work",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Confirmation abonnement {{REFERENCE_NUMBER}}\nAbonné: {{FIRSTNAME}} {{LASTNAME}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nEmail: {{EMAIL_ADDRESS}} | Téléphone: {{PHONE}}\nMontant: {{MONEY}} {{CURRENCY}} / mois\nPrélèvement sur IBAN: {{IBAN}}\nDate début: {{DATE}}",
+    "locale": "fr_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 28,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "location",
+      "contact",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Parkbusse {{REFERENCE_NUMBER}} - {{DATE}} {{TIME}}\nFahrzeughalter: {{NAME}} ({{DOB}})\nFahrzeug: {{VEHICLE_ID}}\nFührerausweis: {{DRIVER_LICENSE}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}\nVerstoss: {{LOCATION_ADDRESS}}\nBusse: {{MONEY}} {{CURRENCY}}\nZahlung auf: {{IBAN}} ({{BANK_ACCOUNT}})\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 29,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "identification_documents",
+      "location",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Consenso informato {{REFERENCE_NUMBER}}\nPaziente: {{NAME}}, nato {{DOB}}, {{AGE}} anni\nCodice sanitario: {{HEALTHCARE_NUMBER}}\nGruppo sanguigno: {{BLOOD_TYPE}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nProcedura: {{MEDICAL_PROCESS}}\nFarmaci: {{DRUG}} {{DOSE}}\nData firma: {{DATE}} {{TIME}}\nContatto: {{EMAIL_ADDRESS}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 32,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "hipaa_additions",
+      "temporal",
+      "contact"
+    ]
+  },
+  {
+    "template": "Procédure divorce {{REFERENCE_NUMBER}}\nÉpoux: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}}, n° AVS {{SSN}}\nÉpouse: {{FIRSTNAME}} {{LASTNAME}}, née {{DOB}}\nAdresse commune: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nAvocat: {{ORGANIZATION}}, {{EMAIL_ADDRESS}}\nDate mariage: {{DATE}}\nRégime matrimonial: {{MARITAL_STATUS}}\nBiens: {{MONEY}} {{CURRENCY}} sur compte {{BANK_ACCOUNT}}",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 36,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "organization",
+      "contact",
+      "financial"
+    ]
+  },
+  {
+    "template": "Mietanfrage {{REFERENCE_NUMBER}}\nInteressent: {{TITLE}} {{FIRSTNAME}} {{LASTNAME}}\nBeruf: {{JOB_TITLE}} bei {{COMPANY}}\nGehalt: {{MONEY}} {{CURRENCY}} / Monat\nAktuelle Adresse: {{STREET}}, {{POSTCODE}} {{CITY}}\nTelefon: {{PHONE}} | Email: {{EMAIL_ADDRESS}}\nGeburtsdatum: {{DOB}}\nHaustiere: {{PET_INFO}}\nRaucher: {{SMOKING_STATUS}}",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "structure_type": "form",
+    "estimated_word_count": 31,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "secrets/technical",
+      "work",
+      "personal_identity",
+      "location",
+      "contact",
+      "financial"
+    ]
+  },
+  {
+    "template": "Iscrizione palestra {{REFERENCE_NUMBER}}\nSocio: {{FIRSTNAME}} {{LASTNAME}}, nato {{DOB}}\nIndirizzo: {{STREET}}, {{POSTCODE}} {{CITY}}\nTelefono: {{PHONE}} | Email: {{EMAIL_ADDRESS}}\nQuota annuale: {{MONEY}} {{CURRENCY}}\nPagamento: Carta {{CREDIT_CARD}} ({{CVV}}), scadenza {{CREDIT_CARD_EXPIRATION}}\nConto bancario: {{IBAN}}\nData iscrizione: {{DATE}}",
+    "locale": "it_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 33,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "location",
+      "contact",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Transfert patient {{REFERENCE_NUMBER}} - {{DATE}} {{TIME}}\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}}), né {{DOB}}\nGroupe sanguin: {{BLOOD_TYPE}}\nDiagnostic: {{MEDICAL_CONDITION}}\nOrigine: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nDestination: {{MEDICAL_FACILITY}}\nMédecin référent: Dr. {{MEDICAL_PROFESSIONAL}} ({{PHONE}})\nContact famille: {{NAME}} ({{EMAIL_ADDRESS}})",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 31,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "secrets/technical",
+      "temporal",
+      "personal_identity",
+      "healthcare",
+      "location",
+      "organization",
+      "contact"
+    ]
+  },
+  {
+    "template": "Kreditantrag {{REFERENCE_NUMBER}}\nAntragsteller: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}\nAHV: {{SSN}} | Nationalität: {{NATIONALITY}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nBeruf: {{JOB_TITLE}} bei {{COMPANY}}\nEinkommen: {{MONEY}} {{CURRENCY}} / Jahr\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nBankverbindung: {{IBAN}} ({{BANK_ACCOUNT}})\nGewünschter Kredit: {{MONEY}} {{CURRENCY}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "form",
+    "estimated_word_count": 36,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "location",
+      "work",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Richiesta certificato {{REFERENCE_NUMBER}}\nRichiedente: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nResidenza: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nOggetto: Certificato di nascita di {{FIRSTNAME}} {{LASTNAME}}, nato {{DOB}} a {{CITY}}\nPadre: {{NAME}} | Madre: {{NAME}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}\nTassa: {{MONEY}} {{CURRENCY}} pagata con carta {{CREDIT_CARD}}",
+    "locale": "it_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 41,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "contact",
+      "financial"
+    ]
+  },
+  {
+    "template": "Renouvellement passeport {{REFERENCE_NUMBER}}\nDemandeur: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}}\nAncien passeport: {{PASSPORT_NUMBER}}\nNationalité: {{NATIONALITY}} | Religion: {{RELIGION}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nEmail: {{EMAIL_ADDRESS}} | Téléphone: {{PHONE}}\nFrais: {{MONEY}} {{CURRENCY}} sur IBAN {{IBAN}}",
+    "locale": "fr_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 32,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "identification_documents",
+      "location",
+      "contact",
+      "financial"
+    ]
+  },
+  {
+    "template": "Beschwerde {{REFERENCE_NUMBER}} - {{DATE}}\nAbsender: {{TITLE}} {{FIRSTNAME}} {{LASTNAME}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nKundennummer: {{CUSTOMER_ID}}\nVorfall am {{DATE}} um {{TIME}} bei {{ORGANIZATION}}, {{LOCATION_ADDRESS}}\nGeforderter Betrag: {{MONEY}} {{CURRENCY}}\nKontoverbindung: {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "structure_type": "narrative",
+    "estimated_word_count": 33,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "secrets/technical",
+      "work",
+      "personal_identity",
+      "location",
+      "contact",
+      "organization",
+      "temporal",
+      "financial"
+    ]
+  },
+  {
+    "template": "{{TIMESTAMP}} - Acquisto effettuato\nCliente: {{USERNAME}} ({{EMAIL_ADDRESS}})\nIP: {{IP_ADDRESS}} | MAC: {{MAC_ADDRESS}}\nDispositivo: {{DEVICE_IDENTIFIER}}\nProdotto: {{PRODUCT_NAME}}\nImporto: {{MONEY}} {{CURRENCY}}\nCarta: {{CREDIT_CARD}} (CVV: {{CVV}})\nIndirizzo spedizione: {{STREET}}, {{POSTCODE}} {{CITY}}, {{COUNTRY}}",
+    "locale": "it_CH",
+    "domain": "ecommerce",
+    "structure_type": "log",
+    "estimated_word_count": 29,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "temporal",
+      "identification_documents",
+      "contact",
+      "secrets/technical",
+      "hipaa_additions",
+      "financial",
+      "location"
+    ]
+  },
+  {
+    "template": "Acte de décès {{REFERENCE_NUMBER}}\nDéfunt: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}}, décédé {{DATE}} à {{TIME}}\nN° AVS: {{SSN}}\nAdresse: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nNationalité: {{NATIONALITY}} | Religion: {{RELIGION}}\nConjoint survivant: {{NAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})\nNotaire: {{ORGANIZATION}}",
+    "locale": "fr_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 32,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "temporal",
+      "location",
+      "identification_documents",
+      "contact",
+      "organization"
+    ]
+  },
+  {
+    "template": "Workshop-Anmeldung {{REFERENCE_NUMBER}}\nTeilnehmer: {{FIRSTNAME}} {{LASTNAME}}\nFirma: {{COMPANY}}\nPosition: {{JOB_TITLE}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nTelefon: {{PHONE}} | Email: {{EMAIL_ADDRESS}}\nTeilnahmegebühr: {{MONEY}} {{CURRENCY}}\nBezahlt: {{DATE}} per Karte {{CREDIT_CARD}}",
+    "locale": "de_CH",
+    "domain": "education",
+    "structure_type": "form",
+    "estimated_word_count": 27,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "organization",
+      "work",
+      "location",
+      "contact",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Lettera di dimissione {{REFERENCE_NUMBER}}\nPaziente: {{NAME}} ({{HEALTHCARE_NUMBER}}), nato {{DOB}}\nDiagnosi: {{MEDICAL_CONDITION}} (codice {{MEDICAL_CODE}})\nTrattamento: {{DRUG}} {{DOSE}}\nGruppo sanguigno: {{BLOOD_TYPE}}\nStruttura di provenienza: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nMedico curante: Dr. {{MEDICAL_PROFESSIONAL}} ({{PHONE}})\nData dimissione: {{DATE}} {{TIME}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 34,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Immatriculation véhicule {{REFERENCE_NUMBER}}\nPropriétaire: {{NAME}}, né {{DOB}}, n° AVS {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nVéhicule: {{VEHICLE_ID}}\nPermis: {{DRIVER_LICENSE}}\nAssurance: {{POLICY_NUMBER}} ({{ORGANIZATION}})\nContact: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 26,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "organization",
+      "contact"
+    ]
+  },
+  {
+    "template": "Spendenzusage {{REFERENCE_NUMBER}}\nSpender: {{TITLE}} {{FIRSTNAME}} {{LASTNAME}}\nAdresse: {{LOCATION_ADDRESS}}, {{COUNTRY}}\nTelefon: {{PHONE}} | Fax: {{FAX}}\nEmail: {{EMAIL_ADDRESS}}\nZugesagter Betrag: {{MONEY}} {{CURRENCY}}\nZahlung auf Konto: {{IBAN}} ({{BANK_ACCOUNT}})\nDatum Zusage: {{DATE}}",
+    "locale": "de_CH",
+    "domain": "non-profit",
+    "structure_type": "form",
+    "estimated_word_count": 28,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "work",
+      "personal_identity",
+      "location",
+      "contact",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "IMU {{REFERENCE_NUMBER}} - {{DATE}}\nContribuente: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nResidenza: {{STREET}}, {{POSTCODE}} {{CITY}}\nImmobile: {{LOCATION_ADDRESS}}\nImporto dovuto: {{MONEY}} {{CURRENCY}}\nPagamento su IBAN: {{IBAN}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 29,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Dossier adoption {{REFERENCE_NUMBER}}\nAdoptants: {{FIRSTNAME}} {{LASTNAME}} ({{DOB}}, {{SSN}}) et {{FIRSTNAME}} {{LASTNAME}} ({{DOB}})\nAdresse: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nReligion: {{RELIGION}}\nRevenu: {{MONEY}} {{CURRENCY}} / an\nContact: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "structure_type": "form",
+    "estimated_word_count": 32,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "location",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Patentanmeldung {{REFERENCE_NUMBER}}\nErfinder: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nArbeitgeber: {{COMPANY}}\nPosition: {{JOB_TITLE}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nGebühren: {{MONEY}} {{CURRENCY}} auf IBAN {{IBAN}}\nAnmeldedatum: {{DATE}} {{TIME}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "form",
+    "estimated_word_count": 28,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "location",
+      "work",
+      "contact",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Rifiuto visto {{REFERENCE_NUMBER}}\nRichiedente: {{NAME}}, nato {{DOB}} a {{CITY}}, {{COUNTRY}}\nPassaporto: {{PASSPORT_NUMBER}}\nNazionalità: {{NATIONALITY}} | Religione: {{RELIGION}}\nResidenza: {{STREET}}, {{POSTCODE}} {{CITY}}\nMotivo rifiuto: {{REASON}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}\nRicorso entro: {{DATE}}",
+    "locale": "it_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 31,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "identification_documents",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Demande d'asile {{REFERENCE_NUMBER}}\nDemandeur: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}} à {{CITY}}, {{COUNTRY}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nReligion: {{RELIGION}} | Orientation politique: {{POLITICAL_AFFILIATION}}\nAdresse actuelle: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nTéléphone: {{PHONE}} | Email: {{EMAIL_ADDRESS}}\nAppartenance syndicale: {{TRADE_UNION_MEMBERSHIP}}",
+    "locale": "fr_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 36,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "location",
+      "contact"
+    ]
+  },
+  {
+    "template": "Hinweisgeber-Meldung {{REFERENCE_NUMBER}} - {{TIMESTAMP}}\nAnonymisierte ID: {{CUSTOMER_ID}}\nBetreff: {{ORGANIZATION}}, {{LOCATION_ADDRESS}}\nVerdacht: {{ALLEGATION}}\nBeweise: Transaktion {{MONEY}} {{CURRENCY}} auf Konto {{BANK_ACCOUNT}} (IBAN: {{IBAN}})\nKontakt über: {{EMAIL_ADDRESS}} (verschlüsselt)\nIP-Log: {{IP_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 27,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "secrets/technical",
+      "organization",
+      "location",
+      "financial",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "URGENZA {{TIMESTAMP}}\nPaziente: {{NAME}}, nato {{DOB}}\nCodice sanitario: {{HEALTHCARE_NUMBER}}\nGruppo sanguigno: {{BLOOD_TYPE}}\nAllergia: {{DRUG}}\nContatto emergenza: {{NAME}} ({{PHONE}})\nOspedale: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 22,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "temporal",
+      "personal_identity",
+      "healthcare",
+      "location",
+      "contact"
+    ]
+  },
+  {
+    "template": "Approbation prêt {{REFERENCE_NUMBER}}\nClient: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}}, n° AVS {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nEmail: {{EMAIL_ADDRESS}} | Téléphone: {{PHONE}}\nMontant approuvé: {{MONEY}} {{CURRENCY}}\nIBAN créditeur: {{IBAN}}\nTaux: {{INTEREST_RATE}}% | Durée: {{DURATION}} mois\nPremière échéance: {{DATE}}",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "structure_type": "form",
+    "estimated_word_count": 37,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "contact",
+      "financial"
+    ]
+  },
+  {
+    "template": "Einbürgerungsgesuch {{REFERENCE_NUMBER}}\nAntragsteller: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}\nGeburtsort: {{CITY}}, {{COUNTRY}}\nAktuelle Nationalität: {{NATIONALITY}}\nReligion: {{RELIGION}} | Ethnische Herkunft: {{ETHNICITY}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nBeruf: {{JOB_TITLE}} bei {{COMPANY}}\nEinkommen: {{MONEY}} {{CURRENCY}} / Jahr\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 36,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "location",
+      "work",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Perizia danno {{REFERENCE_NUMBER}}\nAssicurato: {{NAME}}, nato {{DOB}}\nPolizza: {{POLICY_NUMBER}}\nVeicolo: {{VEHICLE_ID}} | Patente: {{DRIVER_LICENSE}}\nLuogo sinistro: {{STREET}}, {{CITY}}\nData/ora: {{DATE}} {{TIME}}\nDanno stimato: {{MONEY}} {{CURRENCY}}\nPerito: {{ORGANIZATION}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "structure_type": "investigation",
+    "estimated_word_count": 31,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "financial",
+      "organization",
+      "contact"
+    ]
+  },
+  {
+    "template": "Comité d'éthique {{REFERENCE_NUMBER}}\nProtocole: {{STUDY_TITLE}}\nChercheur principal: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nInstitution: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nParticipants: {{NUMBER}}\nDonnées collectées: {{GENETIC_DATA}}, {{BIOMETRIC_IDENTIFIER}}\nContact: {{EMAIL_ADDRESS}} | {{PHONE}}\nApprobation: {{DATE}}",
+    "locale": "fr_CH",
+    "domain": "research",
+    "structure_type": "form",
+    "estimated_word_count": 26,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "secrets/technical",
+      "healthcare",
+      "organization",
+      "location",
+      "hipaa_additions",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Datenpanne-Meldung {{REFERENCE_NUMBER}} - {{TIMESTAMP}}\nBetroffener: {{CUSTOMER_ID}} ({{NAME}})\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nOffengelegte Daten: {{PASSWORD}}, {{CREDIT_CARD}} ({{CVV}}), IBAN {{IBAN}}\nIP-Adresse: {{IP_ADDRESS}} | MAC: {{MAC_ADDRESS}}\nGerät: {{DEVICE_IDENTIFIER}}\nAPI-Key kompromittiert: {{API_KEY}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 28,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "contact",
+      "financial",
+      "hipaa_additions",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Versamento pensione {{REFERENCE_NUMBER}}\nLavoratore: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nDatore lavoro: {{COMPANY}}, {{STREET}} {{CITY}}\nImporto versato: {{MONEY}} {{CURRENCY}}\nPeriodo: {{START_DATE}} - {{END_DATE}}\nIBAN origine: {{IBAN}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "banking",
+    "structure_type": "form",
+    "estimated_word_count": 30,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "organization",
+      "location",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Renouvellement ordonnance {{REFERENCE_NUMBER}}\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}}), né {{DOB}}\nMédecin: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nMédicament: {{DRUG}} {{DOSE}}\nPharmacie: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nDernière délivrance: {{DATE}}\nRenouvellement autorisé jusqu'au: {{DATE}}\nContact patient: {{PHONE}} | {{EMAIL_ADDRESS}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "form",
+    "estimated_word_count": 31,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "organization",
+      "location",
+      "temporal",
+      "contact"
+    ]
+  },
+  {
+    "template": "Heiratsurkunde {{REFERENCE_NUMBER}}\nBräutigam: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nBraut: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}\nTrauung am: {{DATE}} um {{TIME}}\nOrt: {{LOCATION_ADDRESS}}, {{CITY}} {{CANTON}}\nNationalität Bräutigam: {{NATIONALITY}} | Religion: {{RELIGION}}\nNationalität Braut: {{NATIONALITY}} | Religion: {{RELIGION}}\nZeuge: {{NAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 37,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "temporal",
+      "location",
+      "identification_documents",
+      "contact"
+    ]
+  },
+  {
+    "template": "Richiesta casellario {{REFERENCE_NUMBER}}\nRichiedente: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nResidenza: {{STREET}}, {{POSTCODE}} {{CITY}}\nScopo: {{PURPOSE}}\nTassa: {{MONEY}} {{CURRENCY}} pagata con carta {{CREDIT_CARD}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}\nRicevuta inviata a: {{EMAIL_ADDRESS}}",
+    "locale": "it_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 31,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Demande chômage {{REFERENCE_NUMBER}}\nDemandeur: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}}, n° AVS {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nEmail: {{EMAIL_ADDRESS}} | Téléphone: {{PHONE}}\nDernier employeur: {{COMPANY}}, {{LOCATION_ADDRESS}}\nFonction: {{JOB_TITLE}}\nSalaire brut: {{MONEY}} {{CURRENCY}} / mois\nDate de licenciement: {{DATE}}",
+    "locale": "fr_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 37,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "contact",
+      "organization",
+      "work",
+      "financial"
+    ]
+  },
+  {
+    "template": "Firmengründung {{REFERENCE_NUMBER}}\nInhaber: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nFirmenname: {{COMPANY}}\nRechtsform: {{LEGAL_FORM}}\nKapitaleinlage: {{MONEY}} {{CURRENCY}}\nBankverbindung: {{IBAN}} ({{BANK_ACCOUNT}})\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}} | {{FAX}}",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 29,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "organization",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Promemoria visita {{REFERENCE_NUMBER}}\nGentile {{FIRSTNAME}} {{LASTNAME}},\nle ricordiamo l'appuntamento del {{DATE}} alle {{TIME}} con il Dr. {{MEDICAL_PROFESSIONAL}} presso {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}.\nIl suo codice sanitario: {{HEALTHCARE_NUMBER}}.\nIn caso di impedimento: {{PHONE}} o {{EMAIL_ADDRESS}}.",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "other",
+    "estimated_word_count": 33,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "personal_identity",
+      "temporal",
+      "healthcare",
+      "organization",
+      "location",
+      "contact"
+    ]
+  },
+  {
+    "template": "Garde enfant {{REFERENCE_NUMBER}}\nPère: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}}, n° AVS {{SSN}}\nMère: {{FIRSTNAME}} {{LASTNAME}}, née {{DOB}}\nAdresse familiale: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nEnfant: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}}\nNationalité: {{NATIONALITY}} | Religion: {{RELIGION}}\nAvocat père: {{ORGANIZATION}}, {{EMAIL_ADDRESS}}\nAvocat mère: {{ORGANIZATION}}, {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 39,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "temporal",
+      "location",
+      "identification_documents",
+      "organization",
+      "contact"
+    ]
+  },
+  {
+    "template": "Börsenorder {{REFERENCE_NUMBER}} - {{TIMESTAMP}}\nKunde: {{CUSTOMER_ID}} ({{NAME}})\nDepot: {{ACCOUNT_NUMBER}}\nOrder: {{TRADE_TYPE}} {{QUANTITY}} {{SECURITY}} @ {{PRICE}} {{CURRENCY}}\nGesamtwert: {{MONEY}} {{CURRENCY}}\nAuthentifizierung: {{PASSWORD}} + {{API_KEY}}\nIP: {{IP_ADDRESS}} | MAC: {{MAC_ADDRESS}}\nBestätigung an: {{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 31,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "secrets/technical",
+      "identification_documents",
+      "financial",
+      "hipaa_additions",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Deposito cauzione {{REFERENCE_NUMBER}}\nAffittuario: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nIndirizzo: {{STREET}}, {{POSTCODE}} {{CITY}}\nImmobile: {{LOCATION_ADDRESS}}\nImporto cauzione: {{MONEY}} {{CURRENCY}}\nVersato su IBAN: {{IBAN}}\nData versamento: {{DATE}} {{TIME}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "real_estate",
+    "structure_type": "form",
+    "estimated_word_count": 32,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Don d'organes {{REFERENCE_NUMBER}}\nDonneur: {{NAME}}, né {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nGroupe sanguin: {{BLOOD_TYPE}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nContact urgence: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})\nHôpital: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nDate consentement: {{DATE}} {{TIME}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 32,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "hipaa_additions",
+      "contact",
+      "organization",
+      "location",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Urheberrechtsanmeldung {{REFERENCE_NUMBER}}\nAntragsteller: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nWerk: {{WORK_TITLE}}\nSchöpfungshöhe: {{DESCRIPTION}}\nAnmeldedatum: {{DATE}} {{TIME}}\nGebühr: {{MONEY}} {{CURRENCY}} auf IBAN {{IBAN}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "form",
+    "estimated_word_count": 28,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Cambio nome {{REFERENCE_NUMBER}}\nRichiedente: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nResidenza: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nNome attuale: {{FIRSTNAME}} {{LASTNAME}}\nNome richiesto: {{FIRSTNAME}} {{LASTNAME}}\nMotivazione: {{REASON}}\nNazionalità: {{NATIONALITY}} | Religione: {{RELIGION}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 33,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "temporal",
+      "location",
+      "identification_documents",
+      "contact"
+    ]
+  },
+  {
+    "template": "Statut réfugié {{REFERENCE_NUMBER}}\nDemandeur: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}} à {{CITY}}, {{COUNTRY}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nReligion: {{RELIGION}} | Orientation sexuelle: {{SEXUAL_ORIENTATION}}\nAppartenance syndicale: {{TRADE_UNION_MEMBERSHIP}}\nOrientation politique: {{POLITICAL_AFFILIATION}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nContact: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 37,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "location",
+      "contact"
+    ]
+  },
+  {
+    "template": "Invalidenversicherung {{REFERENCE_NUMBER}}\nVersicherter: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nDiagnose: {{MEDICAL_CONDITION}} ({{MEDICAL_CODE}})\nBehandelnder Arzt: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nSpital: {{MEDICAL_FACILITY}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nBeantragte Rente: {{MONEY}} {{CURRENCY}} / Monat",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "form",
+    "estimated_word_count": 33,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "location",
+      "organization",
+      "contact",
+      "financial"
+    ]
+  },
+  {
+    "template": "Permesso costruire {{REFERENCE_NUMBER}}\nRichiedente: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nResidenza: {{STREET}}, {{POSTCODE}} {{CITY}}\nImmobile: {{LOCATION_ADDRESS}}\nProgetto: {{PROJECT_DESCRIPTION}}\nImporto lavori: {{MONEY}} {{CURRENCY}}\nTassa: {{MONEY}} {{CURRENCY}} pagata su IBAN {{IBAN}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 33,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Permis professionnel {{REFERENCE_NUMBER}}\nTitulaire: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}}, n° AVS {{SSN}}\nProfession: {{JOB_TITLE}}\nEmployeur: {{COMPANY}}, {{STREET}} {{CITY}}\nNuméro licence: {{MEDICAL_LICENSE}}\nSpécialité: {{SPECIALTY}}\nEmail: {{EMAIL_ADDRESS}} | Téléphone: {{PHONE}}\nRenouvellement: {{DATE}}",
+    "locale": "fr_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 29,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "work",
+      "organization",
+      "location",
+      "contact"
+    ]
+  },
+  {
+    "template": "Erbschaftsantrag {{REFERENCE_NUMBER}}\nErbe: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nVerstorbener: {{NAME}}, {{DATE_OF_DEATH}}\nVerwandtschaftsgrad: {{RELATIONSHIP}}\nErbschaftsanteil: {{MONEY}} {{CURRENCY}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nNotar: {{ORGANIZATION}}, {{LOCATION_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "form",
+    "estimated_word_count": 28,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "financial",
+      "contact",
+      "organization"
+    ]
+  },
+  {
+    "template": "Allerta frode {{REFERENCE_NUMBER}} - {{TIMESTAMP}}\nCliente: {{CUSTOMER_ID}} ({{NAME}})\nTransazione sospetta: {{MONEY}} {{CURRENCY}} da IBAN {{IBAN}}\nCarta coinvolta: {{CREDIT_CARD}} ({{CVV}})\nIP origine: {{IP_ADDRESS}} | MAC: {{MAC_ADDRESS}}\nDispositivo: {{DEVICE_IDENTIFIER}}\nContatto cliente: {{EMAIL_ADDRESS}} | {{PHONE}}\nAPI usata: {{API_KEY}}",
+    "locale": "it_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 35,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "financial",
+      "hipaa_additions",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Dossier psychiatrique {{REFERENCE_NUMBER}} - CONFIDENTIEL\nPatient: {{NAME}}, né {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nDiagnostic: {{MEDICAL_CONDITION}}\nTraitement: {{DRUG}} {{DOSE}}\nThérapeute: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nÉtablissement: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nDonnées génétiques: {{GENETIC_DATA}}\nContact urgence: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})\nDernière consultation: {{DATE}} {{TIME}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 37,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "hipaa_additions",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Markenanmeldung {{REFERENCE_NUMBER}}\nAnmelder: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}\nFirma: {{COMPANY}}, {{STREET}} {{CITY}} {{CANTON}}\nPosition: {{JOB_TITLE}}\nMarke: {{TRADEMARK_NAME}}\nKlassen: {{CLASS_LIST}}\nGebühr: {{MONEY}} {{CURRENCY}} auf IBAN {{IBAN}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}} | {{FAX}}\nAnmeldedatum: {{DATE}} {{TIME}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "form",
+    "estimated_word_count": 32,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "organization",
+      "work",
+      "location",
+      "financial",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Autorizzazione ambientale {{REFERENCE_NUMBER}}\nRichiedente: {{COMPANY}}, rappresentata da {{NAME}}, nato {{DOB}}\nSede: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nCodice fiscale: {{TAX_ID_NUMBER}}\nAttività: {{ACTIVITY_DESCRIPTION}}\nImporto cauzione: {{MONEY}} {{CURRENCY}} su IBAN {{IBAN}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}\nData richiesta: {{DATE}}",
+    "locale": "it_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 33,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "secrets/technical",
+      "organization",
+      "personal_identity",
+      "location",
+      "identification_documents",
+      "financial",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Convention mère porteuse {{REFERENCE_NUMBER}}\nParents intentionnels: {{FIRSTNAME}} {{LASTNAME}} ({{DOB}}, {{SSN}}) et {{FIRSTNAME}} {{LASTNAME}} ({{DOB}})\nAdresse: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nMère porteuse: {{FIRSTNAME}} {{LASTNAME}}, née {{DOB}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nReligion: {{RELIGION}} | Orientation sexuelle: {{SEXUAL_ORIENTATION}}\nRémunération: {{MONEY}} {{CURRENCY}}\nAvocat: {{ORGANIZATION}}, {{EMAIL_ADDRESS}}",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 42,
+    "pii_count": 23,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "temporal",
+      "location",
+      "identification_documents",
+      "financial",
+      "organization",
+      "contact"
+    ]
+  },
+  {
+    "template": "Waffenerwerbsschein {{REFERENCE_NUMBER}}\nBewilligter: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nNationalität: {{NATIONALITY}}\nBeruf: {{JOB_TITLE}} bei {{COMPANY}}\nWaffentyp: {{FIREARM_TYPE}}\nZweck: {{PURPOSE}}\nGebühr: {{MONEY}} {{CURRENCY}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 30,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "location",
+      "work",
+      "organization",
+      "financial",
+      "contact"
+    ]
+  },
+  {
+    "template": "Sperimentazione clinica {{REFERENCE_NUMBER}}\nSponsor: {{ORGANIZATION}}, {{STREET}} {{CITY}}\nPrincipal Investigator: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nSede: {{MEDICAL_FACILITY}}\nPartecipante: {{NAME}}, nato {{DOB}}, codice {{HEALTHCARE_NUMBER}}\nGruppo sanguigno: {{BLOOD_TYPE}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nConsenso: {{DATE}} {{TIME}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "research",
+    "structure_type": "form",
+    "estimated_word_count": 36,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "secrets/technical",
+      "organization",
+      "healthcare",
+      "personal_identity",
+      "hipaa_additions",
+      "temporal",
+      "contact"
+    ]
+  },
+  {
+    "template": "Gains loterie {{REFERENCE_NUMBER}} - {{DATE}} {{TIME}}\nGagnant: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}}, n° AVS {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nEmail: {{EMAIL_ADDRESS}} | Téléphone: {{PHONE}}\nMontant brut: {{MONEY}} {{CURRENCY}}\nMontant net: {{MONEY}} {{CURRENCY}}\nVersement sur IBAN: {{IBAN}}\nIdentifiant jeu: {{CUSTOMER_ID}}",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "structure_type": "form",
+    "estimated_word_count": 39,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "contact",
+      "financial"
+    ]
+  },
+  {
+    "template": "Pflegeplatzierung {{REFERENCE_NUMBER}}\nKind: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}\nAHV: {{SSN}} | Nationalität: {{NATIONALITY}}\nReligion: {{RELIGION}} | Ethnische Herkunft: {{ETHNICITY}}\nGesundheit: {{MEDICAL_CONDITION}}\nBlutgruppe: {{BLOOD_TYPE}}\nPflegeeltern: {{FIRSTNAME}} {{LASTNAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nBetreuung seit: {{DATE}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "form",
+    "estimated_word_count": 34,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "healthcare",
+      "contact",
+      "location",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Immunità diplomatica {{REFERENCE_NUMBER}}\nDiplomatico: {{TITLE}} {{FIRSTNAME}} {{LASTNAME}}, nato {{DOB}}\nPassaporto diplomatico: {{PASSPORT_NUMBER}}\nNazionalità: {{NATIONALITY}} | Religione: {{RELIGION}}\nRappresenta: {{COUNTRY}}\nResidenza: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}} | {{FAX}}\nValidità: {{START_DATE}} - {{END_DATE}}",
+    "locale": "it_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 33,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "secrets/technical",
+      "work",
+      "personal_identity",
+      "gdpr_sensitive",
+      "identification_documents",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Résultat test VIH {{REFERENCE_NUMBER}} - CONFIDENTIEL\nPatient: {{NAME}}, né {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nGroupe sanguin: {{BLOOD_TYPE}}\nRésultat: {{TEST_RESULT}}\nDate prélèvement: {{DATE}} {{TIME}}\nLaboratoire: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nMédecin prescripteur: Dr. {{MEDICAL_PROFESSIONAL}} ({{PHONE}})\nConseiller: {{NAME}} ({{EMAIL_ADDRESS}})\nDonnées génétiques: {{GENETIC_DATA}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 37,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "hipaa_additions",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Ausweisungsverfügung {{REFERENCE_NUMBER}}\nBetroffene Person: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}}\nPolitische Orientierung: {{POLITICAL_AFFILIATION}}\nGewerkschaftszugehörigkeit: {{TRADE_UNION_MEMBERSHIP}}\nAktuelle Adresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nAusreisefrist: {{DATE}} {{TIME}}",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "legal_text",
+    "estimated_word_count": 33,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Inseminazione artificiale {{REFERENCE_NUMBER}}\nPaziente: {{NAME}}, nata {{DOB}}, codice {{HEALTHCARE_NUMBER}}\nConiuge/partner: {{NAME}}, nato {{DOB}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nStruttura: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nMedico: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nData procedura: {{DATE}} {{TIME}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 35,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "hipaa_additions",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Protection témoin {{REFERENCE_NUMBER}} - ULTRA CONFIDENTIEL\nIdentité réelle: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}}, n° AVS {{SSN}}\nAdresse réelle: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nEmail: {{EMAIL_ADDRESS}} | Téléphone: {{PHONE}}\nNouvelle identité: {{FIRSTNAME}} {{LASTNAME}}\nNouvelle adresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nNouveau n° AVS: {{SSN}}\nAffaire: {{CASE_REFERENCE}}\nAgent responsable: {{NAME}} ({{EMAIL_ADDRESS}})",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 45,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "contact"
+    ]
+  },
+  {
+    "template": "Geschlechtsanerkennung {{REFERENCE_NUMBER}}\nAntragsteller: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nGeburtsgeschlecht: {{BIRTH_GENDER}}\nAngestrebtes Geschlecht: {{TARGET_GENDER}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nPsychologisches Gutachten: {{ASSESSMENT_REFERENCE}}\nÄrztliches Attest: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 33,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "healthcare",
+      "location",
+      "contact"
+    ]
+  },
+  {
+    "template": "Ordine riesumazione {{REFERENCE_NUMBER}}\nDefunto: {{NAME}}, nato {{DOB}}, deceduto {{DATE}}\nCodice fiscale: {{TAX_ID_NUMBER}}\nLuogo sepoltura: {{CEMETERY_ADDRESS}}, {{CITY}}\nRichiedente: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nResidenza: {{STREET}}, {{POSTCODE}} {{CITY}}\nMotivazione: {{REASON}}\nData riesumazione: {{DATE}} {{TIME}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "form",
+    "estimated_word_count": 37,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "contact"
+    ]
+  },
+  {
+    "template": "Consentement stérilisation {{REFERENCE_NUMBER}}\nPatient: {{NAME}}, né {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nGroupe sanguin: {{BLOOD_TYPE}}\nDonnées génétiques: {{GENETIC_DATA}}\nMédecin: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nÉtablissement: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nDate intervention: {{DATE}} {{TIME}}\nContact urgence: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})\nNationalité: {{NATIONALITY}} | Religion: {{RELIGION}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 38,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "hipaa_additions",
+      "organization",
+      "location",
+      "contact",
+      "gdpr_sensitive",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Patientenverfügung {{REFERENCE_NUMBER}}\nErsteller: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nBlutgruppe: {{BLOOD_TYPE}}\nErkrankung: {{MEDICAL_CONDITION}}\nBehandelnder Arzt: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nSpital: {{MEDICAL_FACILITY}}\nNotfallkontakt: {{NAME}} ({{PHONE}})\nUnterschriftsdatum: {{DATE}} {{TIME}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 34,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "location",
+      "contact",
+      "organization",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Adozione maggiorenne {{REFERENCE_NUMBER}}\nAdottante: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nResidenza: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nAdottato: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nResidenza: {{STREET}}, {{POSTCODE}} {{CITY}}\nNazionalità: {{NATIONALITY}} | Religione: {{RELIGION}}\nOrientamento sessuale: {{SEXUAL_ORIENTATION}}\nAvvocato: {{ORGANIZATION}}, {{EMAIL_ADDRESS}} | {{PHONE}}\nData udienza: {{DATE}} {{TIME}}",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 42,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "temporal",
+      "location",
+      "identification_documents",
+      "organization",
+      "contact"
+    ]
+  },
+  {
+    "template": "Dépistage prénatal {{REFERENCE_NUMBER}}\nPatient: {{FIRSTNAME}} {{LASTNAME}}, née {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nGroupe sanguin: {{BLOOD_TYPE}}\nDonnées génétiques fœtus: {{GENETIC_DATA}}\nDonnées génétiques mère: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nMédecin: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nÉtablissement: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nDate prélèvement: {{DATE}} {{TIME}}\nRésultat: {{TEST_RESULT}}\nContact: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 43,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "hipaa_additions",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Konkursgesuch {{REFERENCE_NUMBER}}\nSchuldner: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nBeruf: {{JOB_TITLE}}\nArbeitgeber: {{COMPANY}}\nSchulden: {{MONEY}} {{CURRENCY}}\nVermögen: {{MONEY}} {{CURRENCY}} auf Konto {{BANK_ACCOUNT}} (IBAN: {{IBAN}})\nKonkursverwalter: {{ORGANIZATION}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "form",
+    "estimated_word_count": 34,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "location",
+      "contact",
+      "work",
+      "organization",
+      "financial"
+    ]
+  },
+  {
+    "template": "Registro aggressori sessuali {{REFERENCE_NUMBER}} - RISTRETTO\nSoggetto: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nResidenza: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nNazionalità: {{NATIONALITY}} | Etnia: {{ETHNICITY}}\nOrientamento sessuale: {{SEXUAL_ORIENTATION}}\nCondanna: {{CONVICTION_DATE}}\nData registrazione: {{DATE}} {{TIME}}\nResponsabile: {{NAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})\nProssima verifica: {{DATE}}",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 38,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "temporal",
+      "location",
+      "identification_documents",
+      "contact"
+    ]
+  },
+  {
+    "template": "Conseil génétique {{REFERENCE_NUMBER}}\nPatient: {{NAME}}, né {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nAntécédents familiaux: {{FAMILY_HISTORY}}\nConseiller: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nÉtablissement: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nDate consultation: {{DATE}} {{TIME}}\nContact: {{EMAIL_ADDRESS}} | {{PHONE}}\nGroupe sanguin: {{BLOOD_TYPE}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 38,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "hipaa_additions",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Asylgespräch {{REFERENCE_NUMBER}} - {{DATE}} {{TIME}}\nAntragsteller: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}\nNationalität: {{NATIONALITY}} | Ethnische Herkunft: {{ETHNICITY}}\nReligion: {{RELIGION}} | Rasse: {{RACE}}\nPolitische Orientierung: {{POLITICAL_AFFILIATION}}\nGewerkschaftszugehörigkeit: {{TRADE_UNION_MEMBERSHIP}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nInterviewer: {{NAME}} ({{EMAIL_ADDRESS}})",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 40,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Donatore midollo {{REFERENCE_NUMBER}}\nDonatore: {{NAME}}, nato {{DOB}}, codice {{HEALTHCARE_NUMBER}}\nGruppo sanguigno: {{BLOOD_TYPE}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nEtnia: {{ETHNICITY}}\nNazionalità: {{NATIONALITY}} | Religione: {{RELIGION}}\nResidenza: {{STREET}}, {{POSTCODE}} {{CITY}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}\nData registrazione: {{DATE}} {{TIME}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "form",
+    "estimated_word_count": 37,
+    "pii_count": 17,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "hipaa_additions",
+      "gdpr_sensitive",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Soins palliatifs {{REFERENCE_NUMBER}}\nPatient: {{NAME}}, né {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nDiagnostic: {{MEDICAL_CONDITION}} ({{MEDICAL_CODE}})\nGroupe sanguin: {{BLOOD_TYPE}}\nDonnées génétiques: {{GENETIC_DATA}}\nMédecin traitant: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nÉtablissement: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nDate admission: {{DATE}} {{TIME}}\nContact famille: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})\nDirective anticipée: {{REFERENCE_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 40,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "hipaa_additions",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Militärdienstausweis {{REFERENCE_NUMBER}}\nSoldat: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nDienstgrad: {{RANK}}\nEinheit: {{UNIT}}\nWaffe: {{WEAPON_SERIAL}}\nGesundheit: {{MEDICAL_CONDITION}}\nBlutgruppe: {{BLOOD_TYPE}}\nLetzte Musterung: {{DATE}} {{TIME}}",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 31,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Test paternità {{REFERENCE_NUMBER}}\nBambino: {{NAME}}, nato {{DOB}}, codice {{HEALTHCARE_NUMBER}}\nPresunto padre: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nMadre: {{NAME}}, nata {{DOB}}\nDati genetici bambino: {{GENETIC_DATA}}\nDati genetici padre: {{GENETIC_DATA}}\nDati genetici madre: {{GENETIC_DATA}}\nLaboratorio: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nData prelievo: {{DATE}} {{TIME}}\nRisultato: {{TEST_RESULT}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 47,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "hipaa_additions",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "IVG {{REFERENCE_NUMBER}} - CONFIDENTIEL\nPatient: {{FIRSTNAME}} {{LASTNAME}}, née {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nGroupe sanguin: {{BLOOD_TYPE}}\nNationalité: {{NATIONALITY}} | Religion: {{RELIGION}}\nOrientation sexuelle: {{SEXUAL_ORIENTATION}}\nMédecin: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nÉtablissement: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nDate intervention: {{DATE}} {{TIME}}\nGestation: {{WEEKS}} semaines\nContact confiance: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 43,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Samenspenderakte {{REFERENCE_NUMBER}} - VERTRAULICH\nSpender: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}}\nRasse: {{RACE}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nGenetische Daten: {{GENETIC_DATA}}\nBiometrischer Identifikator: {{BIOMETRIC_IDENTIFIER}}\nBlutgruppe: {{BLOOD_TYPE}}\nSpende vom: {{DATE}} {{TIME}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 44,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Ricovero psichiatrico {{REFERENCE_NUMBER}} - RISERVATO\nPaziente: {{NAME}}, nato {{DOB}}, codice {{HEALTHCARE_NUMBER}}\nDiagnosi: {{MEDICAL_CONDITION}} (codice {{MEDICAL_CODE}})\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nStruttura: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nMedico: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nData ricovero: {{DATE}} {{TIME}}\nContatto familiare: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})\nNazionalità: {{NATIONALITY}} | Religione: {{RELIGION}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 43,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "hipaa_additions",
+      "gdpr_sensitive",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Réhabilitation victime torture {{REFERENCE_NUMBER}}\nPatient: {{NAME}}, né {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nReligion: {{RELIGION}} | Orientation politique: {{POLITICAL_AFFILIATION}}\nAppartenance syndicale: {{TRADE_UNION_MEMBERSHIP}}\nOrientation sexuelle: {{SEXUAL_ORIENTATION}}\nDonnées génétiques: {{GENETIC_DATA}}\nThérapeute: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nÉtablissement: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nDate admission: {{DATE}} {{TIME}}\nContact: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 47,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Terrorismusüberwachung {{REFERENCE_NUMBER}} - GEHEIM\nZielperson: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}} | Rasse: {{RACE}}\nPolitische Orientierung: {{POLITICAL_AFFILIATION}}\nGewerkschaftszugehörigkeit: {{TRADE_UNION_MEMBERSHIP}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nIP-Überwachung: {{IP_ADDRESS}} | MAC: {{MAC_ADDRESS}}\nGerät: {{DEVICE_IDENTIFIER}}\nBankkonto: {{IBAN}} ({{BANK_ACCOUNT}})\nKrypto-Wallet: {{CRYPTO_WALLET}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 47,
+    "pii_count": 23,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "location",
+      "contact",
+      "hipaa_additions",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Vittima tratta {{REFERENCE_NUMBER}} - RISERVATISSIMO\nVittima: {{NAME}}, nata {{DOB}}, codice {{HEALTHCARE_NUMBER}}\nNazionalità: {{NATIONALITY}} | Etnia: {{ETHNICITY}}\nReligione: {{RELIGION}} | Orientamento sessuale: {{SEXUAL_ORIENTATION}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nResidenza protetta: {{LOCATION_ADDRESS}}, {{CITY}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}\nAssistenza legale: {{ORGANIZATION}}, {{STREET}} {{CITY}}\nData identificazione: {{DATE}} {{TIME}}",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 45,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "organization",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Castration chimique {{REFERENCE_NUMBER}} - CONFIDENTIEL\nCondamné: {{NAME}}, né {{DOB}}, n° AVS {{SSN}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nOrientation sexuelle: {{SEXUAL_ORIENTATION}}\nReligion: {{RELIGION}}\nMédecin: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nÉtablissement: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nTraitement: {{DRUG}} {{DOSE}}\nDate début: {{DATE}} {{TIME}}\nProchaine injection: {{DATE}}\nContact surveillant: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 45,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Kriegsverbrechen-Aussage {{REFERENCE_NUMBER}} - STRENG GEHEIM\nZeuge: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}} | Rasse: {{RACE}}\nPolitische Orientierung: {{POLITICAL_AFFILIATION}}\nGewerkschaftszugehörigkeit: {{TRADE_UNION_MEMBERSHIP}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nAnwalt: {{ORGANIZATION}}\nAussagedatum: {{DATE}} {{TIME}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 44,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "location",
+      "contact",
+      "organization",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Rilocazione testimone {{REFERENCE_NUMBER}} - SEGRETISSIMO\nIdentità reale: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nResidenza reale: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}\nNuova identità: {{FIRSTNAME}} {{LASTNAME}}\nNuova residenza: {{STREET}}, {{POSTCODE}} {{CITY}}\nNuovo codice fiscale: {{TAX_ID_NUMBER}}\nCausa: {{CASE_REFERENCE}}\nAgente responsabile: {{NAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})\nData rilocazione: {{DATE}} {{TIME}}",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 46,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "temporal",
+      "location",
+      "identification_documents",
+      "contact"
+    ]
+  },
+  {
+    "template": "MGF victime {{REFERENCE_NUMBER}} - CONFIDENTIEL\nPatient: {{FIRSTNAME}} {{LASTNAME}}, née {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nReligion: {{RELIGION}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nMédecin traitant: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nÉtablissement: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nDate examen: {{DATE}} {{TIME}}\nContact association: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 44,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Staatsschutzakte {{REFERENCE_NUMBER}} - STRENG GEHEIM\nPerson: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}} | Rasse: {{RACE}}\nPolitische Orientierung: {{POLITICAL_AFFILIATION}}\nGewerkschaftszugehörigkeit: {{TRADE_UNION_MEMBERSHIP}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nGenetische Daten: {{GENETIC_DATA}}\nBiometrischer Identifikator: {{BIOMETRIC_IDENTIFIER}}\nÜberwachung seit: {{DATE}} {{TIME}}\nKontoinhaber: {{IBAN}} ({{BANK_ACCOUNT}})\nKrypto-Tracking: {{CRYPTO_WALLET}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 54,
+    "pii_count": 25,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Delitto onore {{REFERENCE_NUMBER}} - RISERVATISSIMO\nVittima: {{NAME}}, nata {{DOB}}, codice {{HEALTHCARE_NUMBER}}\nNazionalità: {{NATIONALITY}} | Etnia: {{ETHNICITY}}\nReligione: {{RELIGION}} | Orientamento sessuale: {{SEXUAL_ORIENTATION}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nResidenza: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nSospettato: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nInvestigatore: {{NAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})\nData evento: {{DATE}} {{TIME}}",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 47,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "identification_documents",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Thérapie conversion {{REFERENCE_NUMBER}} - CONFIDENTIEL\nPatient: {{NAME}}, né {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nOrientation sexuelle: {{SEXUAL_ORIENTATION}}\nNationalité: {{NATIONALITY}} | Religion: {{RELIGION}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nThérapeute: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nÉtablissement: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nDate thérapie: {{DATE}} {{TIME}}\nContact association aide: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 44,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Zwangsheirat-Opferakte {{REFERENCE_NUMBER}} - VERTRAULICH\nBetroffene: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}} | Rasse: {{RACE}}\nPolitische Orientierung: {{POLITICAL_AFFILIATION}}\nGewerkschaftszugehörigkeit: {{TRADE_UNION_MEMBERSHIP}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nGenetische Daten: {{GENETIC_DATA}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nHeiratsdatum: {{DATE}} {{TIME}}\nAnsprechpartner: {{ORGANIZATION}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 46,
+    "pii_count": 22,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "organization",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Riabilitazione bambino soldato {{REFERENCE_NUMBER}} - RISERVATO\nMinore: {{NAME}}, nato {{DOB}}, codice {{HEALTHCARE_NUMBER}}\nNazionalità: {{NATIONALITY}} | Etnia: {{ETHNICITY}}\nReligione: {{RELIGION}} | Orientamento politico: {{POLITICAL}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nStruttura: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nPsicologo: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nData ammissione: {{DATE}} {{TIME}}\nContatto tutore: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 46,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Abus rituel {{REFERENCE_NUMBER}} - CONFIDENTIEL\nVictime: {{NAME}}, né {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nReligion: {{RELIGION}} | Orientation sexuelle: {{SEXUAL_ORIENTATION}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nEnquêteur: {{NAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})\nMédecin légiste: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nDate examen: {{DATE}} {{TIME}}\nÉtablissement: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 46,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Ethnische Säuberung-Zeugenaussage {{REFERENCE_NUMBER}} - STRENG GEHEIM\nZeuge: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}} | Rasse: {{RACE}}\nPolitische Orientierung: {{POLITICAL_AFFILIATION}}\nGewerkschaftszugehörigkeit: {{TRADE_UNION_MEMBERSHIP}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nGenetische Daten: {{GENETIC_DATA}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nAnwalt: {{ORGANIZATION}}\nAussagedatum: {{DATE}} {{TIME}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 48,
+    "pii_count": 22,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "organization",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Sopravvissuto genocidio {{REFERENCE_NUMBER}} - RISERVATISSIMO\nSopravvissuto: {{NAME}}, nato {{DOB}}, codice {{HEALTHCARE_NUMBER}}\nNazionalità: {{NATIONALITY}} | Etnia: {{ETHNICITY}}\nReligione: {{RELIGION}} | Orientamento politico: {{POLITICAL}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nResidenza: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}\nAssociazione sostegno: {{ORGANIZATION}}, {{STREET}} {{CITY}}\nData registrazione: {{DATE}} {{TIME}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 45,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "organization",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Prisonnier politique soins {{REFERENCE_NUMBER}} - CONFIDENTIEL\nDétenu: {{NAME}}, né {{DOB}}, n° AVS {{SSN}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nReligion: {{RELIGION}} | Orientation politique: {{POLITICAL_AFFILIATION}}\nAppartenance syndicale: {{TRADE_UNION_MEMBERSHIP}}\nOrientation sexuelle: {{SEXUAL_ORIENTATION}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nMédecin: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nÉtablissement pénitentiaire: {{LOCATION_ADDRESS}}, {{CITY}}\nDate examen: {{DATE}} {{TIME}}\nContact avocat: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 53,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Sekten-Deprogrammierung {{REFERENCE_NUMBER}} - VERTRAULICH\nBetroffene: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}} | Rasse: {{RACE}}\nPolitische Orientierung: {{POLITICAL_AFFILIATION}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nGenetische Daten: {{GENETIC_DATA}}\nPsychologe: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nKlinik: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nAufnahmedatum: {{DATE}} {{TIME}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 50,
+    "pii_count": 25,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "organization",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Tortura rifugiato {{REFERENCE_NUMBER}} - RISERVATO\nRifugiato: {{NAME}}, nato {{DOB}}, codice {{HEALTHCARE_NUMBER}}\nNazionalità: {{NATIONALITY}} | Etnia: {{ETHNICITY}}\nReligione: {{RELIGION}} | Orientamento politico: {{POLITICAL}}\nAppartenenza sindacale: {{TRADE_UNION}}\nOrientamento sessuale: {{SEXUAL_ORIENTATION}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nStruttura: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nMedico: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nData visita: {{DATE}} {{TIME}}\nContatto ONU: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 51,
+    "pii_count": 22,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Exorcisme {{REFERENCE_NUMBER}} - CONFIDENTIEL\nPersonne: {{NAME}}, né {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nNationalité: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnie: {{ETHNICITY}} | Orientation sexuelle: {{SEXUAL_ORIENTATION}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nExorciste: {{RELIGIOUS_OFFICIAL}}\nLieu: {{LOCATION_ADDRESS}}, {{CITY}}\nDate cérémonie: {{DATE}} {{TIME}}\nContact famille: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})\nSuivi médical: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 47,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Radikalisierungsprävention {{REFERENCE_NUMBER}} - VERTRAULICH\nBetroffene: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}} | Rasse: {{RACE}}\nPolitische Orientierung: {{POLITICAL_AFFILIATION}}\nGewerkschaftszugehörigkeit: {{TRADE_UNION_MEMBERSHIP}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nGenetische Daten: {{GENETIC_DATA}}\nBerater: {{NAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})\nOrganisation: {{ORGANIZATION}}, {{STREET}} {{CITY}}\nErstgespräch: {{DATE}} {{TIME}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "form",
+    "estimated_word_count": 48,
+    "pii_count": 25,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "organization",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Appello pena morte {{REFERENCE_NUMBER}} - URGENTE\nCondannato: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nNazionalità: {{NATIONALITY}} | Etnia: {{ETHNICITY}}\nReligione: {{RELIGION}} | Orientamento sessuale: {{SEXUAL_ORIENTATION}}\nResidenza carceraria: {{LOCATION_ADDRESS}}, {{CITY}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nAvvocato difensore: {{ORGANIZATION}}, {{STREET}} {{CITY}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}\nData esecuzione prevista: {{DATE}} {{TIME}}",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 48,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "organization",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Disparition forcée {{REFERENCE_NUMBER}} - CONFIDENTIEL\nDisparu: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}}, n° AVS {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nReligion: {{RELIGION}} | Orientation politique: {{POLITICAL_AFFILIATION}}\nAppartenance syndicale: {{TRADE_UNION_MEMBERSHIP}}\nOrientation sexuelle: {{SEXUAL_ORIENTATION}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nDate disparition: {{DATE}} {{TIME}}\nContact famille: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})\nEnquêteur: {{NAME}} ({{EMAIL_ADDRESS}})",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 53,
+    "pii_count": 24,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Aussergerichtliche Hinrichtung-Zeuge {{REFERENCE_NUMBER}} - STRENG GEHEIM\nZeuge: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}} | Rasse: {{RACE}}\nPolitische Orientierung: {{POLITICAL_AFFILIATION}}\nGewerkschaftszugehörigkeit: {{TRADE_UNION_MEMBERSHIP}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nGenetische Daten: {{GENETIC_DATA}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nAnwalt: {{ORGANIZATION}}\nAussagedatum: {{DATE}} {{TIME}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 48,
+    "pii_count": 22,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "organization",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Vittima pornografia minorile {{REFERENCE_NUMBER}} - RISERVATISSIMO\nMinore: {{NAME}}, nato {{DOB}}, codice {{HEALTHCARE_NUMBER}}\nNazionalità: {{NATIONALITY}} | Etnia: {{ETHNICITY}}\nReligione: {{RELIGION}} | Orientamento sessuale: {{SEXUAL_ORIENTATION}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nResidenza: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nStruttura protezione: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nPsicologo: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nData identificazione: {{DATE}} {{TIME}}\nContatto tutore: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 51,
+    "pii_count": 23,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "organization",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Prévention MGF {{REFERENCE_NUMBER}} - CONFIDENTIEL\nJeune fille: {{FIRSTNAME}} {{LASTNAME}}, née {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nReligion: {{RELIGION}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nParents: {{NAME}} et {{NAME}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nContact association: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})\nDate évaluation risque: {{DATE}} {{TIME}}\nMédecin: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 50,
+    "pii_count": 23,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Hassverbrechen-Opferakte {{REFERENCE_NUMBER}} - VERTRAULICH\nOpfer: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}} | Rasse: {{RACE}}\nPolitische Orientierung: {{POLITICAL_AFFILIATION}}\nGewerkschaftszugehörigkeit: {{TRADE_UNION_MEMBERSHIP}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nGenetische Daten: {{GENETIC_DATA}}\nTatdatum: {{DATE}} {{TIME}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nAnsprechpartner: {{ORGANIZATION}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 46,
+    "pii_count": 22,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "organization",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Rifugio violenza domestica {{REFERENCE_NUMBER}} - RISERVATO\nOspite: {{NAME}}, nata {{DOB}}, codice {{HEALTHCARE_NUMBER}}\nNazionalità: {{NATIONALITY}} | Etnia: {{ETHNICITY}}\nReligione: {{RELIGION}} | Orientamento sessuale: {{SEXUAL_ORIENTATION}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nIndirizzo segreto: {{LOCATION_ADDRESS}}, {{CITY}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}\nData ingresso: {{DATE}} {{TIME}}\nOperatrice: {{NAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})\nPrecedente indirizzo: {{STREET}}, {{POSTCODE}} {{CITY}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 50,
+    "pii_count": 22,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Attaque acide {{REFERENCE_NUMBER}} - CONFIDENTIEL\nVictime: {{NAME}}, né {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nReligion: {{RELIGION}} | Orientation sexuelle: {{SEXUAL_ORIENTATION}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nMédecin: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nÉtablissement: {{MEDICAL_FACILITY}}, {{STREET}} {{CITY}}\nDate attaque: {{DATE}} {{TIME}}\nContact famille: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})\nAgresseur présumé: {{NAME}} (enquête en cours)",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 52,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "organization",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Stalking-Opferschutz {{REFERENCE_NUMBER}} - VERTRAULICH\nGeschützte Person: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nNeue Adresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}} (GEHEIM)\nAlte Adresse: {{LOCATION_ADDRESS}} (bekannt dem Täter)\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nStalker: {{NAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})\nLetzter Vorfall: {{DATE}} {{TIME}}\nAnsprechpartner Polizei: {{NAME}} ({{EMAIL_ADDRESS}})",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 51,
+    "pii_count": 23,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Molestie lavoro {{REFERENCE_NUMBER}} - RISERVATO\nDipendente: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nNazionalità: {{NATIONALITY}} | Etnia: {{ETHNICITY}}\nReligione: {{RELIGION}} | Orientamento sessuale: {{SEXUAL_ORIENTATION}}\nDatore lavoro: {{COMPANY}}, {{STREET}} {{CITY}}\nPosizione: {{JOB_TITLE}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nData denuncia: {{DATE}} {{TIME}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}\nResponsabile HR: {{NAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})",
+    "locale": "it_CH",
+    "domain": "hr_admin",
+    "structure_type": "investigation",
+    "estimated_word_count": 49,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "organization",
+      "work",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Violence policière {{REFERENCE_NUMBER}} - CONFIDENTIEL\nPlaignant: {{NAME}}, né {{DOB}}, n° AVS {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nReligion: {{RELIGION}} | Orientation sexuelle: {{SEXUAL_ORIENTATION}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nDate incident: {{DATE}} {{TIME}}\nLieu: {{LOCATION_ADDRESS}}, {{CITY}}\nOfficiers impliqués: {{OFFICER_NAMES}}\nContact avocat: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 49,
+    "pii_count": 22,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Diskriminierungsklage {{REFERENCE_NUMBER}}\nKläger: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}} | Rasse: {{RACE}}\nPolitische Orientierung: {{POLITICAL_AFFILIATION}}\nGewerkschaftszugehörigkeit: {{TRADE_UNION_MEMBERSHIP}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nGenetische Daten: {{GENETIC_DATA}}\nBeklagte Partei: {{COMPANY}}, {{LOCATION_ADDRESS}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nAnwalt: {{ORGANIZATION}}",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 45,
+    "pii_count": 22,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "organization",
+      "contact"
+    ]
+  },
+  {
+    "template": "Appello errore giudiziario {{REFERENCE_NUMBER}} - URGENTE\nDetenuto: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nNazionalità: {{NATIONALITY}} | Etnia: {{ETHNICITY}}\nReligione: {{RELIGION}} | Orientamento sessuale: {{SEXUAL_ORIENTATION}}\nResidenza carceraria: {{LOCATION_ADDRESS}}, {{CITY}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nAvvocato: {{ORGANIZATION}}, {{STREET}} {{CITY}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}\nData condanna: {{DATE}}\nNuove prove DNA disponibili",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 49,
+    "pii_count": 18,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "organization",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Rétention administrative soins {{REFERENCE_NUMBER}} - CONFIDENTIEL\nDétenu: {{NAME}}, né {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nReligion: {{RELIGION}} | Orientation politique: {{POLITICAL_AFFILIATION}}\nAppartenance syndicale: {{TRADE_UNION_MEMBERSHIP}}\nOrientation sexuelle: {{SEXUAL_ORIENTATION}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nCentre rétention: {{LOCATION_ADDRESS}}, {{CITY}}\nMédecin: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nDate examen: {{DATE}} {{TIME}}\nContact Cimade: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 53,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Gefängnisvergewaltigung-Opfer {{REFERENCE_NUMBER}} - VERTRAULICH\nOpfer: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nEinrichtung: {{LOCATION_ADDRESS}}, {{CITY}}\nHaftraum: {{CELL_NUMBER}}\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nGenetische Daten: {{GENETIC_DATA}}\nBiometrischer Identifikator: {{BIOMETRIC_IDENTIFIER}}\nTatdatum: {{DATE}} {{TIME}}\nKontakt Anwalt: {{NAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})\nPsychologe: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 44,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Revisione isolamento {{REFERENCE_NUMBER}} - RISERVATO\nDetenuto: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nNazionalità: {{NATIONALITY}} | Etnia: {{ETHNICITY}}\nReligione: {{RELIGION}} | Orientamento politico: {{POLITICAL}}\nOrientamento sessuale: {{SEXUAL_ORIENTATION}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nCarcere: {{LOCATION_ADDRESS}}, {{CITY}}\nData inizio isolamento: {{DATE}} {{TIME}}\nRevisione programmata: {{DATE}}\nMedico: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nContatto garante: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 52,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Détention mineur {{REFERENCE_NUMBER}} - CONFIDENTIEL\nMineur: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}}, n° assurance {{HEALTHCARE_NUMBER}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nReligion: {{RELIGION}} | Orientation sexuelle: {{SEXUAL_ORIENTATION}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nÉtablissement: {{LOCATION_ADDRESS}}, {{CITY}}\nDate admission: {{DATE}} {{TIME}}\nInfraction: {{OFFENSE}}\nContact parent: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})\nÉducateur: {{NAME}} ({{EMAIL_ADDRESS}})\nJuge des enfants: {{NAME}}",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "structure_type": "medical_record",
+    "estimated_word_count": 51,
+    "pii_count": 22,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Tod in Haft-Untersuchung {{REFERENCE_NUMBER}} - STRENG GEHEIM\nVerstorbener: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nLetzte Adresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}} | Rasse: {{RACE}}\nPolitische Orientierung: {{POLITICAL_AFFILIATION}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nGenetische Daten: {{GENETIC_DATA}}\nEinrichtung: {{LOCATION_ADDRESS}}, {{CITY}}\nTodesdatum: {{DATE}} {{TIME}}\nUntersuchungsleiter: {{NAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})\nGerichtsmediziner: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 53,
+    "pii_count": 25,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "healthcare",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Revisione ergastolo {{REFERENCE_NUMBER}} - RISERVATISSIMO\nDetenuto: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nNazionalità: {{NATIONALITY}} | Etnia: {{ETHNICITY}}\nReligione: {{RELIGION}} | Orientamento sessuale: {{SEXUAL_ORIENTATION}}\nResidenza carceraria: {{LOCATION_ADDRESS}}, {{CITY}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nData condanna: {{DATE}}\nAnni scontati: {{YEARS}}\nAvvocato: {{ORGANIZATION}}, {{STREET}} {{CITY}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}\nProssima revisione: {{DATE}}",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 50,
+    "pii_count": 20,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "organization",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Demande grâce {{REFERENCE_NUMBER}} - CONFIDENTIEL\nCondamné: {{NAME}}, né {{DOB}}, n° AVS {{SSN}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nReligion: {{RELIGION}} | Orientation politique: {{POLITICAL_AFFILIATION}}\nAppartenance syndicale: {{TRADE_UNION_MEMBERSHIP}}\nOrientation sexuelle: {{SEXUAL_ORIENTATION}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nÉtablissement pénitentiaire: {{LOCATION_ADDRESS}}, {{CITY}}\nDate condamnation: {{DATE}}\nPeine: {{SENTENCE}}\nAvocat: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})\nDate demande: {{DATE}} {{TIME}}",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 52,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Massregelvollzug-Überprüfung {{REFERENCE_NUMBER}} - VERTRAULICH\nUntergebrachter: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nEinrichtung: {{LOCATION_ADDRESS}}, {{CITY}}\nDiagnose: {{MEDICAL_CONDITION}} ({{MEDICAL_CODE}})\nBehandelnder Arzt: Dr. {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nGenetische Daten: {{GENETIC_DATA}}\nBiometrischer Identifikator: {{BIOMETRIC_IDENTIFIER}}\nLetzte Überprüfung: {{DATE}} {{TIME}}\nNächste Überprüfung: {{DATE}}\nKontakt Anwalt: {{NAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 50,
+    "pii_count": 23,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Richiesta estradizione {{REFERENCE_NUMBER}} - URGENTE\nRicercato: {{NAME}}, nato {{DOB}}, codice fiscale {{TAX_ID_NUMBER}}\nNazionalità: {{NATIONALITY}} | Etnia: {{ETHNICITY}}\nReligione: {{RELIGION}} | Orientamento politico: {{POLITICAL}}\nOrientamento sessuale: {{SEXUAL_ORIENTATION}}\nUltimo indirizzo: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nPaese richiedente: {{COUNTRY}}\nReato: {{OFFENSE}}\nContatto Interpol: {{NAME}} ({{PHONE}}, {{EMAIL_ADDRESS}})\nData richiesta: {{DATE}} {{TIME}}",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "legal_text",
+    "estimated_word_count": 51,
+    "pii_count": 21,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Mandat arrêt international {{REFERENCE_NUMBER}} - CONFIDENTIEL\nRecherché: {{FIRSTNAME}} {{LASTNAME}}, né {{DOB}}, n° AVS {{SSN}}\nNationalité: {{NATIONALITY}} | Ethnie: {{ETHNICITY}}\nReligion: {{RELIGION}} | Orientation politique: {{POLITICAL_AFFILIATION}}\nAppartenance syndicale: {{TRADE_UNION_MEMBERSHIP}}\nOrientation sexuelle: {{SEXUAL_ORIENTATION}}\nDonnées génétiques: {{GENETIC_DATA}}\nIdentifiant biométrique: {{BIOMETRIC_IDENTIFIER}}\nDernière adresse: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nContact: {{EMAIL_ADDRESS}} | {{PHONE}}\nInfraction: {{OFFENSE}}\nDate mandat: {{DATE}} {{TIME}}\nInterpol: {{NAME}} ({{EMAIL_ADDRESS}})",
+    "locale": "fr_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 56,
+    "pii_count": 24,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "INTERPOL-Rotnotice {{REFERENCE_NUMBER}} - STRENG GEHEIM\nGesuchte Person: {{FIRSTNAME}} {{LASTNAME}}, {{DOB}}, AHV {{SSN}}\nLetzter bekannter Wohnort: {{STREET}}, {{POSTCODE}} {{CITY}} {{CANTON}}\nNationalität: {{NATIONALITY}} | Religion: {{RELIGION}}\nEthnische Herkunft: {{ETHNICITY}} | Rasse: {{RACE}}\nPolitische Orientierung: {{POLITICAL_AFFILIATION}}\nGewerkschaftszugehörigkeit: {{TRADE_UNION_MEMBERSHIP}}\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\nGenetische Daten: {{GENETIC_DATA}}\nBiometrischer Identifikator: {{BIOMETRIC_IDENTIFIER}}\nKontakt: {{EMAIL_ADDRESS}} | {{PHONE}}\nStraftat: {{OFFENSE}}\nAusstellungsdatum: {{DATE}} {{TIME}}\nAnsprechpartner: {{NAME}} ({{EMAIL_ADDRESS}})",
+    "locale": "de_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 56,
+    "pii_count": 25,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Testimone CPI {{REFERENCE_NUMBER}} - SEGRETISSIMO\nTestimone: {{NAME}}, nato {{DOB}}, codice {{HEALTHCARE_NUMBER}}\nNazionalità: {{NATIONALITY}} | Etnia: {{ETHNICITY}}\nReligione: {{RELIGION}} | Orientamento politico: {{POLITICAL}}\nAppartenenza sindacale: {{TRADE_UNION}}\nOrientamento sessuale: {{SEXUAL_ORIENTATION}}\nDati genetici: {{GENETIC_DATA}}\nIdentificativo biometrico: {{BIOMETRIC_IDENTIFIER}}\nResidenza protetta: {{LOCATION_ADDRESS}}, {{CITY}}\nContatto: {{EMAIL_ADDRESS}} | {{PHONE}}\nProcura: {{ORGANIZATION}}, {{STREET}} {{CITY}}\nData testimonianza: {{DATE}} {{TIME}}\nAvvocato difesa: {{NAME}} ({{EMAIL_ADDRESS}}, {{PHONE}})",
+    "locale": "it_CH",
+    "domain": "legal",
+    "structure_type": "investigation",
+    "estimated_word_count": 55,
+    "pii_count": 24,
+    "pii_categories_used": [
+      "secrets/technical",
+      "personal_identity",
+      "healthcare",
+      "gdpr_sensitive",
+      "hipaa_additions",
+      "location",
+      "organization",
+      "contact",
+      "temporal"
+    ]
+  }
+]

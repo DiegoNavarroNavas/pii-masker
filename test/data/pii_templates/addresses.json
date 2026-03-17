@@ -1,0 +1,85 @@
+{
+  "en": {
+    "street_types": ["Street", "Avenue", "Boulevard", "Drive", "Road", "Lane", "Court", "Place", "Way", "Circle"],
+    "street_names": [
+      "Main", "Oak", "Maple", "Cedar", "Pine", "Elm", "Washington", "Park", "Lake", "Hill",
+      "First", "Second", "Third", "Fourth", "Fifth", "Broadway", "Market", "Spring", "Center"
+    ],
+    "building_types": ["Apt", "Suite", "Unit", "#"],
+    "postal_code_format": "{5_digits}",
+    "examples": [
+      "123 Main Street, Apt 4B, New York, NY 10001",
+      "456 Oak Avenue, Suite 200, Los Angeles, CA 90001",
+      "789 Maple Drive, Chicago, IL 60601",
+      "321 Pine Road, Unit 5, Houston, TX 77001",
+      "555 Cedar Lane, Philadelphia, PA 19101"
+    ]
+  },
+  "de": {
+    "street_types": ["Straße", "Weg", "Platz", "Allee", "Gasse", "Ring", "Damm", "Ufer"],
+    "street_names": [
+      "Haupt", "Schul", "Bahnhof", "Kirch", "Mühlen", "Garten", "Wald", "Linden",
+      "Birken", "Bach", "Dorf", "Schiller", "Goethe", "Post", "Markt", "Berg"
+    ],
+    "building_types": ["EG", "OG", "WG", "Nr."],
+    "postal_code_format": "{5_digits}",
+    "examples": [
+      "Hauptstraße 123, 10115 Berlin",
+      "Schulweg 45, 2. OG, 20095 Hamburg",
+      "Bahnhofstraße 78, 80331 München",
+      "Kirchplatz 12, 50667 Köln",
+      "Lindenallee 99, 60311 Frankfurt am Main"
+    ]
+  },
+  "fr": {
+    "street_types": ["Rue", "Avenue", "Boulevard", "Place", "Allée", "Impasse", "Chemin", "Route"],
+    "street_names": [
+      "de la Paix", "du Commerce", "de la République", "de l'Église", "de la Gare",
+      "Principale", "des Écoles", "du Marché", "du Château", "de la Mairie",
+      "Pasteur", "Victor Hugo", "Jean Jaurès", "Louis Blanc", "Général de Gaulle"
+    ],
+    "building_types": ["Bis", "Ter", "Appt", "Étage"],
+    "postal_code_format": "{5_digits}",
+    "examples": [
+      "123 Rue de la Paix, 75001 Paris",
+      "45 Avenue des Champs-Élysées, 75008 Paris",
+      "78 Boulevard Saint-Germain, Appt 3, 75005 Paris",
+      "12 Place de la République, 69001 Lyon",
+      "99 Rue de la Gare, 31000 Toulouse"
+    ]
+  },
+  "it": {
+    "street_types": ["Via", "Viale", "Corso", "Piazza", "Largo", "Vicolo", "Lungarno", "Strada"],
+    "street_names": [
+      "Roma", "Garibaldi", "Cavour", "Mazzini", "Verdi", "Dante", "Manzoni",
+      "del Corso", "dei Fori Imperiali", "Veneto", "Condotti", "Margutta",
+      "della Repubblica", "del Duomo", "San Marco"
+    ],
+    "building_types": ["Piano", "Int.", "Scala"],
+    "postal_code_format": "{5_digits}",
+    "examples": [
+      "Via Roma 123, 00100 Roma",
+      "Viale Garibaldi 45, Piano 2, 20100 Milano",
+      "Corso Italia 78, 80100 Napoli",
+      "Piazza del Duomo 12, 50100 Firenze",
+      "Via Cavour 99, 10100 Torino"
+    ]
+  },
+  "es": {
+    "street_types": ["Calle", "Avenida", "Paseo", "Plaza", "Glorieta", "Ronda", "Camino", "Carretera"],
+    "street_names": [
+      "Mayor", "Real", "Principal", "de la Constitución", "del Carmen", "de San Juan",
+      "de la Iglesia", "de la Estación", "de San Francisco", "de Santa María",
+      "de la Paz", "de la Independencia", "de la Libertad", "de España"
+    ],
+    "building_types": ["Piso", "Puerta", "Escalera", "Bloque"],
+    "postal_code_format": "{5_digits}",
+    "examples": [
+      "Calle Mayor 123, 28001 Madrid",
+      "Avenida de la Constitución 45, Piso 3, 41001 Sevilla",
+      "Paseo de Gracia 78, 08001 Barcelona",
+      "Plaza Mayor 12, 46001 Valencia",
+      "Calle Real 99, 50001 Zaragoza"
+    ]
+  }
+}

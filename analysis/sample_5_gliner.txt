@@ -1,0 +1,14 @@
+Sehr geehrte Damen und Herren,
+
+hiermit kündige ich mein Konto <IBAN_CODE_2> bei der <ORGANIZATION_3> per sofort.
+
+Meine Daten:
+Name: <first name_2> <PERSON_3>
+Adresse: <location address_2>
+<ORGANIZATION_2>: 756.9088.3070.32
+
+Bitte bestätigen Sie die Kündigung unter <EMAIL_ADDRESS_2>.
+
+Freundliche Grüsse
+<PERSON_2>
+Total time: 28.8s

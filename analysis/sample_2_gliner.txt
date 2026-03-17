@@ -1,0 +1,2 @@
+Vollmacht: Ich Dr. <PERSON_2>, geb. <DATE_TIME_3>, AHV 756.9908.8117.30, bevollmächtige Dr. <PERSON_2>. <phone number_2>, <DATE_TIME_2>
+Total time: 28.2s

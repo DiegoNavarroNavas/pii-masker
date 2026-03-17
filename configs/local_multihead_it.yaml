@@ -1,0 +1,6 @@
+name: local_multihead_it
+description: Local ModernBERT multihead span classifier for PII detection (Italian)
+engine: local_multihead
+model: local_models/multihead_model.pt
+local_encoder_model: answerdotai/ModernBERT-base
+language: it

@@ -10,16 +10,28 @@ wheels/
 # Virtual environments
 .venv
 
+# Secrets
 *.key
-document.txt
+
+# Documentation
+docs/
+
+# Test outputs
+test/output/
+test/data/input/*.txt
+
+# Native host files
 native_host/*.installed.json
 native_host/host.exe
 native_host/host.log
 
+# Results
 result_*
 results/exports/*
 results/restored/*
 
+# Node modules
 node_modules/
 
+# Temp files
 temp/

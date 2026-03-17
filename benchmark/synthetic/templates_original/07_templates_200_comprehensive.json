@@ -1,0 +1,2825 @@
+[
+  {
+    "template": "{{FIRSTNAME}} {{LASTNAME}}, {{AGE}}-jährige {{NATIONALITY}} mit {{RELIGION}}-Hintergrund, zog am {{DOB}} nach {{CITY}} im Kanton {{CANTON}}. Ihre {{POLITICAL_AFFILIATION}}-Mitgliedschaft und {{TRADE_UNION}}-Zugehörigkeit wurden unter {{EMAIL_ADDRESS}} registriert. Sie arbeitet als {{JOB_TITLE}} bei {{COMPANY}} und verdient {{MONEY}} {{CURRENCY}} jährlich. Ihre Bankverbindung lautet {{IBAN}} und ihre Kreditkarte {{CREDIT_CARD}} läuft am {{CREDIT_CARD_EXPIRATION}} ab.",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "narrative",
+    "estimated_word_count": 64,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "financial",
+      "organization",
+      "gdpr_sensitive",
+      "work"
+    ]
+  },
+  {
+    "template": "AW: Termin\\n\\nVon: {{NAME}} <{{EMAIL_ADDRESS}}>\\nGesendet: {{DATE}} {{TIME}}\\nAn: {{MEDICAL_FACILITY}} <{{EMAIL_ADDRESS}}>\\nBetreff: Re: Untersuchung\\n\\nSehr geehrte Damen und Herren,\\n\\nmeine {{MEDICAL_LICENSE}}-Nummer ist {{REFERENCE_NUMBER}}. Meine Blutgruppe ist {{BLOOD_TYPE}} und ich nehme derzeit {{DRUG}} {{DOSE}} ein.\\n\\n> Am {{DATE}} schrieb Dr. {{MEDICAL_PROFESSIONAL}}:\\n> Liebe Patientin {{NAME}} ({{HEALTHCARE_NUMBER}}),\\n> Ihr Befund zeigt {{CONDITION}}. Bitte vereinbaren Sie einen Termin.",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "dialog",
+    "estimated_word_count": 62,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "healthcare",
+      "organization",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] auth: user={{USERNAME}}|pwd={{PASSWORD}} src_ip={{IP_ADDRESS}} mac={{MAC_ADDRESS}} device={{DEVICE_IDENTIFIER}} bio={{BIOMETRIC_IDENTIFIER}}\\n[{{TIMESTAMP}}] txn: iban={{IBAN}} amt={{MONEY}} cc={{CREDIT_CARD}} cvv={{CVV}} exp={{CREDIT_CARD_EXPIRATION}} crypto={{CRYPTO_WALLET}}\\n[{{TIMESTAMP}}] api: key={{API_KEY}} priv={{PRIVATE_KEY}} cert={{CERTIFICATE_NUMBER}} ref={{REFERENCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 38,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "identification",
+      "hipaa",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Reiseplan für {{NAME}} ({{PASSPORT_NUMBER}}, {{NATIONALITY}})\\n================================\\n{{DATE}}: Flug {{REFERENCE_NUMBER}}, Sitz {{VEHICLE_ID}}\\nHotel: {{COMPANY}}, {{STREET}}, {{POSTCODE}} {{CITY}}, {{COUNTRY}}\\nNotfallkontakt: {{NAME}} ({{PHONE}} / {{EMAIL_ADDRESS}})\\nZahlung: Kreditkarte {{CREDIT_CARD}} (CVV: {{CVV}}, gültig bis {{CREDIT_CARD_EXPIRATION}})\\nVersicherung: {{POLICY_NUMBER}} ({{INSURANCE_NUMBER}})",
+    "locale": "de_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 46,
+    "pii_count": 19,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "financial",
+      "identification",
+      "organization",
+      "gdpr_sensitive",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "# User Config for {{CUSTOMER_ID}}\\n# Generated at {{TIMESTAMP}}\\ndb_url = \"postgres://{{USERNAME}}:{{PASSWORD}}@{{IP_ADDRESS}}:5432/{{REFERENCE_NUMBER}}\"\\napi_key = \"{{API_KEY}}\"\\nprivate_key = \"{{PRIVATE_KEY}}\"\\nwallet_address = \"{{CRYPTO_WALLET}}\"\\nnotification_email = \"{{EMAIL_ADDRESS}}\"\\nbackup_phone = \"{{PHONE}}\"",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 31,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "identification",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "HR-Notiz: Mitarbeiter {{NAME}} ({{GENDER}}, {{SEXUAL_ORIENTATION}}, {{MARITAL_STATUS}}) hat {{GENETIC_DATA}}-Marker. Ethnische Zugehörigkeit: {{ETHNICITY}}/{{RACE}}. Religion: {{RELIGION}}. Politische Ausrichtung: {{POLITICAL}}. Gewerkschaftsmitgliedschaft: {{TRADE_UNION_MEMBERSHIP}}. Diese Daten sind gemäss GDPR Art. 9 als besonders schützenswert eingestuft.",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "medical_record",
+    "estimated_word_count": 39,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "personal_identity",
+      "gdpr_sensitive"
+    ]
+  },
+  {
+    "template": "Bonjour, c'est {{FIRSTNAME}} {{LASTNAME}}. Mon numéro de téléphone est {{PHONE}} et mon adresse email est {{EMAIL_ADDRESS}}. J'habite au {{STREET}}, {{POSTCODE}} {{CITY}} dans le canton de {{CANTON}} en {{COUNTRY}}. Ma date de naissance est le {{DOB}} et j'ai {{AGE}} ans. Je travaille comme {{JOB_TITLE}} chez {{COMPANY}}.",
+    "locale": "fr_CH",
+    "domain": "customer_service",
+    "structure_type": "dialog",
+    "estimated_word_count": 59,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "organization",
+      "work"
+    ]
+  },
+  {
+    "template": "Scheda Paziente: {{NAME}} ({{HEALTHCARE_NUMBER}})\\n========================================\\nData di nascita: {{DOB}}\\nData visita: {{DATE}} {{TIME}}\\nCondizione medica: {{MEDICAL_CONDITION}}\\nCodice diagnosi: {{MEDICAL_CODE}}\\nFarmaco prescritto: {{DRUG}} {{DOSE}}\\nGruppo sanguigno: {{BLOOD_TYPE}}\\nDottore: Dr. {{MEDICAL_PROFESSIONAL}} (Licenza: {{MEDICAL_LICENSE}})\\nProssimo appuntamento: {{DATE}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 38,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{COMPANY}} - Facture No. {{REFERENCE_NUMBER}}\\n=====================================\\nClient: {{NAME}}\\nAdresse: {{LOCATION_ADDRESS}}, {{POSTCODE}} {{CITY}}, {{COUNTRY}}\\nTéléphone: {{PHONE}} | Email: {{EMAIL_ADDRESS}}\\n\\nDétails de paiement:\\nIBAN: {{IBAN}}\\nMontant: {{MONEY}} {{CURRENCY}}\\nCarte de crédit: {{CREDIT_CARD}} (expire le {{CREDIT_CARD_EXPIRATION}}, CVV: {{CVV}})",
+    "locale": "fr_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 42,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "financial",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "{{TIMESTAMP}} [INFO] Login attempt from {{IP_ADDRESS}} for user {{USERNAME}}. MAC address: {{MAC_ADDRESS}}. Session token: {{API_KEY}}. Client ID: {{CUSTOMER_ID}}. Biometric verification: {{BIOMETRIC_IDENTIFIER}}. Device fingerprint: {{DEVICE_IDENTIFIER}}.",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 32,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "hipaa",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Sehr geehrte Damen und Herren,\\n\\nich bin {{NAME}}, geboren am {{DOB}}, AHV-Nummer {{SSN}}. Ich wohne in {{CITY}} im Kanton {{CANTON}}, {{STREET}} {{POSTCODE}}. Meine Kontaktdaten sind: Telefon {{PHONE}}, Email {{EMAIL_ADDRESS}} und Fax {{FAX}}.\\n\\nIch beantrage hiermit die Ausstellung eines neuen Ausweises mit der Nummer {{IDENTITY_CARD_NUMBER}}. Meine Steueridentifikationsnummer lautet {{TAX_IDENTIFICATION_NUMBER}}.",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "legal_text",
+    "estimated_word_count": 58,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "financial",
+      "identification"
+    ]
+  },
+  {
+    "template": "Dr. {{MEDICAL_PROFESSIONAL}} (Lizenz-Nr. {{MEDICAL_LICENSE}}) hat am {{DATE}} um {{TIME}} den Patienten {{NAME}} (geb. {{DOB}}, Versicherungs-Nr. {{HEALTHCARE_NUMBER}}) behandelt.\\n\\nDiagnose: {{CONDITION}} (Code: {{MEDICAL_CODE}})\\nVerletzung: {{INJURY}}\\nBehandlung: {{MEDICAL_PROCESS}}\\nMedikament: {{DRUG}} {{DOSE}}\\nBlutgruppe: {{BLOOD_TYPE}}\\n\\nNächster Termin: {{DATE}} um {{TIME}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 45,
+    "pii_count": 16,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{FIRSTNAME}} {{LASTNAME}} ({{EMAIL_ADDRESS}}) hat am {{DATE}} um {{TIME}} eine Überweisung von {{MONEY}} {{CURRENCY}} getätigt.\\n\\nSender:\\nName: {{NAME}}\\nIBAN: {{IBAN}}\\nKonto: {{ACCOUNT_NUMBER}}\\nBank: {{BANK_ACCOUNT}}\\n\\nReferenz: {{REFERENCE_NUMBER}}\\nTransaktionszeit: {{TIMESTAMP}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "narrative",
+    "estimated_word_count": 33,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "financial",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Cher {{FIRSTNAME}} {{LASTNAME}},\\n\\nVotre police d'assurance {{POLICY_NUMBER}} est désormais active. Vos coordonnées:\\n\\nNom: {{NAME}}\\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}, {{CANTON}}, {{COUNTRY}}\\nTéléphone: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}\\n\\nNuméro d'assurance: {{INSURANCE_NUMBER}}\\nNuméro de client: {{CUSTOMER_ID}}",
+    "locale": "fr_CH",
+    "domain": "insurance",
+    "structure_type": "form",
+    "estimated_word_count": 37,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Buongiorno {{NAME}},\\n\\nLe confermiamo la prenotazione per il {{DATE}} alle {{TIME}}.\\n\\nDettagli cliente:\\nNome: {{NAME}}\\nEmail: {{EMAIL_ADDRESS}}\\nTelefono: {{PHONE}}\\n\\nPagamento:\\nCarta: {{CREDIT_CARD}}\\nCVV: {{CVV}}\\nScadenza: {{CREDIT_CARD_EXPIRATION}}\\nImporto addebitato: {{MONEY}} {{CURRENCY}}",
+    "locale": "it_CH",
+    "domain": "travel",
+    "structure_type": "form",
+    "estimated_word_count": 31,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{NAME}} (Username: {{USERNAME}}) hat sich am {{DATE}} um {{TIME}} von der IP-Adresse {{IP_ADDRESS}} mit der MAC-Adresse {{MAC_ADDRESS}} eingeloggt.\\n\\nSicherheitsdetails:\\nPasswort-Hash: {{PASSWORD}}\\nAPI-Schlüssel: {{API_KEY}}\\nKrypto-Wallet: {{CRYPTO_WALLET}}\\nGeräte-ID: {{DEVICE_IDENTIFIER}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 32,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "financial",
+      "identification",
+      "hipaa",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Kundenstammblatt {{CUSTOMER_ID}}\\n========================\\nName: {{FIRSTNAME}} {{LASTNAME}}\\nAdresse: {{STREET}}, {{POSTCODE}} {{CITY}}, Kanton {{CANTON}}, {{COUNTRY}}\\n\\nTelefon: {{PHONE}}\\nFax: {{FAX}}\\nEmail: {{EMAIL_ADDRESS}}\\nWeb: {{URL}}\\n\\nBankverbindung:\\nKonto: {{BANK_ACCOUNT}}\\nIBAN: {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "structure_type": "list",
+    "estimated_word_count": 30,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "financial",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Patientenakte: {{NAME}}\\n==================\\nGeburtsdatum: {{DOB}}\\nGeschlecht: {{GENDER}}\\nBlutgruppe: {{BLOOD_TYPE}}\\n\\nVersicherung:\\nNummer: {{HEALTHCARE_NUMBER}}\\n\\nMedizinische Daten:\\nKrankheit: {{MEDICAL_CONDITION}}\\nVerletzung: {{INJURY}}\\nBehandlung: {{MEDICAL_PROCESS}}\\nMedikament: {{DRUG}} {{DOSE}}\\n\\nBehandelnder Arzt:\\nName: {{MEDICAL_PROFESSIONAL}}\\nLizenz: {{MEDICAL_LICENSE}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 27,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare"
+    ]
+  },
+  {
+    "template": "{{ORGANIZATION}} - Mitarbeiterdaten\\n================================\\nPersonalnummer: {{REFERENCE_NUMBER}}\\nName: {{NAME}}\\nGeburtstag: {{DOB}}\\nAHV-Nummer: {{SSN}}\\n\\nAdresse:\\n{{LOCATION_ADDRESS}}\\n\\nPosition: {{JOB_TITLE}}\\nGehalt: {{MONEY}} {{CURRENCY}} jährlich\\n\\nBankverbindung:\\nIBAN: {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 23,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "organization",
+      "work",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Von: {{NAME}} <{{EMAIL_ADDRESS}}>\\nDatum: {{DATE}} {{TIME}}\\nAn: {{EMAIL_ADDRESS}}\\nBetreff: AW: Antrag {{REFERENCE_NUMBER}}\\n\\nHallo,\\n\\nanbei die gewünschten Informationen:\\nMeine Steueridentifikationsnummer ist {{TAX_IDENTIFICATION_NUMBER}} und meine Steuernummer lautet {{TAX_ID_NUMBER}}.\\n\\nGruss\\n{{FIRSTNAME}} {{LASTNAME}}",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "structure_type": "dialog",
+    "estimated_word_count": 31,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "identification",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{TIMESTAMP}} - Transaktionsprotokoll\\n================================\\nBenutzer: {{USERNAME}}\\nAktion: Zahlung\\nBetrag: {{MONEY}} {{CURRENCY}}\\n\\nZahlungsdetails:\\nKreditkarte: {{CREDIT_CARD}}\\nAblaufdatum: {{CREDIT_CARD_EXPIRATION}}\\nCVV: {{CVV}}\\nKrypto-Wallet: {{CRYPTO_WALLET}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "log",
+    "estimated_word_count": 19,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "financial",
+      "identification",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{FIRSTNAME}} {{LASTNAME}}, {{NATIONALITY}}, {{AGE}} ans, habite au {{STREET}} {{POSTCODE}} {{CITY}} dans le canton de {{CANTON}}.\\n\\nDonnées sensibles (GDPR Art. 9):\\nReligion: {{RELIGION}}\\nOrientation sexuelle: {{SEXUAL_ORIENTATION}}\\nEthnicité: {{ETHNICITY}}\\nRace: {{RACE}}\\nDonnées génétiques: {{GENETIC_DATA}}\\n\\nContact: {{EMAIL_ADDRESS}} | {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "research",
+    "structure_type": "narrative",
+    "estimated_word_count": 44,
+    "pii_count": 15,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "gdpr_sensitive"
+    ]
+  },
+  {
+    "template": "Paziente: {{NAME}}\\n====================\\nData di nascita: {{DOB}}\\nCodice fiscale: {{TAX_ID_NUMBER}}\\nNumero identità: {{IDENTITY_CARD_NUMBER}}\\n\\nIndirizzo:\\n{{LOCATION_ADDRESS}}\\n\\nContatto:\\nTelefono: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}\\n\\nDati medici:\\nGruppo sanguigno: {{BLOOD_TYPE}}\\nCondizione: {{MEDICAL_CONDITION}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 24,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "identification",
+      "healthcare"
+    ]
+  },
+  {
+    "template": "{{COMPANY}}\\nRechnung Nr. {{REFERENCE_NUMBER}}\\n==========================\\n\\nKunde:\\nKundennummer: {{CUSTOMER_ID}}\\nName: {{NAME}}\\nStrasse: {{STREET}}\\nPLZ/Ort: {{POSTCODE}} {{CITY}}\\nLand: {{COUNTRY}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}\\n\\nZahlung:\\nBetrag: {{MONEY}} {{CURRENCY}}\\nIBAN: {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 27,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "financial",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "{{NAME}} ({{USERNAME}}) registriert am {{TIMESTAMP}}\\nQuell-IP: {{IP_ADDRESS}}\\nMAC-Adresse: {{MAC_ADDRESS}}\\n\\nBiometrische Daten:\\n{{BIOMETRIC_IDENTIFIER}}\\n\\nZertifikat:\\n{{CERTIFICATE_NUMBER}}\\n\\nAPI-Schlüssel:\\n{{API_KEY}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 16,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "identification",
+      "hipaa",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Cher client {{NAME}},\\n\\nVotre compte bancaire {{BANK_ACCOUNT}} (IBAN: {{IBAN}}) a été crédité.\\n\\nDétails de la transaction:\\nMontant: {{MONEY}} {{CURRENCY}}\\nDate: {{DATE}} {{TIME}}\\nRéférence: {{REFERENCE_NUMBER}}\\n\\nVotre conseiller bancaire",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "structure_type": "form",
+    "estimated_word_count": 29,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{MEDICAL_FACILITY}}\\nPatienteninformation\\n========================\\nPatient: {{NAME}}\\nGeburtsdatum: {{DOB}}\\n\\nVersicherung:\\nNummer: {{HEALTHCARE_NUMBER}}\\n\\nMedizinische Daten:\\nDiagnose: {{MEDICAL_CONDITION}}\\nKrankheit: {{CONDITION}}\\nMedikament: {{DRUG}} {{DOSE}}\\nBlutgruppe: {{BLOOD_TYPE}}\\n\\nArzt:\\n{{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 22,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare",
+      "organization"
+    ]
+  },
+  {
+    "template": "Reiseunterlagen für {{NAME}}\\n==============================\\nPass: {{PASSPORT_NUMBER}} ({{NATIONALITY}})\\nGeboren: {{DOB}}\\n\\nAdresse:\\n{{STREET}}\\n{{POSTCODE}} {{CITY}}, Kanton {{CANTON}}\\n{{COUNTRY}}\\n\\nEmail: {{EMAIL_ADDRESS}}\\nTel: {{PHONE}}\\n\\nNotfallkontakt:\\n{{NAME}} ({{PHONE}})",
+    "locale": "de_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 25,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "identification",
+      "gdpr_sensitive"
+    ]
+  },
+  {
+    "template": "# Server Configuration\\n# Host: {{IP_ADDRESS}}\\n# Generated: {{TIMESTAMP}}\\n\\n[database]\\nuser = {{USERNAME}}\\npassword = {{PASSWORD}}\\nhost = {{IP_ADDRESS}}\\nport = 5432\\ndbname = {{REFERENCE_NUMBER}}\\n\\n[security]\\napi_key = {{API_KEY}}\\nprivate_key = {{PRIVATE_KEY}}\\nwallet = {{CRYPTO_WALLET}}\\n\\n[notifications]\\nemail = {{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 35,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "contact",
+      "financial",
+      "identification",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{NAME}}, {{JOB_TITLE}} bei {{COMPANY}}, geboren am {{DOB}}, wohnhaft {{STREET}} {{POSTCODE}} {{CITY}}, hat am {{DATE}} einen Arbeitsunfall gemeldet.\\n\\nVersicherungsdetails:\\nVersicherungsnummer: {{INSURANCE_NUMBER}}\\nPolizzennummer: {{POLICY_NUMBER}}\\n\\nVerletzung: {{INJURY}}\\n\\nFahrzeug: {{VEHICLE_ID}} (Führerschein: {{DRIVER_LICENSE}})",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "investigation",
+    "estimated_word_count": 37,
+    "pii_count": 14,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "identification",
+      "healthcare",
+      "organization",
+      "work",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Unfallbericht Nr. {{REFERENCE_NUMBER}}\\n==========================\\n\\nFahrzeug: {{VEHICLE_ID}}\\nFahrer: {{NAME}} (Führerschein: {{DRIVER_LICENSE}})\\n\\nUnfallort:\\n{{STREET}}, {{POSTCODE}} {{CITY}}\\nDatum/Zeit: {{DATE}} {{TIME}}\\n\\nVersicherung:\\n{{POLICY_NUMBER}} ({{INSURANCE_NUMBER}})\\n\\nSchadenshöhe: {{MONEY}} {{CURRENCY}}",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "investigation",
+    "estimated_word_count": 27,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "identification",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{ORGANIZATION}}\\nVertrauliche Mitarbeiterdaten (GDPR Art. 9)\\n=========================================\\n\\nPersönliche Daten:\\nName: {{NAME}}\\nGeschlecht: {{GENDER}}\\nGeburtstag: {{DOB}}\\n\\nSensitive Daten:\\nNationalität: {{NATIONALITY}}\\nReligion: {{RELIGION}}\\nPolitische Zugehörigkeit: {{POLITICAL_AFFILIATION}}\\nGewerkschaftsmitgliedschaft: {{TRADE_UNION_MEMBERSHIP}}\\nEthnizität: {{ETHNICITY}}\\nRasse: {{RACE}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 27,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "personal_identity",
+      "organization",
+      "gdpr_sensitive"
+    ]
+  },
+  {
+    "template": "{{FIRSTNAME}} {{LASTNAME}}\\n========================\\nPrimär: {{EMAIL_ADDRESS}}\\nBackup: {{EMAIL_ADDRESS}}\\n\\nTelefon:\\nDirekt: {{PHONE}}\\nDurchwahl: {{PHONE}}\\nFax: {{FAX}}\\n\\nAdresse:\\n{{STREET}}\\n{{POSTCODE}} {{CITY}}, Kanton {{CANTON}}\\n{{COUNTRY}}",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "structure_type": "list",
+    "estimated_word_count": 22,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location"
+    ]
+  },
+  {
+    "template": "Paiement confirmé\\n=================\\n\\nMontant: {{MONEY}} {{CURRENCY}}\\n\\nCarte de crédit:\\nNuméro: {{CREDIT_CARD}}\\nExpiration: {{CREDIT_CARD_EXPIRATION}}\\nCVV: {{CVV}}\\n\\nCoordonnées bancaires:\\nIBAN: {{IBAN}}\\n\\nRéférence: {{REFERENCE_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "structure_type": "form",
+    "estimated_word_count": 19,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "financial",
+      "secrets"
+    ]
+  },
+  {
+    "template": "{{NAME}} ({{AGE}} Jahre) aus {{CITY}} hat am {{DATE}} um {{TIME}} einen Termin bei Dr. {{MEDICAL_PROFESSIONAL}} vereinbart.\\n\\nPatientendaten:\\nName: {{NAME}}\\nGeburtstag: {{DOB}}\\nVersicherung: {{HEALTHCARE_NUMBER}}\\n\\nEmail: {{EMAIL_ADDRESS}}\\nTel: {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "narrative",
+    "estimated_word_count": 32,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "healthcare",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Zugriffsprotokoll\\n=================\\nURL: {{URL}}?user={{USERNAME}}&token={{API_KEY}}&id={{CUSTOMER_ID}}&ref={{REFERENCE_NUMBER}}\\n\\nClient-Informationen:\\nIP-Adresse: {{IP_ADDRESS}}\\nMAC-Adresse: {{MAC_ADDRESS}}\\nZeitstempel: {{TIMESTAMP}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 13,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{COMPANY}}\\nKundenstammblatt\\n================\\nKundennummer: {{CUSTOMER_ID}}\\n\\nName: {{NAME}}\\n\\nAdresse:\\n{{STREET}}\\n{{POSTCODE}} {{CITY}}\\n\\nTel: {{PHONE}}\\nFax: {{FAX}}\\nEmail: {{EMAIL_ADDRESS}}\\n\\nSteuerliche Informationen:\\nSteuernummer: {{TAX_ID_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 19,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "identification",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Gentile {{NAME}},\\n\\nLa sua prenotazione {{REFERENCE_NUMBER}} è confermata.\\n\\nDettagli della prenotazione:\\nData: {{DATE}} alle {{TIME}}\\n\\nIndirizzo:\\n{{LOCATION_ADDRESS}}\\n\\nContatto:\\nTelefono: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "it_CH",
+    "domain": "travel",
+    "structure_type": "form",
+    "estimated_word_count": 21,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{NAME}} ({{USERNAME}})\\n========================\\nAnmeldedaten:\\nBenutzername: {{USERNAME}}\\nPasswort: {{PASSWORD}}\\n\\nKontodaten:\\nKontonummer: {{ACCOUNT_NUMBER}}\\nBankleitzahl: {{BANK_ACCOUNT}}\\nRouting-Nummer: {{ROUTING_NUMBER}}\\nIBAN: {{IBAN}}\\n\\nKrypto:\\nWallet: {{CRYPTO_WALLET}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "code_config",
+    "estimated_word_count": 18,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "identification"
+    ]
+  },
+  {
+    "template": "Patientenakte\\n=============\\nName: {{NAME}}\\nGeburtsdatum: {{DOB}}\\nAHV-Nummer: {{SSN}}\\n\\nMedizinische Daten:\\nKrankheit: {{CONDITION}}\\nBlutgruppe: {{BLOOD_TYPE}}\\nMedikament: {{DRUG}} {{DOSE}}\\n\\nBehandelnder Arzt:\\n{{MEDICAL_PROFESSIONAL}}\\nLizenznummer: {{MEDICAL_LICENSE}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 20,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "healthcare"
+    ]
+  },
+  {
+    "template": "{{FIRSTNAME}} {{LASTNAME}}\\n========================\\nPosition: {{JOB_TITLE}}\\nFirma: {{COMPANY}}\\n\\nAdresse:\\n{{STREET}}, {{POSTCODE}} {{CITY}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}\\n\\nDokumente:\\nPass: {{PASSPORT_NUMBER}}\\nID-Karte: {{IDENTITY_CARD_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "list",
+    "estimated_word_count": 22,
+    "pii_count": 12,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "identification",
+      "organization",
+      "work"
+    ]
+  },
+  {
+    "template": "{{TIMESTAMP}} [WARNING] Authentifizierung fehlgeschlagen\\n=====================================================\\nBenutzer: {{USERNAME}}\\nQuell-IP: {{IP_ADDRESS}}\\n\\nGerätedaten:\\nMAC: {{MAC_ADDRESS}}\\nGeräte-ID: {{DEVICE_IDENTIFIER}}\\n\\nBiometrie:\\n{{BIOMETRIC_IDENTIFIER}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 14,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "hipaa",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{NAME}} ({{DOB}}, {{GENDER}})\\n===========================\\n\\nGDPR Art. 9 Daten:\\nEthnizität: {{ETHNICITY}}\\nRasse: {{RACE}}\\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\\nGenetische Daten: {{GENETIC_DATA}}\\nPolitische Meinung: {{POLITICAL}}\\nGewerkschaftszugehörigkeit: {{TRADE_UNION}}",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "form",
+    "estimated_word_count": 24,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "gdpr_sensitive"
+    ]
+  },
+  {
+    "template": "Bonjour {{FIRSTNAME}},\\n\\nVotre rendez-vous médical du {{DATE}} à {{TIME}} est confirmé.\\n\\nDétails du rendez-vous:\\nMédecin: Dr. {{MEDICAL_PROFESSIONAL}}\\nLieu: {{MEDICAL_FACILITY}}\\nAdresse: {{STREET}}, {{CITY}}\\n\\nContact:\\nTéléphone: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "form",
+    "estimated_word_count": 28,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "healthcare",
+      "organization",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{ORGANIZATION}}\\nProjektübersicht\\n================\\nProjekt: {{REFERENCE_NUMBER}}\\n\\nProjektleiter:\\nName: {{NAME}}\\nPosition: {{JOB_TITLE}}\\n\\nFinanzen:\\nBudget: {{MONEY}} {{CURRENCY}}\\nKonto: {{IBAN}}\\n\\nEmail: {{EMAIL_ADDRESS}}\\nTel: {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "non-profit",
+    "structure_type": "form",
+    "estimated_word_count": 19,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "financial",
+      "organization",
+      "work",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Registrierungsprotokoll\\n=======================\\nZeitstempel: {{TIMESTAMP}}\\n\\nBenutzerdaten:\\nName: {{NAME}}\\nEmail: {{EMAIL_ADDRESS}}\\nTelefon: {{PHONE}}\\n\\nAdresse:\\n{{LOCATION_ADDRESS}}\\n\\nPersönliche Daten:\\nGeburtstag: {{DOB}}\\nAHV-Nummer: {{SSN}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "log",
+    "estimated_word_count": 15,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{FIRSTNAME}} {{LASTNAME}}\\n========================\\n\\nAdresse:\\n{{STREET}}\\n{{POSTCODE}} {{CITY}}, {{STATE}}\\n{{COUNTRY}}\\n\\nTel: {{PHONE}}\\nFax: {{FAX}}\\nEmail: {{EMAIL_ADDRESS}}\\nWeb: {{URL}}",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "structure_type": "list",
+    "estimated_word_count": 19,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location"
+    ]
+  },
+  {
+    "template": "Arztbrief\\n=========\\n\\nAbsender:\\nDr. {{MEDICAL_PROFESSIONAL}}\\nLizenz-Nr.: {{MEDICAL_LICENSE}}\\n\\nPatient:\\n{{NAME}} ({{HEALTHCARE_NUMBER}})\\n\\nTermin:\\nDatum: {{DATE}}\\nUhrzeit: {{TIME}}\\n\\nDiagnose:\\n{{MEDICAL_CONDITION}}\\nBehandlung: {{MEDICAL_PROCESS}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 15,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{COMPANY}}\\nZahlungsbestätigung\\n===================\\n\\nKunde:\\nKundennummer: {{CUSTOMER_ID}}\\nName: {{NAME}}\\n\\nZahlungsmittel:\\nKreditkarte: {{CREDIT_CARD}}\\nAblaufdatum: {{CREDIT_CARD_EXPIRATION}}\\nCVV: {{CVV}}\\n\\nBetrag:\\n{{MONEY}} {{CURRENCY}}\\nDatum: {{DATE}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 17,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "organization",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Zugriffsprotokoll\\n=================\\nBenutzer: {{NAME}} ({{USERNAME}})\\nZeitpunkt: {{DATE}} {{TIME}}\\n\\nNetzwerk:\\nIP-Adresse: {{IP_ADDRESS}}\\nMAC-Adresse: {{MAC_ADDRESS}}\\n\\nAnwendung:\\nURL: {{URL}}\\nAPI-Schlüssel: {{API_KEY}}",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "structure_type": "log",
+    "estimated_word_count": 17,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "identification",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Monsieur {{FIRSTNAME}} {{LASTNAME}}, client depuis {{DATE}}, détient le compte {{BANK_ACCOUNT}} avec IBAN {{IBAN}}. Son numéro de téléphone {{PHONE}} et son email {{EMAIL_ADDRESS}} sont enregistrés. Il a effectué un virement de {{MONEY}} {{CURRENCY}} référencé {{REFERENCE_NUMBER}}.",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "structure_type": "narrative",
+    "estimated_word_count": 44,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "financial",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Antrag auf Aufenthaltsbewilligung\\n==================================\\n\\nName: {{NAME}}\\nGeburtstag: {{DOB}}\\nNationalität: {{NATIONALITY}}\\nReligion: {{RELIGION}}\\n\\nPolitische Zugehörigkeit: {{POLITICAL_AFFILIATION}}\\nGewerkschaft: {{TRADE_UNION_MEMBERSHIP}}\\n",
+    "locale": "de_CH",
+    "domain": "government",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "personal_identity",
+      "gdpr_sensitive"
+    ]
+  },
+  {
+    "template": "Konsultationsprotokoll\\n======================\\n\\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\\nGeburtstag: {{DOB}}\\nBlutgruppe: {{BLOOD_TYPE}}\\n\\nDiagnose: {{MEDICAL_CONDITION}}\\nMedikament: {{DRUG}} {{DOSE}}\\n\\nArzt: Dr. {{MEDICAL_PROFESSIONAL}} (Lizenz: {{MEDICAL_LICENSE}})",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 21,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare"
+    ]
+  },
+  {
+    "template": "Personalakte {{REFERENCE_NUMBER}}\\n==========================\\n\\nName: {{FIRSTNAME}} {{LASTNAME}}\\nPosition: {{JOB_TITLE}}\\nFirma: {{COMPANY}}\\n\\nAdresse:\\n{{STREET}}, {{POSTCODE}} {{CITY}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}\\n\\nSozialversicherung:\\nAHV: {{SSN}}\\nSteuer-Nr.: {{TAX_IDENTIFICATION_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 25,
+    "pii_count": 13,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "financial",
+      "identification",
+      "organization",
+      "work",
+      "secrets"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] Transaktion verarbeitet\\n======================================\\n\\nBenutzer: {{USERNAME}}\\nBetrag: {{MONEY}} {{CURRENCY}}\\n\\nZahlungsmittel:\\nKreditkarte: {{CREDIT_CARD}}\\nAblauf: {{CREDIT_CARD_EXPIRATION}}\\nCVV: {{CVV}}\\n\\nBankverbindung:\\nIBAN: {{IBAN}}\\n\\nKrypto-Wallet: {{CRYPTO_WALLET}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 20,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "financial",
+      "identification",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Conferma spedizione ordine {{REFERENCE_NUMBER}}\\n==============================================\\n\\nCliente: {{NAME}}\\n\\nIndirizzo di spedizione:\\n{{LOCATION_ADDRESS}}\\n\\nTracking:\\nCodice: {{VEHICLE_ID}}\\n\\nContatto:\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "it_CH",
+    "domain": "logistics",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "identification",
+      "secrets"
+    ]
+  },
+  {
+    "template": "# Sicherheitskonfiguration\\n# Benutzer: {{USERNAME}}\\n# Zeit: {{TIMESTAMP}}\\n\\n[anmeldedaten]\\npasswort = {{PASSWORD}}\\n\\n[network]\\nip = {{IP_ADDRESS}}\\nmac = {{MAC_ADDRESS}}\\n\\n[api]\\nkey = {{API_KEY}}\\nprivate_key = {{PRIVATE_KEY}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 23,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Betreff: AW: Steuerliche Auskunft {{REFERENCE_NUMBER}}\\n=====================================================\\n\\nVon: {{NAME}} <{{EMAIL_ADDRESS}}>\\nDatum: {{DATE}} {{TIME}}\\nAn: {{EMAIL_ADDRESS}}\\n\\nGuten Tag,\\n\\nmeine Steuer-ID lautet {{TAX_IDENTIFICATION_NUMBER}}\\nund meine Steuernummer ist {{TAX_ID_NUMBER}}.\\n\\n{{FIRSTNAME}} {{LASTNAME}}",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "structure_type": "dialog",
+    "estimated_word_count": 29,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "identification",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Vertraulich: Mitarbeiterdaten (GDPR Art. 9)\\n============================================\\n\\nName: {{NAME}}\\nGeburtstag: {{DOB}}\\nGeschlecht: {{GENDER}}\\n\\nSensitive Daten:\\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\\nFamilienstand: {{MARITAL_STATUS}}\\nGenetische Daten: {{GENETIC_DATA}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 20,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "personal_identity",
+      "gdpr_sensitive"
+    ]
+  },
+  {
+    "template": "Behandlungsprotokoll\\n====================\\n\\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\\nGeburtstag: {{DOB}}\\n\\nMedizinische Daten:\\nBlutgruppe: {{BLOOD_TYPE}}\\nKrankheit: {{MEDICAL_CONDITION}}\\nVerletzung: {{INJURY}}\\nBehandlung: {{MEDICAL_PROCESS}}\\n\\nArzt: {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 20,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare"
+    ]
+  },
+  {
+    "template": "{{COMPANY}} - Kundenportal\\n=========================\\n\\nKundennummer: {{CUSTOMER_ID}}\\n\\nName: {{NAME}}\\n\\nAdresse:\\n{{STREET}}\\n{{POSTCODE}} {{CITY}}\\nKanton: {{CANTON}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}\\n\\nSteuer-Nr.: {{TAX_ID_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 20,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "identification",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Reiseunterlagen {{PASSPORT_NUMBER}}\\n===============================\\n\\nReisender:\\nName: {{FIRSTNAME}} {{LASTNAME}}\\nStaatsangehörigkeit: {{NATIONALITY}}\\nGeboren: {{DOB}}\\n\\nAdresse:\\n{{STREET}}\\n{{POSTCODE}} {{CITY}}, Kanton {{CANTON}}\\n\\nEmail: {{EMAIL_ADDRESS}}\\nTel: {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 22,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "identification",
+      "gdpr_sensitive"
+    ]
+  },
+  {
+    "template": "{{TIMESTAMP}} [ALERT] Sicherheitsvorfall\\n=======================================\\n\\nBenutzer: {{USERNAME}}\\n\\nNetzwerk:\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}\\n\\nGerät:\\nID: {{DEVICE_IDENTIFIER}}\\nBiometrie: {{BIOMETRIC_IDENTIFIER}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 14,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "hipaa",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Attestation d'assurance {{POLICY_NUMBER}}\\n==========================================\\n\\nAssuré: {{FIRSTNAME}} {{LASTNAME}}\\n\\nNuméro d'assurance: {{INSURANCE_NUMBER}}\\n\\nCouverture: {{MONEY}} {{CURRENCY}}\\n\\nContact:\\nTél: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "fr_CH",
+    "domain": "insurance",
+    "structure_type": "form",
+    "estimated_word_count": 19,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "financial",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Studienteilnehmer {{REFERENCE_NUMBER}}\\n===================================\\n\\nName: {{NAME}} ({{AGE}} Jahre)\\nWohnort: {{CITY}}, Kanton {{CANTON}}\\n\\nPersönliche Überzeugungen:\\nReligion: {{RELIGION}}\\nPolitik: {{POLITICAL}}\\nGewerkschaft: {{TRADE_UNION}}\\n\\nEmail: {{EMAIL_ADDRESS}}\\nTel: {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "narrative",
+    "estimated_word_count": 24,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "gdpr_sensitive",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Arztbrief Nr. {{REFERENCE_NUMBER}}\\n===============================\\n\\nAbsender:\\nDr. {{MEDICAL_PROFESSIONAL}}\\nLizenz-Nr.: {{MEDICAL_LICENSE}}\\n\\nPatient:\\n{{NAME}}\\nGeburtstag: {{DOB}}\\nVersicherung: {{HEALTHCARE_NUMBER}}\\n\\nDiagnose: {{CONDITION}}\\nBehandlung: {{MEDICAL_PROCESS}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 17,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare",
+      "secrets"
+    ]
+  },
+  {
+    "template": "{{COMPANY}} - Rechnung {{REFERENCE_NUMBER}}\\n======================================\\n\\nKunde:\\nName: {{NAME}}\\n\\nAdresse:\\n{{LOCATION_ADDRESS}}\\n\\nZahlung:\\nBetrag: {{MONEY}} {{CURRENCY}}\\nKreditkarte: {{CREDIT_CARD}} (CVV: {{CVV}})",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 18,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "{{FIRSTNAME}} {{LASTNAME}}\\n========================\\n{{JOB_TITLE}}\\n{{COMPANY}}\\n\\nAdresse:\\n{{STREET}}, {{POSTCODE}} {{CITY}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}\\n\\nSozialversicherung:\\nAHV: {{SSN}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "list",
+    "estimated_word_count": 18,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "financial",
+      "organization",
+      "work"
+    ]
+  },
+  {
+    "template": "Systemzugriff {{DATE}} {{TIME}}\\n============================\\n\\nBenutzer: {{NAME}} ({{USERNAME}})\\n\\nNetzwerk:\\nIP-Adresse: {{IP_ADDRESS}}\\nMAC-Adresse: {{MAC_ADDRESS}}\\n\\nAnwendung:\\nURL: {{URL}}\\nAPI-Key: {{API_KEY}}\\nWallet: {{CRYPTO_WALLET}}",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "structure_type": "log",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "financial",
+      "identification",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Cartella Clinica {{MEDICAL_CODE}}\\n================================\\n\\nPaziente: {{NAME}}\\nData visita: {{DATE}} {{TIME}}\\n\\nDati medici:\\nCondizione: {{MEDICAL_CONDITION}}\\nFarmaco: {{DRUG}} {{DOSE}}\\nGruppo sanguigno: {{BLOOD_TYPE}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 21,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{ORGANIZATION}}\\nMitarbeiterprofil\\n=================\\n\\nName: {{NAME}}\\nPosition: {{JOB_TITLE}}\\nGeburtstag: {{DOB}}\\n\\nBankverbindung:\\nIBAN: {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 11,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "organization",
+      "work"
+    ]
+  },
+  {
+    "template": "Ethnographie-Studie Teilnehmer\\n==============================\\n\\nName: {{NAME}}\\nGeburtstag: {{DOB}}\\nGeschlecht: {{GENDER}}\\n\\nHerkunft:\\nNationalität: {{NATIONALITY}}\\nReligion: {{RELIGION}}\\n\\nEthnische Zugehörigkeit:\\nEthnizität: {{ETHNICITY}}\\nRasse: {{RACE}}",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "form",
+    "estimated_word_count": 17,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "gdpr_sensitive"
+    ]
+  },
+  {
+    "template": "Confirmation rendez-vous médical\\n=================================\\n\\nPatient: {{FIRSTNAME}} {{LASTNAME}}\\n\\nRendez-vous:\\nDate: {{DATE}} à {{TIME}}\\nMédecin: Dr. {{MEDICAL_PROFESSIONAL}}\\nLieu: {{MEDICAL_FACILITY}}\\nAdresse: {{STREET}}, {{CITY}}\\n\\nContact:\\nTél: {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "form",
+    "estimated_word_count": 23,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "healthcare",
+      "organization",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{COMPANY}}\\nKundenstammblatt {{CUSTOMER_ID}}\\n=============================\\n\\nName: {{NAME}}\\n\\nAdresse:\\n{{STREET}}, {{POSTCODE}} {{CITY}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}\\n\\nSteuerliche Informationen:\\nSteuernummer: {{TAX_ID_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 18,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "identification",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Reisepass {{PASSPORT_NUMBER}}\\n============================\\n\\nInhaber:\\nName: {{FIRSTNAME}} {{LASTNAME}}\\nFührerschein: {{DRIVER_LICENSE}}\\n\\nAdresse:\\n{{STREET}}\\n{{POSTCODE}} {{CITY}}, Kanton {{CANTON}}\\n{{COUNTRY}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 21,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "identification"
+    ]
+  },
+  {
+    "template": "Zahlungsauftrag {{TIMESTAMP}}\\n============================\\n\\nBetrag: {{MONEY}} {{CURRENCY}}\\n\\nZahlungsmittel:\\nKreditkarte: {{CREDIT_CARD}}\\nAblaufdatum: {{CREDIT_CARD_EXPIRATION}}\\nCVV: {{CVV}}\\n\\nBankverbindung:\\nIBAN: {{IBAN}}\\n\\nReferenz: {{REFERENCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 17,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "financial",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "# Bankzugangsdaten\\n# Kunde: {{USERNAME}}\\n\\n[login]\\npasswort = {{PASSWORD}}\\n\\n[konto]\\nnummer = {{ACCOUNT_NUMBER}}\\nbank = {{BANK_ACCOUNT}}\\nrouting = {{ROUTING_NUMBER}}\\niban = {{IBAN}}\\n\\n[crypto]\\nwallet = {{CRYPTO_WALLET}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "code_config",
+    "estimated_word_count": 23,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "financial",
+      "identification"
+    ]
+  },
+  {
+    "template": "Patientenakte {{HEALTHCARE_NUMBER}}\\n================================\\n\\nPatient:\\nName: {{NAME}}\\nGeburtstag: {{DOB}}\\n\\nMedizinische Daten:\\nBlutgruppe: {{BLOOD_TYPE}}\\nKrankheit: {{MEDICAL_CONDITION}}\\nVerletzung: {{INJURY}}\\nBehandlung: {{MEDICAL_PROCESS}}\\n\\nArzt:\\n{{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare"
+    ]
+  },
+  {
+    "template": "{{ORGANIZATION}}\\nProjekt {{REFERENCE_NUMBER}}\\n===========================\\n\\nProjektleiter:\\nName: {{NAME}}\\nPosition: {{JOB_TITLE}}\\n\\nFinanzen:\\nBudget: {{MONEY}} {{CURRENCY}}\\nKonto: {{IBAN}}\\n\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "non-profit",
+    "structure_type": "form",
+    "estimated_word_count": 17,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "financial",
+      "organization",
+      "work",
+      "secrets"
+    ]
+  },
+  {
+    "template": "{{FIRSTNAME}} {{LASTNAME}}, {{AGE}} Jahre, {{NATIONALITY}}\\n=====================================================\\n\\nPersönliche Überzeugungen:\\nReligion: {{RELIGION}}\\nPolitische Ausrichtung: {{POLITICAL_AFFILIATION}}\\nGewerkschaftszugehörigkeit: {{TRADE_UNION}}\\n\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "narrative",
+    "estimated_word_count": 19,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "gdpr_sensitive"
+    ]
+  },
+  {
+    "template": "Confirmation de paiement\\n=========================\\n\\nClient: {{NAME}}\\n\\nPaiement:\\nMontant: {{MONEY}} {{CURRENCY}}\\n\\nCarte de crédit:\\nNuméro: {{CREDIT_CARD}}\\nCVV: {{CVV}}\\nExpiration: {{CREDIT_CARD_EXPIRATION}}\\n\\nRéférence: {{REFERENCE_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 19,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Registrierungsprotokoll {{TIMESTAMP}}\\n==================================\\n\\nBenutzerdaten:\\nName: {{NAME}}\\nEmail: {{EMAIL_ADDRESS}}\\nTelefon: {{PHONE}}\\n\\nAdresse:\\n{{LOCATION_ADDRESS}}\\n\\nPersönliche Daten:\\nGeburtstag: {{DOB}}\\nID-Karte: {{IDENTITY_CARD_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "log",
+    "estimated_word_count": 15,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "identification",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{COMPANY}}\\nVertrauliche Mitarbeiterinformation\\n===================================\\nMitarbeiter: {{NAME}}\\nPosition: {{JOB_TITLE}}\\n\\nPersönliche Daten:\\nGeschlecht: {{GENDER}}\\nSexuelle Orientierung: {{SEXUAL_ORIENTATION}}\\nFamilienstand: {{MARITAL_STATUS}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "organization",
+      "gdpr_sensitive",
+      "work"
+    ]
+  },
+  {
+    "template": "Konsultation Dr. {{MEDICAL_PROFESSIONAL}}\\n======================================\\n\\nArzt:\\nName: Dr. {{MEDICAL_PROFESSIONAL}}\\nLizenz: {{MEDICAL_LICENSE}}\\n\\nPatient:\\nName: {{NAME}}\\nVersicherung: {{HEALTHCARE_NUMBER}}\\n\\nTermin:\\nDatum: {{DATE}} {{TIME}}\\n\\nDiagnose: {{CONDITION}}\\nBehandlung: {{MEDICAL_PROCESS}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 21,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{FIRSTNAME}} {{LASTNAME}}\\n========================\\n\\nAdresse:\\n{{STREET}}\\n{{POSTCODE}} {{CITY}}, {{STATE}}\\n{{COUNTRY}}\\n\\nTel: {{PHONE}}\\nFax: {{FAX}}\\nEmail: {{EMAIL_ADDRESS}}\\nWeb: {{URL}}",
+    "locale": "de_CH",
+    "domain": "real_estate",
+    "structure_type": "list",
+    "estimated_word_count": 19,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location"
+    ]
+  },
+  {
+    "template": "{{TIMESTAMP}} [INFO] Systemzugriff\\n=================================\\n\\nBenutzer: {{USERNAME}}\\n\\nNetzwerk:\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}\\n\\nGerät:\\nID: {{DEVICE_IDENTIFIER}}\\nZertifikat: {{CERTIFICATE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 14,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "hipaa",
+      "temporal"
+    ]
+  },
+  {
+    "template": "GDPR Art. 9 Daten\\n=================\\n\\nName: {{NAME}}\\nGeburtstag: {{DOB}}\\nGeschlecht: {{GENDER}}\\n\\nSensitive Daten:\\nEthnizität: {{ETHNICITY}}\\nRasse: {{RACE}}\\nGenetische Daten: {{GENETIC_DATA}}\\nPolitische Meinung: {{POLITICAL}}\\nGewerkschaft: {{TRADE_UNION_MEMBERSHIP}}",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "form",
+    "estimated_word_count": 23,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "gdpr_sensitive"
+    ]
+  },
+  {
+    "template": "Polizza assicurativa {{POLICY_NUMBER}}\\n===================================\\n\\nAssicurato: {{NAME}}\\n\\nDettagli polizza:\\nNumero assicurazione: {{INSURANCE_NUMBER}}\\n\\nContatto:\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "structure_type": "form",
+    "estimated_word_count": 14,
+    "pii_count": 5,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "secrets"
+    ]
+  },
+  {
+    "template": "{{COMPANY}}\\nPagamento cliente {{CUSTOMER_ID}}\\n==============================\\n\\nCliente: {{NAME}}\\n\\nPagamento:\\nCarta di credito: {{CREDIT_CARD}}\\nScadenza: {{CREDIT_CARD_EXPIRATION}}\\nCVV: {{CVV}}\\n\\nImporto: {{MONEY}} {{CURRENCY}}\\nData: {{DATE}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 21,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "organization",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "{{FIRSTNAME}} {{LASTNAME}}\\n========================\\n{{JOB_TITLE}}\\n{{COMPANY}}\\n\\nIndirizzo:\\n{{STREET}}, {{POSTCODE}} {{CITY}}\\n\\nContatto:\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}\\n\\nAssicurazione sociale:\\nAHV: {{SSN}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "list",
+    "estimated_word_count": 19,
+    "pii_count": 11,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "financial",
+      "organization",
+      "work"
+    ]
+  },
+  {
+    "template": "Zugriffsprotokoll {{DATE}} {{TIME}}\\n================================\\n\\nBenutzer: {{NAME}} ({{USERNAME}})\\n\\nNetzwerk:\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}\\n\\nAnwendung:\\nURL: {{URL}}\\nAPI-Key: {{API_KEY}}",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "structure_type": "log",
+    "estimated_word_count": 17,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "identification",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Patienteninformationen\\n======================\\n\\nPatient:\\nName: {{NAME}}\\nGeburtstag: {{DOB}}\\n\\nVersicherung:\\nNummer: {{HEALTHCARE_NUMBER}}\\n\\nMedizinische Daten:\\nBlutgruppe: {{BLOOD_TYPE}}\\nKrankheit: {{MEDICAL_CONDITION}}\\nMedikament: {{DRUG}} {{DOSE}}\\n\\nArzt: {{MEDICAL_PROFESSIONAL}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 18,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare"
+    ]
+  },
+  {
+    "template": "{{ORGANIZATION}}\\nMitarbeiterdaten\\n================\\n\\nName: {{NAME}}\\n\\nPersönliche Daten:\\nGeburtstag: {{DOB}}\\nNationalität: {{NATIONALITY}}\\nReligion: {{RELIGION}}\\n\\nPolitische Daten:\\nPartei: {{POLITICAL_AFFILIATION}}\\nGewerkschaft: {{TRADE_UNION_MEMBERSHIP}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "organization",
+      "gdpr_sensitive"
+    ]
+  },
+  {
+    "template": "{{FIRSTNAME}} {{LASTNAME}}\\n========================\\n\\nEmail:\\nPrimär: {{EMAIL_ADDRESS}}\\nBackup: {{EMAIL_ADDRESS}}\\n\\nTelefon:\\nDirekt: {{PHONE}}\\n\\nAdresse:\\n{{STREET}}\\n{{POSTCODE}} {{CITY}}, Kanton {{CANTON}}",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "structure_type": "list",
+    "estimated_word_count": 17,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location"
+    ]
+  },
+  {
+    "template": "Cher {{FIRSTNAME}} {{LASTNAME}},\\n\\nVotre compte {{ACCOUNT_NUMBER}} a été débité.\\n\\nDétails de l'opération:\\nMontant: {{MONEY}} {{CURRENCY}}\\nIBAN: {{IBAN}}\\nRéférence: {{REFERENCE_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "structure_type": "form",
+    "estimated_word_count": 21,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Kundenprofil {{NAME}}\\n====================\\n\\nPersönliche Daten:\\nAlter: {{AGE}} Jahre\\nWohnort: {{CITY}}\\n\\nEmail: {{EMAIL_ADDRESS}}\\nTel: {{PHONE}}\\n\\nAdresse:\\n{{LOCATION_ADDRESS}}\\n\\nGeburtstag: {{DOB}}\\nAHV: {{SSN}}",
+    "locale": "de_CH",
+    "domain": "customer_service",
+    "structure_type": "narrative",
+    "estimated_word_count": 18,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "financial"
+    ]
+  },
+  {
+    "template": "{{TIMESTAMP}} Transaktion genehmigt\\n==================================\\n\\nBetrag: {{MONEY}} {{CURRENCY}}\\n\\nKreditkarte:\\nNummer: {{CREDIT_CARD}}\\nAblauf: {{CREDIT_CARD_EXPIRATION}}\\nCVV: {{CVV}}\\n\\nKrypto:\\nWallet: {{CRYPTO_WALLET}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 16,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "# Sicherheitsdaten\\n# Benutzer: {{USERNAME}}\\n\\n[anmeldedaten]\\npasswort = {{PASSWORD}}\\n\\n[network]\\nip = {{IP_ADDRESS}}\\nmac = {{MAC_ADDRESS}}\\n\\n[api]\\nkey = {{API_KEY}}\\nprivate_key = {{PRIVATE_KEY}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 20,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "secrets"
+    ]
+  },
+  {
+    "template": "{{COMPANY}}\\nKundenstammblatt {{CUSTOMER_ID}}\\n=============================\\n\\nName: {{NAME}}\\n\\nAdresse:\\n{{STREET}}\\n{{POSTCODE}} {{CITY}}\\n\\nTel: {{PHONE}} | Fax: {{FAX}}\\nEmail: {{EMAIL_ADDRESS}}\\n\\nSteuer-Nr.: {{TAX_ID_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 20,
+    "pii_count": 10,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "identification",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Patientenakte\\n=============\\n\\nPatient:\\nName: {{NAME}}\\nVersicherung: {{HEALTHCARE_NUMBER}}\\nGeburtstag: {{DOB}}\\n\\nMedizinische Daten:\\nBlutgruppe: {{BLOOD_TYPE}}\\nKrankheit: {{CONDITION}}\\n\\nArzt:\\n{{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 15,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare"
+    ]
+  },
+  {
+    "template": "Flugbuchung {{REFERENCE_NUMBER}}\\n==========================\\n\\nPassagier:\\nName: {{FIRSTNAME}} {{LASTNAME}}\\nPass: {{PASSPORT_NUMBER}}\\nNationalität: {{NATIONALITY}}\\n\\nFlugdetails:\\nDatum: {{DATE}}\\nSitz: {{VEHICLE_ID}}\\n\\nEmail: {{EMAIL_ADDRESS}}\\nTel: {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "identification",
+      "gdpr_sensitive",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Flugbuchung {{REFERENCE_NUMBER}}\\n==========================\\n\\nPassagier:\\nName: {{FIRSTNAME}} {{LASTNAME}}\\nPass: {{PASSPORT_NUMBER}}\\nNationalität: {{NATIONALITY}}\\n\\nFlugdetails:\\nDatum: {{DATE}}\\nSitz: {{VEHICLE_ID}}\\n\\nEmail: {{EMAIL_ADDRESS}}\\nTel: {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "identification",
+      "gdpr_sensitive",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Flugbuchung {{REFERENCE_NUMBER}}\\n==========================\\n\\nPassagier:\\nName: {{FIRSTNAME}} {{LASTNAME}}\\nPass: {{PASSPORT_NUMBER}}\\nNationalität: {{NATIONALITY}}\\n\\nFlugdetails:\\nDatum: {{DATE}}\\nSitz: {{VEHICLE_ID}}\\n\\nEmail: {{EMAIL_ADDRESS}}\\nTel: {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "identification",
+      "gdpr_sensitive",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Flugbuchung {{REFERENCE_NUMBER}}\\n==========================\\n\\nPassagier:\\nName: {{FIRSTNAME}} {{LASTNAME}}\\nPass: {{PASSPORT_NUMBER}}\\nNationalität: {{NATIONALITY}}\\n\\nFlugdetails:\\nDatum: {{DATE}}\\nSitz: {{VEHICLE_ID}}\\n\\nEmail: {{EMAIL_ADDRESS}}\\nTel: {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "identification",
+      "gdpr_sensitive",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Flugbuchung {{REFERENCE_NUMBER}}\\n==========================\\n\\nPassagier:\\nName: {{FIRSTNAME}} {{LASTNAME}}\\nPass: {{PASSPORT_NUMBER}}\\nNationalität: {{NATIONALITY}}\\n\\nFlugdetails:\\nDatum: {{DATE}}\\nSitz: {{VEHICLE_ID}}\\n\\nEmail: {{EMAIL_ADDRESS}}\\nTel: {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "identification",
+      "gdpr_sensitive",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] API-Aufruf\\n======================\\n\\nBenutzer: {{USERNAME}}\\nAPI-Key: {{API_KEY}}\\n\\nNetzwerk:\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}\\n\\nGerät: {{DEVICE_IDENTIFIER}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "hipaa",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] API-Aufruf\\n======================\\n\\nBenutzer: {{USERNAME}}\\nAPI-Key: {{API_KEY}}\\n\\nNetzwerk:\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}\\n\\nGerät: {{DEVICE_IDENTIFIER}}",
+    "locale": "fr_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "hipaa",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] API-Aufruf\\n======================\\n\\nBenutzer: {{USERNAME}}\\nAPI-Key: {{API_KEY}}\\n\\nNetzwerk:\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}\\n\\nGerät: {{DEVICE_IDENTIFIER}}",
+    "locale": "it_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "hipaa",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] API-Aufruf\\n======================\\n\\nBenutzer: {{USERNAME}}\\nAPI-Key: {{API_KEY}}\\n\\nNetzwerk:\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}\\n\\nGerät: {{DEVICE_IDENTIFIER}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "hipaa",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "[{{TIMESTAMP}}] API-Aufruf\\n======================\\n\\nBenutzer: {{USERNAME}}\\nAPI-Key: {{API_KEY}}\\n\\nNetzwerk:\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}\\n\\nGerät: {{DEVICE_IDENTIFIER}}",
+    "locale": "fr_CH",
+    "domain": "tech",
+    "structure_type": "log",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "hipaa",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Laborergebnisse {{REFERENCE_NUMBER}}\\n============================\\n\\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\\nGeburtstag: {{DOB}}\\nBlutgruppe: {{BLOOD_TYPE}}\\n\\nBefund: {{MEDICAL_CONDITION}}\\nCode: {{MEDICAL_CODE}}\\n\\nArzt: {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Laborergebnisse {{REFERENCE_NUMBER}}\\n============================\\n\\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\\nGeburtstag: {{DOB}}\\nBlutgruppe: {{BLOOD_TYPE}}\\n\\nBefund: {{MEDICAL_CONDITION}}\\nCode: {{MEDICAL_CODE}}\\n\\nArzt: {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Laborergebnisse {{REFERENCE_NUMBER}}\\n============================\\n\\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\\nGeburtstag: {{DOB}}\\nBlutgruppe: {{BLOOD_TYPE}}\\n\\nBefund: {{MEDICAL_CONDITION}}\\nCode: {{MEDICAL_CODE}}\\n\\nArzt: {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Laborergebnisse {{REFERENCE_NUMBER}}\\n============================\\n\\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\\nGeburtstag: {{DOB}}\\nBlutgruppe: {{BLOOD_TYPE}}\\n\\nBefund: {{MEDICAL_CONDITION}}\\nCode: {{MEDICAL_CODE}}\\n\\nArzt: {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Laborergebnisse {{REFERENCE_NUMBER}}\\n============================\\n\\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\\nGeburtstag: {{DOB}}\\nBlutgruppe: {{BLOOD_TYPE}}\\n\\nBefund: {{MEDICAL_CONDITION}}\\nCode: {{MEDICAL_CODE}}\\n\\nArzt: {{MEDICAL_PROFESSIONAL}} ({{MEDICAL_LICENSE}})",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Lohnabrechnung {{REFERENCE_NUMBER}}\\n=========================\\n\\nMitarbeiter: {{NAME}}\\nPosition: {{JOB_TITLE}}\\nGeburtstag: {{DOB}}\\nAHV: {{SSN}}\\n\\nGehalt: {{MONEY}} {{CURRENCY}}\\nBank: {{IBAN}}",
+    "locale": "fr_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 18,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "organization",
+      "work",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Lohnabrechnung {{REFERENCE_NUMBER}}\\n=========================\\n\\nMitarbeiter: {{NAME}}\\nPosition: {{JOB_TITLE}}\\nGeburtstag: {{DOB}}\\nAHV: {{SSN}}\\n\\nGehalt: {{MONEY}} {{CURRENCY}}\\nBank: {{IBAN}}",
+    "locale": "it_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 18,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "organization",
+      "work",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Lohnabrechnung {{REFERENCE_NUMBER}}\\n=========================\\n\\nMitarbeiter: {{NAME}}\\nPosition: {{JOB_TITLE}}\\nGeburtstag: {{DOB}}\\nAHV: {{SSN}}\\n\\nGehalt: {{MONEY}} {{CURRENCY}}\\nBank: {{IBAN}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 18,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "organization",
+      "work",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Lohnabrechnung {{REFERENCE_NUMBER}}\\n=========================\\n\\nMitarbeiter: {{NAME}}\\nPosition: {{JOB_TITLE}}\\nGeburtstag: {{DOB}}\\nAHV: {{SSN}}\\n\\nGehalt: {{MONEY}} {{CURRENCY}}\\nBank: {{IBAN}}",
+    "locale": "fr_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 18,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "organization",
+      "work",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Lohnabrechnung {{REFERENCE_NUMBER}}\\n=========================\\n\\nMitarbeiter: {{NAME}}\\nPosition: {{JOB_TITLE}}\\nGeburtstag: {{DOB}}\\nAHV: {{SSN}}\\n\\nGehalt: {{MONEY}} {{CURRENCY}}\\nBank: {{IBAN}}",
+    "locale": "it_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 18,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "organization",
+      "work",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Überweisung {{TIMESTAMP}}\\n=====================\\n\\nVon: {{NAME}} ({{IBAN}})\\nBetrag: {{MONEY}} {{CURRENCY}}\\n\\nKonto: {{ACCOUNT_NUMBER}}\\nBank: {{BANK_ACCOUNT}}\\nRouting: {{ROUTING_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 17,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Überweisung {{TIMESTAMP}}\\n=====================\\n\\nVon: {{NAME}} ({{IBAN}})\\nBetrag: {{MONEY}} {{CURRENCY}}\\n\\nKonto: {{ACCOUNT_NUMBER}}\\nBank: {{BANK_ACCOUNT}}\\nRouting: {{ROUTING_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 17,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Überweisung {{TIMESTAMP}}\\n=====================\\n\\nVon: {{NAME}} ({{IBAN}})\\nBetrag: {{MONEY}} {{CURRENCY}}\\n\\nKonto: {{ACCOUNT_NUMBER}}\\nBank: {{BANK_ACCOUNT}}\\nRouting: {{ROUTING_NUMBER}}",
+    "locale": "it_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 17,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Überweisung {{TIMESTAMP}}\\n=====================\\n\\nVon: {{NAME}} ({{IBAN}})\\nBetrag: {{MONEY}} {{CURRENCY}}\\n\\nKonto: {{ACCOUNT_NUMBER}}\\nBank: {{BANK_ACCOUNT}}\\nRouting: {{ROUTING_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 17,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Überweisung {{TIMESTAMP}}\\n=====================\\n\\nVon: {{NAME}} ({{IBAN}})\\nBetrag: {{MONEY}} {{CURRENCY}}\\n\\nKonto: {{ACCOUNT_NUMBER}}\\nBank: {{BANK_ACCOUNT}}\\nRouting: {{ROUTING_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 17,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Bestellung {{REFERENCE_NUMBER}}\\n======================\\n\\nKunde: {{NAME}} ({{CUSTOMER_ID}})\\n\\nAdresse:\\n{{LOCATION_ADDRESS}}\\n\\nZahlung:\\nKarte: {{CREDIT_CARD}} ({{CVV}})\\nBetrag: {{MONEY}} {{CURRENCY}}",
+    "locale": "it_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Bestellung {{REFERENCE_NUMBER}}\\n======================\\n\\nKunde: {{NAME}} ({{CUSTOMER_ID}})\\n\\nAdresse:\\n{{LOCATION_ADDRESS}}\\n\\nZahlung:\\nKarte: {{CREDIT_CARD}} ({{CVV}})\\nBetrag: {{MONEY}} {{CURRENCY}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Bestellung {{REFERENCE_NUMBER}}\\n======================\\n\\nKunde: {{NAME}} ({{CUSTOMER_ID}})\\n\\nAdresse:\\n{{LOCATION_ADDRESS}}\\n\\nZahlung:\\nKarte: {{CREDIT_CARD}} ({{CVV}})\\nBetrag: {{MONEY}} {{CURRENCY}}",
+    "locale": "fr_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Bestellung {{REFERENCE_NUMBER}}\\n======================\\n\\nKunde: {{NAME}} ({{CUSTOMER_ID}})\\n\\nAdresse:\\n{{LOCATION_ADDRESS}}\\n\\nZahlung:\\nKarte: {{CREDIT_CARD}} ({{CVV}})\\nBetrag: {{MONEY}} {{CURRENCY}}",
+    "locale": "it_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Bestellung {{REFERENCE_NUMBER}}\\n======================\\n\\nKunde: {{NAME}} ({{CUSTOMER_ID}})\\n\\nAdresse:\\n{{LOCATION_ADDRESS}}\\n\\nZahlung:\\nKarte: {{CREDIT_CARD}} ({{CVV}})\\nBetrag: {{MONEY}} {{CURRENCY}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Schadenmeldung {{POLICY_NUMBER}}\\n=========================\\n\\nVersicherter: {{NAME}}\\nVersicherung: {{INSURANCE_NUMBER}}\\n\\nSchaden:\\nDatum: {{DATE}} {{TIME}}\\nOrt: {{STREET}}, {{CITY}}\\nSchadenhöhe: {{MONEY}} {{CURRENCY}}",
+    "locale": "fr_CH",
+    "domain": "insurance",
+    "structure_type": "investigation",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Schadenmeldung {{POLICY_NUMBER}}\\n=========================\\n\\nVersicherter: {{NAME}}\\nVersicherung: {{INSURANCE_NUMBER}}\\n\\nSchaden:\\nDatum: {{DATE}} {{TIME}}\\nOrt: {{STREET}}, {{CITY}}\\nSchadenhöhe: {{MONEY}} {{CURRENCY}}",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "structure_type": "investigation",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Schadenmeldung {{POLICY_NUMBER}}\\n=========================\\n\\nVersicherter: {{NAME}}\\nVersicherung: {{INSURANCE_NUMBER}}\\n\\nSchaden:\\nDatum: {{DATE}} {{TIME}}\\nOrt: {{STREET}}, {{CITY}}\\nSchadenhöhe: {{MONEY}} {{CURRENCY}}",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "investigation",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Schadenmeldung {{POLICY_NUMBER}}\\n=========================\\n\\nVersicherter: {{NAME}}\\nVersicherung: {{INSURANCE_NUMBER}}\\n\\nSchaden:\\nDatum: {{DATE}} {{TIME}}\\nOrt: {{STREET}}, {{CITY}}\\nSchadenhöhe: {{MONEY}} {{CURRENCY}}",
+    "locale": "fr_CH",
+    "domain": "insurance",
+    "structure_type": "investigation",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Schadenmeldung {{POLICY_NUMBER}}\\n=========================\\n\\nVersicherter: {{NAME}}\\nVersicherung: {{INSURANCE_NUMBER}}\\n\\nSchaden:\\nDatum: {{DATE}} {{TIME}}\\nOrt: {{STREET}}, {{CITY}}\\nSchadenhöhe: {{MONEY}} {{CURRENCY}}",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "structure_type": "investigation",
+    "estimated_word_count": 19,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Umfrageteilnehmer {{REFERENCE_NUMBER}}\\n============================\\n\\nName: {{NAME}} ({{AGE}})\\nWohnort: {{CITY}}, Kanton {{CANTON}}\\n\\nDaten:\\nReligion: {{RELIGION}}\\nPolitik: {{POLITICAL}}\\nEthnizität: {{ETHNICITY}}",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "narrative",
+    "estimated_word_count": 18,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "gdpr_sensitive",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Umfrageteilnehmer {{REFERENCE_NUMBER}}\\n============================\\n\\nName: {{NAME}} ({{AGE}})\\nWohnort: {{CITY}}, Kanton {{CANTON}}\\n\\nDaten:\\nReligion: {{RELIGION}}\\nPolitik: {{POLITICAL}}\\nEthnizität: {{ETHNICITY}}",
+    "locale": "fr_CH",
+    "domain": "research",
+    "structure_type": "narrative",
+    "estimated_word_count": 18,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "gdpr_sensitive",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Umfrageteilnehmer {{REFERENCE_NUMBER}}\\n============================\\n\\nName: {{NAME}} ({{AGE}})\\nWohnort: {{CITY}}, Kanton {{CANTON}}\\n\\nDaten:\\nReligion: {{RELIGION}}\\nPolitik: {{POLITICAL}}\\nEthnizität: {{ETHNICITY}}",
+    "locale": "it_CH",
+    "domain": "research",
+    "structure_type": "narrative",
+    "estimated_word_count": 18,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "gdpr_sensitive",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Umfrageteilnehmer {{REFERENCE_NUMBER}}\\n============================\\n\\nName: {{NAME}} ({{AGE}})\\nWohnort: {{CITY}}, Kanton {{CANTON}}\\n\\nDaten:\\nReligion: {{RELIGION}}\\nPolitik: {{POLITICAL}}\\nEthnizität: {{ETHNICITY}}",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "narrative",
+    "estimated_word_count": 18,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "gdpr_sensitive",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Umfrageteilnehmer {{REFERENCE_NUMBER}}\\n============================\\n\\nName: {{NAME}} ({{AGE}})\\nWohnort: {{CITY}}, Kanton {{CANTON}}\\n\\nDaten:\\nReligion: {{RELIGION}}\\nPolitik: {{POLITICAL}}\\nEthnizität: {{ETHNICITY}}",
+    "locale": "fr_CH",
+    "domain": "research",
+    "structure_type": "narrative",
+    "estimated_word_count": 18,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "gdpr_sensitive",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Rechnung {{COMPANY}}\\n==================\\n\\nKunde: {{NAME}} ({{CUSTOMER_ID}})\\n\\nAdresse:\\n{{STREET}}\\n{{POSTCODE}} {{CITY}}\\n\\nBetrag: {{MONEY}} {{CURRENCY}}\\nSteuer-Nr.: {{TAX_ID_NUMBER}}",
+    "locale": "it_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 17,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "identification",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Rechnung {{COMPANY}}\\n==================\\n\\nKunde: {{NAME}} ({{CUSTOMER_ID}})\\n\\nAdresse:\\n{{STREET}}\\n{{POSTCODE}} {{CITY}}\\n\\nBetrag: {{MONEY}} {{CURRENCY}}\\nSteuer-Nr.: {{TAX_ID_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 17,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "identification",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Rechnung {{COMPANY}}\\n==================\\n\\nKunde: {{NAME}} ({{CUSTOMER_ID}})\\n\\nAdresse:\\n{{STREET}}\\n{{POSTCODE}} {{CITY}}\\n\\nBetrag: {{MONEY}} {{CURRENCY}}\\nSteuer-Nr.: {{TAX_ID_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 17,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "identification",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Rechnung {{COMPANY}}\\n==================\\n\\nKunde: {{NAME}} ({{CUSTOMER_ID}})\\n\\nAdresse:\\n{{STREET}}\\n{{POSTCODE}} {{CITY}}\\n\\nBetrag: {{MONEY}} {{CURRENCY}}\\nSteuer-Nr.: {{TAX_ID_NUMBER}}",
+    "locale": "it_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 17,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "identification",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Rechnung {{COMPANY}}\\n==================\\n\\nKunde: {{NAME}} ({{CUSTOMER_ID}})\\n\\nAdresse:\\n{{STREET}}\\n{{POSTCODE}} {{CITY}}\\n\\nBetrag: {{MONEY}} {{CURRENCY}}\\nSteuer-Nr.: {{TAX_ID_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 17,
+    "pii_count": 9,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "financial",
+      "identification",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Verbindungsprotokoll {{DATE}}\\n==========================\\n\\nBenutzer: {{USERNAME}}\\nTelefon: {{PHONE}}\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}\\nURL: {{URL}}",
+    "locale": "fr_CH",
+    "domain": "telecom",
+    "structure_type": "log",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Verbindungsprotokoll {{DATE}}\\n==========================\\n\\nBenutzer: {{USERNAME}}\\nTelefon: {{PHONE}}\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}\\nURL: {{URL}}",
+    "locale": "it_CH",
+    "domain": "telecom",
+    "structure_type": "log",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Verbindungsprotokoll {{DATE}}\\n==========================\\n\\nBenutzer: {{USERNAME}}\\nTelefon: {{PHONE}}\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}\\nURL: {{URL}}",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "structure_type": "log",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Verbindungsprotokoll {{DATE}}\\n==========================\\n\\nBenutzer: {{USERNAME}}\\nTelefon: {{PHONE}}\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}\\nURL: {{URL}}",
+    "locale": "fr_CH",
+    "domain": "telecom",
+    "structure_type": "log",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Verbindungsprotokoll {{DATE}}\\n==========================\\n\\nBenutzer: {{USERNAME}}\\nTelefon: {{PHONE}}\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}\\nURL: {{URL}}",
+    "locale": "it_CH",
+    "domain": "telecom",
+    "structure_type": "log",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Rückerstattung {{REFERENCE_NUMBER}}\\n=========================\\n\\nKunde: {{NAME}}\\nKundennummer: {{CUSTOMER_ID}}\\n\\nZahlungsmittel:\\nKarte: {{CREDIT_CARD}}\\nIBAN: {{IBAN}}\\n\\nBetrag: {{MONEY}} {{CURRENCY}}\\nDatum: {{DATE}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 17,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Rückerstattung {{REFERENCE_NUMBER}}\\n=========================\\n\\nKunde: {{NAME}}\\nKundennummer: {{CUSTOMER_ID}}\\n\\nZahlungsmittel:\\nKarte: {{CREDIT_CARD}}\\nIBAN: {{IBAN}}\\n\\nBetrag: {{MONEY}} {{CURRENCY}}\\nDatum: {{DATE}}",
+    "locale": "fr_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 17,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Rückerstattung {{REFERENCE_NUMBER}}\\n=========================\\n\\nKunde: {{NAME}}\\nKundennummer: {{CUSTOMER_ID}}\\n\\nZahlungsmittel:\\nKarte: {{CREDIT_CARD}}\\nIBAN: {{IBAN}}\\n\\nBetrag: {{MONEY}} {{CURRENCY}}\\nDatum: {{DATE}}",
+    "locale": "it_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 17,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Rückerstattung {{REFERENCE_NUMBER}}\\n=========================\\n\\nKunde: {{NAME}}\\nKundennummer: {{CUSTOMER_ID}}\\n\\nZahlungsmittel:\\nKarte: {{CREDIT_CARD}}\\nIBAN: {{IBAN}}\\n\\nBetrag: {{MONEY}} {{CURRENCY}}\\nDatum: {{DATE}}",
+    "locale": "de_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 17,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Rückerstattung {{REFERENCE_NUMBER}}\\n=========================\\n\\nKunde: {{NAME}}\\nKundennummer: {{CUSTOMER_ID}}\\n\\nZahlungsmittel:\\nKarte: {{CREDIT_CARD}}\\nIBAN: {{IBAN}}\\n\\nBetrag: {{MONEY}} {{CURRENCY}}\\nDatum: {{DATE}}",
+    "locale": "fr_CH",
+    "domain": "ecommerce",
+    "structure_type": "form",
+    "estimated_word_count": 17,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "financial",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Genetik-Studie Teilnehmer {{REFERENCE_NUMBER}}\\n=====================================\\n\\nName: {{NAME}}\\nGeburtstag: {{DOB}}\\nGeschlecht: {{GENDER}}\\n\\nDaten:\\nGenetik: {{GENETIC_DATA}}\\nEthnizität: {{ETHNICITY}}\\nRasse: {{RACE}}",
+    "locale": "it_CH",
+    "domain": "research",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "gdpr_sensitive",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Genetik-Studie Teilnehmer {{REFERENCE_NUMBER}}\\n=====================================\\n\\nName: {{NAME}}\\nGeburtstag: {{DOB}}\\nGeschlecht: {{GENDER}}\\n\\nDaten:\\nGenetik: {{GENETIC_DATA}}\\nEthnizität: {{ETHNICITY}}\\nRasse: {{RACE}}",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "gdpr_sensitive",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Genetik-Studie Teilnehmer {{REFERENCE_NUMBER}}\\n=====================================\\n\\nName: {{NAME}}\\nGeburtstag: {{DOB}}\\nGeschlecht: {{GENDER}}\\n\\nDaten:\\nGenetik: {{GENETIC_DATA}}\\nEthnizität: {{ETHNICITY}}\\nRasse: {{RACE}}",
+    "locale": "fr_CH",
+    "domain": "research",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "gdpr_sensitive",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Genetik-Studie Teilnehmer {{REFERENCE_NUMBER}}\\n=====================================\\n\\nName: {{NAME}}\\nGeburtstag: {{DOB}}\\nGeschlecht: {{GENDER}}\\n\\nDaten:\\nGenetik: {{GENETIC_DATA}}\\nEthnizität: {{ETHNICITY}}\\nRasse: {{RACE}}",
+    "locale": "it_CH",
+    "domain": "research",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "gdpr_sensitive",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Genetik-Studie Teilnehmer {{REFERENCE_NUMBER}}\\n=====================================\\n\\nName: {{NAME}}\\nGeburtstag: {{DOB}}\\nGeschlecht: {{GENDER}}\\n\\nDaten:\\nGenetik: {{GENETIC_DATA}}\\nEthnizität: {{ETHNICITY}}\\nRasse: {{RACE}}",
+    "locale": "de_CH",
+    "domain": "research",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "gdpr_sensitive",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Policeänderung {{POLICY_NUMBER}}\\n==========================\\n\\nVersicherter: {{FIRSTNAME}} {{LASTNAME}}\\nVersicherung: {{INSURANCE_NUMBER}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "fr_CH",
+    "domain": "insurance",
+    "structure_type": "form",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Policeänderung {{POLICY_NUMBER}}\\n==========================\\n\\nVersicherter: {{FIRSTNAME}} {{LASTNAME}}\\nVersicherung: {{INSURANCE_NUMBER}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "structure_type": "form",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Policeänderung {{POLICY_NUMBER}}\\n==========================\\n\\nVersicherter: {{FIRSTNAME}} {{LASTNAME}}\\nVersicherung: {{INSURANCE_NUMBER}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "insurance",
+    "structure_type": "form",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Policeänderung {{POLICY_NUMBER}}\\n==========================\\n\\nVersicherter: {{FIRSTNAME}} {{LASTNAME}}\\nVersicherung: {{INSURANCE_NUMBER}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "fr_CH",
+    "domain": "insurance",
+    "structure_type": "form",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Policeänderung {{POLICY_NUMBER}}\\n==========================\\n\\nVersicherter: {{FIRSTNAME}} {{LASTNAME}}\\nVersicherung: {{INSURANCE_NUMBER}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "it_CH",
+    "domain": "insurance",
+    "structure_type": "form",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Zählerstand {{COMPANY}}\\n=====================\\n\\nKunde: {{NAME}} ({{CUSTOMER_ID}})\\n\\nAdresse:\\n{{STREET}}, {{POSTCODE}} {{CITY}}\\n\\nZählerstand: {{REFERENCE_NUMBER}}\\nSteuer-Nr.: {{TAX_ID_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "identification",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Zählerstand {{COMPANY}}\\n=====================\\n\\nKunde: {{NAME}} ({{CUSTOMER_ID}})\\n\\nAdresse:\\n{{STREET}}, {{POSTCODE}} {{CITY}}\\n\\nZählerstand: {{REFERENCE_NUMBER}}\\nSteuer-Nr.: {{TAX_ID_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "identification",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Zählerstand {{COMPANY}}\\n=====================\\n\\nKunde: {{NAME}} ({{CUSTOMER_ID}})\\n\\nAdresse:\\n{{STREET}}, {{POSTCODE}} {{CITY}}\\n\\nZählerstand: {{REFERENCE_NUMBER}}\\nSteuer-Nr.: {{TAX_ID_NUMBER}}",
+    "locale": "it_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "identification",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Zählerstand {{COMPANY}}\\n=====================\\n\\nKunde: {{NAME}} ({{CUSTOMER_ID}})\\n\\nAdresse:\\n{{STREET}}, {{POSTCODE}} {{CITY}}\\n\\nZählerstand: {{REFERENCE_NUMBER}}\\nSteuer-Nr.: {{TAX_ID_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "identification",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Zählerstand {{COMPANY}}\\n=====================\\n\\nKunde: {{NAME}} ({{CUSTOMER_ID}})\\n\\nAdresse:\\n{{STREET}}, {{POSTCODE}} {{CITY}}\\n\\nZählerstand: {{REFERENCE_NUMBER}}\\nSteuer-Nr.: {{TAX_ID_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "utilities",
+    "structure_type": "form",
+    "estimated_word_count": 16,
+    "pii_count": 8,
+    "pii_categories_used": [
+      "personal_identity",
+      "location",
+      "identification",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "SMS-Protokoll {{TIMESTAMP}}\\n====================\\n\\nVon: {{PHONE}}\\nAn: {{PHONE}}\\n\\nGerät:\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}",
+    "locale": "it_CH",
+    "domain": "telecom",
+    "structure_type": "log",
+    "estimated_word_count": 11,
+    "pii_count": 5,
+    "pii_categories_used": [
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "SMS-Protokoll {{TIMESTAMP}}\\n====================\\n\\nVon: {{PHONE}}\\nAn: {{PHONE}}\\n\\nGerät:\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "structure_type": "log",
+    "estimated_word_count": 11,
+    "pii_count": 5,
+    "pii_categories_used": [
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "SMS-Protokoll {{TIMESTAMP}}\\n====================\\n\\nVon: {{PHONE}}\\nAn: {{PHONE}}\\n\\nGerät:\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}",
+    "locale": "fr_CH",
+    "domain": "telecom",
+    "structure_type": "log",
+    "estimated_word_count": 11,
+    "pii_count": 5,
+    "pii_categories_used": [
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "SMS-Protokoll {{TIMESTAMP}}\\n====================\\n\\nVon: {{PHONE}}\\nAn: {{PHONE}}\\n\\nGerät:\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}",
+    "locale": "it_CH",
+    "domain": "telecom",
+    "structure_type": "log",
+    "estimated_word_count": 11,
+    "pii_count": 5,
+    "pii_categories_used": [
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "SMS-Protokoll {{TIMESTAMP}}\\n====================\\n\\nVon: {{PHONE}}\\nAn: {{PHONE}}\\n\\nGerät:\\nIP: {{IP_ADDRESS}}\\nMAC: {{MAC_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "telecom",
+    "structure_type": "log",
+    "estimated_word_count": 11,
+    "pii_count": 5,
+    "pii_categories_used": [
+      "contact",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Hotelreservierung {{REFERENCE_NUMBER}}\\n============================\\n\\nGast: {{NAME}}\\n\\nHotel: {{COMPANY}}\\nAdresse: {{STREET}}, {{CITY}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "fr_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 15,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Hotelreservierung {{REFERENCE_NUMBER}}\\n============================\\n\\nGast: {{NAME}}\\n\\nHotel: {{COMPANY}}\\nAdresse: {{STREET}}, {{CITY}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "it_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 15,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Hotelreservierung {{REFERENCE_NUMBER}}\\n============================\\n\\nGast: {{NAME}}\\n\\nHotel: {{COMPANY}}\\nAdresse: {{STREET}}, {{CITY}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "de_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 15,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Hotelreservierung {{REFERENCE_NUMBER}}\\n============================\\n\\nGast: {{NAME}}\\n\\nHotel: {{COMPANY}}\\nAdresse: {{STREET}}, {{CITY}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "fr_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 15,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Hotelreservierung {{REFERENCE_NUMBER}}\\n============================\\n\\nGast: {{NAME}}\\n\\nHotel: {{COMPANY}}\\nAdresse: {{STREET}}, {{CITY}}\\n\\nTel: {{PHONE}}\\nEmail: {{EMAIL_ADDRESS}}",
+    "locale": "it_CH",
+    "domain": "travel",
+    "structure_type": "list",
+    "estimated_word_count": 15,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "location",
+      "organization",
+      "secrets"
+    ]
+  },
+  {
+    "template": "# Datenbankkonfiguration\\n# Server: {{IP_ADDRESS}}\\n\\n[connection]\\nuser = {{USERNAME}}\\npassword = {{PASSWORD}}\\nhost = {{IP_ADDRESS}}\\ndatabase = {{REFERENCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 17,
+    "pii_count": 5,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "secrets"
+    ]
+  },
+  {
+    "template": "# Datenbankkonfiguration\\n# Server: {{IP_ADDRESS}}\\n\\n[connection]\\nuser = {{USERNAME}}\\npassword = {{PASSWORD}}\\nhost = {{IP_ADDRESS}}\\ndatabase = {{REFERENCE_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 17,
+    "pii_count": 5,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "secrets"
+    ]
+  },
+  {
+    "template": "# Datenbankkonfiguration\\n# Server: {{IP_ADDRESS}}\\n\\n[connection]\\nuser = {{USERNAME}}\\npassword = {{PASSWORD}}\\nhost = {{IP_ADDRESS}}\\ndatabase = {{REFERENCE_NUMBER}}",
+    "locale": "it_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 17,
+    "pii_count": 5,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "secrets"
+    ]
+  },
+  {
+    "template": "# Datenbankkonfiguration\\n# Server: {{IP_ADDRESS}}\\n\\n[connection]\\nuser = {{USERNAME}}\\npassword = {{PASSWORD}}\\nhost = {{IP_ADDRESS}}\\ndatabase = {{REFERENCE_NUMBER}}",
+    "locale": "de_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 17,
+    "pii_count": 5,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "secrets"
+    ]
+  },
+  {
+    "template": "# Datenbankkonfiguration\\n# Server: {{IP_ADDRESS}}\\n\\n[connection]\\nuser = {{USERNAME}}\\npassword = {{PASSWORD}}\\nhost = {{IP_ADDRESS}}\\ndatabase = {{REFERENCE_NUMBER}}",
+    "locale": "fr_CH",
+    "domain": "tech",
+    "structure_type": "code_config",
+    "estimated_word_count": 17,
+    "pii_count": 5,
+    "pii_categories_used": [
+      "contact",
+      "identification",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Rezept {{MEDICAL_LICENSE}}\\n==================\\n\\nArzt: Dr. {{MEDICAL_PROFESSIONAL}}\\n\\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\\n\\nMedikament: {{DRUG}} {{DOSE}}\\nCode: {{MEDICAL_CODE}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 16,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare"
+    ]
+  },
+  {
+    "template": "Rezept {{MEDICAL_LICENSE}}\\n==================\\n\\nArzt: Dr. {{MEDICAL_PROFESSIONAL}}\\n\\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\\n\\nMedikament: {{DRUG}} {{DOSE}}\\nCode: {{MEDICAL_CODE}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 16,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare"
+    ]
+  },
+  {
+    "template": "Rezept {{MEDICAL_LICENSE}}\\n==================\\n\\nArzt: Dr. {{MEDICAL_PROFESSIONAL}}\\n\\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\\n\\nMedikament: {{DRUG}} {{DOSE}}\\nCode: {{MEDICAL_CODE}}",
+    "locale": "fr_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 16,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare"
+    ]
+  },
+  {
+    "template": "Rezept {{MEDICAL_LICENSE}}\\n==================\\n\\nArzt: Dr. {{MEDICAL_PROFESSIONAL}}\\n\\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\\n\\nMedikament: {{DRUG}} {{DOSE}}\\nCode: {{MEDICAL_CODE}}",
+    "locale": "it_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 16,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare"
+    ]
+  },
+  {
+    "template": "Rezept {{MEDICAL_LICENSE}}\\n==================\\n\\nArzt: Dr. {{MEDICAL_PROFESSIONAL}}\\n\\nPatient: {{NAME}} ({{HEALTHCARE_NUMBER}})\\n\\nMedikament: {{DRUG}} {{DOSE}}\\nCode: {{MEDICAL_CODE}}",
+    "locale": "de_CH",
+    "domain": "healthcare",
+    "structure_type": "medical_record",
+    "estimated_word_count": 16,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "healthcare"
+    ]
+  },
+  {
+    "template": "Bewerbung {{REFERENCE_NUMBER}}\\n====================\\n\\nName: {{FIRSTNAME}} {{LASTNAME}}\\nGeburtstag: {{DOB}}\\nNationalität: {{NATIONALITY}}\\n\\nEmail: {{EMAIL_ADDRESS}}\\nTel: {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 15,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "gdpr_sensitive",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Bewerbung {{REFERENCE_NUMBER}}\\n====================\\n\\nName: {{FIRSTNAME}} {{LASTNAME}}\\nGeburtstag: {{DOB}}\\nNationalität: {{NATIONALITY}}\\n\\nEmail: {{EMAIL_ADDRESS}}\\nTel: {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 15,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "gdpr_sensitive",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Bewerbung {{REFERENCE_NUMBER}}\\n====================\\n\\nName: {{FIRSTNAME}} {{LASTNAME}}\\nGeburtstag: {{DOB}}\\nNationalität: {{NATIONALITY}}\\n\\nEmail: {{EMAIL_ADDRESS}}\\nTel: {{PHONE}}",
+    "locale": "de_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 15,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "gdpr_sensitive",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Bewerbung {{REFERENCE_NUMBER}}\\n====================\\n\\nName: {{FIRSTNAME}} {{LASTNAME}}\\nGeburtstag: {{DOB}}\\nNationalität: {{NATIONALITY}}\\n\\nEmail: {{EMAIL_ADDRESS}}\\nTel: {{PHONE}}",
+    "locale": "fr_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 15,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "gdpr_sensitive",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Bewerbung {{REFERENCE_NUMBER}}\\n====================\\n\\nName: {{FIRSTNAME}} {{LASTNAME}}\\nGeburtstag: {{DOB}}\\nNationalität: {{NATIONALITY}}\\n\\nEmail: {{EMAIL_ADDRESS}}\\nTel: {{PHONE}}",
+    "locale": "it_CH",
+    "domain": "hr_admin",
+    "structure_type": "form",
+    "estimated_word_count": 15,
+    "pii_count": 7,
+    "pii_categories_used": [
+      "personal_identity",
+      "contact",
+      "gdpr_sensitive",
+      "secrets"
+    ]
+  },
+  {
+    "template": "Krypto-Transaktion {{TIMESTAMP}}\\n==========================\\n\\nVon: {{CRYPTO_WALLET}}\\nBetrag: {{MONEY}} {{CURRENCY}}\\n\\nBenutzer: {{USERNAME}}\\nAPI-Key: {{API_KEY}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "financial",
+      "identification",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Krypto-Transaktion {{TIMESTAMP}}\\n==========================\\n\\nVon: {{CRYPTO_WALLET}}\\nBetrag: {{MONEY}} {{CURRENCY}}\\n\\nBenutzer: {{USERNAME}}\\nAPI-Key: {{API_KEY}}",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "financial",
+      "identification",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Krypto-Transaktion {{TIMESTAMP}}\\n==========================\\n\\nVon: {{CRYPTO_WALLET}}\\nBetrag: {{MONEY}} {{CURRENCY}}\\n\\nBenutzer: {{USERNAME}}\\nAPI-Key: {{API_KEY}}",
+    "locale": "it_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "financial",
+      "identification",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Krypto-Transaktion {{TIMESTAMP}}\\n==========================\\n\\nVon: {{CRYPTO_WALLET}}\\nBetrag: {{MONEY}} {{CURRENCY}}\\n\\nBenutzer: {{USERNAME}}\\nAPI-Key: {{API_KEY}}",
+    "locale": "de_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "financial",
+      "identification",
+      "secrets",
+      "temporal"
+    ]
+  },
+  {
+    "template": "Krypto-Transaktion {{TIMESTAMP}}\\n==========================\\n\\nVon: {{CRYPTO_WALLET}}\\nBetrag: {{MONEY}} {{CURRENCY}}\\n\\nBenutzer: {{USERNAME}}\\nAPI-Key: {{API_KEY}}",
+    "locale": "fr_CH",
+    "domain": "banking",
+    "structure_type": "log",
+    "estimated_word_count": 13,
+    "pii_count": 6,
+    "pii_categories_used": [
+      "financial",
+      "identification",
+      "secrets",
+      "temporal"
+    ]
+  }
+]

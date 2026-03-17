@@ -1,0 +1,186 @@
+{
+  "en": {
+    "cities": [
+      "New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia",
+      "San Antonio", "San Diego", "Dallas", "San Jose", "Austin", "Jacksonville",
+      "San Francisco", "Columbus", "Indianapolis", "Fort Worth", "Charlotte",
+      "Seattle", "Denver", "El Paso", "Detroit", "Washington", "Boston",
+      "Memphis", "Nashville", "Portland", "Oklahoma City", "Las Vegas",
+      "Baltimore", "Louisville", "Milwaukee", "Albuquerque", "Tucson", "Fresno",
+      "Sacramento", "Mesa", "Atlanta", "Kansas City", "Colorado Springs",
+      "Raleigh", "Omaha", "Miami", "Long Beach", "Virginia Beach", "Oakland"
+    ],
+    "streets": [
+      "Main Street", "Oak Avenue", "Maple Drive", "Cedar Lane", "Pine Road",
+      "Elm Street", "Washington Boulevard", "Park Avenue", "Lake Drive",
+      "Hill Street", "First Street", "Second Avenue", "Third Road", "Fourth Lane",
+      "Fifth Street", "Broadway", "Market Street", "Spring Street", "Center Street",
+      "High Street", "Church Street", "School Street", "Mill Road", "River Road",
+      "Forest Avenue", "Sunset Boulevard", "Willow Lane", "Chestnut Street",
+      "Walnut Street", "Cherry Drive", "Birch Road", "Ash Street", "Spruce Lane",
+      "Magnolia Avenue", "Hickory Street", "Cypress Drive", "Juniper Lane",
+      "Dogwood Street", "Sycamore Road", "Poplar Avenue", "Cottonwood Drive"
+    ],
+    "countries": [
+      "United States", "United Kingdom", "Canada", "Australia", "Germany",
+      "France", "Italy", "Spain", "Netherlands", "Belgium", "Switzerland",
+      "Austria", "Sweden", "Norway", "Denmark", "Finland", "Poland", "Ireland",
+      "Portugal", "Greece", "Czech Republic", "Hungary", "Romania", "Bulgaria"
+    ],
+    "states": [
+      "California", "Texas", "Florida", "New York", "Pennsylvania", "Illinois",
+      "Ohio", "Georgia", "North Carolina", "Michigan", "New Jersey", "Virginia",
+      "Washington", "Arizona", "Massachusetts", "Tennessee", "Indiana", "Maryland",
+      "Missouri", "Wisconsin", "Colorado", "Minnesota", "South Carolina",
+      "Alabama", "Louisiana", "Kentucky", "Oregon", "Oklahoma", "Connecticut",
+      "Utah", "Nevada", "Arkansas", "Mississippi", "Kansas", "New Mexico"
+    ],
+    "landmarks": [
+      "Empire State Building", "Statue of Liberty", "Golden Gate Bridge",
+      "Grand Canyon", "Mount Rushmore", "Niagara Falls", "Yellowstone National Park",
+      "Times Square", "Hollywood Sign", "Space Needle", "Gateway Arch",
+      "Liberty Bell", "Mount Vernon", "Disneyland", "Walt Disney World",
+      "Central Park", "Yosemite National Park", "Zion National Park"
+    ]
+  },
+  "de": {
+    "cities": [
+      "Berlin", "Hamburg", "München", "Köln", "Frankfurt am Main", "Stuttgart",
+      "Düsseldorf", "Dortmund", "Essen", "Leipzig", "Bremen", "Dresden",
+      "Hannover", "Nürnberg", "Duisburg", "Bochum", "Wuppertal", "Bielefeld",
+      "Bonn", "Münster", "Karlsruhe", "Mannheim", "Augsburg", "Wiesbaden",
+      "Gelsenkirchen", "Mönchengladbach", "Braunschweig", "Chemnitz", "Kiel",
+      "Aachen", "Halle", "Magdeburg", "Freiburg im Breisgau", "Krefeld"
+    ],
+    "streets": [
+      "Hauptstraße", "Schulstraße", "Bahnhofstraße", "Kirchstraße", "Mühlenstraße",
+      "Gartenstraße", "Waldstraße", "Lindenstraße", "Birkenweg", "Bachstraße",
+      "Dorfstraße", "Ringstraße", "Schillerstraße", "Goethestraße", "Poststraße",
+      "Marktstraße", "Bergstraße", "Talstraße", "Parkstraße", "Wiesenstraße",
+      "Rathausstraße", "Friedhofstraße", "Mittelweg", "Brunnenstraße",
+      "Lange Straße", "Breite Straße", "Schlossstraße", "Steinweg", "Wasserweg"
+    ],
+    "countries": [
+      "Deutschland", "Österreich", "Schweiz", "Frankreich", "Italien", "Spanien",
+      "Niederlande", "Belgien", "Polen", "Tschechien", "Dänemark", "Schweden",
+      "Norwegen", "Finnland", "Ungarn", "Rumänien", "Bulgarien", "Griechenland",
+      "Portugal", "Irland", "Vereinigtes Königreich", "Luxemburg"
+    ],
+    "states": [
+      "Bayern", "Baden-Württemberg", "Nordrhein-Westfalen", "Hessen", "Niedersachsen",
+      "Sachsen", "Rheinland-Pfalz", "Berlin", "Schleswig-Holstein", "Brandenburg",
+      "Sachsen-Anhalt", "Thüringen", "Mecklenburg-Vorpommern", "Saarland",
+      "Bremen", "Hamburg"
+    ],
+    "landmarks": [
+      "Brandenburger Tor", "Schloss Neuschwanstein", "Kölner Dom", "Frauenkirche Dresden",
+      "Reichstagsgebäude", "Hamburger Hafen", "Marienplatz München", "Römer Frankfurt",
+      "Aachener Dom", "Heidelberger Schloss", "Burg Hohenzollern", "Zugspitze",
+      "Bodensee", "Schwarzwald", "Bayerischer Wald", "Nordseeinseln"
+    ]
+  },
+  "fr": {
+    "cities": [
+      "Paris", "Marseille", "Lyon", "Toulouse", "Nice", "Nantes", "Strasbourg",
+      "Montpellier", "Bordeaux", "Lille", "Rennes", "Reims", "Le Havre",
+      "Saint-Étienne", "Toulon", "Grenoble", "Dijon", "Angers", "Nîmes", "Villeurbanne",
+      "Clermont-Ferrand", "Le Mans", "Aix-en-Provence", "Brest", "Tours", "Limoges",
+      "Amiens", "Metz", "Besançon", "Perpignan", "Orléans", "Mulhouse", "Caen"
+    ],
+    "streets": [
+      "Rue de la Paix", "Rue du Commerce", "Avenue des Champs-Élysées", "Rue de Rivoli",
+      "Boulevard Saint-Germain", "Rue de la République", "Avenue de la Liberté",
+      "Rue du Marché", "Place de l'Église", "Rue de la Gare", "Avenue du Général de Gaulle",
+      "Rue Principale", "Rue des Écoles", "Place du Marché", "Rue de l'Église",
+      "Avenue Jean Jaurès", "Rue Victor Hugo", "Boulevard Victor Hugo", "Rue Pasteur",
+      "Avenue Pasteur", "Rue Louis Blanc", "Place de la Mairie", "Rue du Château"
+    ],
+    "countries": [
+      "France", "Allemagne", "Italie", "Espagne", "Belgique", "Suisse", "Pays-Bas",
+      "Luxembourg", "Royaume-Uni", "Irlande", "Portugal", "Autriche", "Pologne",
+      "République tchèque", "Hongrie", "Roumanie", "Bulgarie", "Grèce", "Danemark",
+      "Suède", "Norvège", "Finlande"
+    ],
+    "regions": [
+      "Île-de-France", "Auvergne-Rhône-Alpes", "Nouvelle-Aquitaine", "Occitanie",
+      "Hauts-de-France", "Provence-Alpes-Côte d'Azur", "Grand Est", "Pays de la Loire",
+      "Bretagne", "Normandie", "Bourgogne-Franche-Comté", "Centre-Val de Loire",
+      "Corse"
+    ],
+    "landmarks": [
+      "Tour Eiffel", "Arc de Triomphe", "Notre-Dame de Paris", "Musée du Louvre",
+      "Mont-Saint-Michel", "Château de Versailles", "Pont du Gard", "Lascaux",
+      "Sacré-Cœur", "Panthéon", "Cathédrale de Chartres", "Châteaux de la Loire",
+      "Palais des Papes", "Cité de Carcassonne", "Stade de France"
+    ]
+  },
+  "it": {
+    "cities": [
+      "Roma", "Milano", "Napoli", "Torino", "Palermo", "Genova", "Bologna",
+      "Firenze", "Bari", "Catania", "Venezia", "Verona", "Messina", "Padova",
+      "Trieste", "Taranto", "Brescia", "Prato", "Parma", "Modena", "Reggio Calabria",
+      "Reggio Emilia", "Perugia", "Livorno", "Ravenna", "Foggia", "Rimini",
+      "Salerno", "Sassari", "Siracusa", "San Severo", "Cagliari", "Andria"
+    ],
+    "streets": [
+      "Via Roma", "Via Garibaldi", "Via Cavour", "Via Mazzini", "Corso Italia",
+      "Via Dante", "Via Verdi", "Piazza del Duomo", "Piazza della Repubblica",
+      "Via della Repubblica", "Corso Vittorio Emanuele", "Via Manzoni",
+      "Piazza San Marco", "Via del Corso", "Via dei Fori Imperiali", "Via Veneto",
+      "Piazza Navona", "Via Condotti", "Piazza di Spagna", "Via Margutta",
+      "Corso Buenos Aires", "Via Torino", "Piazza del Popolo", "Via Nazionale"
+    ],
+    "countries": [
+      "Italia", "Germania", "Francia", "Spagna", "Austria", "Svizzera", "Slovenia",
+      "Croazia", "Grecia", "Albania", "Montenegro", "San Marino", "Città del Vaticano",
+      "Malta", "Portogallo", "Regno Unito", "Irlanda", "Belgio", "Paesi Bassi"
+    ],
+    "regions": [
+      "Lombardia", "Lazio", "Campania", "Sicilia", "Veneto", "Emilia-Romagna",
+      "Piemonte", "Puglia", "Toscana", "Calabria", "Sardegna", "Liguria",
+      "Marche", "Abruzzo", "Umbria", "Friuli-Venezia Giulia", "Trentino-Alto Adige",
+      "Basilicata", "Molise", "Valle d'Aosta"
+    ],
+    "landmarks": [
+      "Colosseo", "Fontana di Trevi", "Torre di Pisa", "Duomo di Milano",
+      "San Pietro", "Uffizi", "Città di Venezia", "Arena di Verona",
+      "Valle dei Templi", "Pompei", "Costiera Amalfitana", "Dolomiti",
+      "Lago di Como", "Lago di Garda", "Cinque Terre"
+    ]
+  },
+  "es": {
+    "cities": [
+      "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Málaga",
+      "Murcia", "Palma de Mallorca", "Las Palmas de Gran Canaria", "Bilbao",
+      "Alicante", "Córdoba", "Valladolid", "Vigo", "Gijón", "Granada",
+      "A Coruña", "Vitoria", "Santa Cruz de Tenerife", "Oviedo", "Pamplona",
+      "Santander", "San Sebastián", "Burgos", "Albacete", "Salamanca", "Logroño",
+      "Badajoz", "Huelva", "Tarragona", "León", "Cádiz", "Lleida"
+    ],
+    "streets": [
+      "Calle Mayor", "Calle Real", "Plaza Mayor", "Paseo de la Castellana",
+      "Gran Vía", "Calle de Alcalá", "Paseo del Prado", "Plaza de España",
+      "Calle Preciados", "Plaza del Sol", "Paseo de Gracia", "Rambla de Cataluña",
+      "Diagonal", "Calle Serrano", "Plaza de Cataluña", "Avenida de la Constitución",
+      "Paseo Marítimo", "Calle Larios", "Plaza de la Virgen", "Calle del Carmen",
+      "Bulevar de la Constitución", "Avenida de Andalucía", "Plaza de Armas"
+    ],
+    "countries": [
+      "España", "Portugal", "Francia", "Andorra", "Marruecos", "Argelia",
+      "Italia", "Alemania", "Reino Unido", "Estados Unidos", "México", "Argentina",
+      "Colombia", "Chile", "Perú", "Venezuela", "Ecuador", "Cuba", "República Dominicana"
+    ],
+    "regions": [
+      "Andalucía", "Cataluña", "Comunidad de Madrid", "Comunidad Valenciana",
+      "Galicia", "Castilla y León", "País Vasco", "Canarias", "Castilla-La Mancha",
+      "Región de Murcia", "Aragón", "Extremadura", "Baleares", "Asturias",
+      "Navarra", "Cantabria", "La Rioja", "Ceuta", "Melilla"
+    ],
+    "landmarks": [
+      "Sagrada Familia", "Alhambra", "Parque del Retiro", "Museo del Prado",
+      "Catedral de Santiago de Compostela", "Mezquita de Córdoba", "Acueducto de Segovia",
+      "Park Güell", "Casa Batlló", "Plaza Mayor de Madrid", "Cibeles",
+      "Puerta de Alcalá", "Catedral de Sevilla", "Giralda", "Torre de Hércules"
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "en": {
+    "company_types": ["Inc.", "Corp.", "LLC", "Ltd.", "Co.", "Group", "Holdings", "Partners"],
+    "industries": ["Technology", "Finance", "Healthcare", "Manufacturing", "Retail", "Energy", "Consulting", "Legal"],
+    "prefixes": ["Global", "United", "American", "National", "International", "Premier", "Advanced", "Elite"],
+    "suffixes": ["Solutions", "Systems", "Services", "Industries", "Enterprises", "Corporation", "Associates"],
+    "examples": [
+      "Global Technology Solutions Inc.",
+      "United Finance Corp.",
+      "American Healthcare Systems LLC",
+      "National Manufacturing Co.",
+      "Premier Retail Group",
+      "Advanced Energy Services",
+      "Elite Consulting Partners",
+      "International Legal Associates",
+      "Tech Innovations Inc.",
+      "Data Dynamics Corp."
+    ]
+  },
+  "de": {
+    "company_types": ["GmbH", "AG", "KG", "GmbH & Co. KG", "UG", "OHG", "GbR"],
+    "industries": ["Technologie", "Finanzen", "Gesundheit", "Industrie", "Handel", "Energie", "Beratung"],
+    "prefixes": ["Global", "United", "Deutsche", "Nationale", "Internationale", "Premier", "Advanced"],
+    "suffixes": ["Lösungen", "Systeme", "Dienstleistungen", "Industrie", "Unternehmen", "Gruppe"],
+    "examples": [
+      "Deutsche Technologie GmbH",
+      "Global Finanz AG",
+      "Nationale Gesundheitssysteme KG",
+      "Industrie Lösungen GmbH & Co. KG",
+      "Premier Handel UG",
+      "Advanced Energie Dienstleistungen",
+      "Internationale Beratung OHG",
+      "Tech Innovationen GmbH",
+      "Daten Dynamik AG",
+      "System Integration GmbH"
+    ]
+  },
+  "fr": {
+    "company_types": ["SARL", "SA", "SAS", "EURL", "SNC", "GIE", "SCOP"],
+    "industries": ["Technologie", "Finance", "Santé", "Industrie", "Commerce", "Énergie", "Conseil"],
+    "prefixes": ["Global", "Uni", "Française", "Nationale", "Internationale", "Premier", "Avancé"],
+    "suffixes": ["Solutions", "Systèmes", "Services", "Industrie", "Entreprises", "Groupe"],
+    "examples": [
+      "Technologie Française SARL",
+      "Global Finance SA",
+      "Santé Nationale SAS",
+      "Industrie Solutions EURL",
+      "Commerce Premier GIE",
+      "Énergie Avancée Services",
+      "Conseil International SNC",
+      "Innovation Tech SARL",
+      "Dynamique Données SA",
+      "Systèmes Intégrés SAS"
+    ]
+  },
+  "it": {
+    "company_types": ["S.r.l.", "S.p.A.", "S.a.s.", "S.n.c.", "Coop.", "Consorzio"],
+    "industries": ["Tecnologia", "Finanza", "Salute", "Industria", "Commercio", "Energia", "Consulenza"],
+    "prefixes": ["Globale", "Unito", "Italiana", "Nazionale", "Internazionale", "Premier", "Avanzato"],
+    "suffixes": ["Soluzioni", "Sistemi", "Servizi", "Industria", "Imprese", "Gruppo"],
+    "examples": [
+      "Tecnologia Italiana S.r.l.",
+      "Finanza Globale S.p.A.",
+      "Salute Nazionale S.a.s.",
+      "Industria Soluzioni S.n.c.",
+      "Commercio Premier Coop.",
+      "Energia Avanzata Servizi",
+      "Consulenza Internazionale S.r.l.",
+      "Innovazione Tech S.p.A.",
+      "Dati Dinamici S.r.l.",
+      "Sistemi Integrati S.p.A."
+    ]
+  },
+  "es": {
+    "company_types": ["S.L.", "S.A.", "S.A.U.", "S.C.P.", "S.L.N.E.", "Cooperativa"],
+    "industries": ["Tecnología", "Finanzas", "Salud", "Industria", "Comercio", "Energía", "Consultoría"],
+    "prefixes": ["Global", "Unido", "Española", "Nacional", "Internacional", "Premier", "Avanzado"],
+    "suffixes": ["Soluciones", "Sistemas", "Servicios", "Industria", "Empresas", "Grupo"],
+    "examples": [
+      "Tecnología Española S.L.",
+      "Finanzas Global S.A.",
+      "Salud Nacional S.A.U.",
+      "Industria Soluciones S.C.P.",
+      "Comercio Premier S.L.N.E.",
+      "Energía Avanzada Servicios",
+      "Consultoría Internacional S.L.",
+      "Innovación Tech S.A.",
+      "Datos Dinámicos S.L.",
+      "Sistemas Integrados S.A."
+    ]
+  }
+}

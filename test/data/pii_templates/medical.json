@@ -1,0 +1,62 @@
+{
+  "en": {
+    "mrn_format": "MRN-{8_digits}",
+    "patient_id_format": "PAT-{8_digits}",
+    "record_types": ["Medical Record", "Patient Record", "Health Record", "Clinical Record"],
+    "departments": ["Cardiology", "Neurology", "Oncology", "Pediatrics", "Emergency", "Surgery", "Radiology", "Pathology"],
+    "diagnosis_codes": ["A00", "B01", "C00", "D50", "E11", "F32", "G40", "I10", "J45", "K21", "M54", "N39", "R51"],
+    "examples": {
+      "mrns": ["MRN-12345678", "MRN-87654321", "MRN-11223344", "MRN-55667788", "MRN-99887766"],
+      "patient_ids": ["PAT-12345678", "PAT-87654321", "PAT-11223344", "PAT-55667788", "PAT-99887766"],
+      "records": ["Medical Record: MRN-12345678", "Patient ID: PAT-87654321", "Health Record: MRN-11223344"]
+    }
+  },
+  "de": {
+    "mrn_format": "PN-{8_digits}",
+    "patient_id_format": "PAT-{8_digits}",
+    "record_types": ["Patientenakte", "Krankenakte", "Gesundheitsakte", "Klinische Akte"],
+    "departments": ["Kardiologie", "Neurologie", "Onkologie", "Pädiatrie", "Notaufnahme", "Chirurgie", "Radiologie", "Pathologie"],
+    "diagnosis_codes": ["A00", "B01", "C00", "D50", "E11", "F32", "G40", "I10", "J45", "K21", "M54", "N39", "R51"],
+    "examples": {
+      "mrns": ["PN-12345678", "PN-87654321", "PN-11223344", "PN-55667788", "PN-99887766"],
+      "patient_ids": ["PAT-12345678", "PAT-87654321", "PAT-11223344", "PAT-55667788", "PAT-99887766"],
+      "records": ["Patientenakte: PN-12345678", "Patienten-ID: PAT-87654321", "Gesundheitsakte: PN-11223344"]
+    }
+  },
+  "fr": {
+    "mrn_format": "DMP-{8_digits}",
+    "patient_id_format": "PAT-{8_digits}",
+    "record_types": ["Dossier Médical", "Dossier Patient", "Dossier de Santé", "Dossier Clinique"],
+    "departments": ["Cardiologie", "Neurologie", "Oncologie", "Pédiatrie", "Urgences", "Chirurgie", "Radiologie", "Pathologie"],
+    "diagnosis_codes": ["A00", "B01", "C00", "D50", "E11", "F32", "G40", "I10", "J45", "K21", "M54", "N39", "R51"],
+    "examples": {
+      "mrns": ["DMP-12345678", "DMP-87654321", "DMP-11223344", "DMP-55667788", "DMP-99887766"],
+      "patient_ids": ["PAT-12345678", "PAT-87654321", "PAT-11223344", "PAT-55667788", "PAT-99887766"],
+      "records": ["Dossier Médical: DMP-12345678", "ID Patient: PAT-87654321", "Dossier de Santé: DMP-11223344"]
+    }
+  },
+  "it": {
+    "mrn_format": "FC-{8_digits}",
+    "patient_id_format": "PAT-{8_digits}",
+    "record_types": ["Cartella Clinica", "Referto Medico", "Fascicolo Sanitario", "Documento Clinico"],
+    "departments": ["Cardiologia", "Neurologia", "Oncologia", "Pediatria", "Pronto Soccorso", "Chirurgia", "Radiologia", "Patologia"],
+    "diagnosis_codes": ["A00", "B01", "C00", "D50", "E11", "F32", "G40", "I10", "J45", "K21", "M54", "N39", "R51"],
+    "examples": {
+      "mrns": ["FC-12345678", "FC-87654321", "FC-11223344", "FC-55667788", "FC-99887766"],
+      "patient_ids": ["PAT-12345678", "PAT-87654321", "PAT-11223344", "PAT-55667788", "PAT-99887766"],
+      "records": ["Cartella Clinica: FC-12345678", "ID Paziente: PAT-87654321", "Fascicolo Sanitario: FC-11223344"]
+    }
+  },
+  "es": {
+    "mrn_format": "HC-{8_digits}",
+    "patient_id_format": "PAT-{8_digits}",
+    "record_types": ["Historia Clínica", "Expediente Médico", "Registro de Salud", "Documento Clínico"],
+    "departments": ["Cardiología", "Neurología", "Oncología", "Pediatría", "Urgencias", "Cirugía", "Radiología", "Patología"],
+    "diagnosis_codes": ["A00", "B01", "C00", "D50", "E11", "F32", "G40", "I10", "J45", "K21", "M54", "N39", "R51"],
+    "examples": {
+      "mrns": ["HC-12345678", "HC-87654321", "HC-11223344", "HC-55667788", "HC-99887766"],
+      "patient_ids": ["PAT-12345678", "PAT-87654321", "PAT-11223344", "PAT-55667788", "PAT-99887766"],
+      "records": ["Historia Clínica: HC-12345678", "ID Paciente: PAT-87654321", "Registro de Salud: HC-11223344"]
+    }
+  }
+}

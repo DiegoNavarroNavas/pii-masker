@@ -1,0 +1,58 @@
+{
+  "en": {
+    "formats": [
+      "{month}/{day}/{year}",
+      "{month}-{day}-{year}",
+      "{month} {day}, {year}",
+      "{day} {month} {year}",
+      "{year}-{month}-{day}"
+    ],
+    "month_names": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    "month_abbr": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "examples": ["03/15/1990", "12-25-1985", "January 1, 2000", "4 July 1776", "2024-01-15"]
+  },
+  "de": {
+    "formats": [
+      "{day}.{month}.{year}",
+      "{day}. {month_name} {year}",
+      "{day}. {month_abbr} {year}",
+      "{year}-{month}-{day}"
+    ],
+    "month_names": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+    "month_abbr": ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
+    "examples": ["15.03.1990", "25.12.1985", "1. Januar 2000", "4. Juli 1776", "2024-01-15"]
+  },
+  "fr": {
+    "formats": [
+      "{day}/{month}/{year}",
+      "{day} {month_name} {year}",
+      "{day} {month_abbr} {year}",
+      "{year}-{month}-{day}"
+    ],
+    "month_names": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
+    "month_abbr": ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."],
+    "examples": ["15/03/1990", "25/12/1985", "1er janvier 2000", "4 juillet 1776", "2024-01-15"]
+  },
+  "it": {
+    "formats": [
+      "{day}/{month}/{year}",
+      "{day} {month_name} {year}",
+      "{day} {month_abbr} {year}",
+      "{year}-{month}-{day}"
+    ],
+    "month_names": ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"],
+    "month_abbr": ["gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic"],
+    "examples": ["15/03/1990", "25/12/1985", "1 gennaio 2000", "4 luglio 1776", "2024-01-15"]
+  },
+  "es": {
+    "formats": [
+      "{day}/{month}/{year}",
+      "{day} de {month_name} de {year}",
+      "{day} de {month_abbr} de {year}",
+      "{year}-{month}-{day}"
+    ],
+    "month_names": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
+    "month_abbr": ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"],
+    "examples": ["15/03/1990", "25/12/1985", "1 de enero de 2000", "4 de julio de 1776", "2024-01-15"]
+  }
+}

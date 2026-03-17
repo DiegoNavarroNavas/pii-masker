@@ -1,0 +1,8 @@
+Ground Truth Entities:
+==================================================
+- PERSON: 'Dr. Lissi Dietz' [15:30]
+- DATE_TIME: '1948-02-26' [37:47]
+- ID_NUMBER: '756.9908.8117.30' [53:69]
+- PERSON: 'Dr. Lissi Dietz' [86:101]
+- PHONE_NUMBER: '+41 27 980 68 65' [103:119]
+- DATE_TIME: '2019-03-04' [121:131]

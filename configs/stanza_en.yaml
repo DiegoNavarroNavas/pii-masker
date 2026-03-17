@@ -1,0 +1,11 @@
+name: stanza_en
+description: Stanza NLP model for English
+engine: stanza
+model: en
+language: en
+
+# Filter predictions below this confidence score (0-1)
+score_threshold: 0.5
+
+recognizers:
+  - stanza

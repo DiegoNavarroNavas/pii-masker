@@ -1,0 +1,9 @@
+<PERSON_2>,
+
+willkommen im <ORGANIZATION_3> Dein Start ist am <DATE_TIME_2> um 11:18:52. Unsere Adresse: <location address_2>.
+
+Bei Fragen: <phone number_2>
+
+Liebe Grüsse
+Sedat Sorgatz (<ORGANIZATION_2>)
+Total time: 21.8s

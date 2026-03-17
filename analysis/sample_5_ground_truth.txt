@@ -1,0 +1,12 @@
+Ground Truth Entities:
+==================================================
+- IBAN: 'DE79889864565220368499' [63:85]
+- ORGANIZATION: 'Dippel Kensy GmbH' [94:111]
+- PERSON: 'Herr Friedrich Höfig' [144:164]
+- LOCATION: 'Haufferplatz 5/2' [174:190]
+- LOCATION: '42138' [192:197]
+- LOCATION: 'Augsburg' [198:206]
+- ID_NUMBER: '756.9088.3070.32' [219:235]
+- EMAIL_ADDRESS: 'hansjuergen49@example.com' [278:303]
+- PERSON: 'Janine' [325:331]
+- PERSON: 'Martin' [332:338]
