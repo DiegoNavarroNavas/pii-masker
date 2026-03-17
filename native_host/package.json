@@ -3,9 +3,11 @@
   "private": true,
   "scripts": {
     "playwright:diagnose-extension": "node ./playwright_diagnose_extension.mjs",
-    "playwright:test-upload": "node ./playwright_test_upload.mjs"
+    "playwright:test-upload": "node ./playwright_test_upload.mjs",
+    "puppeteer:diagnose-extension": "node ./puppeteer_diagnose_extension.mjs"
   },
   "devDependencies": {
-    "playwright": "^1.58.2"
+    "playwright": "^1.58.2",
+    "puppeteer": "^24.25.0"
   }
 }

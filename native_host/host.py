@@ -38,6 +38,22 @@ def runtime_host_dir() -> Path:
     return Path(__file__).resolve().parent
 
 
+def resolve_repo_root() -> Path:
+    """
+    Resolve repository root by walking upward until `pii_masker.py` is found.
+
+    This is required for frozen native-host binaries built under paths like
+    `results/release/linux/bin/host`, where `runtime_host_dir().parent` is not
+    the repository root.
+    """
+    start = runtime_host_dir()
+    for candidate in (start, *start.parents):
+        if (candidate / "pii_masker.py").exists():
+            return candidate
+    # Fallback to previous behavior when not running from a repo checkout.
+    return start.parent
+
+
 def configure_logger() -> logging.Logger:
     """Configure file logger for host diagnostics (no PII content)."""
     log_path = os.environ.get("PII_MASKER_HOST_LOG")
@@ -64,6 +80,45 @@ def configure_logger() -> logging.Logger:
 LOGGER = configure_logger()
 
 
+def is_usable_python_executable(repo_root: Path, exe_path: Path) -> bool:
+    """Return True when executable can run `import encodings`."""
+    if not exe_path.exists():
+        return False
+    if getattr(sys, "frozen", False) and exe_path.resolve() == Path(sys.executable).resolve():
+        # In frozen mode, sys.executable points to this host binary, not Python.
+        return False
+    try:
+        probe = subprocess.run(
+            [str(exe_path), "-c", "import encodings"],
+            cwd=str(repo_root),
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            timeout=5,
+        )
+        return probe.returncode == 0
+    except Exception:
+        return False
+
+
+def preferred_python_executable(repo_root: Path) -> str:
+    """Choose a Python executable that is usable in current runtime context."""
+    candidates: list[Path] = [
+        repo_root / ".venv" / "Scripts" / "python.exe",
+        repo_root / ".venv" / "bin" / "python",
+        Path("/usr/bin/python3"),
+    ]
+    for name in ("python3", "python"):
+        discovered = shutil.which(name)
+        if discovered:
+            candidates.append(Path(discovered))
+    candidates.append(Path(sys.executable))
+
+    for candidate in candidates:
+        if is_usable_python_executable(repo_root, candidate):
+            return str(candidate)
+    return str(sys.executable)
+
+
 def run_command_with_live_stderr(
     *,
     command: list[str],
@@ -81,6 +136,13 @@ def run_command_with_live_stderr(
     env = os.environ.copy()
     # Force unbuffered child Python output so progress appears incrementally.
     env.setdefault("PYTHONUNBUFFERED", "1")
+    # When running as a PyInstaller-frozen binary, inherited runtime loader vars
+    # can break external Python interpreters/modules (for example _ssl).
+    if getattr(sys, "frozen", False):
+        env.pop("PYTHONHOME", None)
+        env.pop("PYTHONPATH", None)
+        env.pop("PYTHONEXECUTABLE", None)
+        env.pop("LD_LIBRARY_PATH", None)
 
     proc = subprocess.Popen(
         command,
@@ -290,17 +352,10 @@ def masker_command(repo_root: Path) -> list[str]:
         # Space-separated command override, e.g.:
         # PII_MASKER_CMD="uv run python pii_masker.py --json-mode"
         return env_command.split(" ")
-    venv_python_windows = repo_root / ".venv" / "Scripts" / "python.exe"
-    venv_python_unix = repo_root / ".venv" / "bin" / "python"
-    if venv_python_windows.exists():
-        return [str(venv_python_windows), "pii_masker.py", "--json-mode"]
-    if venv_python_unix.exists():
-        return [str(venv_python_unix), "pii_masker.py", "--json-mode"]
-    if os.name == "nt":
-        uv_exe = shutil.which("uv")
-        if uv_exe:
-            return [uv_exe, "run", "python", "pii_masker.py", "--json-mode"]
-    return [sys.executable, "pii_masker.py", "--json-mode"]
+    uv_exe = shutil.which("uv")
+    if uv_exe:
+        return [uv_exe, "run", "python", "pii_masker.py", "--json-mode"]
+    return [preferred_python_executable(repo_root), "pii_masker.py", "--json-mode"]
 
 
 def parse_json_from_stdout(stdout: str) -> dict[str, Any]:
@@ -335,13 +390,7 @@ def parse_json_from_stdout(stdout: str) -> dict[str, Any]:
 def runtime_worker_command(repo_root: Path) -> list[str]:
     """Command for the venv worker handling runtime-heavy formats."""
     worker_script = repo_root / "native_host" / "runtime_worker.py"
-    venv_python_windows = repo_root / ".venv" / "Scripts" / "python.exe"
-    venv_python_unix = repo_root / ".venv" / "bin" / "python"
-    if venv_python_windows.exists():
-        return [str(venv_python_windows), str(worker_script)]
-    if venv_python_unix.exists():
-        return [str(venv_python_unix), str(worker_script)]
-    return [sys.executable, str(worker_script)]
+    return [preferred_python_executable(repo_root), str(worker_script)]
 
 
 def run_masker_text(
@@ -652,7 +701,7 @@ def process_request(repo_root: Path, request: dict[str, Any]) -> dict[str, Any]:
 
 
 def main() -> int:
-    repo_root = runtime_host_dir().parent
+    repo_root = resolve_repo_root()
     LOGGER.info("native_host_start repoRoot=%s", repo_root)
     while True:
         try:

@@ -25,6 +25,28 @@ cd pii_masker
 uv sync
 ```
 
+### Linux Transformers Runtime Mode
+
+On Linux, if you need transformers and want to avoid installing NVIDIA CUDA wheels on non-NVIDIA machines, use:
+
+```bash
+# Auto-detect (nvidia if nvidia-smi exists, else cpu)
+bash ./scripts/release/linux/setup_runtime.sh auto
+
+# Force CPU-only runtime
+bash ./scripts/release/linux/setup_runtime.sh cpu
+
+# Force NVIDIA CUDA runtime
+bash ./scripts/release/linux/setup_runtime.sh nvidia
+```
+
+If you run the extension through a Flatpak browser (for example `com.google.Chrome`),
+install runtime dependencies inside the Flatpak browser Python as well:
+
+```bash
+bash ./scripts/release/linux/setup_flatpak_runtime.sh chrome auto
+```
+
 ### spaCy Models
 
 ```bash
@@ -145,7 +167,9 @@ This repository includes a v1 Chrome extension and native host bridge for **manu
 For public users, package and distribute as:
 
 1. Browser extension via store (Chrome Web Store / Edge Add-ons)
-2. Companion native app installer per OS (registers Native Messaging host)
+2. Companion native app package per OS (registers Native Messaging host)
+
+Current Linux public artifact is a portable archive (`pii-masker-native-host-linux.tar.gz`).
 
 Platform packaging docs:
 
@@ -230,12 +254,14 @@ Run helpers from repository root:
 ```powershell
 npm --prefix native_host run playwright:diagnose-extension
 npm --prefix native_host run playwright:test-upload
+npm --prefix native_host run puppeteer:diagnose-extension
 ```
 
 What these helpers do:
 
 - `playwright:diagnose-extension`: Loads the unpacked extension in Edge, saves popup settings, runs "Diagnose Native Host", and prints popup status.
 - `playwright:test-upload`: Loads `tests/upload_test.html`, uploads `document.txt`, triggers manual redaction through the extension, and verifies a `.redacted` filename is selected.
+- `puppeteer:diagnose-extension`: Linux-focused diagnose helper that launches Puppeteer-managed Chrome + extension, registers native host manifest for the detected extension ID, and runs popup diagnosis.
 
 ### Running tests
 

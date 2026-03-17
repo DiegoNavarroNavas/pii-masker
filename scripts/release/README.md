@@ -15,6 +15,12 @@ Each platform directory provides:
 - `install_native_host.*`: Register browser native messaging host manifest.
 - `generate_key.*`: Create a new encryption key file for extension settings.
 
+Linux also provides:
+
+- `setup_runtime.sh`: Install runtime dependencies for transformers in `cpu`, `nvidia`, or `auto` mode.
+- `setup_flatpak_runtime.sh`: Install runtime dependencies into Flatpak browser Python (`chrome`, `chromium`, or `brave`).
+- `install_native_host.sh`: Auto-selects standard or Flatpak native-messaging paths for `chrome`, `chromium`, and `brave`.
+
 ## Notes
 
 - Build scripts are for maintainers creating release artifacts.

@@ -1,0 +1,865 @@
+2026-03-16T18:02:17 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-16T18:02:17 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux
+2026-03-16T18:02:17 INFO native_host_stdin_closed
+2026-03-16T22:58:42 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-16T22:58:42 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux
+2026-03-16T22:58:42 INFO request_parsed jobId=diag-1773698322230 fileName=diag.txt mimeType=text/plain sizeBytes=4 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-16T22:58:42 INFO run_masker_start command=['/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host', 'pii_masker.py', '--json-mode'] language=en engine=transformers keyFile=/home/fdondi/.pii-masker/secret.key
+2026-03-16T22:58:42 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-16T22:58:42 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux
+2026-03-16T22:58:42 ERROR native_host_loop_error
+Traceback (most recent call last):
+  File "host.py", line 659, in main
+  File "host.py", line 148, in read_native_message
+  File "json/__init__.py", line 346, in loads
+  File "json/decoder.py", line 337, in decode
+  File "json/decoder.py", line 355, in raw_decode
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-03-16T22:58:42 INFO native_host_stdin_closed
+2026-03-16T22:58:42 ERROR run_masker_invalid_json stdoutPrefix=
+2026-03-16T22:58:42 ERROR masker_command_failed jobId=diag-1773698322230 error=Masker returned invalid JSON
+2026-03-16T22:58:42 INFO native_host_stdin_closed
+2026-03-16T22:59:37 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-16T22:59:37 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux
+2026-03-16T22:59:37 INFO request_parsed jobId=diag-1773698377234 fileName=diag.txt mimeType=text/plain sizeBytes=4 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-16T22:59:37 INFO run_masker_start command=['/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host', 'pii_masker.py', '--json-mode'] language=en engine=transformers keyFile=/home/fdondi/.pii-masker/secret.key
+2026-03-16T22:59:37 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-16T22:59:37 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux
+2026-03-16T22:59:37 ERROR native_host_loop_error
+Traceback (most recent call last):
+  File "host.py", line 659, in main
+  File "host.py", line 148, in read_native_message
+  File "json/__init__.py", line 346, in loads
+  File "json/decoder.py", line 337, in decode
+  File "json/decoder.py", line 355, in raw_decode
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-03-16T22:59:37 INFO native_host_stdin_closed
+2026-03-16T22:59:37 ERROR run_masker_invalid_json stdoutPrefix=
+2026-03-16T22:59:37 ERROR masker_command_failed jobId=diag-1773698377234 error=Masker returned invalid JSON
+2026-03-16T22:59:37 INFO native_host_stdin_closed
+2026-03-16T23:00:51 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-16T23:00:51 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-16T23:00:51 INFO request_parsed jobId=diag-cli fileName=diag.txt mimeType=text/plain sizeBytes=4 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel=None transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=None includeMapping=False
+2026-03-16T23:00:51 INFO run_masker_start command=['/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python', 'pii_masker.py', '--json-mode'] language=en engine=transformers keyFile=/home/fdondi/.pii-masker/secret.key
+2026-03-16T23:00:51 INFO masker_stderr Traceback (most recent call last):
+2026-03-16T23:00:51 INFO masker_stderr File "/home/fdondi/Documents/#GitHub/pii-masker/pii_masker.py", line 26, in <module>
+2026-03-16T23:00:51 INFO masker_stderr from pii_masker_local import DEFAULT_LOCAL_ENCODER_MODEL, detect_pii_with_local_multihead, resolve_local_multihead_checkpoint
+2026-03-16T23:00:51 INFO masker_stderr File "/home/fdondi/Documents/#GitHub/pii-masker/pii_masker_local.py", line 47, in <module>
+2026-03-16T23:00:51 INFO masker_stderr def resolve_local_multihead_checkpoint(model: str | None) -> Path:
+2026-03-16T23:00:51 INFO masker_stderr ^^^^
+2026-03-16T23:00:51 INFO masker_stderr NameError: name 'Path' is not defined
+2026-03-16T23:00:51 ERROR run_masker_failed returnCode=1 stderr=Traceback (most recent call last):
+  File "/home/fdondi/Documents/#GitHub/pii-masker/pii_masker.py", line 26, in <module>
+    from pii_masker_local import DEFAULT_LOCAL_ENCODER_MODEL, detect_pii_with_local_multihead, resolve_local_multihead_checkpoint
+  File "/home/fdondi/Documents/#GitHub/pii-masker/pii_masker_local.py", line 47, in <module>
+    def resolve_local_multihead_checkpoint(model: str | None) -> Path:
+                                                                 ^^^^
+NameError: name 'Path' is not defined
+2026-03-16T23:00:51 ERROR masker_command_failed jobId=diag-cli error=Masker command failed (1): Traceback (most recent call last):
+  File "/home/fdondi/Documents/#GitHub/pii-masker/pii_masker.py", line 26, in <module>
+    from pii_masker_local import DEFAULT_LOCAL_ENCODER_MODEL, detect_pii_with_local_multihead, resolve_local_multihead_checkpoint
+  File "/home/fdondi/Documents/#GitHub/pii-masker/pii_masker_local.py", line 47, in <module>
+    def resolve_local_multihead_checkpoint(model: str | None) -> Path:
+                                                                 ^^^^
+NameError: name 'Path' is not defined
+2026-03-16T23:00:51 INFO native_host_stdin_closed
+2026-03-16T23:01:19 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-16T23:01:19 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-16T23:01:19 INFO request_parsed jobId=diag-cli-2 fileName=diag.txt mimeType=text/plain sizeBytes=4 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel=None transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=None includeMapping=False
+2026-03-16T23:01:19 INFO run_masker_start command=['/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python', 'pii_masker.py', '--json-mode'] language=en engine=transformers keyFile=/home/fdondi/.pii-masker/secret.key
+2026-03-16T23:01:35 INFO masker_stderr /home/fdondi/Documents/#GitHub/pii-masker/.venv/lib/python3.13/site-packages/udapi/block/write/textmodetrees.py:133: SyntaxWarning: invalid escape sequence '\e'
+2026-03-16T23:01:35 INFO masker_stderr into \begin{verbatim}...\end{verbatim}, but you need to compile with pdflatex (xelatex not supported)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (0.0s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (0.1s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (0.2s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (0.3s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (0.4s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (0.5s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (0.6s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (0.7s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (0.8s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (0.9s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (1.0s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (1.1s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (1.2s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (1.3s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (1.4s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (1.5s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (1.6s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (1.7s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (1.8s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (1.9s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (2.0s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (2.1s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (2.2s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (2.3s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (2.4s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (2.5s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (2.6s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (2.7s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (2.8s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (2.9s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (3.0s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (3.1s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (3.2s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (3.3s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (3.4s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (3.5s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (3.6s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (3.7s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (3.8s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (3.9s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (4.0s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (4.1s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (4.2s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (4.3s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (4.4s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (4.5s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (4.6s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (4.7s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (4.8s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (4.9s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (5.0s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (5.1s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (5.2s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (5.3s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (5.4s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (5.5s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (5.6s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (5.7s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (5.8s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (5.9s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (6.0s)
+2026-03-16T23:01:35 INFO masker_stderr ⏳ Loading transformers NLP engine (6.1s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (6.2s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (6.3s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (6.4s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (6.5s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (6.6s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (6.7s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (6.8s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (6.9s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (7.0s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (7.1s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (7.2s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (7.3s)                    '(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /Babelscape/wikineural-multilingual-ner/resolve/main/config.json (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"), '(Request ID: 4eb51380-14a2-4a26-afcd-0531ae881606)')' thrown while requesting HEAD https://huggingface.co/Babelscape/wikineural-multilingual-ner/resolve/main/config.json
+2026-03-16T23:01:39 INFO masker_stderr Retrying in 1s [Retry 1/5].
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (7.4s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (7.5s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (7.6s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (7.7s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (7.8s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (7.9s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (8.0s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (8.1s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (8.2s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (8.3s)                    '(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /Babelscape/wikineural-multilingual-ner/resolve/main/config.json (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"), '(Request ID: befc5637-6e39-4fbd-ba84-258ca5bf44f2)')' thrown while requesting HEAD https://huggingface.co/Babelscape/wikineural-multilingual-ner/resolve/main/config.json
+2026-03-16T23:01:39 INFO masker_stderr Retrying in 2s [Retry 2/5].
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (8.4s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (8.5s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (8.6s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (8.7s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (8.8s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (8.9s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (9.0s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (9.1s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (9.2s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (9.3s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (9.4s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (9.5s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (9.6s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (9.7s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (9.8s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (9.9s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (10.0s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (10.1s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (10.2s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (10.3s)                   '(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /Babelscape/wikineural-multilingual-ner/resolve/main/config.json (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"), '(Request ID: 882f7add-e86a-4c8e-b4bd-0e78739998fb)')' thrown while requesting HEAD https://huggingface.co/Babelscape/wikineural-multilingual-ner/resolve/main/config.json
+2026-03-16T23:01:39 INFO masker_stderr Retrying in 4s [Retry 3/5].
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (10.4s)
+2026-03-16T23:01:39 INFO masker_stderr ⏳ Loading transformers NLP engine (10.5s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (10.6s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (10.7s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (10.8s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (10.9s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (11.0s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (11.1s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (11.2s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (11.3s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (11.4s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (11.5s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (11.6s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (11.7s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (11.8s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (11.9s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (12.0s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (12.1s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (12.2s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (12.3s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (12.4s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (12.5s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (12.6s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (12.7s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (12.8s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (12.9s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (13.0s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (13.1s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (13.2s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (13.3s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (13.4s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (13.5s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (13.6s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (13.7s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (13.8s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (13.9s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (14.0s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (14.1s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (14.2s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (14.3s)                   '(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /Babelscape/wikineural-multilingual-ner/resolve/main/config.json (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"), '(Request ID: e2dbd096-7bd3-4dd7-af10-0c9f60127573)')' thrown while requesting HEAD https://huggingface.co/Babelscape/wikineural-multilingual-ner/resolve/main/config.json
+2026-03-16T23:01:45 INFO masker_stderr Retrying in 8s [Retry 4/5].
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (14.4s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (14.5s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (14.6s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (14.7s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (14.8s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (14.9s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (15.0s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (15.1s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (15.2s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (15.3s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (15.4s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (15.5s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (15.6s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (15.7s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (15.8s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (15.9s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (16.0s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (16.1s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (16.2s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (16.3s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (16.4s)
+2026-03-16T23:01:45 INFO masker_stderr ⏳ Loading transformers NLP engine (16.5s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (16.6s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (16.7s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (16.8s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (16.9s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (17.0s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (17.1s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (17.2s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (17.3s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (17.4s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (17.5s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (17.6s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (17.7s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (17.8s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (17.9s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (18.0s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (18.1s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (18.2s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (18.3s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (18.4s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (18.5s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (18.6s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (18.7s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (18.8s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (18.9s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (19.0s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (19.1s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (19.2s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (19.3s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (19.4s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (19.5s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (19.6s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (19.7s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (19.8s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (19.9s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (20.0s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (20.1s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (20.2s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (20.3s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (20.4s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (20.5s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (20.6s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (20.7s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (20.8s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (20.9s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (21.0s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (21.1s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (21.2s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (21.3s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (21.4s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (21.5s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (21.6s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (21.7s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (21.8s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (21.9s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (22.0s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (22.1s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (22.2s)
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (22.3s)                   '(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /Babelscape/wikineural-multilingual-ner/resolve/main/config.json (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"), '(Request ID: 361573c4-24c1-4732-8f64-f3d4d1cef387)')' thrown while requesting HEAD https://huggingface.co/Babelscape/wikineural-multilingual-ner/resolve/main/config.json
+2026-03-16T23:01:51 INFO masker_stderr Retrying in 8s [Retry 5/5].
+2026-03-16T23:01:51 INFO masker_stderr ⏳ Loading transformers NLP engine (22.4s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (22.5s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (22.6s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (22.7s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (22.8s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (22.9s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (23.0s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (23.1s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (23.2s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (23.3s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (23.4s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (23.5s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (23.6s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (23.7s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (23.8s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (23.9s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (24.0s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (24.1s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (24.2s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (24.3s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (24.4s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (24.5s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (24.6s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (24.7s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (24.8s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (24.9s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (25.0s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (25.1s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (25.2s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (25.3s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (25.4s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (25.5s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (25.6s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (25.7s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (25.8s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (25.9s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (26.0s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (26.1s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (26.2s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (26.3s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (26.4s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (26.5s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (26.6s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (26.7s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (26.8s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (26.9s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (27.0s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (27.1s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (27.2s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (27.3s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (27.4s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (27.5s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (27.6s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (27.7s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (27.8s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (27.9s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (28.0s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (28.1s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (28.2s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (28.3s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (28.4s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (28.5s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (28.6s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (28.7s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (28.8s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (28.9s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (29.0s)
+2026-03-16T23:01:58 INFO masker_stderr ⏳ Loading transformers NLP engine (29.1s)
+2026-03-16T23:02:00 INFO masker_stderr ⏳ Loading transformers NLP engine (29.3s)
+2026-03-16T23:02:00 INFO masker_stderr ⏳ Loading transformers NLP engine (29.4s)
+2026-03-16T23:02:00 INFO masker_stderr ⏳ Loading transformers NLP engine (29.5s)
+2026-03-16T23:02:00 INFO masker_stderr ⏳ Loading transformers NLP engine (29.6s)
+2026-03-16T23:02:00 INFO masker_stderr ⏳ Loading transformers NLP engine (29.7s)
+2026-03-16T23:02:00 INFO masker_stderr ⏳ Loading transformers NLP engine (29.8s)
+2026-03-16T23:02:00 INFO masker_stderr ⏳ Loading transformers NLP engine (29.9s)
+2026-03-16T23:02:00 INFO masker_stderr ⏳ Loading transformers NLP engine (30.0s)
+2026-03-16T23:02:00 INFO masker_stderr ⏳ Loading transformers NLP engine (30.1s)
+2026-03-16T23:02:00 INFO masker_stderr ⏳ Loading transformers NLP engine (30.2s)
+2026-03-16T23:02:00 INFO masker_stderr ⏳ Loading transformers NLP engine (30.3s)
+2026-03-16T23:02:00 INFO masker_stderr ⏳ Loading transformers NLP engine (30.4s)                   '(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /Babelscape/wikineural-multilingual-ner/resolve/main/config.json (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"), '(Request ID: cd2c461e-00d9-4e31-b392-0f113e226f35)')' thrown while requesting HEAD https://huggingface.co/Babelscape/wikineural-multilingual-ner/resolve/main/config.json
+2026-03-16T23:02:00 INFO masker_stderr Error creating NLP engine: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /Babelscape/wikineural-multilingual-ner/resolve/main/config.json (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"), '(Request ID: cd2c461e-00d9-4e31-b392-0f113e226f35)')
+2026-03-16T23:02:00 INFO masker_stderr ✓ Loading transformers NLP engine (30.5s)
+2026-03-16T23:02:00 ERROR run_masker_response_error returnCode=6 code=DEPENDENCY_OR_ENGINE_ERROR message=NLP engine initialization failed. Check dependencies/models.
+2026-03-16T23:02:00 ERROR dependency_missing jobId=diag-cli-2 error=DEPENDENCY_OR_ENGINE_ERROR: NLP engine initialization failed. Check dependencies/models.
+2026-03-16T23:02:00 INFO native_host_stdin_closed
+2026-03-16T23:15:40 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-16T23:15:40 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-16T23:15:40 INFO request_parsed jobId=diag-1773699340301 fileName=diag.txt mimeType=text/plain sizeBytes=4 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-16T23:15:40 INFO run_masker_start command=['/usr/bin/python3', 'pii_masker.py', '--json-mode'] language=en engine=transformers keyFile=/home/fdondi/.pii-masker/secret.key
+2026-03-16T23:15:40 ERROR run_masker_response_error returnCode=3 code=KEY_FILE_NOT_FOUND message=Key file not found: /home/fdondi/.pii-masker/secret.key
+2026-03-16T23:15:40 ERROR masker_command_failed jobId=diag-1773699340301 error=Masker error KEY_FILE_NOT_FOUND: Key file not found: /home/fdondi/.pii-masker/secret.key
+2026-03-16T23:15:40 INFO native_host_stdin_closed
+2026-03-16T23:16:28 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-16T23:16:28 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-16T23:16:28 INFO request_parsed jobId=diag-1773699388153 fileName=diag.txt mimeType=text/plain sizeBytes=4 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-16T23:16:28 INFO run_masker_start command=['/usr/bin/python3', 'pii_masker.py', '--json-mode'] language=en engine=transformers keyFile=/home/fdondi/.pii-masker/secret.key
+2026-03-16T23:16:28 ERROR run_masker_response_error returnCode=3 code=KEY_FILE_NOT_FOUND message=Key file not found: /home/fdondi/.pii-masker/secret.key
+2026-03-16T23:16:28 ERROR masker_command_failed jobId=diag-1773699388153 error=Masker error KEY_FILE_NOT_FOUND: Key file not found: /home/fdondi/.pii-masker/secret.key
+2026-03-16T23:16:28 INFO native_host_stdin_closed
+2026-03-16T23:19:21 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-16T23:19:21 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-16T23:19:21 INFO request_parsed jobId=diag-1773699561375 fileName=diag.txt mimeType=text/plain sizeBytes=4 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-16T23:19:21 INFO run_masker_start command=['/usr/bin/python3', 'pii_masker.py', '--json-mode'] language=en engine=transformers keyFile=/home/fdondi/.var/app/com.google.Chrome/config/google-chrome/pii-masker/secret.key
+2026-03-16T23:19:21 ERROR run_masker_response_error returnCode=5 code=ANONYMIZE_FAILED message=No module named 'presidio_analyzer'
+2026-03-16T23:19:21 ERROR masker_command_failed jobId=diag-1773699561375 error=Masker error ANONYMIZE_FAILED: No module named 'presidio_analyzer'
+2026-03-16T23:19:21 INFO native_host_stdin_closed
+2026-03-16T23:19:51 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-16T23:19:51 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-16T23:19:51 INFO native_host_stdin_closed
+2026-03-17T01:34:53 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-17T01:34:53 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-17T01:34:53 INFO request_parsed jobId=diag-1773707693588 fileName=diag.txt mimeType=text/plain sizeBytes=4 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-17T01:34:53 INFO run_masker_start command=['/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python', 'pii_masker.py', '--json-mode'] language=en engine=transformers keyFile=/home/fdondi/.var/app/com.google.Chrome/config/google-chrome/pii-masker/secret.key
+2026-03-17T01:34:53 ERROR internal_error jobId=diag-1773707693588
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "host.py", line 611, in process_request
+  File "host.py", line 476, in redact_text_file
+  File "host.py", line 402, in run_masker_text
+  File "host.py", line 142, in run_command_with_live_stderr
+BrokenPipeError: [Errno 32] Broken pipe
+2026-03-17T01:34:53 INFO masker_stderr /home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python: error while loading shared libraries: libpython3.14.so.1.0: cannot open shared object file: No such file or directory
+2026-03-17T01:34:53 INFO native_host_stdin_closed
+2026-03-17T01:39:50 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-17T01:39:50 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-17T01:39:50 INFO request_parsed jobId=diag-1773707990713 fileName=diag.txt mimeType=text/plain sizeBytes=4 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-17T01:39:50 INFO run_masker_start command=['/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python', 'pii_masker.py', '--json-mode'] language=en engine=transformers keyFile=/home/fdondi/.var/app/com.google.Chrome/config/google-chrome/pii-masker/secret.key
+2026-03-17T01:39:50 INFO masker_stderr Could not find platform independent libraries <prefix>
+2026-03-17T01:39:50 INFO masker_stderr Could not find platform dependent libraries <exec_prefix>
+2026-03-17T01:39:50 INFO masker_stderr Python path configuration:
+2026-03-17T01:39:50 INFO masker_stderr PYTHONHOME = (not set)
+2026-03-17T01:39:50 INFO masker_stderr PYTHONPATH = (not set)
+2026-03-17T01:39:50 INFO masker_stderr program name = '/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python'
+2026-03-17T01:39:50 INFO masker_stderr isolated = 0
+2026-03-17T01:39:50 INFO masker_stderr environment = 1
+2026-03-17T01:39:50 INFO masker_stderr user site = 1
+2026-03-17T01:39:50 INFO masker_stderr safe_path = 0
+2026-03-17T01:39:50 INFO masker_stderr import site = 1
+2026-03-17T01:39:50 INFO masker_stderr is in build tree = 0
+2026-03-17T01:39:50 INFO masker_stderr stdlib dir = '/home/fdondi/anaconda3/lib/python3.12'
+2026-03-17T01:39:50 INFO masker_stderr sys._base_executable = '/home/fdondi/anaconda3/bin/python'
+2026-03-17T01:39:50 INFO masker_stderr sys.base_prefix = '/home/fdondi/anaconda3'
+2026-03-17T01:39:50 INFO masker_stderr sys.base_exec_prefix = '/home/fdondi/anaconda3'
+2026-03-17T01:39:50 INFO masker_stderr sys.platlibdir = 'lib'
+2026-03-17T01:39:50 INFO masker_stderr sys.executable = '/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python'
+2026-03-17T01:39:50 INFO masker_stderr sys.prefix = '/home/fdondi/anaconda3'
+2026-03-17T01:39:50 INFO masker_stderr sys.exec_prefix = '/home/fdondi/anaconda3'
+2026-03-17T01:39:50 INFO masker_stderr sys.path = [
+2026-03-17T01:39:50 INFO masker_stderr '/home/fdondi/anaconda3/lib/python312.zip',
+2026-03-17T01:39:50 INFO masker_stderr '/home/fdondi/anaconda3/lib/python3.12',
+2026-03-17T01:39:50 INFO masker_stderr '/home/fdondi/anaconda3/lib/python3.12/lib-dynload',
+2026-03-17T01:39:50 INFO masker_stderr ]
+2026-03-17T01:39:50 INFO masker_stderr Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+2026-03-17T01:39:50 INFO masker_stderr Python runtime state: core initialized
+2026-03-17T01:39:50 INFO masker_stderr ModuleNotFoundError: No module named 'encodings'
+2026-03-17T01:39:50 INFO masker_stderr Current thread 0x00007f585e02d680 (most recent call first):
+2026-03-17T01:39:50 INFO masker_stderr <no Python frame>
+2026-03-17T01:39:50 ERROR run_masker_failed returnCode=1 stderr=Could not find platform independent libraries <prefix>
+Could not find platform dependent libraries <exec_prefix>
+Python path configuration:
+  PYTHONHOME = (not set)
+  PYTHONPATH = (not set)
+  program name = '/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python'
+  isolated = 0
+  environment = 1
+  user site = 1
+  safe_path = 0
+  import site = 1
+  is in build tree = 0
+  stdlib dir = '/home/fdondi/anaconda3/lib/python3.12'
+  sys._base_executable = '/home/fdondi/anaconda3/bin/python'
+  sys.base_prefix = '/home/fdondi/anaconda3'
+  sys.base_exec_prefix = '/home/fdondi/anaconda3'
+  sys.platlibdir = 'lib'
+  sys.executable = '/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python'
+  sys.prefix = '/home/fdondi/anaconda3'
+  sys.exec_prefix = '/home/fdondi/anaconda3'
+  sys.path = [
+    '/home
+2026-03-17T01:39:50 ERROR masker_command_failed jobId=diag-1773707990713 error=Masker command failed (1): Could not find platform independent libraries <prefix>
+Could not find platform dependent libraries <exec_prefix>
+Python path configuration:
+  PYTHONHOME = (not set)
+  PYTHONPATH = (not set)
+  program name = '/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python'
+  isolated = 0
+  environment = 1
+  user site = 1
+  safe_path = 0
+  import site = 1
+  is in build tree = 0
+  stdlib dir = '/home/fdondi/anaconda3/lib/python3.12'
+  sys._base_executable = '/home/fdondi/anaconda3/bin/python'
+  sys.base_prefix = '/home/fdondi/anaconda3'
+  sys.base_exec_prefix = '/home/fdondi/anaconda3'
+  sys.platlibdir = 'lib'
+  sys.executable = '/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python'
+  sys.prefix = '/home/fdondi/anaconda3'
+  sys.exec_prefix = '/home/fdondi/anaconda3'
+  sys.path = [
+    '/home/fdondi/anaconda3/lib/python312.zip',
+    '/home/fdondi/anaconda3/lib/python3.12',
+    '/home/fdondi/anaconda3/lib/python3.12/lib-dynload',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007f585e02d680 (most recent call first):
+  <no Python frame>
+2026-03-17T01:39:50 INFO native_host_stdin_closed
+2026-03-17T01:45:33 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-17T01:45:33 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-17T01:45:33 INFO request_parsed jobId=diag-flatpak fileName=diag.txt mimeType=text/plain sizeBytes=4 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel=None transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=None includeMapping=False
+2026-03-17T01:45:33 INFO run_masker_start command=['/usr/bin/python3', 'pii_masker.py', '--json-mode'] language=en engine=transformers keyFile=/home/fdondi/.var/app/com.google.Chrome/config/google-chrome/pii-masker/secret.key
+2026-03-17T01:45:38 INFO masker_stderr ⏳ Loading transformers NLP engine (0.0s)                    Error: Missing dependencies for engine 'transformers': Can't connect to HTTPS URL because the SSL module is not available.
+2026-03-17T01:45:38 INFO masker_stderr Install with: pip install presidio-analyzer[transformers]
+2026-03-17T01:45:38 INFO masker_stderr ✓ Loading transformers NLP engine (0.1s)
+2026-03-17T01:45:38 ERROR run_masker_response_error returnCode=6 code=DEPENDENCY_OR_ENGINE_ERROR message=NLP engine initialization failed. Check dependencies/models.
+2026-03-17T01:45:38 ERROR dependency_missing jobId=diag-flatpak error=DEPENDENCY_OR_ENGINE_ERROR: NLP engine initialization failed. Check dependencies/models.
+2026-03-17T01:45:38 INFO native_host_stdin_closed
+2026-03-17T01:47:30 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-17T01:47:30 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-17T01:47:30 INFO request_parsed jobId=diag-flatpak fileName=diag.txt mimeType=text/plain sizeBytes=4 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel=None transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=None includeMapping=False
+2026-03-17T01:47:30 INFO run_masker_start command=['/usr/bin/python3', 'pii_masker.py', '--json-mode'] language=en engine=transformers keyFile=/home/fdondi/.var/app/com.google.Chrome/config/google-chrome/pii-masker/secret.key
+2026-03-17T01:47:36 INFO masker_stderr ⏳ Loading transformers NLP engine (0.0s)
+2026-03-17T01:47:36 INFO masker_stderr ⏳ Loading transformers NLP engine (0.1s)
+2026-03-17T01:47:36 INFO masker_stderr ⏳ Loading transformers NLP engine (0.3s)
+2026-03-17T01:47:36 INFO masker_stderr ⏳ Loading transformers NLP engine (0.4s)
+2026-03-17T01:47:36 INFO masker_stderr ⏳ Loading transformers NLP engine (0.5s)                    Error: Missing dependencies for engine 'transformers': Can't connect to HTTPS URL because the SSL module is not available.
+2026-03-17T01:47:36 INFO masker_stderr Install with: pip install presidio-analyzer[transformers]
+2026-03-17T01:47:36 INFO masker_stderr ✓ Loading transformers NLP engine (0.6s)
+2026-03-17T01:47:36 ERROR run_masker_response_error returnCode=6 code=DEPENDENCY_OR_ENGINE_ERROR message=NLP engine initialization failed. Check dependencies/models.
+2026-03-17T01:47:36 ERROR dependency_missing jobId=diag-flatpak error=DEPENDENCY_OR_ENGINE_ERROR: NLP engine initialization failed. Check dependencies/models.
+2026-03-17T01:47:36 INFO native_host_stdin_closed
+2026-03-17T01:48:30 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-17T01:48:30 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-17T01:48:30 INFO request_parsed jobId=diag-flatpak fileName=diag.txt mimeType=text/plain sizeBytes=4 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel=None transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=None includeMapping=False
+2026-03-17T01:48:30 INFO run_masker_start command=['/usr/bin/python3', 'pii_masker.py', '--json-mode'] language=en engine=transformers keyFile=/home/fdondi/.var/app/com.google.Chrome/config/google-chrome/pii-masker/secret.key
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (0.0s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (0.1s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (0.2s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (0.3s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (0.4s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (0.5s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (0.6s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (0.7s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (0.8s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (1.0s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (1.1s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (1.2s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (1.3s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (1.4s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (1.5s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (1.6s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (1.7s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Loading transformers NLP engine (1.8s)                    Device set to use cpu
+2026-03-17T01:48:37 INFO masker_stderr ✓ Loading transformers NLP engine (1.9s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Analyzing text for PII (0.0s)
+2026-03-17T01:48:37 INFO masker_stderr ⏳ Analyzing text for PII (0.1s)
+2026-03-17T01:48:37 INFO masker_stderr ✓ Analyzing text for PII (0.2s)
+2026-03-17T01:48:38 INFO run_masker_success mappingCount=0
+2026-03-17T01:48:38 INFO redacted_text_preview_first_10_lines
+test
+2026-03-17T01:48:38 INFO request_success jobId=diag-flatpak outputFile=diag.redacted.txt outputMime=text/plain outputBytes=4 mappingCount=0
+2026-03-17T01:48:38 INFO native_host_stdin_closed
+2026-03-17T01:50:23 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-17T01:50:23 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-17T01:50:23 INFO request_parsed jobId=diag-1773708623026 fileName=diag.txt mimeType=text/plain sizeBytes=4 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-17T01:50:23 INFO run_masker_start command=['/usr/bin/python3', 'pii_masker.py', '--json-mode'] language=en engine=transformers keyFile=/home/fdondi/.var/app/com.google.Chrome/config/google-chrome/pii-masker/secret.key
+2026-03-17T01:50:25 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-17T01:50:25 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-17T01:50:25 INFO request_parsed jobId=diag-1773708625314 fileName=diag.txt mimeType=text/plain sizeBytes=4 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-17T01:50:25 INFO run_masker_start command=['/usr/bin/python3', 'pii_masker.py', '--json-mode'] language=en engine=transformers keyFile=/home/fdondi/.var/app/com.google.Chrome/config/google-chrome/pii-masker/secret.key
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (0.0s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (0.1s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (0.3s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (0.4s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (0.5s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (0.6s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (0.7s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (0.8s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (0.9s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (1.0s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (1.1s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (1.2s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (1.3s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (1.4s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (1.5s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (1.6s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (1.7s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (1.8s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Loading transformers NLP engine (1.9s)                    Device set to use cpu
+2026-03-17T01:50:30 INFO masker_stderr ✓ Loading transformers NLP engine (2.0s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Analyzing text for PII (0.0s)
+2026-03-17T01:50:30 INFO masker_stderr ⏳ Analyzing text for PII (0.1s)
+2026-03-17T01:50:30 INFO masker_stderr ✓ Analyzing text for PII (0.2s)
+2026-03-17T01:50:30 INFO run_masker_success mappingCount=0
+2026-03-17T01:50:30 INFO redacted_text_preview_first_10_lines
+test
+2026-03-17T01:50:30 INFO request_success jobId=diag-1773708623026 outputFile=diag.redacted.txt outputMime=text/plain outputBytes=4 mappingCount=0
+2026-03-17T01:50:30 INFO native_host_stdin_closed
+2026-03-17T01:50:31 INFO masker_stderr ⏳ Loading transformers NLP engine (0.0s)
+2026-03-17T01:50:31 INFO masker_stderr ⏳ Loading transformers NLP engine (0.1s)
+2026-03-17T01:50:31 INFO masker_stderr ⏳ Loading transformers NLP engine (0.2s)
+2026-03-17T01:50:31 INFO masker_stderr ⏳ Loading transformers NLP engine (0.3s)
+2026-03-17T01:50:31 INFO masker_stderr ⏳ Loading transformers NLP engine (0.4s)
+2026-03-17T01:50:31 INFO masker_stderr ⏳ Loading transformers NLP engine (0.5s)
+2026-03-17T01:50:31 INFO masker_stderr ⏳ Loading transformers NLP engine (0.6s)
+2026-03-17T01:50:31 INFO masker_stderr ⏳ Loading transformers NLP engine (0.7s)
+2026-03-17T01:50:31 INFO masker_stderr ⏳ Loading transformers NLP engine (0.8s)
+2026-03-17T01:50:31 INFO masker_stderr ⏳ Loading transformers NLP engine (1.0s)
+2026-03-17T01:50:31 INFO masker_stderr ⏳ Loading transformers NLP engine (1.1s)
+2026-03-17T01:50:31 INFO masker_stderr ⏳ Loading transformers NLP engine (1.2s)
+2026-03-17T01:50:31 INFO masker_stderr ⏳ Loading transformers NLP engine (1.3s)                    Device set to use cpu
+2026-03-17T01:50:31 INFO masker_stderr ✓ Loading transformers NLP engine (1.4s)
+2026-03-17T01:50:31 INFO masker_stderr ⏳ Analyzing text for PII (0.0s)
+2026-03-17T01:50:31 INFO masker_stderr ⏳ Analyzing text for PII (0.1s)
+2026-03-17T01:50:31 INFO masker_stderr ✓ Analyzing text for PII (0.2s)
+2026-03-17T01:50:31 INFO run_masker_success mappingCount=0
+2026-03-17T01:50:31 INFO redacted_text_preview_first_10_lines
+test
+2026-03-17T01:50:31 INFO request_success jobId=diag-1773708625314 outputFile=diag.redacted.txt outputMime=text/plain outputBytes=4 mappingCount=0
+2026-03-17T01:50:31 INFO native_host_stdin_closed
+2026-03-17T01:50:37 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-17T01:50:37 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-17T01:50:37 INFO request_parsed jobId=diag-1773708637606 fileName=diag.txt mimeType=text/plain sizeBytes=4 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-17T01:50:37 INFO run_masker_start command=['/usr/bin/python3', 'pii_masker.py', '--json-mode'] language=en engine=transformers keyFile=/home/fdondi/.var/app/com.google.Chrome/config/google-chrome/pii-masker/secret.key
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Loading transformers NLP engine (0.0s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Loading transformers NLP engine (0.1s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Loading transformers NLP engine (0.2s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Loading transformers NLP engine (0.3s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Loading transformers NLP engine (0.4s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Loading transformers NLP engine (0.5s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Loading transformers NLP engine (0.6s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Loading transformers NLP engine (0.7s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Loading transformers NLP engine (0.8s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Loading transformers NLP engine (0.9s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Loading transformers NLP engine (1.0s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Loading transformers NLP engine (1.1s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Loading transformers NLP engine (1.2s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Loading transformers NLP engine (1.4s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Loading transformers NLP engine (1.5s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Loading transformers NLP engine (1.6s)                    Device set to use cpu
+2026-03-17T01:50:43 INFO masker_stderr ✓ Loading transformers NLP engine (1.7s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Analyzing text for PII (0.0s)
+2026-03-17T01:50:43 INFO masker_stderr ⏳ Analyzing text for PII (0.1s)
+2026-03-17T01:50:43 INFO masker_stderr ✓ Analyzing text for PII (0.2s)
+2026-03-17T01:50:43 INFO run_masker_success mappingCount=0
+2026-03-17T01:50:43 INFO redacted_text_preview_first_10_lines
+test
+2026-03-17T01:50:43 INFO request_success jobId=diag-1773708637606 outputFile=diag.redacted.txt outputMime=text/plain outputBytes=4 mappingCount=0
+2026-03-17T01:50:43 INFO native_host_stdin_closed
+2026-03-17T01:53:10 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-17T01:53:10 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-17T01:53:10 INFO request_parsed jobId=852db13c-e39d-49af-be43-8f932fbf4a43 fileName=cv_personalized-32.pdf mimeType=application/pdf sizeBytes=293574 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-17T01:53:10 INFO run_pdf_worker_start command=['/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python', '/home/fdondi/Documents/#GitHub/pii-masker/native_host/runtime_worker.py']
+2026-03-17T01:53:10 INFO pdf_worker_stderr Could not find platform independent libraries <prefix>
+2026-03-17T01:53:10 INFO pdf_worker_stderr Could not find platform dependent libraries <exec_prefix>
+2026-03-17T01:53:10 INFO pdf_worker_stderr Python path configuration:
+2026-03-17T01:53:10 INFO pdf_worker_stderr PYTHONHOME = (not set)
+2026-03-17T01:53:10 INFO pdf_worker_stderr PYTHONPATH = (not set)
+2026-03-17T01:53:10 INFO pdf_worker_stderr program name = '/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python'
+2026-03-17T01:53:10 INFO pdf_worker_stderr isolated = 0
+2026-03-17T01:53:10 INFO pdf_worker_stderr environment = 1
+2026-03-17T01:53:10 INFO pdf_worker_stderr user site = 1
+2026-03-17T01:53:10 INFO pdf_worker_stderr safe_path = 0
+2026-03-17T01:53:10 INFO pdf_worker_stderr import site = 1
+2026-03-17T01:53:10 INFO pdf_worker_stderr is in build tree = 0
+2026-03-17T01:53:10 INFO pdf_worker_stderr stdlib dir = '/home/fdondi/anaconda3/lib/python3.12'
+2026-03-17T01:53:10 INFO pdf_worker_stderr sys._base_executable = '/home/fdondi/anaconda3/bin/python'
+2026-03-17T01:53:10 INFO pdf_worker_stderr sys.base_prefix = '/home/fdondi/anaconda3'
+2026-03-17T01:53:10 INFO pdf_worker_stderr sys.base_exec_prefix = '/home/fdondi/anaconda3'
+2026-03-17T01:53:10 INFO pdf_worker_stderr sys.platlibdir = 'lib'
+2026-03-17T01:53:10 INFO pdf_worker_stderr sys.executable = '/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python'
+2026-03-17T01:53:10 INFO pdf_worker_stderr sys.prefix = '/home/fdondi/anaconda3'
+2026-03-17T01:53:10 INFO pdf_worker_stderr sys.exec_prefix = '/home/fdondi/anaconda3'
+2026-03-17T01:53:10 INFO pdf_worker_stderr sys.path = [
+2026-03-17T01:53:10 INFO pdf_worker_stderr '/home/fdondi/anaconda3/lib/python312.zip',
+2026-03-17T01:53:10 INFO pdf_worker_stderr '/home/fdondi/anaconda3/lib/python3.12',
+2026-03-17T01:53:10 INFO pdf_worker_stderr '/home/fdondi/anaconda3/lib/python3.12/lib-dynload',
+2026-03-17T01:53:10 ERROR internal_error jobId=852db13c-e39d-49af-be43-8f932fbf4a43
+Traceback (most recent call last):
+  File "host.py", line 619, in process_request
+  File "host.py", line 541, in redact_pdf_file
+  File "host.py", line 148, in run_command_with_live_stderr
+BrokenPipeError: [Errno 32] Broken pipe
+2026-03-17T01:53:10 INFO pdf_worker_stderr ]
+2026-03-17T01:53:10 INFO pdf_worker_stderr Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+2026-03-17T01:53:10 INFO pdf_worker_stderr Python runtime state: core initialized
+2026-03-17T01:53:10 INFO pdf_worker_stderr ModuleNotFoundError: No module named 'encodings'
+2026-03-17T01:53:10 INFO pdf_worker_stderr Current thread 0x00007f4041744680 (most recent call first):
+2026-03-17T01:53:10 INFO pdf_worker_stderr <no Python frame>
+2026-03-17T01:53:10 INFO native_host_stdin_closed
+2026-03-17T01:54:05 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-17T01:54:05 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-17T01:54:05 INFO request_parsed jobId=51e13dca-bdab-49d0-832f-54b5c581a789 fileName=cv_personalized-32.pdf mimeType=application/pdf sizeBytes=293574 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-17T01:54:05 INFO run_pdf_worker_start command=['/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python', '/home/fdondi/Documents/#GitHub/pii-masker/native_host/runtime_worker.py']
+2026-03-17T01:54:05 INFO pdf_worker_stderr Could not find platform independent libraries <prefix>
+2026-03-17T01:54:05 INFO pdf_worker_stderr Could not find platform dependent libraries <exec_prefix>
+2026-03-17T01:54:05 INFO pdf_worker_stderr Python path configuration:
+2026-03-17T01:54:05 INFO pdf_worker_stderr PYTHONHOME = (not set)
+2026-03-17T01:54:05 INFO pdf_worker_stderr PYTHONPATH = (not set)
+2026-03-17T01:54:05 ERROR internal_error jobId=51e13dca-bdab-49d0-832f-54b5c581a789
+Traceback (most recent call last):
+  File "host.py", line 619, in process_request
+  File "host.py", line 541, in redact_pdf_file
+  File "host.py", line 148, in run_command_with_live_stderr
+BrokenPipeError: [Errno 32] Broken pipe
+2026-03-17T01:54:05 INFO pdf_worker_stderr program name = '/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python'
+2026-03-17T01:54:05 INFO pdf_worker_stderr isolated = 0
+2026-03-17T01:54:05 INFO pdf_worker_stderr environment = 1
+2026-03-17T01:54:05 INFO pdf_worker_stderr user site = 1
+2026-03-17T01:54:05 INFO pdf_worker_stderr safe_path = 0
+2026-03-17T01:54:05 INFO pdf_worker_stderr import site = 1
+2026-03-17T01:54:05 INFO pdf_worker_stderr is in build tree = 0
+2026-03-17T01:54:05 INFO pdf_worker_stderr stdlib dir = '/home/fdondi/anaconda3/lib/python3.12'
+2026-03-17T01:54:05 INFO pdf_worker_stderr sys._base_executable = '/home/fdondi/anaconda3/bin/python'
+2026-03-17T01:54:05 INFO pdf_worker_stderr sys.base_prefix = '/home/fdondi/anaconda3'
+2026-03-17T01:54:05 INFO pdf_worker_stderr sys.base_exec_prefix = '/home/fdondi/anaconda3'
+2026-03-17T01:54:05 INFO pdf_worker_stderr sys.platlibdir = 'lib'
+2026-03-17T01:54:05 INFO pdf_worker_stderr sys.executable = '/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python'
+2026-03-17T01:54:05 INFO pdf_worker_stderr sys.prefix = '/home/fdondi/anaconda3'
+2026-03-17T01:54:05 INFO pdf_worker_stderr sys.exec_prefix = '/home/fdondi/anaconda3'
+2026-03-17T01:54:05 INFO pdf_worker_stderr sys.path = [
+2026-03-17T01:54:05 INFO pdf_worker_stderr '/home/fdondi/anaconda3/lib/python312.zip',
+2026-03-17T01:54:05 INFO pdf_worker_stderr '/home/fdondi/anaconda3/lib/python3.12',
+2026-03-17T01:54:05 INFO pdf_worker_stderr '/home/fdondi/anaconda3/lib/python3.12/lib-dynload',
+2026-03-17T01:54:05 INFO pdf_worker_stderr ]
+2026-03-17T01:54:05 INFO pdf_worker_stderr Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+2026-03-17T01:54:05 INFO pdf_worker_stderr Python runtime state: core initialized
+2026-03-17T01:54:05 INFO pdf_worker_stderr ModuleNotFoundError: No module named 'encodings'
+2026-03-17T01:54:05 INFO pdf_worker_stderr Current thread 0x00007f74bcc06680 (most recent call first):
+2026-03-17T01:54:05 INFO pdf_worker_stderr <no Python frame>
+2026-03-17T01:54:05 INFO native_host_stdin_closed
+2026-03-17T01:54:22 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-17T01:54:22 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-17T01:54:22 INFO request_parsed jobId=diag-1773708861887 fileName=diag.txt mimeType=text/plain sizeBytes=4 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-17T01:54:22 INFO run_masker_start command=['/usr/bin/python3', 'pii_masker.py', '--json-mode'] language=en engine=transformers keyFile=/home/fdondi/.var/app/com.google.Chrome/config/google-chrome/pii-masker/secret.key
+2026-03-17T01:54:27 INFO masker_stderr ⏳ Loading transformers NLP engine (0.0s)
+2026-03-17T01:54:27 INFO masker_stderr ⏳ Loading transformers NLP engine (0.1s)
+2026-03-17T01:54:27 INFO masker_stderr ⏳ Loading transformers NLP engine (0.2s)
+2026-03-17T01:54:27 INFO masker_stderr ⏳ Loading transformers NLP engine (0.3s)
+2026-03-17T01:54:27 INFO masker_stderr ⏳ Loading transformers NLP engine (0.4s)
+2026-03-17T01:54:27 INFO masker_stderr ⏳ Loading transformers NLP engine (0.5s)
+2026-03-17T01:54:27 INFO masker_stderr ⏳ Loading transformers NLP engine (0.6s)
+2026-03-17T01:54:27 INFO masker_stderr ⏳ Loading transformers NLP engine (0.8s)
+2026-03-17T01:54:27 INFO masker_stderr ⏳ Loading transformers NLP engine (0.9s)
+2026-03-17T01:54:27 INFO masker_stderr ⏳ Loading transformers NLP engine (1.0s)
+2026-03-17T01:54:27 INFO masker_stderr ⏳ Loading transformers NLP engine (1.1s)
+2026-03-17T01:54:27 INFO masker_stderr ⏳ Loading transformers NLP engine (1.2s)
+2026-03-17T01:54:27 INFO masker_stderr ⏳ Loading transformers NLP engine (1.3s)
+2026-03-17T01:54:27 INFO masker_stderr ⏳ Loading transformers NLP engine (1.4s)                    Device set to use cpu
+2026-03-17T01:54:27 INFO masker_stderr ✓ Loading transformers NLP engine (1.5s)
+2026-03-17T01:54:27 INFO masker_stderr ⏳ Analyzing text for PII (0.0s)
+2026-03-17T01:54:27 INFO masker_stderr ⏳ Analyzing text for PII (0.1s)
+2026-03-17T01:54:27 INFO masker_stderr ✓ Analyzing text for PII (0.2s)
+2026-03-17T01:54:27 INFO run_masker_success mappingCount=0
+2026-03-17T01:54:27 INFO redacted_text_preview_first_10_lines
+test
+2026-03-17T01:54:27 INFO request_success jobId=diag-1773708861887 outputFile=diag.redacted.txt outputMime=text/plain outputBytes=4 mappingCount=0
+2026-03-17T01:54:27 INFO native_host_stdin_closed
+2026-03-17T01:54:30 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-17T01:54:30 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-17T01:54:30 INFO request_parsed jobId=bac71d8c-2d7b-4f63-b214-1967bd68d232 fileName=cv_personalized-29.pdf mimeType=application/pdf sizeBytes=293575 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-17T01:54:30 INFO run_pdf_worker_start command=['/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python', '/home/fdondi/Documents/#GitHub/pii-masker/native_host/runtime_worker.py']
+2026-03-17T01:54:30 INFO pdf_worker_stderr Could not find platform independent libraries <prefix>
+2026-03-17T01:54:30 INFO pdf_worker_stderr Could not find platform dependent libraries <exec_prefix>
+2026-03-17T01:54:30 INFO pdf_worker_stderr Python path configuration:
+2026-03-17T01:54:30 INFO pdf_worker_stderr PYTHONHOME = (not set)
+2026-03-17T01:54:30 ERROR internal_error jobId=bac71d8c-2d7b-4f63-b214-1967bd68d232
+Traceback (most recent call last):
+  File "host.py", line 619, in process_request
+  File "host.py", line 541, in redact_pdf_file
+  File "host.py", line 148, in run_command_with_live_stderr
+BrokenPipeError: [Errno 32] Broken pipe
+2026-03-17T01:54:30 INFO pdf_worker_stderr PYTHONPATH = (not set)
+2026-03-17T01:54:30 INFO pdf_worker_stderr program name = '/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python'
+2026-03-17T01:54:30 INFO pdf_worker_stderr isolated = 0
+2026-03-17T01:54:30 INFO pdf_worker_stderr environment = 1
+2026-03-17T01:54:30 INFO pdf_worker_stderr user site = 1
+2026-03-17T01:54:30 INFO pdf_worker_stderr safe_path = 0
+2026-03-17T01:54:30 INFO pdf_worker_stderr import site = 1
+2026-03-17T01:54:30 INFO pdf_worker_stderr is in build tree = 0
+2026-03-17T01:54:30 INFO pdf_worker_stderr stdlib dir = '/home/fdondi/anaconda3/lib/python3.12'
+2026-03-17T01:54:30 INFO pdf_worker_stderr sys._base_executable = '/home/fdondi/anaconda3/bin/python'
+2026-03-17T01:54:30 INFO pdf_worker_stderr sys.base_prefix = '/home/fdondi/anaconda3'
+2026-03-17T01:54:30 INFO pdf_worker_stderr sys.base_exec_prefix = '/home/fdondi/anaconda3'
+2026-03-17T01:54:30 INFO pdf_worker_stderr sys.platlibdir = 'lib'
+2026-03-17T01:54:30 INFO pdf_worker_stderr sys.executable = '/home/fdondi/Documents/#GitHub/pii-masker/.venv/bin/python'
+2026-03-17T01:54:30 INFO pdf_worker_stderr sys.prefix = '/home/fdondi/anaconda3'
+2026-03-17T01:54:30 INFO pdf_worker_stderr sys.exec_prefix = '/home/fdondi/anaconda3'
+2026-03-17T01:54:30 INFO pdf_worker_stderr sys.path = [
+2026-03-17T01:54:30 INFO pdf_worker_stderr '/home/fdondi/anaconda3/lib/python312.zip',
+2026-03-17T01:54:30 INFO pdf_worker_stderr '/home/fdondi/anaconda3/lib/python3.12',
+2026-03-17T01:54:30 INFO pdf_worker_stderr '/home/fdondi/anaconda3/lib/python3.12/lib-dynload',
+2026-03-17T01:54:30 INFO pdf_worker_stderr ]
+2026-03-17T01:54:30 INFO pdf_worker_stderr Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+2026-03-17T01:54:30 INFO pdf_worker_stderr Python runtime state: core initialized
+2026-03-17T01:54:30 INFO pdf_worker_stderr ModuleNotFoundError: No module named 'encodings'
+2026-03-17T01:54:30 INFO pdf_worker_stderr Current thread 0x00007fd8e8aeb680 (most recent call first):
+2026-03-17T01:54:30 INFO pdf_worker_stderr <no Python frame>
+2026-03-17T01:54:30 INFO native_host_stdin_closed
+2026-03-17T01:56:14 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-17T01:56:14 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-17T01:56:14 INFO request_parsed jobId=diag-flatpak fileName=smoke.pdf mimeType=application/pdf sizeBytes=1369 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel=None transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=None includeMapping=False
+2026-03-17T01:56:14 INFO run_pdf_worker_start command=['/usr/bin/python3', '/home/fdondi/Documents/#GitHub/pii-masker/native_host/runtime_worker.py']
+2026-03-17T01:56:20 INFO redacted_pdf_text_preview_first_10_lines
+<PERSON_1> lives in <LOCATION_1>.
+2026-03-17T01:56:20 INFO request_success jobId=diag-flatpak outputFile=smoke.redacted.pdf outputMime=application/pdf outputBytes=1366 mappingCount=2
+2026-03-17T01:56:20 INFO native_host_stdin_closed
+2026-03-17T01:57:27 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-17T01:57:27 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-17T01:57:27 INFO request_parsed jobId=401cd413-ff29-45b0-91d7-9bbb924b00bd fileName=cv_personalized-29.pdf mimeType=application/pdf sizeBytes=293575 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-17T01:57:27 INFO run_pdf_worker_start command=['/usr/bin/python3', '/home/fdondi/Documents/#GitHub/pii-masker/native_host/runtime_worker.py']
+2026-03-17T01:57:34 INFO redacted_pdf_text_preview_first_10_lines
+<PERSON_1>
+The guarantee of experience, the enthusiasm for good engineering.
+Latest version of this CV at: <URL_1>
+Online (React) version of this CV at: <URL_2>
+Zugerstarsse 66, 8810 <PERSON_2>, ZH
+♂¶obile-alt<PHONE_NUMBER_1>
+/envel⌢<EMAIL_ADDRESS_1>linkedin-infrancesco-dondi
+/githubFdondi
+Born <DATE_TIME_1>
+Italian citizen, C permit
+2026-03-17T01:57:34 INFO request_success jobId=401cd413-ff29-45b0-91d7-9bbb924b00bd outputFile=cv_personalized-29.redacted.pdf outputMime=application/pdf outputBytes=7976 mappingCount=56
+2026-03-17T01:57:34 INFO native_host_stdin_closed
+2026-03-17T01:58:58 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-17T01:58:58 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-17T01:58:58 INFO request_parsed jobId=f0e36be3-ce16-4064-9ade-c0740f7a20ee fileName=cv_personalized-29.redacted.pdf mimeType=application/pdf sizeBytes=7976 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-17T01:58:58 INFO run_pdf_worker_start command=['/usr/bin/python3', '/home/fdondi/Documents/#GitHub/pii-masker/native_host/runtime_worker.py']
+2026-03-17T01:59:06 INFO redacted_pdf_text_preview_first_10_lines
+<PERSON_1>
+The guarantee of experience, the enthusiasm for good engineering.
+Latest version of this CV at: <URL_1>
+Online (React) version of this CV at: <URL_2>
+Zugerstarsse 66, 8810 <PERSON_2>, ZH
+■¶obile-alt<PHONE_NUMBER_1>
+/envel■<EMAIL_ADDRESS_1>linkedin-infrancesco-dondi
+/githubFdondi
+Born <DATE_TIME_1>
+Italian citizen, C permit
+2026-03-17T01:59:06 INFO request_success jobId=f0e36be3-ce16-4064-9ade-c0740f7a20ee outputFile=cv_personalized-29.redacted.redacted.pdf outputMime=application/pdf outputBytes=8715 mappingCount=5
+2026-03-17T01:59:06 INFO native_host_stdin_closed
+2026-03-17T01:59:15 INFO Native host logger initialized path=/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/bin/host.log
+2026-03-17T01:59:15 INFO native_host_start repoRoot=/home/fdondi/Documents/#GitHub/pii-masker
+2026-03-17T01:59:15 INFO request_parsed jobId=65777a1c-fd7c-4a4f-a9d7-abf9536f4a6d fileName=cv_personalized-29.redacted.redacted.pdf mimeType=application/pdf sizeBytes=8715 language=en engine=transformers model=Babelscape/wikineural-multilingual-ner spacyModel= transformersModel=Babelscape/wikineural-multilingual-ner localEncoderModel=answerdotai/ModernBERT-base includeMapping=False
+2026-03-17T01:59:15 INFO run_pdf_worker_start command=['/usr/bin/python3', '/home/fdondi/Documents/#GitHub/pii-masker/native_host/runtime_worker.py']
+2026-03-17T01:59:22 INFO redacted_pdf_text_preview_first_10_lines
+<PERSON_1>
+The guarantee of experience, the enthusiasm for good engineering.
+Latest version of this CV at: <URL_1>
+Online (React) version of this CV at: <URL_2>
+Zugerstarsse 66, 8810 <PERSON_2>, ZH
+■¶obile-alt<PHONE_NUMBER_1>
+/envel■<EMAIL_ADDRESS_1>linkedin-infrancesco-dondi
+/githubFdondi
+Born <DATE_TIME_1>
+Italian citizen, C permit
+2026-03-17T01:59:22 INFO request_success jobId=65777a1c-fd7c-4a4f-a9d7-abf9536f4a6d outputFile=cv_personalized-29.redacted.redacted.redacted.pdf outputMime=application/pdf outputBytes=9490 mappingCount=2
+2026-03-17T01:59:22 INFO native_host_stdin_closed

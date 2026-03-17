@@ -19,3 +19,5 @@ native_host/host.log
 result_*
 
 node_modules/
+
+temp/

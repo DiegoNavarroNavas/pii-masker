@@ -1,0 +1,6 @@
+#!/home/fdondi/Documents/#GitHub/pii-masker/results/release/linux/build-venv/bin/python
+import sys
+from PyInstaller.utils.cliutils.bindepend import run
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(run())

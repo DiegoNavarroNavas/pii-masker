@@ -3,7 +3,7 @@ set -euo pipefail
 
 if [[ $# -lt 2 ]]; then
   echo "Usage: $0 <host_binary_path> <extension_id> [browser]"
-  echo "browser: chrome|chromium|edge (default: chrome)"
+  echo "browser: chrome|chromium|edge|brave (default: chrome)"
   exit 1
 fi
 
@@ -21,13 +21,28 @@ chmod +x "$HOST_BINARY_PATH"
 
 case "$BROWSER" in
   chrome)
-    MANIFEST_DIR="$HOME/.config/google-chrome/NativeMessagingHosts"
+    if [[ -d "$HOME/.var/app/com.google.Chrome/config/google-chrome" ]]; then
+      MANIFEST_DIR="$HOME/.var/app/com.google.Chrome/config/google-chrome/NativeMessagingHosts"
+    else
+      MANIFEST_DIR="$HOME/.config/google-chrome/NativeMessagingHosts"
+    fi
     ;;
   chromium)
-    MANIFEST_DIR="$HOME/.config/chromium/NativeMessagingHosts"
+    if [[ -d "$HOME/.var/app/org.chromium.Chromium/config/chromium" ]]; then
+      MANIFEST_DIR="$HOME/.var/app/org.chromium.Chromium/config/chromium/NativeMessagingHosts"
+    else
+      MANIFEST_DIR="$HOME/.config/chromium/NativeMessagingHosts"
+    fi
     ;;
   edge)
     MANIFEST_DIR="$HOME/.config/microsoft-edge/NativeMessagingHosts"
+    ;;
+  brave)
+    if [[ -d "$HOME/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser" ]]; then
+      MANIFEST_DIR="$HOME/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/NativeMessagingHosts"
+    else
+      MANIFEST_DIR="$HOME/.config/BraveSoftware/Brave-Browser/NativeMessagingHosts"
+    fi
     ;;
   *)
     echo "Unsupported browser: $BROWSER"
