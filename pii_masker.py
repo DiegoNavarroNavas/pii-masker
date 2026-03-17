@@ -365,7 +365,19 @@ def anonymize_with_unique_masks(
     entity_counters = defaultdict(int)
     entity_map: dict[tuple[str, str], tuple[str, str]] = {}
 
-    sorted_results = sorted(results, key=lambda x: x.start)
+    # Resolve overlapping detections: when two spans overlap, keep the one with the
+    # highest score (ties broken by longest span).  Without this, applying both
+    # replacements back-to-front corrupts the text because the second replacement
+    # slices into already-modified characters left by the first.
+    def _resolve_overlaps(raw_results):
+        candidates = sorted(raw_results, key=lambda r: (r.score, r.end - r.start), reverse=True)
+        kept = []
+        for candidate in candidates:
+            if not any(candidate.start < k.end and candidate.end > k.start for k in kept):
+                kept.append(candidate)
+        return sorted(kept, key=lambda r: r.start)
+
+    sorted_results = _resolve_overlaps(results)
 
     # First pass: encrypt each unique value and build mapping
     with pulse(f"Encrypting {len(sorted_results)} entities"):
