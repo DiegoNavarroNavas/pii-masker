@@ -18,6 +18,7 @@ import zipfile
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
+import tkinter as tk
 from tkinter import BooleanVar, StringVar, Tk, ttk, messagebox, filedialog
 
 
@@ -55,6 +56,25 @@ def masker_command(repo_root: Path) -> list[str]:
     return [sys.executable, "pii_masker.py"]
 
 
+def create_locked_vault_icon() -> tk.PhotoImage:
+    image = tk.PhotoImage(width=32, height=32)
+    image.put("#1A1F2B", to=(0, 0, 32, 32))
+    image.put("#2A3142", to=(2, 2, 30, 30))
+    image.put("#141925", to=(3, 3, 29, 29))
+
+    # Yellow down arrow (pack/export)
+    arrow = "#FFD24A"
+    shadow = "#B88B18"
+    image.put(arrow, to=(14, 8, 18, 20))
+    image.put(arrow, to=(10, 18, 22, 22))
+    image.put(arrow, to=(11, 20, 21, 23))
+    image.put(arrow, to=(12, 22, 20, 25))
+    image.put(arrow, to=(13, 24, 19, 27))
+    image.put(shadow, to=(18, 8, 19, 20))
+    image.put(shadow, to=(22, 18, 23, 22))
+    return image
+
+
 @dataclass
 class VaultRecord:
     path: Path
@@ -86,6 +106,8 @@ class VaultManagerApp:
     def __init__(self, root: Tk) -> None:
         self.root = root
         self.root.title("PII Masker Vault Manager")
+        self.icon_image = create_locked_vault_icon()
+        self.root.iconphoto(True, self.icon_image)
         self.vault_dir = default_vault_dir()
         self.records: list[VaultRecord] = []
         self.flags: list[BooleanVar] = []
