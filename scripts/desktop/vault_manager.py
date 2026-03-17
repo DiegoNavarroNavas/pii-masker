@@ -11,6 +11,9 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import shutil
+import subprocess
+import sys
 import zipfile
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -32,6 +35,24 @@ def default_vault_dir() -> Path:
     if xdg_data_home:
         return Path(xdg_data_home) / "pii-masker" / "vaults"
     return Path.home() / ".local" / "share" / "pii-masker" / "vaults"
+
+
+def repo_root_dir() -> Path:
+    return Path(__file__).resolve().parents[2]
+
+
+def masker_command(repo_root: Path) -> list[str]:
+    venv_python_windows = repo_root / ".venv" / "Scripts" / "python.exe"
+    venv_python_unix = repo_root / ".venv" / "bin" / "python"
+    if venv_python_windows.exists():
+        return [str(venv_python_windows), "pii_masker.py"]
+    if venv_python_unix.exists():
+        return [str(venv_python_unix), "pii_masker.py"]
+    if os.name == "nt":
+        uv_exe = shutil.which("uv")
+        if uv_exe:
+            return [uv_exe, "run", "python", "pii_masker.py"]
+    return [sys.executable, "pii_masker.py"]
 
 
 @dataclass
@@ -138,10 +159,11 @@ class VaultManagerApp:
 
         key_button_row = ttk.Frame(keys_tab)
         key_button_row.grid(row=2, column=0, sticky="ew", pady=(0, 6))
-        key_button_row.columnconfigure((0, 1), weight=1)
+        key_button_row.columnconfigure((0, 1, 2), weight=1)
         ttk.Button(key_button_row, text="Add Key", command=self.add_key).grid(row=0, column=0, sticky="ew", padx=(0, 3))
+        ttk.Button(key_button_row, text="Generate Key", command=self.generate_key).grid(row=0, column=1, sticky="ew", padx=3)
         self.delete_key_button = ttk.Button(key_button_row, text="Delete Selected Key", command=self.delete_selected_key)
-        self.delete_key_button.grid(row=0, column=1, sticky="ew", padx=(3, 0))
+        self.delete_key_button.grid(row=0, column=2, sticky="ew", padx=(3, 0))
         self.delete_key_button.state(["disabled"])
 
         ttk.Label(
@@ -321,6 +343,45 @@ class VaultManagerApp:
         self.save_key_registry(registry)
         self.reload()
         self.status_var.set("Added key to key manager.")
+
+    def generate_key(self) -> None:
+        suggested = Path.home() / ".pii-masker" / "secret.key"
+        selected_file = filedialog.asksaveasfilename(
+            title="Generate key file",
+            defaultextension=".key",
+            initialfile=suggested.name,
+            initialdir=str(suggested.parent),
+            filetypes=[("Key files", "*.key"), ("All files", "*.*")],
+        )
+        if not selected_file:
+            return
+
+        key_file = Path(selected_file).expanduser()
+        key_file.parent.mkdir(parents=True, exist_ok=True)
+
+        command = masker_command(repo_root_dir()) + ["--generate-key", "--key-file", str(key_file)]
+        result = subprocess.run(
+            command,
+            cwd=str(repo_root_dir()),
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+            details = (result.stderr or result.stdout or "").strip()
+            messagebox.showerror(
+                "Key generation failed",
+                f"Command failed with exit code {result.returncode}.\n\n{details}",
+            )
+            self.status_var.set("Key generation failed.")
+            return
+
+        normalized = self.normalize_key_path(str(key_file))
+        registry = self.load_key_registry()
+        registry.add(normalized)
+        self.save_key_registry(registry)
+        self.reload()
+        self.status_var.set("Generated key and added it to key manager.")
 
     def delete_selected_key(self) -> None:
         entry = self.selected_key_entry()
