@@ -580,8 +580,28 @@ def redact_pdf_file(
     except subprocess.TimeoutExpired:
         raise RuntimeError("PDF worker failed (timeout): process exceeded 180s")
     if return_code != 0:
+        parsed_response: dict[str, Any] | None = None
+        if stdout_text.strip():
+            try:
+                parsed_response = parse_json_from_stdout(stdout_text)
+            except Exception:
+                parsed_response = None
+
+        if parsed_response and not parsed_response.get("ok"):
+            error = parsed_response.get("error", {})
+            code = error.get("code", "UNKNOWN")
+            message = error.get("message", "Unknown error")
+            raise RuntimeError(f"PDF worker failed ({return_code}) {code}: {message}")
+
         stderr = stderr_text.strip()
-        raise RuntimeError(f"PDF worker failed ({return_code}): {stderr}")
+        if stderr:
+            raise RuntimeError(f"PDF worker failed ({return_code}): {stderr}")
+
+        stdout = stdout_text.strip()
+        if stdout:
+            raise RuntimeError(f"PDF worker failed ({return_code}): {stdout[:800]}")
+
+        raise RuntimeError(f"PDF worker failed ({return_code}): no stderr/stdout output")
 
     try:
         response = parse_json_from_stdout(stdout_text)
